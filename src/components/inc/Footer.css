@@ -1,0 +1,122 @@
+.footer-section {
+  margin-top: 30px;
+}
+.footer .list-unstyled li a {
+  color: #62666a;
+  /* font-family: "Satoshi"; */
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  line-height: inherit;
+  text-decoration: none;
+}
+.footer .list-unstyled li {
+  padding: 5px 0;
+}
+.info {
+  width: 100%;
+}
+.footer_link {
+  clip-path: polygon(78% 0, 100% 72%, 91% 100%, 0 100%, 0 0);
+  height: 100%;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.footer-section .container-fluid .col-lg-7 {
+  padding-left: 0;
+}
+.footer-section .footer {
+  padding: 5% 10% 2% 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input-group-prepend {
+  margin-left: -10px;
+}
+.footer-newsletter input {
+  background-color: #dbdadb;
+  border: none;
+  width: 85%;
+  padding: 2%;
+}
+.footer-newsletter input:focus-visible {
+  outline: none;
+}
+.contact .contact-details {
+  padding: 0 4%;
+}
+.footer-direct-links h3 {
+  color: #fff;
+}
+.location .address, .email .address, .site .address, .mobile .address  {
+  color: #1d1d1d;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-section {
+    background: #07002f;
+  }
+  .footer-section .footer{
+    padding: 0 3% 3% 10%;
+  }
+  .con {
+    color: #fff;
+  }
+  .footer-section {
+    margin-top: 0;
+  }
+  .contact .contact-details{
+    padding: 0 10%;
+  }
+  .location svg path , .email svg path, .site svg path, .mobile svg path {
+    fill: #183893;
+  }
+  .location .address, .email .address, .site .address, .mobile .address {
+    color: #62666a;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .footer_link {
+    clip-path: none;
+  }
+  .footer-section .footer{
+    padding: 0 3% 3% 10%;
+  }
+  .footer-section {
+    margin-top: 0;
+  }
+  .footer-copyright {
+    display: none;
+  }
+  .container-flu {
+    background-color: #07002f;
+  }
+  .location {
+    color: #fff;
+  }
+  .footer-section {
+    background: #07002f;
+  }
+  .contact .contact-details{
+    padding: 0 10%;
+  }
+  .location .address {
+    color: #62666a;
+  }
+  .location svg path , .email svg path, .site svg path, .mobile svg path {
+    fill: #183893;
+  }
+  .location .address, .email .address, .site .address, .mobile .address {
+    color: #62666a;
+  }
+}
