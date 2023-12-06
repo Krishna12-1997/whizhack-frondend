@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 export default function Guru({}) {
   const { paramName } = useParams();
   const uri =
-    " http://40.88.24.216:1337/api/training?populate=training.cyber_gurus.price , training.about_cybers.cyber_link, training.cyber_modules.cyber_module, training.btogs.btog_card, training.solution_cases.case_impact";
+    " http://15.207.20.62:1337/api/training?populate=training.cyber_gurus.price , training.about_cybers.cyber_link, training.cyber_modules.cyber_module, training.btogs.btog_card, training.solution_cases.case_impact";
   const { loading, error, data } = useFetch(uri);
   // console.log(data.attributes);
   if (loading) {

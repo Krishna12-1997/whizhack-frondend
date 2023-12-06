@@ -30,7 +30,7 @@ export default function Trace() {
 
       // Make a POST request to your Strapi API
       axios
-        .post("http://40.88.24.216:1337/api/solution-contacts", formData)
+        .post("http://15.207.20.62:1337/api/solution-contacts", formData)
         .then((response) => {
           console.log("POST request successful");
           alert("Thank You");
@@ -51,7 +51,7 @@ export default function Trace() {
 
   const { solutionName } = useParams();
   const uri =
-    " http://40.88.24.216:1337/api/solution?populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace";
+    " http://15.207.20.62:1337/api/solution?populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace";
   const { loading, error, data } = useFetch(uri);
   // console.log(data.attributes);
   if (loading) {

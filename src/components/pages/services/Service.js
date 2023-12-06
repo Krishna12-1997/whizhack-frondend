@@ -11,7 +11,7 @@ import { ThreeDots } from "react-loader-spinner";
 
 export default function Service() {
   const uri =
-    "http://40.88.24.216:1337/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing";
+    "http://15.207.20.62:1337/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing";
   const { loading, error, data } = useFetch(uri);
   // console.log(data.attributes);
   if (loading) {

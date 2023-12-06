@@ -52,7 +52,7 @@ const SimpleSlider = (props) => {
   });
 
   const uri =
-  "http://40.88.24.216:1337/api/service?populate=testing";
+  "http://15.207.20.62:1337/api/service?populate=testing";
 const { loading, error, data } = useFetch(uri);
 // console.log(data.attributes);
 if (loading) {

@@ -7,7 +7,7 @@ import { ThreeDots } from "react-loader-spinner";
 export default function Blog_details() {
   const { blogId } = useParams();
 
-  const uri = `http://40.88.24.216:1337/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.Single_blog_details, all_blog.all_blog.latest_blogs.blog_button/${blogId}, all_blog.all_blog.latest_blogs.Single_blog_details/${blogId}`;
+  const uri = `http://15.207.20.62:1337/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.Single_blog_details, all_blog.all_blog.latest_blogs.blog_button/${blogId}, all_blog.all_blog.latest_blogs.Single_blog_details/${blogId}`;
   const { loading, error, data } = useFetch(uri);
   // console.log(data.attributes);
   if (loading) {

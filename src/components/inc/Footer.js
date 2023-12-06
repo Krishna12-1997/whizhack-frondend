@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 export default function Footer() {
 
-  const uri = "http://40.88.24.216:1337/api/footer?populate=left_footer";
+  const uri = "http://15.207.20.62:1337/api/footer?populate=left_footer";
 const { loading, error, data } = useFetch(uri);
 // console.log(data.attributes);
 if (loading) {
