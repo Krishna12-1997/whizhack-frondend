@@ -12,11 +12,11 @@
         @media only screen and (min-width: 320px) and (max-width: 479px){
         
                 .art-product-box-inner img:nth-child(2){
-                    width: 80%;
+                    width: 70%;
 
                 }
                 .art-product-box-inner img:first-child{
-                    width: 45%;
+                    width: 35%;
                 }
                 .art-product-box-inner img{
                     padding-right: 0;
@@ -270,19 +270,20 @@
                 width: 75%;
             }
             .art-products{
-                background: url(./components/images/tablet/banner3.png);
+                /* background: url(./components/images/tablet/banner3.png); */
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 height: auto;
                 width: 100%;
-                padding: 5% 3%;
+                clip-path: none;
+                /* padding: 5% 3%; */
             }
             .art-product-content-inner h3{
                 font-size: 1.5rem;
             }
             .art-products-inner{
-                position: static;
-                flex-direction: column;
+                position: absolute;
+                top: 42%;
                 width: 100%;
             }
             .art-product-content-inner{
@@ -362,10 +363,25 @@
             .section3, .section4{
                 margin-top: 0;
             }
+           
         }
         @media only screen and (min-width: 480px) and (max-width: 768px){
                 .footer-section{
                     padding-bottom: 6%;
+                }
+                .art-products{
+                    /* background: url(./components/images/tablet/banner3.png); */
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    height: auto;
+                    width: 100%;
+                    clip-path: none;
+                    /* padding: 5% 3%; */
+                }
+                .art-products-inner{
+                    position: absolute;
+                    top: 42%;
+                    width: 100%;
                 }
                 .section3, .section4{
                     margin-top: 0;
@@ -595,7 +611,7 @@
                 margin-right: auto;
                 width: 45%;
             }
-            .art-products{
+            /* .art-products{
                 background: url(./components/images/tablet/banner3.png);
                 background-size: 100%;
                 height: auto;
@@ -606,7 +622,7 @@
                 position: static;
                 flex-direction: column;
                 width: 100%;
-            }
+            } */
             .art-product-content-inner{
                 position: static;
                 transform: none;

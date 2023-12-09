@@ -68,6 +68,7 @@ export default function Navbar() {
                             className={`nav-link active`}
                           >
                             <div className="nav_right_solution">
+                            <div className="image-container">
                               <img
                                 src={link.icon_url}
                                 alt="icon"
@@ -75,6 +76,7 @@ export default function Navbar() {
                                 height="173px"
                                 className="mb-3"
                               />
+                              </div>
                               <div className="mobile_dropdown">
                               <h4>{link.label}</h4>
                               <p>{link.description}</p>

@@ -53,7 +53,7 @@ export default function Trace() {
   const uri =
     " http://15.207.20.62:1337/api/solution?populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace";
   const { loading, error, data } = useFetch(uri);
-  // console.log(data.attributes);
+  // console.log(data.attributes); 15.207.20.62
   if (loading) {
     return <p>Loading data...</p>;
   }
@@ -1371,7 +1371,7 @@ export default function Trace() {
                             src={firstSolution.logo_url}
                             alt="zerohack_logo"
                             width="191px"
-                            height="136px"
+                            height="50px"
                             className="mb-5"
                           />
                           <h5
