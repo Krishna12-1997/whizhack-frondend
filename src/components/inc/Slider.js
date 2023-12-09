@@ -18,7 +18,7 @@ const SimpleSlider = () => {
   //     }, [inView]);
 
   const uri =
-  "http://localhost:1337/api/home?populate=link, images";
+  "http://15.207.20.62:1337/api/home?populate=link, images";
 const { loading, error, data } = useFetch(uri);
 // console.log(data.attributes);
 if (loading) {
