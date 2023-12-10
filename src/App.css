@@ -1247,7 +1247,7 @@ a:hover {
 .ransomeware .ransomeware-content .ransomeware-content-img {
   display: block;
   width: 100%;
-  padding: 13% 4% 13% 4%;
+  padding: 13% 11%;
 }
 .ransomeware .ransomeware-content video{
   height: 500px;
@@ -1271,14 +1271,14 @@ a:hover {
     margin: 0;
   }
   .ransomeware .ransomeware-content video{
-    height: 500px;
+    height: 600px;
     object-fit: cover;
     width: 100%;
   }
   .ransomeware .ransomeware-content .ransomeware-content-img {
     display: block;
     width: 100%;
-    padding: 13% 4% 13% 4%;
+    padding: 13% 11%;
   }
   .art-products-inner-whizrange{
     width: 100%;

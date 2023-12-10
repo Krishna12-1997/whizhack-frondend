@@ -373,7 +373,7 @@ export default function Home() {
       <div className="ransomeware">
         <div className="container-flu">
           <div className="row">
-            <div className="col-lg-12 col-md-12 col-sm-12">
+            <div className="">
               <div className="ransomeware-content">
                 <video muted loop autoPlay="autoplay">
                   <source src={ran_video} type="video/mp4" />
