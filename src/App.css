@@ -283,8 +283,7 @@ transition: top 0.3s ease, color 0.3s ease;
 
 }
 .art-products-inner-logo{
-  width: 10%;
-  margin: 0 auto;
+  text-align: center;
 }
 .art-products-inner-whizrange {
   /* display: flex;
@@ -1229,7 +1228,7 @@ a:hover {
   }
   .art-products video{
     width: 100%;
-    height: 2074px;
+    height: 1874px;
     object-fit: cover;
   }
   .zerohack-product {
@@ -1238,16 +1237,17 @@ a:hover {
 .art-products-inner-whizrange{
   width: 100%;
   right: 2%;
+  border-bottom: none;
   left: 2%;
   padding: 0;
 }
 .art-products-inner-logo{
-  width: 24%;
+  text-align: center;
 }
 .ransomeware .ransomeware-content .ransomeware-content-img {
   display: block;
   width: 100%;
-  padding: 7% 5%;
+  padding: 13% 4% 13% 4%;
 }
 .ransomeware .ransomeware-content video{
   height: 500px;
@@ -1256,7 +1256,6 @@ a:hover {
 }
 .whizrange-product{
   padding: 0;
-  border-bottom: none;
   flex-direction: column;
 }
 .ransomeware{
@@ -1266,7 +1265,7 @@ a:hover {
 
 @media only screen and (min-width: 320px) and (max-width: 479px){
   .art-products-inner-logo{
-    width: 24%;
+    text-align: center;
   }
   .ransomeware{
     margin: 0;
@@ -1279,17 +1278,18 @@ a:hover {
   .ransomeware .ransomeware-content .ransomeware-content-img {
     display: block;
     width: 100%;
-    padding: 7% 5%;
+    padding: 13% 4% 13% 4%;
   }
   .art-products-inner-whizrange{
     width: 100%;
     right: 2%;
+    border-bottom: none;
     left: 2%;
     padding: 0;
   }
   .art-products video{
     width: 100%;
-    height: 2074px;
+    height: 1874px;
     object-fit: cover;
   }
   .navbar-light .navbar-toggler{
