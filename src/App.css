@@ -1256,6 +1256,7 @@ a:hover {
 }
 .whizrange-product{
   padding: 0;
+  border-bottom: none;
   flex-direction: column;
 }
 .ransomeware{
@@ -1403,6 +1404,7 @@ a:hover {
   }
   .whizrange-product{
     padding: 0;
+    border-bottom: none;
     flex-direction: column;
   }
   .zerohack-product {
