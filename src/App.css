@@ -6,7 +6,9 @@
   transform: translateY(20px);
   transition: opacity 4s ease-in-out, transform 1s ease-out;
 }
-
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #185893 !important;
+}
 .fade-in-text-title {
   opacity: 0;
   transform: translateX(150%);
@@ -1262,6 +1264,9 @@ a:hover {
 }
 .ransomeware{
   margin: 0;
+}
+.art-product-box-inner img:first-child{
+  width: 71%;
 }
 }
 
