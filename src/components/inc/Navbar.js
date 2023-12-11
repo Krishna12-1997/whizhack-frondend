@@ -282,7 +282,7 @@ export default function Navbar() {
     });
 
     return (
-      <nav className="navbar fixed-top navbar-expand-md navbar-light ">
+      <nav className="navbar fixed-top navbar-expand-sm navbar-light ">
         <Link to="/" className="navbar-brand">
           <img src={logo} alt="" />
         </Link>
