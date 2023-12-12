@@ -311,7 +311,7 @@ transition: top 0.3s ease, color 0.3s ease;
   height: 40vh;
   margin: 15px 15px;
   background-color: #fff;
-  clip-path: polygon(25% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
+  clip-path: polygon(13% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
   margin-bottom: 22px;
 }
 .whizrange-product{
@@ -322,7 +322,18 @@ transition: top 0.3s ease, color 0.3s ease;
   text-align: right;
   padding-right: 15px;
 }
+.art-product-box-inner-whizrange {
+  position: relative;
+  text-align: right;
+  padding-right: 15px;
+}
 .art-product-box-inner h2{
+  text-align: center;
+  font-weight: normal;
+  font-family: sans-serif;
+  color: blueviolet;
+}
+.art-product-box-inner-whizrange h2{
   text-align: center;
   font-weight: normal;
   font-family: sans-serif;
@@ -332,7 +343,16 @@ transition: top 0.3s ease, color 0.3s ease;
   width: 60%;
   /* padding-right: 39%; */
 }
+.art-product-box-inner-whizrange img:first-child {
+  width: 80%;
+  /* padding-right: 39%; */
+}
 .art-product-box-inner img {
+  width: 50%;
+  padding-right: 25%;
+  margin-bottom: 5%;
+}
+.art-product-box-inner-whizrange img {
   width: 50%;
   padding-right: 25%;
   margin-bottom: 5%;
@@ -341,7 +361,7 @@ transition: top 0.3s ease, color 0.3s ease;
   width: 65%;
   /* padding-right: 0; */
 }
-.art-product-box-inner p {
+.art-product-box-inner p, .art-product-box-inner-whizrange p {
   text-align: justify;
   color: #6d6d6d;
   font-size: 0.8rem;
@@ -703,7 +723,7 @@ a:hover {
   height: 280px;
   margin: 15px 15px;
   background-color: #fff;
-  clip-path: polygon(25% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
+  clip-path: polygon(19% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
   margin-bottom: 22px;
   position: relative;
 }

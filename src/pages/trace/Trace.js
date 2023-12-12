@@ -51,7 +51,7 @@ export default function Trace() {
 
   const { solutionName } = useParams();
   const uri =
-    " http://15.207.20.62:1337/api/solution?populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace";
+    " http://15.207.20.62:1337/api/solution?populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.about_cybers, solution.hids_section.hids_features.feature_hids";
   const { loading, error, data } = useFetch(uri);
   // console.log(data.attributes); 15.207.20.62
   if (loading) {
@@ -64,11 +64,9 @@ export default function Trace() {
 
   const solutions = data.attributes.solution;
 
-  // Check if the solution is "TRACE" or "ZEROHACK" and render content accordingl
   return (
     <div>
       {solutions.map((firstSolution, index) => {
-        // Check if the solution is "CYBER GURU" and the URL parameter matches
         if (
           firstSolution.__component === "solution.solution-header" &&
           firstSolution.big_title === "TRACE" &&
@@ -757,9 +755,8 @@ export default function Trace() {
                       />
                     </div>
 
-                    
-                      <div className="col-lg-6 col-md-6 col-sm-12 mx-auto">
-                      <form onSubmit={formik.handleSubmit} >
+                    <div className="col-lg-6 col-md-6 col-sm-12 mx-auto">
+                      <form onSubmit={formik.handleSubmit}>
                         <div className="partner_form mx-5">
                           <h1
                             style={{
@@ -831,16 +828,16 @@ export default function Trace() {
                               color: "#363636",
                             }}
                           />
-                       
-                        <button
-                          type="submit"
-                          className="d-flex justify-content-end clipped-btns"
-                        >
-                          Submit
-                        </button>
-                      </div>
+
+                          <button
+                            type="submit"
+                            className="d-flex justify-content-end clipped-btns"
+                          >
+                            Submit
+                          </button>
+                        </div>
                       </form>
-                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -1258,9 +1255,8 @@ export default function Trace() {
                       />
                     </div>
 
-                    
-                      <div className="col-lg-6 col-md-6 col-sm-12 mx-auto">
-                      <form onSubmit={formik.handleSubmit} >
+                    <div className="col-lg-6 col-md-6 col-sm-12 mx-auto">
+                      <form onSubmit={formik.handleSubmit}>
                         <div className="partner_form mx-5">
                           <h1
                             style={{
@@ -1332,29 +1328,28 @@ export default function Trace() {
                               color: "#363636",
                             }}
                           />
-                       
-                        <button
-                          type="submit"
-                          className="d-flex justify-content-end clipped-btns"
-                        >
-                          Submit
-                        </button>
-                      </div>
+
+                          <button
+                            type="submit"
+                            className="d-flex justify-content-end clipped-btns"
+                          >
+                            Submit
+                          </button>
+                        </div>
                       </form>
-                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
             </>
           );
-        }   else if (
+        } else if (
           firstSolution.__component === "solution.zero-hack" &&
           firstSolution.big_title === "ZEROHACK" &&
           solutionName === "zerohack"
         ) {
           return (
             <>
-
               <div className="guru-section1">
                 <video muted loop autoPlay="autoplay">
                   <source src={firstSolution.bg_url} type="video/mp4" />
@@ -1414,7 +1409,7 @@ export default function Trace() {
                 <div className="threat mt-5">
                   <div className="container-fluid">
                     <div className="row">
-                    <div className="col-lg-7 col-md-6 col-sm-122">
+                      <div className="col-lg-7 col-md-6 col-sm-122">
                         <div className="zerohack_whiz">
                           <div className="degree">
                             {firstSolution.bg_image_url.card.map((card) => (
@@ -1480,8 +1475,6 @@ export default function Trace() {
                           </button>
                         </div>
                       </div>
-
-              
                     </div>
                   </div>
                 </div>
@@ -1491,7 +1484,7 @@ export default function Trace() {
                 <div className=" mt-5 about-whiz-section">
                   <div className="container-fluid">
                     <div className="row bottom_bg">
-                    <div className="col-lg-6 col-md-6 col-sm-122">
+                      <div className="col-lg-6 col-md-6 col-sm-122">
                         {firstSolution.bg_image_url.about_cybers.data.map(
                           (about) => (
                             <div className="about_whiz">
@@ -1551,21 +1544,22 @@ export default function Trace() {
                         )}
                       </div>
                       <div className="col-lg-6 col-md-6 col-sm-12">
-                      {firstSolution.bg_image_url.about_cybers.data.map((about) => (
-                        <div
-                          className="mt-2"
-                          style={{
-                            background: `url(${about.attributes.bg_image_url})`,
-                            height: "100vh",
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                            backgroundRepeat: "no-repeat",
-                          }}
-                        ></div>
-                      ))}
+                        {firstSolution.bg_image_url.about_cybers.data.map(
+                          (about) => (
+                            <div
+                              className="mt-2"
+                              style={{
+                                background: `url(${about.attributes.bg_image_url})`,
+                                height: "100vh",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat",
+                              }}
+                            ></div>
+                          )
+                        )}
                       </div>
 
-                     
                       <div className=""></div>
                     </div>
                   </div>
@@ -1758,9 +1752,8 @@ export default function Trace() {
                       />
                     </div>
 
-                    
-                      <div className="col-lg-6 col-md-6 col-sm-12 mx-auto">
-                      <form onSubmit={formik.handleSubmit} >
+                    <div className="col-lg-6 col-md-6 col-sm-12 mx-auto">
+                      <form onSubmit={formik.handleSubmit}>
                         <div className="partner_form mx-5">
                           <h1
                             style={{
@@ -1832,27 +1825,446 @@ export default function Trace() {
                               color: "#363636",
                             }}
                           />
-                       
-                        <button
-                          type="submit"
-                          className="d-flex justify-content-end clipped-btns"
-                        >
-                          Submit
-                        </button>
-                      </div>
+
+                          <button
+                            type="submit"
+                            className="d-flex justify-content-end clipped-btns"
+                          >
+                            Submit
+                          </button>
+                        </div>
                       </form>
-                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
+            </>
+          );
+        } else if (
+          firstSolution.__component === "solution.hids" &&
+          firstSolution.big_title === "Host Intrusion and Detection System" &&
+          solutionName === "hids"
+        ) {
+          return (
+            <>
+              <div className="guru-section1">
+                <video muted loop autoPlay="autoplay">
+                  <source src={firstSolution.bg_url} type="video/mp4" />
+                </video>
+                <div className="ui1-banner1-parent-solution-zerohack">
+                  <div className="container-fluid">
+                    <div className="row justify-content-between">
+                      <div className="col-lg-6">
+                        <div className="ui1-banner1-content-solution-hids">
+                          <h5
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            data-aos-duration={1500}
+                            style={{ color: "#00B85F" }}
+                            className="mb-3"
+                          >
+                            {firstSolution.small_title}
+                          </h5>
+                          <h3
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            data-aos-duration={1500}
+                            className="mb-4"
+                          >
+                            {firstSolution.big_title}
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="col-lg-6"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <section>
+                <div className="threat mt-5">
+                  <div className="container-fluid">
+                    <div className="row">
+                      <div className="col-lg-6 col-md-6 col-sm-122">
+                        <img
+                          src={firstSolution.hids_section.bg_image_url}
+                          alt="bgimg"
+                          width="100%"
+                        />
+                      </div>
+                      <div className="line">
+                        <div className="bottom_zero"></div>
+                      </div>
+
+                      <div className="col-lg-5 col-md-3 col-sm-12 square_content">
+                        <div className=" mt-5 ">
+                          <h3
+                            data-aos="fade-right"
+                            data-aos-delay="300"
+                            data-aos-duration={1500}
+                            className="mb-4"
+                            style={{ color: "#07002F", fontWeight: "700" }}
+                          >
+                            {firstSolution.hids_section.title}
+                          </h3>
+                          <h6
+                            data-aos="fade-right"
+                            data-aos-delay="300"
+                            data-aos-duration={1500}
+                            className="mb-3"
+                            style={{ color: "#62666A", fontWeight: "500" }}
+                          >
+                            {firstSolution.hids_section.description}
+                          </h6>
+                          <button
+                            type="submit"
+                            className="know_more clipped-btns mt-4"
+                          >
+                            Know More
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <div className=" mt-5 about-whiz-section">
+                  <div className="container-fluid">
+                    <div className="row bottom_bg">
+                      <div className="col-lg-6 col-md-6 col-sm-12">
+                        {firstSolution.hids_section.about_cybers.data.map(
+                          (about) => (
+                            <div className="about_whiz">
+                              <div className="whiz_degree mx-4">
+                                <h3
+                                  data-aos="fade-down"
+                                  data-aos-delay="300"
+                                  data-aos-duration={1500}
+                                  className="mb-1"
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  {about.attributes.title}{" "}
+                                  <span
+                                    style={{
+                                      color: "#2C81FE",
+                                      fontWeight: "600",
+                                    }}
+                                  >
+                                    {about.attributes.color_title}
+                                  </span>
+                                </h3>
+                                <p
+                                  data-aos="fade-down"
+                                  data-aos-delay="300"
+                                  data-aos-duration={1500}
+                                  className="mb-3"
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "400",
+                                  }}
+                                >
+                                  Host Intrusion and Detection System
+                                </p>
+                                <p
+                                  data-aos="fade-down"
+                                  data-aos-delay="300"
+                                  data-aos-duration={1500}
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "500",
+                                  }}
+                                >
+                                  {about.attributes.description}
+                                </p>
+                                <button
+                                  type="submit"
+                                  className="know_more clipped-btns mt-4"
+                                >
+                                  Know More
+                                </button>
+                              </div>
+                            </div>
+                          )
+                        )}
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-12">
+                        {firstSolution.hids_section.about_cybers.data.map(
+                          (about) => (
+                            <div
+                              className="mt-2"
+                              style={{
+                                background: `url(${about.attributes.bg_image_url})`,
+                                height: "100vh",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat",
+                              }}
+                            ></div>
+                          )
+                        )}
+                      </div>
+
+                      {/* <div className=""></div> */}
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {firstSolution.hids_section.hids_features.data.map((feature) => (
+                <section className="main-feauters mt-5">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12 text-center feature-heading">
+                        <h1>{feature.attributes.title}</h1>
+                      </div>
+                    </div>
+                    {feature.attributes.feature_hids.map((dete, index) => (
+                      <div
+                        className={`row mt-5 feauters-content ${
+                          index % 2 === 0 ? "even" : "odd"
+                        }`}
+                      >
+                        <div className="col-lg-6 col-md-6 col-sm-12">
+                          <img
+                            src={dete.image_url}
+                            alt="attact-img"
+                            width="100%"
+                          />
+                        </div>
+
+                        <div className="col-lg-6 col-md-6 col-sm-12">
+                          <div className="main-feauters-content">
+                            <h3>{dete.title}</h3>
+                            <p>{dete.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </>
+          );
+        } else if (
+          firstSolution.__component === "solution.hids" &&
+          firstSolution.big_title ===
+            "Network Intrusion and Detection System" &&
+          solutionName === "nids"
+        ) {
+          return (
+            <>
+              <div className="guru-section1">
+                <video muted loop autoPlay="autoplay">
+                  <source src={firstSolution.bg_url} type="video/mp4" />
+                </video>
+                <div className="ui1-banner1-parent-solution-zerohack">
+                  <div className="container-fluid">
+                    <div className="row justify-content-between">
+                      <div className="col-lg-6">
+                        <div className="ui1-banner1-content-solution-hids">
+                          <h5
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            data-aos-duration={1500}
+                            style={{ color: "#00B85F" }}
+                            className="mb-3"
+                          >
+                            {firstSolution.small_title}
+                          </h5>
+                          <h3
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            data-aos-duration={1500}
+                            className="mb-4"
+                          >
+                            {firstSolution.big_title}
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="col-lg-6"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <section>
+                <div className="threat mt-5">
+                  <div className="container-fluid">
+                    <div className="row">
+                      <div className="col-lg-6 col-md-6 col-sm-122">
+                        <img
+                          src={firstSolution.hids_section.bg_image_url}
+                          alt="bgimg"
+                          width="100%"
+                        />
+                      </div>
+                      <div className="line">
+                        <div className="bottom_zero"></div>
+                      </div>
+
+                      <div className="col-lg-5 col-md-3 col-sm-12 square_content">
+                        <div className=" mt-5 ">
+                          <h3
+                            data-aos="fade-right"
+                            data-aos-delay="300"
+                            data-aos-duration={1500}
+                            className="mb-4"
+                            style={{ color: "#07002F", fontWeight: "700" }}
+                          >
+                            {firstSolution.hids_section.title}
+                          </h3>
+                          <h6
+                            data-aos="fade-right"
+                            data-aos-delay="300"
+                            data-aos-duration={1500}
+                            className="mb-3"
+                            style={{ color: "#62666A", fontWeight: "500" }}
+                          >
+                            {firstSolution.hids_section.description}
+                          </h6>
+                          <button
+                            type="submit"
+                            className="know_more clipped-btns mt-4"
+                          >
+                            Know More
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <div className=" mt-5 about-whiz-section">
+                  <div className="container-fluid">
+                    <div className="row bottom_bg">
+                      <div className="col-lg-6 col-md-6 col-sm-12">
+                        {firstSolution.hids_section.about_cybers.data.map(
+                          (about) => (
+                            <div className="about_whiz">
+                              <div className="whiz_degree mx-4">
+                                <h3
+                                  data-aos="fade-down"
+                                  data-aos-delay="300"
+                                  data-aos-duration={1500}
+                                  className="mb-1"
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  {about.attributes.title}{" "}
+                                  <span
+                                    style={{
+                                      color: "#2C81FE",
+                                      fontWeight: "600",
+                                    }}
+                                  >
+                                    {about.attributes.color_title}
+                                  </span>
+                                </h3>
+                                <p
+                                  data-aos="fade-down"
+                                  data-aos-delay="300"
+                                  data-aos-duration={1500}
+                                  className="mb-3"
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "400",
+                                  }}
+                                >
+                                  Host Intrusion and Detection System
+                                </p>
+                                <p
+                                  data-aos="fade-down"
+                                  data-aos-delay="300"
+                                  data-aos-duration={1500}
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "500",
+                                  }}
+                                >
+                                  {about.attributes.description}
+                                </p>
+                                <button
+                                  type="submit"
+                                  className="know_more clipped-btns mt-4"
+                                >
+                                  Know More
+                                </button>
+                              </div>
+                            </div>
+                          )
+                        )}
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-12">
+                        {firstSolution.hids_section.about_cybers.data.map(
+                          (about) => (
+                            <div
+                              className="mt-2"
+                              style={{
+                                background: `url(${about.attributes.bg_image_url})`,
+                                height: "100vh",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat",
+                              }}
+                            ></div>
+                          )
+                        )}
+                      </div>
+
+                      <div className=""></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {firstSolution.hids_section.hids_features.data.map((feature) => (
+                <section className="main-feauters mt-5">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12 text-center feature-heading">
+                        <h1>{feature.attributes.title}</h1>
+                      </div>
+                    </div>
+                    {feature.attributes.feature_hids.map((dete, index) => (
+                      <div
+                        className={`row mt-5 ${
+                          index % 2 === 0 ? "even" : "odd"
+                        }`}
+                      >
+                        <div className="col-lg-6 col-md-6 col-sm-12">
+                          <img
+                            src={dete.image_url}
+                            alt="attact-img"
+                            width="100%"
+                          />
+                        </div>
+
+                        <div className="col-lg-6 col-md-6 col-sm-12">
+                          <div className="main-feauters-content">
+                            <h3>{dete.title}</h3>
+                            <p>{dete.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ))}
             </>
           );
         }
 
         return null;
       })}
-
-      
     </div>
   );
 }

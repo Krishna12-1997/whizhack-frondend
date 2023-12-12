@@ -26,7 +26,7 @@ export default function Home() {
   const uri =
     "http://15.207.20.62:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
   const { loading, error, data } = useFetch(uri);
-  // 15.207.20.62
+  // 15.207.20.62 15.207.20.62
   // console.log(data.attributes);
   if (loading) {
     return (
@@ -167,7 +167,7 @@ export default function Home() {
                     data-aos-duration={1500}
                   >
                     <div className="art-product-box">
-                      <div className="art-product-box-inner">
+                      <div className="art-product-box-inner-whizrange">
                         {/* <img src={whiz_box.image_url} alt="" /> */}
                         <img src={whiz_box.logo_url} alt="" />
                         <p>{whiz_box.description}</p>

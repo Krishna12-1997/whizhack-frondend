@@ -50,6 +50,7 @@ text-align: center;
 }
 .industry-section2 .container-fluid{
     padding-left: 0;
+    padding-right: 0;
 }
 .industry-left-bg-video{
     /* position: relative; */

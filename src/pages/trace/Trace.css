@@ -13,7 +13,7 @@
   align-items: center;
   padding-top: 100px;
 }
-.ui1-banner1-parent-solution-zerohack{
+.ui1-banner1-parent-solution-zerohack {
   position: relative;
   left: -60px;
   background: url(../../components//images//bg/Bg\ Purple.svg);
@@ -24,7 +24,7 @@
   align-items: center;
   padding-top: 100px;
 }
-.ui1-banner1-parent-trace-solution{
+.ui1-banner1-parent-trace-solution {
   position: relative;
   background: url(../../components//images/bg/BG.png);
   height: 100vh;
@@ -85,7 +85,7 @@
 .text-light {
   border: none;
 }
-.row{
+.row {
   margin-right: 0 !important;
 }
 .tech_card_index {
@@ -110,7 +110,7 @@
   padding: 8% 5%;
 }
 .tech_card_details:last-child {
-  grid-column: 1 / -1;  
+  grid-column: 1 / -1;
   /* display: grid; */
   /* grid-template-columns: repeat(1, 1fr); */
 }
@@ -145,20 +145,20 @@
   border-bottom: 1px solid #fff;
   border-left: 1px solid #fff;
 }
-.top_zero{
+.top_zero {
   width: 55px;
   height: 39px;
   position: relative;
   left: -57px;
   opacity: 0.4;
-  background-color: #9747FF;
+  background-color: #9747ff;
 }
-.bottom_zero{
+.bottom_zero {
   position: relative;
   left: -47px;
   width: 55px;
   height: 100px;
-  background-color: #DA1937;
+  background-color: #da1937;
   opacity: 0.4;
   margin: 120px 0 0 0;
 }
@@ -189,21 +189,21 @@
   align-items: center;
   height: 100%;
 }
-.whiz{
+.whiz {
   background-image: url(../../asset/whizrange/Firefly\ Cybersecurity\ Building\ viewed\ from\ top\ with\ dark\ green\ as\ primary\ colour\ 58042\ 1.png);
   height: 100%;
   background-size: cover;
   background-position: center;
- background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
-.zerohack_whiz{
+.zerohack_whiz {
   background-image: url(../../components/images/zero.svg);
   height: 100vh;
   background-size: cover;
   background-position: center;
- background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
-.about_whiz{
+.about_whiz {
   display: flex;
   align-items: center;
   height: 100%;
@@ -218,7 +218,16 @@
   border-radius: 25px;
   text-align: center;
   padding: 1% 2%;
-  clip-path: polygon(15% 0, 85% 0, 100% 14%, 100% 87%, 87% 100%, 12% 100%, 0 86%, 0 13%);
+  clip-path: polygon(
+    15% 0,
+    85% 0,
+    100% 14%,
+    100% 87%,
+    87% 100%,
+    12% 100%,
+    0 86%,
+    0 13%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -240,98 +249,146 @@
   color: #fff;
   opacity: 1;
 }
-.square .degree-2 svg{
+.square .degree-2 svg {
   width: 52px;
   height: 46px;
 }
 .submit:hover {
   opacity: 0.5;
 }
-.threat .container-fluid{
+.threat .container-fluid {
   padding: 0;
 }
-.about-whiz-section .container-fluid{
+.about-whiz-section .container-fluid {
   padding: 0;
 }
-.left-cut-img{
+.left-cut-img {
   clip-path: polygon(100% 0, 100% 79%, 82% 100%, 0 100%, 0 0);
 }
+.row.even {
+}
+.row.odd {
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the order for even rows */
+}
+.feature-heading {
+  color: #07002f;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 5% 0 0 0;
+}
+.main-feauters-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3%;
+  height: 100%;
+  width: 100%;
+}
+.feauters-content {
+  margin: 8% 0;
+}
+.main-feauters-content h3 {
+  color: #1d1d1d;
+  /* font-family: "Pulse"; */
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: normal;
+}
+.main-feauters-content p {
+  color: #62666a;
+  /* font-family: "Satoshi"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.ui1-banner1-content-solution-hids {
+  width: 50%;
+  margin: 0 auto;
+  color: #fff;
+}
 @media only screen and (min-width: 479px) and (max-width: 768px) {
-  .ui1-banner1-parent-solution-zerohack{
+  .main-feauters-content{
+    margin-top: 18px;
+  }
+  .ui1-banner1-parent-solution-zerohack {
     background-size: auto;
     left: 0;
   }
-  .zerohack_whiz{
+  .zerohack_whiz {
     height: auto;
   }
-  .top_zero{
+  .top_zero {
     display: none;
   }
-  .bottom_zero{
+  .bottom_zero {
     display: none;
   }
   .ui1-banner1-content-solution {
     text-align: center;
-}
-  .trace-about .square_content{
+  }
+  .trace-about .square_content {
     padding: 5% 8%;
   }
-  .partner_trace .partner_form input, .partner_trace .partner_form textarea{
+  .partner_trace .partner_form input,
+  .partner_trace .partner_form textarea {
     width: 100%;
   }
-  .partner_trace .partner_form h1{
+  .partner_trace .partner_form h1 {
     text-align: center;
-font-size: 2rem;
+    font-size: 2rem;
   }
-  .partner_trace .partner_form h6{
+  .partner_trace .partner_form h6 {
     text-align: center;
   }
-  .partner_trace .partner_form{
+  .partner_trace .partner_form {
     padding: 5% 3%;
     margin: 0 !important;
   }
-  .technology.trace-technology{
+  .technology.trace-technology {
     margin-top: 0 !important;
     background-size: cover;
   }
-  .cyber.use-cases .container .row .col-lg-12{
+  .cyber.use-cases .container .row .col-lg-12 {
     margin-top: 0 !important;
   }
-  .cyber.use-cases .cyber-heading{
+  .cyber.use-cases .cyber-heading {
     text-align: center;
   }
-  .threat.key-features{
+  .threat.key-features {
     padding: 5% 5%;
   }
-  .threat.key-features .container-fluid .row .col-lg-6{
+  .threat.key-features .container-fluid .row .col-lg-6 {
     padding-left: 0;
   }
 
-  .threat.key-benefits .square{
+  .threat.key-benefits .square {
     height: auto !important;
     padding: 8% 0;
-
-
   }
-  .threat.key-benefits .square_content .key .d-flex{
+  .threat.key-benefits .square_content .key .d-flex {
     margin: 0 !important;
   }
-  .threat.key-benefits .square_content .key p{
+  .threat.key-benefits .square_content .key p {
     margin: 0 !important;
   }
-  .threat.key-benefits .square_content{
-padding: 5%;
+  .threat.key-benefits .square_content {
+    padding: 5%;
   }
-  .threat.key-features .square_content{
-    height:100vh !important;
+  .threat.key-features .square_content {
+    height: 100vh !important;
   }
-  .trace-about .container-fluid .row .col-lg-8{
+  .trace-about .container-fluid .row .col-lg-8 {
     order: 0;
   }
-  .trace-about .container-fluid .row .col-lg-3{
+  .trace-about .container-fluid .row .col-lg-3 {
     order: 1;
   }
-  .trace-about .container-fluid .row .col-lg-8 .square{
+  .trace-about .container-fluid .row .col-lg-8 .square {
     padding: 8% 0;
   }
   .trace_home {
@@ -340,10 +397,10 @@ padding: 5%;
   .ui1-banner1-parent-solution {
     background-size: cover;
   }
-  .ui1-banner1-parent-trace-solution{
+  .ui1-banner1-parent-trace-solution {
     background-size: 150% 100%;
   }
-  .tech_card{
+  .tech_card {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
@@ -436,95 +493,101 @@ padding: 5%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-  .top_zero{
+  .ui1-banner1-content-solution-hids{
+    width: 100%;
+    text-align: center;
+  }
+  .main-feauters-content{
+    margin-top: 18px;
+  }
+  .top_zero {
     display: none;
   }
-  .bottom_zero{
+  .bottom_zero {
     display: none;
   }
-  .ui1-banner1-parent-solution-zerohack{
+  .ui1-banner1-parent-solution-zerohack {
     background-size: auto;
     left: 0;
   }
-  .zerohack_whiz{
+  .zerohack_whiz {
     height: auto;
   }
-  .trace-about .square_content{
+  .trace-about .square_content {
     padding: 5% 8%;
   }
-  .partner_trace .partner_form input, .partner_trace .partner_form textarea{
+  .partner_trace .partner_form input,
+  .partner_trace .partner_form textarea {
     width: 100%;
   }
-  .partner_trace .partner_form h1{
+  .partner_trace .partner_form h1 {
     text-align: center;
-font-size: 2rem;
+    font-size: 2rem;
   }
-  .partner_trace .partner_form h6{
+  .partner_trace .partner_form h6 {
     text-align: center;
   }
-  .partner_trace .partner_form{
+  .partner_trace .partner_form {
     padding: 5% 3%;
     margin: 0 !important;
   }
-  .technology.trace-technology{
+  .technology.trace-technology {
     margin-top: 0 !important;
     background-size: cover;
   }
-  .cyber.use-cases .container .row .col-lg-12{
+  .cyber.use-cases .container .row .col-lg-12 {
     margin-top: 0 !important;
   }
-  .cyber.use-cases .cyber-heading{
+  .cyber.use-cases .cyber-heading {
     text-align: center;
   }
-  .threat.key-features{
+  .threat.key-features {
     padding: 5% 5%;
   }
-  .threat.key-features .container-fluid .row .col-lg-6{
+  .threat.key-features .container-fluid .row .col-lg-6 {
     padding-left: 0;
   }
 
-  .threat.key-benefits .square{
+  .threat.key-benefits .square {
     height: auto !important;
     padding: 8% 0;
-
-
   }
-  .threat.key-benefits .square_content .key .d-flex{
+  .threat.key-benefits .square_content .key .d-flex {
     margin: 0 !important;
   }
-  .threat.key-benefits .square_content .key p{
+  .threat.key-benefits .square_content .key p {
     margin: 0 !important;
   }
-  .threat.key-benefits .square_content{
-padding: 5%;
+  .threat.key-benefits .square_content {
+    padding: 5%;
   }
-  .threat.key-features .square_content{
-    height:100vh !important;
+  .threat.key-features .square_content {
+    height: 100vh !important;
   }
-  .trace-about .container-fluid .row .col-lg-8{
+  .trace-about .container-fluid .row .col-lg-8 {
     order: 0;
   }
-  .trace-about .container-fluid .row .col-lg-3{
+  .trace-about .container-fluid .row .col-lg-3 {
     order: 1;
   }
-  .trace-about .container-fluid .row .col-lg-8 .square{
+  .trace-about .container-fluid .row .col-lg-8 .square {
     padding: 8% 0;
   }
-  .ui1-banner1-content-solution{
+  .ui1-banner1-content-solution {
     text-align: center;
   }
-  .ui1-banner1-parent-trace-solution{
+  .ui1-banner1-parent-trace-solution {
     background-size: 150% 100%;
     padding-top: 70px;
   }
   .cyber .cyber_content {
     padding: 8% 5%;
   }
-  .tech_card{
+  .tech_card {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
