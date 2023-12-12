@@ -315,8 +315,9 @@
   }
   .art-products-inner {
     position: absolute;
-    top: 36%;
+    bottom: 5%;
     width: 100%;
+    left: 2%;
   }
   .art-product-content-inner {
     position: static;
@@ -412,7 +413,7 @@
   }
   .art-products-inner {
     position: absolute;
-    top: 42%;
+    bottom: -4%;
     width: 100%;
   }
   .section3,
@@ -754,6 +755,9 @@
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .second-banner::before{
+    display: none;
+  }
   .first_form .form-group select.dirty + label,
   .first_form .form-group select:focus + label,
   .first_form .form-group select:not(:placeholder-shown) + label {
@@ -879,6 +883,10 @@
   }
 }
 @media only screen and (min-width: 991px) and (max-width: 1280px) {
+  .second-banner::before {
+    left: 33%;
+    transform: rotate(13deg);
+}
 }
 @media only screen and (min-width: 1280px) {
 }

@@ -1,0 +1,42 @@
+
+
+.section-title h4{
+    text-align: left;
+    margin-top: 6%;
+}
+.policies-inner ul{
+    padding-left: 15px;
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .policies-inner ul{
+        padding-left: 15px;
+    }
+    .industry-banner-title h3{
+        font-size: 1.5rem;
+    }
+    .section-title h3{
+        margin: 8% 0;
+    }
+    .industry-banner-section{
+        height: 100vh;
+    }
+    .industry-banner-title p, .policies-inner p, .policies-inner ul li{
+        font-size: 0.9rem;
+    }
+  
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .industry-banner-title h3{
+        font-size: 1.5rem;
+    }
+    .industry-banner-title p, .policies-inner p, .policies-inner ul li{
+        font-size: 0.9rem;
+    }
+    .section-title h3{
+        margin: 8% 0;
+    }
+    .industry-banner-section{
+        height: 100vh;
+    }
+  
+}

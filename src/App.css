@@ -230,7 +230,7 @@ transition: top 0.3s ease, color 0.3s ease;
 .second-banner {
   height: 105vh;
   background-image: url(./components/images/home-bg21.png);
-  background-size: 55% 100%;
+  background-size: 34% 100%;
   background-repeat: no-repeat;
   display: flex;
   position: relative;
@@ -250,11 +250,33 @@ transition: top 0.3s ease, color 0.3s ease;
   /* height: 135vh; */
   /* background-image: url(./components/images/art-bg.png); */
   background-size: 100% 100%;
-  clip-path: polygon(38% 0, 100% 0, 100% 100%, 0% 100%);
-  width: 80%;
+  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0% 100%);
+  width: 100%;
   background-repeat: no-repeat;
   height: 135vh;
   position: relative;
+}
+/* .art-products::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  left: 22%;
+  width: 40px;
+  height: 100px;
+  background-color: rgba(255, 0, 0, 0.5);
+  transform: rotate(17deg);
+} */
+.second-banner::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  left: 34%;
+  width: 50px;
+  height: 135px;
+  background-color: rgba(255, 0, 0, 0.5);
+  transform: rotate(18deg);
 }
 .art-products video{
   width: 100%;
@@ -269,8 +291,8 @@ transition: top 0.3s ease, color 0.3s ease;
 .art-product-content-inner {
   position: absolute;
   width: 25%;
-  left: 7%;
-  bottom: 40%;
+  left: 1%;
+  bottom: 47%;
 }
 .art-product-content-inner h3 {
   font-size: 2rem;
@@ -311,7 +333,7 @@ transition: top 0.3s ease, color 0.3s ease;
   height: 40vh;
   margin: 15px 15px;
   background-color: #fff;
-  clip-path: polygon(13% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
+  clip-path: polygon(8% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
   margin-bottom: 22px;
 }
 .whizrange-product{
@@ -1143,6 +1165,9 @@ a:hover {
   display: flex;
 }
 @media only screen and (min-width: 480px) and (max-width: 768px){
+  .second-banner::before{
+    display: none;
+  }
   .navbar-light .navbar-toggler {
     color: #fff;
 }
@@ -1265,6 +1290,13 @@ a:hover {
   left: 2%;
   padding: 0;
 }
+.art-products-inner{
+  width: 100%;
+  right: 2%;
+  border-bottom: none;
+  left: 2%;
+  padding: 0;
+}
 .art-products-inner-logo{
   text-align: center;
 }
@@ -1291,6 +1323,9 @@ a:hover {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px){
+  .second-banner::before{
+    display: none;
+  }
   .art-products-inner-logo{
     text-align: center;
   }

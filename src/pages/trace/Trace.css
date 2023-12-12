@@ -311,12 +311,24 @@
   margin: 0 auto;
   color: #fff;
 }
+.bottom_zero_hids{
+  position: relative;
+  left: -47px;
+  top: 81%;
+  width: 55px;
+  height: 145px;
+  background-color: #185893;
+  opacity: 0.8;
+}
 @media only screen and (min-width: 479px) and (max-width: 768px) {
   .main-feauters-content{
     margin-top: 18px;
   }
   .hids{
     padding: 0;
+  }
+  .bottom_zero_hids{
+    display: none;
   }
   .ui1-banner1-parent-solution-zerohack {
     background-size: auto;
@@ -503,6 +515,9 @@
   .ui1-banner1-content-solution-hids{
     width: 100%;
     text-align: center;
+  }
+  .bottom_zero_hids{
+    display: none;
   }
   .hids{
     padding: 0;

@@ -1893,7 +1893,7 @@ export default function Trace() {
                         />
                       </div>
                       <div className="line">
-                        <div className="bottom_zero"></div>
+                        <div className="bottom_zero_hids"></div>
                       </div>
 
                       <div className="col-lg-5 col-md-3 col-sm-12 square_content">
@@ -2104,7 +2104,7 @@ export default function Trace() {
                         />
                       </div>
                       <div className="line">
-                        <div className="bottom_zero"></div>
+                        <div className="bottom_zero_hids"></div>
                       </div>
 
                       <div className="col-lg-5 col-md-3 col-sm-12 square_content">

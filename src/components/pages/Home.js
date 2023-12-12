@@ -101,7 +101,44 @@ export default function Home() {
               <source src={product_video} type="video/mp4" />
             </video>
             <div className="art-products-inner">
-              <div className="art-products-inner-logo">
+            <div className="art-products-inner-logo">
+                <img
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                  src={whizrange}
+                  alt=""
+                  width="70px"
+                  height="50px"
+                  style={whiteImageStyle}
+                />
+              </div>
+              <div className="d-flex whizrange-product" >
+                {data.attributes.whizrangeproduct.map((whiz_box) => (
+                  <div
+                    className="art-product-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <div className="art-product-box">
+                      <div className="art-product-box-inner-whizrange">
+                        {/* <img src={whiz_box.image_url} alt="" /> */}
+                        <img src={whiz_box.logo_url} alt="" />
+                        <p>{whiz_box.description}</p>
+                      </div>
+                    </div>
+                    <a href={`${whiz_box.button.redirect_url}`} className="clipped-btns">
+                      {whiz_box.button.label}
+                    </a>
+                  </div>
+                ))}
+              </div>
+             
+            </div>
+
+            <div className="art-products-inner-whizrange">
+            <div className="art-products-inner-logo">
                 <img
                   data-aos="fade-down"
                   data-aos-delay="300"
@@ -139,42 +176,6 @@ export default function Home() {
                     </div>
                     <a href={`${box.button.redirect_url}`} className="clipped-btns">
                       {box.button.label}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="art-products-inner-whizrange">
-              <div className="art-products-inner-logo">
-                <img
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
-                  src={whizrange}
-                  alt=""
-                  width="70px"
-                  height="50px"
-                  style={whiteImageStyle}
-                />
-              </div>
-              <div className="d-flex whizrange-product" >
-                {data.attributes.whizrangeproduct.map((whiz_box) => (
-                  <div
-                    className="art-product-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
-                  >
-                    <div className="art-product-box">
-                      <div className="art-product-box-inner-whizrange">
-                        {/* <img src={whiz_box.image_url} alt="" /> */}
-                        <img src={whiz_box.logo_url} alt="" />
-                        <p>{whiz_box.description}</p>
-                      </div>
-                    </div>
-                    <a href={`${whiz_box.button.redirect_url}`} className="clipped-btns">
-                      {whiz_box.button.label}
                     </a>
                   </div>
                 ))}
