@@ -315,6 +315,9 @@
   .main-feauters-content{
     margin-top: 18px;
   }
+  .hids{
+    padding: 0;
+  }
   .ui1-banner1-parent-solution-zerohack {
     background-size: auto;
     left: 0;
@@ -500,6 +503,9 @@
   .ui1-banner1-content-solution-hids{
     width: 100%;
     text-align: center;
+  }
+  .hids{
+    padding: 0;
   }
   .main-feauters-content{
     margin-top: 18px;

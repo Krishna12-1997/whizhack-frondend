@@ -1885,7 +1885,7 @@ export default function Trace() {
                 <div className="threat mt-5">
                   <div className="container-fluid">
                     <div className="row">
-                      <div className="col-lg-6 col-md-6 col-sm-122">
+                      <div className="col-lg-6 col-md-6 col-sm-12 hids">
                         <img
                           src={firstSolution.hids_section.bg_image_url}
                           alt="bgimg"
@@ -1992,7 +1992,7 @@ export default function Trace() {
                           )
                         )}
                       </div>
-                      <div className="col-lg-6 col-md-6 col-sm-12">
+                      <div className="col-lg-6 col-md-6 col-sm-12 hids">
                         {firstSolution.hids_section.about_cybers.data.map(
                           (about) => (
                             <div
@@ -2096,7 +2096,7 @@ export default function Trace() {
                 <div className="threat mt-5">
                   <div className="container-fluid">
                     <div className="row">
-                      <div className="col-lg-6 col-md-6 col-sm-122">
+                      <div className="col-lg-6 col-md-6 col-sm-12 hids">
                         <img
                           src={firstSolution.hids_section.bg_image_url}
                           alt="bgimg"
@@ -2203,7 +2203,7 @@ export default function Trace() {
                           )
                         )}
                       </div>
-                      <div className="col-lg-6 col-md-6 col-sm-12">
+                      <div className="col-lg-6 col-md-6 col-sm-12 hids">
                         {firstSolution.hids_section.about_cybers.data.map(
                           (about) => (
                             <div
