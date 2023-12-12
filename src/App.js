@@ -17,6 +17,9 @@ import Blog_details from "./components/pages/blogs/Blog_details";
 import Contact from "./components/pages/contact/Contact";
 import Service from "./components/pages/services/Service";
 import Industry from "./components/pages/industry/Industry";
+import Privcy from "./components/pages/Privacy_policy";
+import Partner from "./components/pages/Partners";
+import Condition from "./components/pages/Terms_Conditions";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -39,6 +42,9 @@ function App() {
         <Route path="/blog/:blogId" element={<Blog_details/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/services" element={<Service/>} />
+        <Route path="/privacy" element={<Privcy/>} />
+        <Route path="/partners" element={<Partner/>} />
+        <Route path="/termsandcondition" element={<Condition/>} />
       </Routes>
       <Footer/>
     </div>
