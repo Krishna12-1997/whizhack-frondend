@@ -13,15 +13,6 @@ import whizrange from "../images/whizrange logo.png";
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {
-  // const [ref, inView] = useInView({
-  //   triggerOnce:true,
-  //     });
-  //     const [isVisible, setIsVisible] = useState(false);
-  //     useEffect(()=>{
-  //         if(inView){
-  //           setIsVisible(true);
-  //         }
-  //     }, [inView]);
 
   const uri =
     "http://15.207.20.62:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";

@@ -256,27 +256,18 @@ transition: top 0.3s ease, color 0.3s ease;
   height: 135vh;
   position: relative;
 }
-/* .art-products::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  z-index: 1000;
-  left: 22%;
-  width: 40px;
-  height: 100px;
-  background-color: rgba(255, 0, 0, 0.5);
-  transform: rotate(17deg);
-} */
+
 .second-banner::before{
   content: "";
   position: absolute;
   top: 0;
   z-index: 1000;
-  left: 39%;
-  width: 50px;
-  height: 135px;
+  left: 36%;
+  width: 270px;
+  height: 145px;
   background-color: rgba(255, 0, 0, 0.5);
-  transform: rotate(16deg);
+  /* transform: rotate(-8deg); */
+  clip-path: polygon(24% 0, 42% 0%, 29% 101%, 10% 100%);
 }
 .art-products video{
   width: 100%;
