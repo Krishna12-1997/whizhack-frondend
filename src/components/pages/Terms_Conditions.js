@@ -6,7 +6,7 @@ import useFetch from "../../hooks/useFetch";
 import service_banner_icon from "../images/decors/service_banner_icon.png";
 
 export default function Terms_Conditions() {
-  const uri = "http://localhost:1337/api/terms-condition";
+  const uri = "http://15.207.20.62:1337/api/terms-condition";
   const { loading, error, data } = useFetch(uri);
   // 15.207.20.62
   if (loading) {

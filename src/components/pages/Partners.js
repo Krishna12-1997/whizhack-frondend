@@ -9,7 +9,7 @@ import module1 from "../images/product-logos/module2.svg";
 
 export default function Partners() {
   const uri =
-    "http://localhost:1337/api/partner?populate=partner_contents.partner_card";
+    "http://15.207.20.62:1337/api/partner?populate=partner_contents.partner_card";
   const { loading, error, data } = useFetch(uri);
   // 15.207.20.62 15.207.20.62
   // console.log(data.attributes);
