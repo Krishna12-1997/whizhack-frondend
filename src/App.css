@@ -230,7 +230,7 @@ transition: top 0.3s ease, color 0.3s ease;
 .second-banner {
   height: 105vh;
   background-image: url(./components/images/home-bg21.png);
-  background-size: 34% 100%;
+  background-size: 60% 100%;
   background-repeat: no-repeat;
   display: flex;
   position: relative;
@@ -244,7 +244,7 @@ transition: top 0.3s ease, color 0.3s ease;
 }
 .art-product-content {
   height: 105vh;
-  width: 20%;
+  width: 31%;
 }
 .art-products {
   /* height: 135vh; */
@@ -272,11 +272,11 @@ transition: top 0.3s ease, color 0.3s ease;
   position: absolute;
   top: 0;
   z-index: 1000;
-  left: 34%;
+  left: 39%;
   width: 50px;
   height: 135px;
   background-color: rgba(255, 0, 0, 0.5);
-  transform: rotate(18deg);
+  transform: rotate(16deg);
 }
 .art-products video{
   width: 100%;
@@ -291,7 +291,7 @@ transition: top 0.3s ease, color 0.3s ease;
 .art-product-content-inner {
   position: absolute;
   width: 25%;
-  left: 1%;
+  left: 6%;
   bottom: 47%;
 }
 .art-product-content-inner h3 {
@@ -303,7 +303,7 @@ transition: top 0.3s ease, color 0.3s ease;
   justify-content: right;
   align-items: center; */
   position: absolute;
-  bottom: 8%;
+  bottom: 6%;
   width: 75%;
   right: 2%;
 
@@ -346,8 +346,13 @@ transition: top 0.3s ease, color 0.3s ease;
 }
 .art-product-box-inner-whizrange {
   position: relative;
-  text-align: right;
+  text-align: center;
   padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 .art-product-box-inner h2{
   text-align: center;
@@ -367,11 +372,13 @@ transition: top 0.3s ease, color 0.3s ease;
 }
 .art-product-box-inner-whizrange img:first-child {
   width: 80%;
+  margin-left: 72px;
   /* padding-right: 39%; */
 }
 .art-product-box-inner img {
   width: 50%;
   padding-right: 25%;
+  margin-right: 17px;
   margin-bottom: 5%;
 }
 .art-product-box-inner-whizrange img {

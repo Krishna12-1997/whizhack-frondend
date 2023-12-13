@@ -24,7 +24,7 @@ export default function Home() {
   //     }, [inView]);
 
   const uri =
-    "http://15.207.20.62:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
+    "http://localhost:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
   const { loading, error, data } = useFetch(uri);
   // 15.207.20.62 15.207.20.62
   // console.log(data.attributes);
@@ -49,10 +49,9 @@ export default function Home() {
     return <p>Error: {error.message}</p>;
   }
 
-  const colorizeImage = (color) => {
-    return {
-      filter: `hue-rotate(${color}deg)`,
-    };
+  const colorizeImageStyle = {
+    filter: 'brightness(80%) saturate(100%)',
+   color: '#a002fb',
   };
 
   const whiteImageStyle = {
@@ -108,8 +107,8 @@ export default function Home() {
                   data-aos-duration={1500}
                   src={whizrange}
                   alt=""
-                  width="70px"
-                  height="50px"
+                  width="100px"
+                  height="70px"
                   style={whiteImageStyle}
                 />
               </div>
@@ -162,7 +161,7 @@ export default function Home() {
                         <img
                           src={box.image_url}
                           alt=""
-                          style={colorizeImage(120)}
+                          style={{...colorizeImageStyle, objectFit: 'cover'}}
                         />
                         {box.text_logo ? (
                           <h2>{box.text_logo}</h2>

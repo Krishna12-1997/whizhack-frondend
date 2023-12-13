@@ -18,6 +18,7 @@
   }
   .art-product-box-inner img {
     padding-right: 0;
+    margin-right: 0;
   }
   .footer-section {
     padding-bottom: 6%;
@@ -315,7 +316,7 @@
   }
   .art-products-inner {
     position: absolute;
-    bottom: 5%;
+    bottom: 3%;
     width: 100%;
     left: 2%;
   }
