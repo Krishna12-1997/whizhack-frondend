@@ -1163,6 +1163,10 @@ a:hover {
   display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+.whizrange-product{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 @media only screen and (min-width: 480px) and (max-width: 768px){
   .second-banner::before{
     display: none;

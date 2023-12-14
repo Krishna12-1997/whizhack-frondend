@@ -103,7 +103,7 @@ export default function Home() {
                   style={whiteImageStyle}
                 />
               </div>
-              <div className="d-flex whizrange-product" >
+              <div className=" whizrange-product" >
                 {data.attributes.whizrangeproduct.map((whiz_box) => (
                   <div
                     className="art-product-box-outer"
