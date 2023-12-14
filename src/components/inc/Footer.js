@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 export default function Footer() {
 
-  const uri = "http://15.207.20.62:1337/api/footer?populate=left_footer";
+  const uri = "http://localhost:1337/api/footer?populate=left_footer";
 const { loading, error, data } = useFetch(uri);
 // console.log(data.attributes);
 if (loading) {
@@ -20,7 +20,7 @@ if (error) {
       <section className="footer-section">
         <div className="container-fluid ">
           <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-12 footer_link"  style={{
+            <div className="col-lg-6 col-md-12 col-sm-12 footer_link"  style={{
                   backgroundColor: "#07002F",
                 }}>
               <div
@@ -72,7 +72,7 @@ if (error) {
               </div>
             </div>
 
-            <div className="col-lg-6 col-md-6 col-sm-12 mt-5 contact">
+            <div className="col-lg-6 col-md-12 col-sm-12 mt-5 contact">
               <div className="info contact-details">
               <h3 className=" footer-contact-title">Contact Us</h3>
               <div className=" footer-newsletter">

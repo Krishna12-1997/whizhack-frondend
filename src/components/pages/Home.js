@@ -8,14 +8,14 @@ import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../hooks/useFetch";
 import ran_video from "../images/video/Ransomware Section.mp4";
 import product_video from "../images/video/product BG.mp4";
-import zerohack from "../images/2Zero hack.png";
+import zerohack from "../images/zerohack.png";
 import whizrange from "../images/whizrange logo.png";
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {
 
   const uri =
-    "http://15.207.20.62:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
+    "http://localhost:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
   const { loading, error, data } = useFetch(uri);
   // 15.207.20.62 15.207.20.62
   // console.log(data.attributes);

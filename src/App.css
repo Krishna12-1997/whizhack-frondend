@@ -229,8 +229,8 @@ transition: top 0.3s ease, color 0.3s ease;
 }
 .second-banner {
   height: 105vh;
-  background-image: url(./components/images/home-bg21.png);
-  background-size: 60% 100%;
+  background-image: url(./components/images/home-bg.png);
+  background-size: 78% 100%;
   background-repeat: no-repeat;
   display: flex;
   position: relative;
@@ -244,13 +244,13 @@ transition: top 0.3s ease, color 0.3s ease;
 }
 .art-product-content {
   height: 105vh;
-  width: 31%;
+  width: 0%;
 }
 .art-products {
   /* height: 135vh; */
   /* background-image: url(./components/images/art-bg.png); */
   background-size: 100% 100%;
-  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(44% 0, 100% 0, 100% 100%, 0% 100%);
   width: 100%;
   background-repeat: no-repeat;
   height: 135vh;
@@ -262,12 +262,12 @@ transition: top 0.3s ease, color 0.3s ease;
   position: absolute;
   top: 0;
   z-index: 1000;
-  left: 36%;
+  left: 34%;
   width: 270px;
   height: 145px;
   background-color: rgba(255, 0, 0, 0.5);
   /* transform: rotate(-8deg); */
-  clip-path: polygon(24% 0, 42% 0%, 29% 101%, 10% 100%);
+  clip-path: polygon(47% 0, 67% 0%, 29% 100%, 8% 100%);
 }
 .art-products video{
   width: 100%;
@@ -281,9 +281,9 @@ transition: top 0.3s ease, color 0.3s ease;
 
 .art-product-content-inner {
   position: absolute;
-  width: 25%;
-  left: 6%;
-  bottom: 47%;
+    width: 23%;
+    left: 6%;
+    bottom: 59%;
 }
 .art-product-content-inner h3 {
   font-size: 2rem;
@@ -294,9 +294,9 @@ transition: top 0.3s ease, color 0.3s ease;
   justify-content: right;
   align-items: center; */
   position: absolute;
-  bottom: 6%;
-  width: 75%;
-  right: 2%;
+    bottom: 4%;
+    width: 55%;
+    right: 2%;
 
 }
 .art-products-inner-logo{
@@ -308,7 +308,7 @@ transition: top 0.3s ease, color 0.3s ease;
   align-items: center; */
   position: absolute;
   top: 3%;
-  width: 75%;
+  width: 55%;
   right: 2%;
   border-bottom: 2px solid red;
   padding: 0 0 3% 0;
@@ -324,7 +324,7 @@ transition: top 0.3s ease, color 0.3s ease;
   height: 40vh;
   margin: 15px 15px;
   background-color: #fff;
-  clip-path: polygon(8% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
+  clip-path: polygon(17% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
   margin-bottom: 22px;
 }
 .whizrange-product{
@@ -1160,7 +1160,8 @@ a:hover {
   /* clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%); */
 }
 .zerohack-product{
-  display: flex;
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 @media only screen and (min-width: 480px) and (max-width: 768px){
   .second-banner::before{

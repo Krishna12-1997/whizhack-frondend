@@ -120,3 +120,40 @@
     color: #62666a;
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer_link {
+    clip-path: none;
+  }
+  .list-unstyled {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-section {
+    background: #07002f;
+  }
+  .footer-section .footer{
+    padding: 0 3% 3% 10%;
+  }
+  .footer-copyright {
+    display: none;
+  }
+  .footer-contact-title{
+    color: #fff;
+  }
+  .con {
+    color: #fff;
+  }
+  .contact .contact-details{
+    padding: 0 10% 10%;
+  }
+  .location .address {
+    color: #62666a;
+  }
+  .location svg path , .email svg path, .site svg path, .mobile svg path {
+    fill: #183893;
+  }
+  .location .address, .email .address, .site .address, .mobile .address {
+    color: #62666a;
+  }
+}

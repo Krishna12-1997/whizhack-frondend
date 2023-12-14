@@ -801,6 +801,7 @@
     background: url(./components/images/tablet/banner4.png);
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 5%;
   }
   .form-row .div-left {
     display: none;
@@ -834,6 +835,8 @@
   }
   .art-products-inner-whizrange{
     width: 100%;
+    top: 0;
+    /* left: 1%; */
   }
   .art-product-content {
     width: 100%;
@@ -847,11 +850,23 @@
     margin-right: auto;
     width: 22%;
   }
+  .art-products video {
+    width: 100%;
+    object-fit: cover;
+    height: 834px;
+  }
   .art-products-inner{
     position: absolute;
-    bottom: 0;
+    bottom: 18px;
     width: 100%;
   }
+  .fourth-banner{
+    display: block;
+  }
+  .art-product2-content-inner{
+   width: 100%;
+  }
+   
   .banner-text h2 {
     margin: 0 2%;
     text-align: center;
