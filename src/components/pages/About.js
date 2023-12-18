@@ -9,7 +9,7 @@ import AboutSlider from "../inc/AboutSlider";
 
 const About = () => {
   const uri =
-    "http://localhost:1337/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
+    "http://15.207.20.62:1337/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
   const { loading, error, data } = useFetch(uri);
   if (loading) {
     return <p>Loading data...</p>;
