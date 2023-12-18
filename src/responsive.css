@@ -316,9 +316,9 @@
   }
   .art-products-inner {
     position: absolute;
-    bottom: 3%;
+    bottom: 4%;
     width: 100%;
-    left: 2%;
+    left: 0%;
   }
   .art-product-content-inner {
     position: static;

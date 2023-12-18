@@ -9,7 +9,7 @@ import AboutSlider from "../inc/AboutSlider";
 
 const About = () => {
   const uri =
-    "http://15.207.20.62:1337/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
+    "http://localhost:1337/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
   const { loading, error, data } = useFetch(uri);
   if (loading) {
     return <p>Loading data...</p>;
@@ -22,7 +22,7 @@ const About = () => {
   // Assuming data is available
   const header = data.attributes.header;
   const management = header.management;
-  const story = header.story; 
+  const story = header.story;
 
   if (data && data.attributes) {
     return (
@@ -47,14 +47,21 @@ const About = () => {
             }}
           >
             <div>
-              <div className="heading mb-3" data-aos="fade-down" data-aos-delay="300" data-aos-duration={1500}
+              <div
+                className="heading mb-3"
+                data-aos="fade-down"
+                data-aos-delay="300"
+                data-aos-duration={1500}
               >
                 {data.attributes.header.title}
               </div>
 
-              <p >
+              <p>
                 <div
-                 className="lead" data-aos="fade-up" data-aos-delay="300" data-aos-duration={1500}
+                  className="lead"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
                 >
                   {data.attributes.header.content}
                 </div>
@@ -73,27 +80,25 @@ const About = () => {
                   className="col-md-4 col-sm-8 mx-auto mt-2 mb-2 rounded text-left"
                   data-aos="fadeIn"
                 >
-                  <img
-                    src={data.attributes.header.story.image_url}
-                    alt="img"
-                    style={{width: "100%"}}
-                  />
-                   <div className="play_btn">
-                  <img
-                    src={data.attributes.header.story.play_btn_url}
-                    alt="play_btn"
-                  />
-                </div>
+                  {/* <video muted loop autoPlay="autoplay">
+                    <source src={data.attributes.header.story.image_url} type="video/mp4" />
+                  </video> */}
+                  <iframe
+                    width="640"
+                    height="390"
+                    src={`https://www.youtube.com/embed/JQD3n2Rh1uM`}
+                    title="YouTube Video"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
                 </div>
 
                 <div
                   className="col-lg-6 col-md-6 col-sm-9 mx-auto mt-2 mb-2 rounded "
                   data-aos="zoom-in"
-                  style={{padding: "4% 6%"}}
+                  style={{ padding: "2% 6%" }}
                 >
-                  <div
-                   className="about_story mb-2"
-                  >
+                  <div className="about_story mb-2">
                     {data.attributes.header.story.title}
                   </div>
                   <div
@@ -208,7 +213,9 @@ const About = () => {
                             }}
                           >
                             {" "}
-                            <img src={lin} alt="" height="" width="100%"/>
+                            <a href={ab.linkedin_url}>
+                              <img src={lin} alt="" height="" width="100%" />
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -226,40 +233,53 @@ const About = () => {
 
         {/* About page vision mission page start */}
 
-      <section className="about-vision-section">
-                  <div className="container">
-                    <div className="row mission-row justify-content-center">
-                      <div className="col-lg-6">
-                        <div className="mission-content" data-aos="fade-right" data-aos-delay="300" data-aos-duration={1500}>
-                          <p>To be Ranked #1 Vertically Integrated Cyber Security Innovation Player</p>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="mission-vector">
-                          <img src={mission_icon} alt="" />
-                          <h4>MISSION</h4>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div className="row vision-row justify-content-center">
-                      <div className="col-lg-6">
-                      <div className="vision-vector">
-                          <img src={vision_icon} alt="" />
-                          <h4>VISION</h4>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                       
-                        <div className="vision-content" data-aos="fade-down" data-aos-delay="300" data-aos-duration={1500}>
-                          <p>Invest in Deep Research to create globally respected Digital Products and Empowered Human Capital</p>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>      
-      </section>
-      {/* About page vision mission page end */}
+        <section className="about-vision-section">
+          <div className="container">
+            <div className="row mission-row justify-content-center">
+              <div className="col-lg-6">
+                <div
+                  className="mission-content"
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <p>
+                    To be Ranked #1 Vertically Integrated Cyber Security
+                    Innovation Player
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="mission-vector">
+                  <img src={mission_icon} alt="" />
+                  <h4>MISSION</h4>
+                </div>
+              </div>
+            </div>
+            <div className="row vision-row justify-content-center">
+              <div className="col-lg-6">
+                <div className="vision-vector">
+                  <img src={vision_icon} alt="" />
+                  <h4>VISION</h4>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div
+                  className="vision-content"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <p>
+                    Invest in Deep Research to create globally respected Digital
+                    Products and Empowered Human Capital
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* About page vision mission page end */}
 
         {/* -------------------- Advisors Start----------------------------- */}
         <section>
@@ -300,7 +320,7 @@ const About = () => {
                 <div
                   style={{
                     color: "#1D1D1D",
-                    fontSize:"22px",
+                    fontSize: "22px",
                     fontStyle: "normal",
                     fontWeight: 600,
                     lineHeight: "normal",
@@ -336,7 +356,7 @@ const About = () => {
                 <div
                   style={{
                     color: "#62666A",
-                    fontSize:"16px",
+                    fontSize: "16px",
                     fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "normal",
@@ -373,8 +393,14 @@ const About = () => {
             </div>
             <div className="row">
               {header.alliance.strategicalliances.data.map((alliance) => (
-                <div className="col-lg-3 col-md-8 col-sm-12 mx-auto mt-5 mb-4 pt-2 pb-2 text-center "data-aos="fade-up">
-                  <div className="shadow rounded p-5" style={{height: "100%"}}>
+                <div
+                  className="col-lg-3 col-md-8 col-sm-12 mx-auto mt-5 mb-4 pt-2 pb-2 text-center "
+                  data-aos="fade-up"
+                >
+                  <div
+                    className="shadow rounded p-5"
+                    style={{ height: "100%" }}
+                  >
                     <div className="mb-3">
                       <img
                         src={alliance.attributes.logo_url}
@@ -387,11 +413,12 @@ const About = () => {
                       style={{
                         color: "#1D1D1D",
                         // fontFamily: "Pulse",
-                        fontSize:"20px",
+                        fontSize: "20px",
                         fontStyle: "normal",
                         fontWeight: 600,
                         lineHeight: "normal",
-                      }} className="mb-3"
+                      }}
+                      className="mb-3"
                     >
                       {alliance.attributes.title}
                     </div>
@@ -404,7 +431,6 @@ const About = () => {
                         fontWeight: 400,
                         lineHeight: "normal",
                       }}
-                      
                     >
                       {alliance.attributes.description}
                     </div>
@@ -425,11 +451,13 @@ const About = () => {
                   <div
                     style={{
                       color: "#07002F",
-                      fontSize:"22px",
+                      fontSize: "22px",
                       fontStyle: "normal",
                       fontWeight: 700,
                     }}
-                    data-aos="fade-right" data-aos-delay="300" data-aos-duration={1500}
+                    data-aos="fade-right"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
                   >
                     {header.partnership.title}
                   </div>
@@ -439,18 +467,22 @@ const About = () => {
                       marginTop: "20px",
                       color: "#62666A",
                       // fontFamily: "Satoshi",
-                      fontSize:"16px",
+                      fontSize: "16px",
                       fontStyle: "normal",
                       fontWeight: 500,
                     }}
-                    data-aos="fade-right" data-aos-delay="300" data-aos-duration={1500}
+                    data-aos="fade-right"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
                   >
                     {header.partnership.description}
                     <span
                       style={{ color: "#185893", textDecorationLine: "none" }}
                     >
                       {" "}
-                      {header.partnership.color_title}
+                      <a href="mailto:partnership@whizhack.com">
+                        {header.partnership.color_title}
+                      </a>
                     </span>
                   </div>
                 </div>
@@ -476,14 +508,14 @@ const About = () => {
         <section>
           <div className="recognition">
             <div className="">
-              <div className="row" style={{paddingTop: "60px"}}>
+              <div className="row" style={{ paddingTop: "60px" }}>
                 <div className="col-md-12 col-sm-12 text-center mt-5">
                   <h2
                     style={{
                       color: "#fff",
                       // fontFamily: "Pulse",
                       fontWeight: 600,
-                      fontSize: "50px"
+                      fontSize: "50px",
                     }}
                   >
                     {header.recognition.title}

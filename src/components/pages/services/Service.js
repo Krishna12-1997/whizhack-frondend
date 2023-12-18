@@ -77,17 +77,16 @@ export default function Service() {
             <div className="col-lg-6">
               <div className="service-left-video-parent">
                 <div className="service-left-bg-video">
-                  {/* <img src={service_banner2_icon} className='' alt="" /> */}
-                  {/* <video muted loop autoPlay="autoplay"> */}
-                  <img src={data.attributes.section.image_url} alt="sou_img" />
-                  {/* </video> */}
+                <iframe
+                    width="640"
+                    height="390"
+                    src={`https://www.youtube.com/embed/COLhMb88AYs`}
+                    title="YouTube Video"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-                <div className="play_btn">
-                  <img
-                    src={data.attributes.section.play_btn_url}
-                    alt="play_btn"
-                  />
-                </div>
+              
               </div>
             </div>
             <div className="col-lg-6">
@@ -218,13 +217,15 @@ export default function Service() {
                         </p>
                         <div className="ot-security-lists">
                           <ul className="security-list">
-                          {ot.service_links.data.map((link) => (
-                              <div>
-                                {link.attributes.assessment.map((link_ass) => (
+                          {ot.service_links.data.map((link, index) => (
+                              <div key={index}>
+                                {link.attributes.assessment.map((link_ass, subIndex) => (
                                   <li
+                                  key={subIndex}
                                     data-aos="fade-right"
                                     data-aos-delay="300"
                                     data-aos-duration={1500}
+                                    className={subIndex % 2 === 0 ? 'even' : 'odd'}
                                   >
                                     <p>{link_ass.label}</p>
                                   </li>

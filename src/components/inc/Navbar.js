@@ -39,7 +39,7 @@ export default function Navbar() {
       ) {
         const dropdownItems = menuItem.sections.data.map((section, index) =>
 
-          label === "Solutions" ? (
+          label === "Product" ? (
             <div>
               <div className="row mt-5">
                 <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
@@ -173,7 +173,7 @@ export default function Navbar() {
         // For regular menu items
         return (
           <li key={key} className="nav-item">
-            <Link to={`/${label}`} className="nav-link">
+            <Link to={`/${menuItem.icon}`} className="nav-link">
               {label}
             </Link>
           </li>

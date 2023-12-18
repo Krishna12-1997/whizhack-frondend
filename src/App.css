@@ -1,12 +1,13 @@
 .App {
   text-align: center;
 }
+
 .fade-in-text {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 4s ease-in-out, transform 1s ease-out;
 }
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
   color: #185893 !important;
 }
 .fade-in-text-title {
@@ -153,7 +154,19 @@ transition: top 0.3s ease, color 0.3s ease;
   border: none;
 } */
 .navbar-nav .nav-link {
+  opacity: 1;
+  transition: opacity 0.3s ease; 
   color: #fff;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link:hover {
+    opacity: 1;
+}
+
+/* Styling for the adjacent sibling of the active nav link */
+.navbar-nav .nav-item.active + .nav-item .nav-link {
+    opacity: 0.5;
 }
 .navbar-expand-sm .navbar-nav .dropdown-menu {
   height: 70vh;
@@ -302,6 +315,10 @@ transition: top 0.3s ease, color 0.3s ease;
 .art-products-inner-logo{
   text-align: center;
 }
+.art-products-inner-logo-zerohack img {
+  width: 100%;
+  height: 55px;
+}
 .art-products-inner-whizrange {
   /* display: flex;
   justify-content: right;
@@ -345,7 +362,7 @@ transition: top 0.3s ease, color 0.3s ease;
   justify-content: center;
   height: 100%;
 }
-.art-product-box-inner h2{
+.art-product-box-inner h3{
   text-align: center;
   font-weight: normal;
   font-family: sans-serif;
@@ -358,7 +375,7 @@ transition: top 0.3s ease, color 0.3s ease;
   color: blueviolet;
 }
 .art-product-box-inner img:first-child {
-  width: 60%;
+  width: 53%;
   /* padding-right: 39%; */
 }
 .art-product-box-inner-whizrange img:first-child {
@@ -731,7 +748,7 @@ a:hover {
   position: absolute;
   bottom: 20%;
   width: 75%;
-  right: 8%;
+  right: 0%;
 }
 .art-product2-content-inner p {
   font-size: 1rem;
@@ -739,8 +756,8 @@ a:hover {
 }
 .art-product2-box {
   padding: 3% 3% 1% 3%;
-  width: 200px;
-  height: 280px;
+  width: 85%;
+  height: 40vh;
   margin: 15px 15px;
   background-color: #fff;
   clip-path: polygon(19% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
@@ -756,13 +773,14 @@ a:hover {
   font-size: 1.5rem;
   padding: 10px 0 10px 35px;
   text-align: center;
+  color: #1D1D1D;
 }
 .art-product2-box-inner img {
   width: 60%;
   margin-bottom: 5%;
 }
 .art-product2-box-inner img:nth-child(2) {
-  width: 45%;
+  width: 29%;
   padding-top: 5%;
   padding-bottom: 5%;
   margin-left: auto;
@@ -773,8 +791,8 @@ a:hover {
   color: #6d6d6d;
   font-size: 1rem;
   font-weight: 600;
-  padding-right: 40px;
-  padding-left: 40px;
+  /* padding-right: 40px;
+  padding-left: 40px; */
 }
 .art-product2-box-outer {
   text-align: npmstarcenter;
@@ -1469,8 +1487,8 @@ a:hover {
   }
   .whizrange-product{
     padding: 0;
+    grid-template-columns: repeat(1, 1fr);
     border-bottom: none;
-    flex-direction: column;
   }
   .zerohack-product {
     display: block;

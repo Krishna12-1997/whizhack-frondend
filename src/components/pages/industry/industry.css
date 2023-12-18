@@ -360,3 +360,93 @@ text-align: center;
         height: 25%;
     }
 }
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .tab-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .industry-products-single{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .industry-products .column-title{
+        margin-top: 6%;
+    }
+    .industry-type .column-title, .industry-products .column-title{
+        text-align: center;
+    }
+    .industry-type{
+        padding: 0;
+        /* border-bottom: 1px solid #000; */
+        border-right: none;
+    }
+    .industry-type .nav-pills .nav-link {
+        width: fit-content;
+        float: left;
+        padding: 2% 3%;
+    }
+    .industry-type .nav-pills .nav-link h5{
+        display: inline-block;
+    }
+    .industry-type .nav-pills .nav-link p{
+        display: none;
+    }
+    .industry-type .nav-pills{
+        flex-direction: row;
+    }
+    .industry-left-bg-video img{
+        height: auto;
+    }
+    .tag{
+        display: grid;
+        grid: auto-flow / 1fr 1fr 1fr;
+        border-bottom: 1px solid #000;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+       
+    }
+    .industry-left-bg-video{
+        clip-path: none;
+    }
+    .industry-left-video-parent::after{
+        background: url(../../images/decors/mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: 50%;
+        top: 0;
+        height: 7%;
+        width: 65%;
+        z-index: 9;
+    }
+    .industry-right-content .section-title h3{
+        text-align: center;
+    }
+    .industry-right-content{
+       padding: 13% 8% 10% 13%;
+        background: url(../../images/tablet/banner2.png);
+        background-repeat: no-repeat;
+        background-size: 180% 110%;
+        background-position: 23%;
+        height: 100vh;
+        text-align: center;
+    }
+    .industry-section2 .container-fluid .row{
+        flex-direction: column-reverse;
+    }
+    .industry-section2{
+        height: auto;
+        margin-top: 0;
+        background:none;
+    }
+    .industry-section2 .container-fluid .row .col-lg-6{
+        padding: 0;
+    }
+    .industry-banner-section{
+        margin-top: 10% !important;
+        /* background-size: cover; */
+    }
+}

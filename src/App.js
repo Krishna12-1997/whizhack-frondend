@@ -20,6 +20,7 @@ import Industry from "./components/pages/industry/Industry";
 import Privcy from "./components/pages/Privacy_policy";
 import Partner from "./components/pages/Partners";
 import Condition from "./components/pages/Terms_Conditions";
+import Ransomeware from "./components/pages/ransomeware/Ransomeware";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -35,7 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/industry" element={<Industry />} />
-        <Route path="Solutions/:solutionName" element={<Trace />} />
+        <Route path="Product/:solutionName" element={<Trace />} />
         {/* <Route path="/npti" element={<Npti />} /> */}
         <Route path="Trainings/:paramName" element={<Guru/>} />
         <Route path="/blog" element={<Blog />} />
@@ -45,6 +46,7 @@ function App() {
         <Route path="/privacy" element={<Privcy/>} />
         <Route path="/partners" element={<Partner/>} />
         <Route path="/termsandcondition" element={<Condition/>} />
+        <Route path="/ransomeware" element={<Ransomeware/>} />
       </Routes>
       <Footer/>
     </div>

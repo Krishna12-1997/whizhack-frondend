@@ -8,7 +8,7 @@ import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../hooks/useFetch";
 import ran_video from "../images/video/Ransomware Section.mp4";
 import product_video from "../images/video/product BG.mp4";
-import zerohack from "../images/zerohack.png";
+import zerohack from "../images/2Zero.svg";
 import whizrange from "../images/whizrange logo.png";
 import { useInView } from "react-intersection-observer";
 
@@ -128,7 +128,7 @@ export default function Home() {
             </div>
 
             <div className="art-products-inner-whizrange">
-            <div className="art-products-inner-logo">
+            <div className="art-products-inner-logo-zerohack">
                 <img
                   data-aos="fade-down"
                   data-aos-delay="300"
@@ -155,7 +155,7 @@ export default function Home() {
                           style={{...colorizeImageStyle, objectFit: 'cover'}}
                         />
                         {box.text_logo ? (
-                          <h2>{box.text_logo}</h2>
+                          <h3>{box.text_logo}</h3>
                         ) : (
                           <>
                             <img src={box.logo_url} alt="" />
@@ -229,6 +229,7 @@ export default function Home() {
           >
             <div className="art-products2-inner">
               {data.attributes.service_compo.service_box.map((box) => (
+                <a href={`${box.redirect_url}`}>
                 <div
                   className="art-product2-box-outer"
                   key={box.id}
@@ -241,9 +242,11 @@ export default function Home() {
                       <h5>{box.head}</h5>
                       <img src={box.image_url} alt="" />
                       <p>{box.para}</p>
+                      
                     </div>
                   </div>
                 </div>
+                </a>
               ))}
             </div>
           </div>
@@ -381,7 +384,7 @@ export default function Home() {
                     data-aos="fade-down"
                     data-aos-delay="400"
                     data-aos-duration={1500}
-                    href="/"
+                    href="/ransomeware"
                     className="ransomeware-btns"
                   >
                     Know More

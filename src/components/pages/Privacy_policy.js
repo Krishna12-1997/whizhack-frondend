@@ -80,7 +80,7 @@ export default function Privacy_policy() {
                   <h4>Effective Date: [Date]</h4>
                 </div>
                 <p>
-                  Thank you for visiting www.whizhack.in! This Privacy Policy
+                  Thank you for visiting www.whizhack.com! This Privacy Policy
                   outlines how we collect, use, and protect your personal
                   information.
                 </p>
