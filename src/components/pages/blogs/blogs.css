@@ -12,6 +12,7 @@
   /* object-fit: contain;
     object-position: right; */
 }
+
 .blog-banner1-content {
   position: relative;
   background: url(../../images/bg/bg-green.png);
@@ -86,11 +87,23 @@
   display: inline-block;
 }
 .blog-title .blog-view-all {
+  
+}
+.blog-view-all {
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
   display: inline-block;
+}
+
+.blog-view-all.view-less {
+  height: auto;
 }
 .blog-view-all a {
   color: #a3a3a3;
   text-decoration: none;
+}
+.blog-view-all i{
+  padding: 0px 10px;
 }
 .blog-section1-detail {
   position: relative;

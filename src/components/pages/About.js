@@ -110,7 +110,11 @@ const About = () => {
                       wordWrap: "break-word",
                     }}
                   >
-                    {data.attributes.header.story.content}
+                    {data.attributes.header.story.content
+                        .split("\n")
+                        .map((paragraph, index) => (
+                          <p key={index}>{paragraph}</p>
+                        ))}
                   </div>
                 </div>
               </div>
@@ -122,8 +126,6 @@ const About = () => {
         {/* -------------------- Management Team Start----------------------------- */}
 
         <div>
-          {/* {ab.management.map((mana, i) => (
-          <div> */}
           <section className="management">
             <div className="container-fluid">
               <div className="row">
@@ -193,7 +195,11 @@ const About = () => {
                             wordWrap: "break-word",
                           }}
                         >
-                          {ab.description}
+                          {ab.description
+                        .split("\n")
+                        .map((paragraph, index) => (
+                          <p key={index}>{paragraph}</p>
+                        ))}
                         </div>
 
                         <div
@@ -363,7 +369,11 @@ const About = () => {
                   }}
                   className="mt-3"
                 >
-                  {header.Advisor.description}
+                  {header.Advisor.description
+                        .split("\n")
+                        .map((paragraph, index) => (
+                          <p key={index}>{paragraph}</p>
+                        ))}
                 </div>
               </div>
             </div>
@@ -394,7 +404,7 @@ const About = () => {
             <div className="row">
               {header.alliance.strategicalliances.data.map((alliance) => (
                 <div
-                  className="col-lg-3 col-md-8 col-sm-12 mx-auto mt-5 mb-4 pt-2 pb-2 text-center "
+                  className="col-lg-4 col-md-8 col-sm-12 mx-auto mt-5 mb-4 pt-2 pb-2 text-center "
                   data-aos="fade-up"
                 >
                   <div
@@ -475,7 +485,11 @@ const About = () => {
                     data-aos-delay="300"
                     data-aos-duration={1500}
                   >
-                    {header.partnership.description}
+                    {header.partnership.description
+                        .split("\n")
+                        .map((paragraph, index) => (
+                          <p key={index}>{paragraph}</p>
+                        ))}
                     <span
                       style={{ color: "#185893", textDecorationLine: "none" }}
                     >

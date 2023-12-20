@@ -105,7 +105,11 @@ export default function Service() {
                   data-aos-delay="300"
                   data-aos-duration={1500}
                 >
-                  {data.attributes.section.content}
+                  {data.attributes.section.content
+                        .split("\n")
+                        .map((paragraph, index) => (
+                          <p key={index}>{paragraph}</p>
+                        ))}
                 </p>
               </div>
             </div>

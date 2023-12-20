@@ -13,9 +13,8 @@ import whizrange from "../images/whizrange logo.png";
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {
-
   const uri =
-    "http://15.207.20.62:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
+    "http://15.207.20.62:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
   const { loading, error, data } = useFetch(uri);
   // 15.207.20.62 15.207.20.62
   // console.log(data.attributes);
@@ -41,12 +40,13 @@ export default function Home() {
   }
 
   const colorizeImageStyle = {
-    filter: 'brightness(80%) saturate(100%)',
-   color: '#a002fb',
+    filter: "brightness(80%) saturate(100%)",
+    color: "#a002fb",
   };
 
   const whiteImageStyle = {
-    filter: 'brightness(0) invert(1) sepia(1) brightness(8) saturate(100) hue-rotate(0deg)',
+    filter:
+      "brightness(0) invert(1) sepia(1) brightness(8) saturate(100) hue-rotate(0deg)",
   };
 
   return (
@@ -91,7 +91,7 @@ export default function Home() {
               <source src={product_video} type="video/mp4" />
             </video>
             <div className="art-products-inner">
-            <div className="art-products-inner-logo">
+              <div className="art-products-inner-logo">
                 <img
                   data-aos="fade-down"
                   data-aos-delay="300"
@@ -103,7 +103,7 @@ export default function Home() {
                   style={whiteImageStyle}
                 />
               </div>
-              <div className=" whizrange-product" >
+              <div className=" whizrange-product">
                 {data.attributes.whizrangeproduct.map((whiz_box) => (
                   <div
                     className="art-product-box-outer"
@@ -118,17 +118,19 @@ export default function Home() {
                         <p>{whiz_box.description}</p>
                       </div>
                     </div>
-                    <a href={`${whiz_box.button.redirect_url}`} className="clipped-btns">
+                    <a
+                      href={`${whiz_box.button.redirect_url}`}
+                      className="clipped-btns"
+                    >
                       {whiz_box.button.label}
                     </a>
                   </div>
                 ))}
               </div>
-             
             </div>
 
             <div className="art-products-inner-whizrange">
-            <div className="art-products-inner-logo-zerohack">
+              <div className="art-products-inner-logo-zerohack">
                 <img
                   data-aos="fade-down"
                   data-aos-delay="300"
@@ -152,7 +154,7 @@ export default function Home() {
                         <img
                           src={box.image_url}
                           alt=""
-                          style={{...colorizeImageStyle, objectFit: 'cover'}}
+                          style={{ ...colorizeImageStyle, objectFit: "cover" }}
                         />
                         {box.text_logo ? (
                           <h3>{box.text_logo}</h3>
@@ -164,7 +166,10 @@ export default function Home() {
                         <p>{box.description}</p>
                       </div>
                     </div>
-                    <a href={`${box.button.redirect_url}`} className="clipped-btns">
+                    <a
+                      href={`${box.button.redirect_url}`}
+                      className="clipped-btns"
+                    >
                       {box.button.label}
                     </a>
                   </div>
@@ -216,9 +221,9 @@ export default function Home() {
                 {" "}
                 {data.attributes.service_compo.description}
               </p>
-              <a href="/" className="clipped-btns">
+              {/* <a href="/" className="clipped-btns">
                 Know more
-              </a>
+              </a> */}
             </div>
           </div>
           <div
@@ -229,24 +234,34 @@ export default function Home() {
           >
             <div className="art-products2-inner">
               {data.attributes.service_compo.service_box.map((box) => (
-                <a href={`${box.redirect_url}`}>
-                <div
-                  className="art-product2-box-outer"
-                  key={box.id}
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
-                >
-                  <div className="art-product2-box">
-                    <div className="art-product2-box-inner">
-                      <h5>{box.head}</h5>
-                      <img src={box.image_url} alt="" />
-                      <p>{box.para}</p>
-                      
+                  <div
+                    className="art-product2-box-outer"
+                    key={box.id}
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <div className="art-product2-box">
+                      <div className="art-product2-box-inner">
+                        <img src={box.image_url} alt="" />
+                        {box.service_homes.data.map((service) => (
+                          <div>
+                            <h5>{service.attributes.title}</h5>
+                            <ul>
+                              {service.attributes.service_content.map(
+                                (content) => (
+                                  <li>{content.title}</li>
+                                )
+                              )}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
                     </div>
+                    <a href={`${box.redirect_url}`} className="clipped-btns">
+                      Know more
+                    </a>
                   </div>
-                </div>
-                </a>
               ))}
             </div>
           </div>

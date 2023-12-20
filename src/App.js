@@ -21,11 +21,13 @@ import Privcy from "./components/pages/Privacy_policy";
 import Partner from "./components/pages/Partners";
 import Condition from "./components/pages/Terms_Conditions";
 import Ransomeware from "./components/pages/ransomeware/Ransomeware";
+import Investor_Relations from "./components/pages/investor_relation/Investor_Relations";
+import Service_IT from "./components/pages/service_infra/Service_IT";
+import Service_OT from "./components/pages/service_infra/Service_OT";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
-  const [selectedMenuItem, setSelectedMenuItem] = React.useState(null);
   useEffect(() => {
     AOS.init();
   }, []);
@@ -36,7 +38,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/industry" element={<Industry />} />
-        <Route path="Product/:solutionName" element={<Trace />} />
+        <Route path="Products/:solutionName" element={<Trace />} />
         {/* <Route path="/npti" element={<Npti />} /> */}
         <Route path="Trainings/:paramName" element={<Guru/>} />
         <Route path="/blog" element={<Blog />} />
@@ -47,6 +49,9 @@ function App() {
         <Route path="/partners" element={<Partner/>} />
         <Route path="/termsandcondition" element={<Condition/>} />
         <Route path="/ransomeware" element={<Ransomeware/>} />
+        <Route path="/investor" element={<Investor_Relations />} />
+        <Route path="/serviceIT" element={<Service_IT />} />
+        <Route path="/serviceOT" element={<Service_OT />} />
       </Routes>
       <Footer/>
     </div>

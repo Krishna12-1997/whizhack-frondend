@@ -39,7 +39,7 @@ export default function Navbar() {
       ) {
         const dropdownItems = menuItem.sections.data.map((section, index) =>
 
-          label === "Product" ? (
+          label === "Products" ? (
             <div>
               <div className="row mt-5">
                 <div className="col-lg-4 col-md-4 col-sm-12 nav_left">

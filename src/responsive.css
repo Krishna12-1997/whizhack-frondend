@@ -13,6 +13,9 @@
   .art-product-box-inner img:nth-child(2) {
     width: 70%;
   }
+  .art-product2-box-outer {
+    margin-right: 0;
+}
   .art-product-box-inner img:first-child {
     width: 35%;
   }
@@ -173,7 +176,7 @@
   }
   .art-product2-box-inner h5,
   .art-product2-box-inner p {
-    padding-left: 0;
+    /* padding-left: 0; */
     padding-right: 0;
   }
   .art-product2-box {
@@ -187,8 +190,8 @@
       0 86%,
       0 13%
     );
-    height: 270px;
-    width: 250px;
+    height: auto;
+    width: 333px;
   }
   .art-products2 {
     padding: 5% 0;
