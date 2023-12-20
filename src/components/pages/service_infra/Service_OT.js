@@ -83,6 +83,23 @@ const Service_OT = () => {
           </div>
         </div>
       </div>
+  
+      <div className="get-in-touch-service">
+        <div className="container-flu">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="head-title">
+                <h3>If you have any queries related to our services, Connect with us</h3>
+              </div>
+              <div className="touch-button">
+                <a href="/contact" className="clipped-btns">
+                  Connect
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </>
   )

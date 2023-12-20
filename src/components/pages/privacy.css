@@ -5,6 +5,23 @@
     margin-top: 6%;
     font-weight: 700;
 }
+.get-in-touch-service{
+    margin: 50px 0;
+    background-color: #e3e7e8;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.get-in-touch-service .head-title{
+    margin: 3% 0;
+}
+.get-in-touch-service .head-title h3{
+    font-weight: 700;
+}
+.get-in-touch-service .touch-button{
+    text-align: center;
+}
 .policies-inner ul{
     padding-left: 15px;
 }
