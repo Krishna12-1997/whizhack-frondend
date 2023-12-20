@@ -6,7 +6,7 @@ import service_banner_icon from "../../images/decors/service_banner_icon.png";
 const Service_OT = () => {
 
     const uri =
-    "http://15.207.20.62:1337/api/service-ot?populate=service_ot_content";
+    "http://localhost:1337/api/service-ot?populate=service_ot_content";
   const { loading, error, data } = useFetch(uri);
   // 15.207.20.62 15.207.20.62
   // console.log(data.attributes);
@@ -88,7 +88,7 @@ const Service_OT = () => {
         <div className="container-flu">
           <div className="row">
             <div className="col-lg-12">
-              <div className="head-title">
+              <div className="head-title connect-us-new">
                 <h3>If you have any queries related to our services, Connect with us</h3>
               </div>
               <div className="touch-button">

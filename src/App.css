@@ -1351,6 +1351,16 @@ a:hover {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+  .get-in-touch-service .row{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .head-title.connect-us-new{
+    text-align: center;
+  }
+  .head-title.connect-us-new h3{
+    margin-bottom: 5%;
+  }
   .second-banner::before {
     display: none;
   }
