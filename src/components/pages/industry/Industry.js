@@ -13,7 +13,7 @@ export default function Industry() {
   };
 
   const uri =
-    "http://localhost:1337/api/industry?populate=industry_left.industry_lefts, section, industry_right.industry_rights.button";
+    "http://15.207.20.62:1337/api/industry?populate=industry_left.industry_lefts, section, industry_right.industry_rights.button";
   const { loading, error, data } = useFetch(uri);
   // console.log(data.attributes);
   if (loading) {

@@ -14,7 +14,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function Home() {
   const uri =
-    "http://localhost:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
+    "http://15.207.20.62:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
   const { loading, error, data } = useFetch(uri);
   // 15.207.20.62 15.207.20.62
   // console.log(data.attributes);
@@ -234,34 +234,34 @@ export default function Home() {
           >
             <div className="art-products2-inner">
               {data.attributes.service_compo.service_box.map((box) => (
-                  <div
-                    className="art-product2-box-outer"
-                    key={box.id}
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
-                  >
-                    <div className="art-product2-box">
-                      <div className="art-product2-box-inner">
-                        <img src={box.image_url} alt="" />
-                        {box.service_homes.data.map((service) => (
-                          <div>
-                            <h5>{service.attributes.title}</h5>
-                            <ul>
-                              {service.attributes.service_content.map(
-                                (content) => (
-                                  <li>{content.title}</li>
-                                )
-                              )}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
+                <div
+                  className="art-product2-box-outer"
+                  key={box.id}
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <div className="art-product2-box">
+                    <div className="art-product2-box-inner">
+                      <img src={box.image_url} alt="" />
+                      {box.service_homes.data.map((service) => (
+                        <div>
+                          <h5>{service.attributes.title}</h5>
+                          <ul>
+                            {service.attributes.service_content.map(
+                              (content) => (
+                                <li>{content.title}</li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      ))}
                     </div>
-                    <a href={`${box.redirect_url}`} className="clipped-btns">
-                      Know more
-                    </a>
                   </div>
+                  <a href={`${box.redirect_url}`} className="clipped-btns">
+                    Know more
+                  </a>
+                </div>
               ))}
             </div>
           </div>
@@ -311,7 +311,7 @@ export default function Home() {
               >
                 {data.attributes.career.title}
               </h3>
-              <div
+              {/* <div
                 className="art-product4-buttons"
                 data-aos="fade-right"
                 data-aos-delay="300"
@@ -321,59 +321,100 @@ export default function Home() {
                   <a href={link.redirect_url} className="clipped-btns">
                     {link.label}
                   </a>
-                ))}
+                ))} */}
                 {/* <a href="/" className="clipped-btns">
                   Know more
                 </a>
                 <a href="/" className="clipped-btns">
                   Know more
                 </a> */}
-              </div>
-              <img
+              {/* </div> */}
+              {/* <img
                 data-aos="fade-right"
                 data-aos-delay="300"
                 data-aos-duration={1500}
                 src={data.attributes.career.certificate_url}
                 alt="certificate"
               />
-              <p>{data.attributes.career.certified_name}</p>
+              <p>{data.attributes.career.certified_name}</p> */}
               {/* <p>Whizhack is your trusted partner for IT/OT security services. Our specialized teams have years of experience and unparalleled commitment to work with select customers in meeting most extreme security challenges for durable partnerships.</p> */}
             </div>
           </div>
           <div className="art-products4">
             <div className="art-product4-content-parent">
-              <h3
+              {/* <h3
                 data-aos="fade-down"
                 data-aos-delay="300"
                 data-aos-duration={1500}
               >
                 {data.attributes.career.career_right.title}
-              </h3>
-              <p
+              </h3> */}
+              {/* <p
                 data-aos="fade-up"
                 data-aos-delay="300"
                 data-aos-duration={1500}
               >
                 {data.attributes.career.career_right.content}
-              </p>
-              {/* <ul>
-                <li>- Certificate from IIT-Jodhpur TISC</li>
-                <li>- No specific Stream required</li>
-                <li>- Live Virtual Labs</li>
-              </ul> */}
-              <a href="" className="clipped-btns">
-                Know More
-              </a>
-            </div>
+              </p> */}
+              {data.attributes.career.career_right.map((career) => (
+                <div
+                  className="art-product-box-outer"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <div className="art-product-box">
+                    <div className="art-product-box-inner">
+                      <img src={career.icon_url} alt="" />
+                      <h3>{career.title}</h3>
 
-            <div className="partner">
-              <p>{data.attributes.career.career_right.partner_title}</p>
-              <img
-                src={data.attributes.career.career_right.partner_url}
-                alt="partner"
-                width="250px"
-                height="100px"
-              />
+                      <p>{career.content}</p>
+                    </div>
+                  </div>
+                  <a href={`${career.label_redirect}`} className="clipped-btns">
+                    {career.label}
+                  </a>
+                </div>
+              ))}
+
+              {/* <div
+                    className="art-product-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <div className="art-product-box">
+                      <div className="art-product-box-inner">
+                          <h3>Industry Specific</h3>
+                        
+                        <p>NPTI</p>
+                      </div>
+                    </div>
+                    <a
+                      href={``}
+                      className="clipped-btns"
+                    >
+                      Know more
+                    </a>
+                  </div>
+
+                  <div
+                    className="art-product-box-outer"
+                  >
+                    <div className="art-product-box">
+                      <div className="art-product-box-inner">
+                          <h3>Govt</h3>
+                        
+                        <p>NIC</p>
+                      </div>
+                    </div>
+                    <a
+                      href={``}
+                      className="clipped-btns"
+                    >
+                      Know more
+                    </a>
+                  </div> */}
             </div>
           </div>
         </div>

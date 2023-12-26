@@ -94,6 +94,7 @@
   }
   .banner4 {
     background: none;
+    margin: 0;
   }
   .partner {
     display: none;
@@ -109,14 +110,22 @@
   }
   .art-product4-content-parent {
     text-align: center;
+    grid-template-columns: repeat(1, 1fr);
   }
   .art-product4-content-parent h3 {
     font-size: 1.5rem;
   }
   .art-product4-content {
-    order: 1;
+    /* order: 1;
+    background-position: center; */
     background-position: center;
-    background-size: 180%;
+    background-size: 350% 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    height: 1769px;
+    /* filter: blur(2px); */
   }
   .art-product2-content-inner h3 {
     text-align: center;
@@ -208,7 +217,7 @@
     flex-direction: column;
   }
   .fourth-banner {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: auto;
   }
   .art-product-content2 {

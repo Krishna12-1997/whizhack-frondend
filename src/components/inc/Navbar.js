@@ -10,12 +10,11 @@ export default function Navbar() {
 
   const handleSectionHover = (index, event) => {
     event.preventDefault();
-      setActiveSection(index);
-    
+      setActiveSection(index); 
   };
 
   const uri =
-    " http://localhost:1337/api/top-right-menu?populate=body.sections.links, body.single_sections";
+    " http://15.207.20.62:1337/api/top-right-menu?populate=body.sections.links, body.single_sections";
   const { loading, error, data } = useFetch(uri);
   // console.log(data.attributes); 15.207.20.62
   if (loading) {

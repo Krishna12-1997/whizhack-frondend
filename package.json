@@ -2,6 +2,7 @@
   "name": "whizhack",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://15.207.20.62:1337",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -35,7 +36,9 @@
     ],
     "overrides": [
       {
-        "files": ["**/*.test.js"],
+        "files": [
+          "**/*.test.js"
+        ],
         "env": {
           "jest": true
         }

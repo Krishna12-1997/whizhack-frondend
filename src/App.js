@@ -24,6 +24,7 @@ import Ransomeware from "./components/pages/ransomeware/Ransomeware";
 import Investor_Relations from "./components/pages/investor_relation/Investor_Relations";
 import Service_IT from "./components/pages/service_infra/Service_IT";
 import Service_OT from "./components/pages/service_infra/Service_OT";
+import White_Paper from "./components/pages/White_Paper";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/investor" element={<Investor_Relations />} />
         <Route path="/serviceIT" element={<Service_IT />} />
         <Route path="/serviceOT" element={<Service_OT />} />
+        <Route path="/White Paper" element={<White_Paper />} />
       </Routes>
       <Footer/>
     </div>

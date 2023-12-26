@@ -5,7 +5,7 @@ import service_banner_icon from "../../images/decors/service_banner_icon.png";
 
 const Service_IT = () => {
   const uri =
-    "http://localhost:1337/api/service-it?populate=service_IT_content";
+    "http://15.207.20.62:1337/api/service-it?populate=service_IT_content";
   const { loading, error, data } = useFetch(uri);
   // 15.207.20.62 15.207.20.62
   // console.log(data.attributes);
