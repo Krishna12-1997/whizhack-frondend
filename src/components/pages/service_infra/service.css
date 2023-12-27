@@ -1,0 +1,36 @@
+.IT, .OT{
+ display: flex;
+ justify-content: space-between;
+}
+.IT.odd{
+    display: flex;
+    flex-direction: row-reverse; 
+}
+
+.OT.odd{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .IT, .OT{
+        display: flex;
+        flex-direction: column;
+    }
+    .IT.odd, .OT.odd{
+        display: flex;
+        flex-direction: column; 
+    }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .IT, .OT{
+        display: flex;
+        flex-direction: column;
+    }
+    .IT.odd, .OT.odd{
+        display: flex;
+        flex-direction: column; 
+    }
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../../hooks/useFetch";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
+import './service.css';
 
 const Service_OT = () => {
 
@@ -66,18 +67,22 @@ const Service_OT = () => {
 
     <div className="policies-section2">
         <div className="container">
-          <div className="row justify-content-center">
-          {data.attributes.service_ot_content.map((it) => (
-            <div className="col-lg-10">
+          <div className="row ">
+          {data.attributes.service_ot_content.map((it, index) => (
+            <div className={`mt-4 mb-5 OT ${
+              index % 2 === 0 ? "even" : "odd"
+            }`}>
+            <div className="col-lg-6 my-auto">
+               <img src={it.image_url} alt="image" width="100%" />
+            </div>
+            <div className="col-lg-6">
               <div className="policies-inner">
                 <div className="section-title">
                   <h4>{it.title}</h4>
                 </div>
-                <p>
-                  {it.content}
-                </p>
-               
+                <p>{it.content}</p>
               </div>
+            </div>
             </div>
             ))}
           </div>

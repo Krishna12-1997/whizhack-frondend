@@ -269,7 +269,7 @@
 }
 .row.odd {
   display: flex;
-  flex-direction: row-reverse; /* Reverse the order for even rows */
+  flex-direction: row-reverse; 
 }
 .feature-heading {
   color: #07002f;
