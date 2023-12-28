@@ -75,7 +75,7 @@
     align-items: center;
   }
   .art-product4-content-inner h3 {
-    color: #000;
+    color: #fff;
     text-align: center;
     font-size: 1.5rem;
   }
@@ -112,6 +112,7 @@
   .art-product4-content-parent {
     text-align: center;
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
   }
   .art-product4-content-parent h3 {
     font-size: 1.5rem;
