@@ -3,15 +3,15 @@ import "../services/service.css";
 import Slider from "react-slick";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
 import service_sample from "../../images/video/service_sample_video.mp4";
-import services1 from "../../images/services1.png";
-import services2 from "../../images/services2.png";
+import services1 from "../../images/service.png";
+import service from "../../images/it_ot_services.jpeg";
 import TestingSlider from "../../inc/ServiceTestingSlider";
 import useFetch from "../../../hooks/useFetch";
 import { ThreeDots } from "react-loader-spinner";
 
 export default function Service() {
   const uri =
-    "http://15.207.20.62:1337/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing";
+    "http://localhost:1337/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing, Service_security.service_homes.service_content";
   const { loading, error, data } = useFetch(uri);
   // console.log(data.attributes);
   if (loading) {
@@ -77,7 +77,7 @@ export default function Service() {
             <div className="col-lg-6">
               <div className="service-left-video-parent">
                 <div className="service-left-bg-video">
-                <iframe
+                  <iframe
                     width="640"
                     height="390"
                     src={`https://www.youtube.com/embed/COLhMb88AYs`}
@@ -86,7 +86,6 @@ export default function Service() {
                     allowFullScreen
                   ></iframe>
                 </div>
-              
               </div>
             </div>
             <div className="col-lg-6">
@@ -106,10 +105,10 @@ export default function Service() {
                   data-aos-duration={1500}
                 >
                   {data.attributes.section.content
-                        .split("\n")
-                        .map((paragraph, index) => (
-                          <p key={index}>{paragraph}</p>
-                        ))}
+                    .split("\n")
+                    .map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))}
                 </p>
               </div>
             </div>
@@ -185,6 +184,8 @@ export default function Service() {
                                 ))}
                               </div>
                             ))}
+
+                           
                           </ul>
                         </div>
                       </div>
@@ -221,19 +222,23 @@ export default function Service() {
                         </p>
                         <div className="ot-security-lists">
                           <ul className="security-list">
-                          {ot.service_links.data.map((link, index) => (
+                            {ot.service_links.data.map((link, index) => (
                               <div key={index}>
-                                {link.attributes.assessment.map((link_ass, subIndex) => (
-                                  <li
-                                  key={subIndex}
-                                    data-aos="fade-right"
-                                    data-aos-delay="300"
-                                    data-aos-duration={1500}
-                                    className={subIndex % 2 === 0 ? 'even' : 'odd'}
-                                  >
-                                    <p>{link_ass.label}</p>
-                                  </li>
-                                ))}
+                                {link.attributes.assessment.map(
+                                  (link_ass, subIndex) => (
+                                    <li
+                                      key={subIndex}
+                                      data-aos="fade-right"
+                                      data-aos-delay="300"
+                                      data-aos-duration={1500}
+                                      className={
+                                        subIndex % 2 === 0 ? "even" : "odd"
+                                      }
+                                    >
+                                      <p>{link_ass.label}</p>
+                                    </li>
+                                  )
+                                )}
                               </div>
                             ))}
                           </ul>
@@ -254,6 +259,7 @@ export default function Service() {
           </div>
         </div>
       ))}
+
       <div className="service-section7">
         <div className="container">
           <div className="row justify-content-center">
@@ -287,6 +293,8 @@ export default function Service() {
           </div>
         </div>
       </div>
+
+      
     </div>
   );
 }

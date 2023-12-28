@@ -81,9 +81,10 @@
   }
   .art-product4-content-inner {
     transform: none;
-    width: 100%;
+    width: 23%;
     position: static;
     text-align: center;
+    margin: 0 auto;
   }
   .art-product4-content {
     background-image: url(./components/images/tablet/banner5.png);
@@ -123,6 +124,7 @@
     width: 100%;
     position: absolute;
     top: 0;
+    clip-path: none;
     object-fit: cover;
     height: 1769px;
     /* filter: blur(2px); */
@@ -491,12 +493,19 @@
     text-align: center;
   }
   .art-product4-content {
-    background-image: url(./components/images/tablet/banner5.png);
+    background-position: center;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
-    padding: 6% 3%;
-    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    clip-path: none;
+    object-fit: cover;
+    height: 1769px;
   }
+  .art-product4-content-parent {
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+}
   .banner4 {
     background: none;
   }
