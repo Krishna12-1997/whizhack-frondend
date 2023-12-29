@@ -920,11 +920,7 @@
     background-position: center;
   }
 }
+
 @media only screen and (min-width: 991px) and (max-width: 1280px) {
-  .second-banner::before {
-    left: 33%;
-    transform: rotate(13deg);
-}
-}
-@media only screen and (min-width: 1280px) {
+  
 }

@@ -56,7 +56,7 @@ const AboutSlider = ({ recongni }) => {
               <h3>{recon.attributes.title}</h3>
               <p style={{textAlign: "center"}}>{recon.attributes.description}</p>
               <div className="p-auto">
-                <a href="#">
+                <a href={`${recon.attributes.button.url}`} target="_blank">
                   <p>{recon.attributes.button.title}</p>
                   <img src={recon.attributes.button.icon_url} alt="icon" />
                 </a>

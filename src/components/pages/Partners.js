@@ -69,7 +69,7 @@ export default function Partners() {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-12">
-                <div className="section-title">
+                <div className="section-title-partner">
                   <h3>{tit.attributes.title}</h3>
                 </div>
               </div>

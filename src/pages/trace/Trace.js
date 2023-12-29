@@ -531,7 +531,6 @@ export default function Trace() {
                             className="square"
                             style={{
                               background: `url(${thred})`,
-                              height: "100vh",
                               backgroundSize: "cover",
                               backgroundPosition: "center",
                               backgroundRepeat: "no-repeat",

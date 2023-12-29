@@ -1,7 +1,11 @@
 .partners-section2 {
   padding: 3% 0;
 }
-.section-title h3 {
+.section-title-partner{
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+.section-title-partner h3 {
   color: #07002f;
   margin: 3% 0;
   font-style: normal;
@@ -40,7 +44,7 @@ color: #62666A;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-  .section-title h3 {
+  .section-title-partner h3 {
     margin: 8% 0;
   }
   .industry-banner-section {
@@ -58,7 +62,7 @@ color: #62666A;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  .section-title h3 {
+  .section-title-partner h3 {
     margin: 8% 0;
   }
   .industry-banner-section {

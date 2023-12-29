@@ -21,6 +21,7 @@ import Privcy from "./components/pages/Privacy_policy";
 import Partner from "./components/pages/Partners";
 import Condition from "./components/pages/Terms_Conditions";
 import Ransomeware from "./components/pages/ransomeware/Ransomeware";
+import Career from "./components/pages/trainings/Career";
 import Investor_Relations from "./components/pages/investor_relation/Investor_Relations";
 import Service_IT from "./components/pages/service_infra/Service_IT";
 import Service_OT from "./components/pages/service_infra/Service_OT";
@@ -54,6 +55,7 @@ function App() {
         <Route path="/serviceIT" element={<Service_IT />} />
         <Route path="/serviceOT" element={<Service_OT />} />
         <Route path="/White Paper" element={<White_Paper />} />
+        <Route path="/career" element={<Career/>} />
       </Routes>
       <Footer/>
     </div>

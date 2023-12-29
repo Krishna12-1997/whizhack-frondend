@@ -113,15 +113,16 @@
 }
 /* White paper css */
 
-.white_paper_form .form-group{
+.white_paper_form .form-group {
   position: relative;
   font-size: 1rem;
 }
-.white_paper_form .form-group input, .first_form .form-group select{
+.white_paper_form .form-group input,
+.first_form .form-group select {
   border: 1px solid #000;
   border-radius: 0;
 }
-.white_paper_form .form-group label{
+.white_paper_form .form-group label {
   padding: 0 3px;
   position: absolute;
   top: 50%;
@@ -129,11 +130,10 @@
   transform: translateY(-50%);
   transition: top 0.3s ease, color 0.3s ease;
 }
-.white_paper_form .form-group input:focus{
-  outline: none; 
+.white_paper_form .form-group input:focus {
+  outline: none;
   box-shadow: none;
-  border:1px solid #9747FF;
-
+  border: 1px solid #9747ff;
 }
 .white_paper_form .form-group input.dirty + label,
 .white_paper_form .form-group input:focus + label,
@@ -141,7 +141,7 @@
   background-color: #fff;
   top: 0px;
   font-size: 0.8rem;
-  color: #9747FF;
+  color: #9747ff;
 }
 .white_paper_form .form-group select.dirty + label,
 .white_paper_form .form-group select:focus + label,
@@ -153,8 +153,8 @@
 }
 .white_paper_form .form-group select.dirty,
 .white_paper_form .form-group select:focus,
-.white_paper_form .form-group select:not(:placeholder-shown){
-  border:1px solid #9747FF;
+.white_paper_form .form-group select:not(:placeholder-shown) {
+  border: 1px solid #9747ff;
 }
 
 /* White paper css */
@@ -639,7 +639,7 @@ a:hover {
   border: 1px solid #303030;
   padding: 30px 20px;
   width: 100%;
-  height: 296px;
+  height: 375px;
   margin: 0 auto;
   text-decoration: none;
 }
@@ -1020,7 +1020,16 @@ a:hover {
 .art-product4-content {
   height: auto;
   width: 56%;
-  clip-path: polygon(0 0, 70% 0%, 86% 33%, 100% 63%, 70% 100%, 0 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(
+    0 0,
+    70% 0%,
+    86% 33%,
+    100% 63%,
+    70% 100%,
+    0 100%,
+    0% 70%,
+    0% 30%
+  );
   /* background-image: url(./components/images/home-bg8.png); */
   background-size: 100% 100%;
   position: relative;
@@ -1049,12 +1058,13 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   padding: 20px 0 44px 0;
 }
-.art-product-box-outer:nth-child(4), .art-product-box-outer:nth-child(5){
+.art-product-box-outer:nth-child(4),
+.art-product-box-outer:nth-child(5) {
   position: relative;
   left: 45%;
   top: 20px;
 }
-.art-product-box-outer:nth-child(5) .art-product-box-inner img:first-child{
+.art-product-box-outer:nth-child(5) .art-product-box-inner img:first-child {
   width: 71%;
   padding: 0;
   /* padding-bottom: 0; */
@@ -1261,7 +1271,8 @@ a:hover {
   grid-template-columns: repeat(2, 1fr);
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  .art-product-box-outer:nth-child(4), .art-product-box-outer:nth-child(5){
+  .art-product-box-outer:nth-child(4),
+  .art-product-box-outer:nth-child(5) {
     left: 0%;
   }
   .second-banner::before {
@@ -1422,7 +1433,8 @@ a:hover {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-  .art-product-box-outer:nth-child(4), .art-product-box-outer:nth-child(5){
+  .art-product-box-outer:nth-child(4),
+  .art-product-box-outer:nth-child(5) {
     left: 0;
   }
   .get-in-touch-service .row {
@@ -1584,4 +1596,81 @@ a:hover {
   .zerohack-product {
     display: block;
   }
+}
+
+@media only screen and (min-width: 996px) and (max-width: 1280px) {
+  .second-banner::before {
+    clip-path: polygon(47% 0, 67% 0%, 35% 100%, 15% 100%);
+    left: 32%;
+  }
+ 
+  .art-products-inner {
+    bottom: 1%;
+}
+.art-product-box{
+  height: 48vh;
+}
+.art-products, .second-banner{
+  height: 165vh;
+}
+.art-product-content-inner{
+  width: 28%;
+  left: 3%;
+  bottom: 62%;
+}
+.art-product2-box{
+  height: 71vh;
+}
+.art-product-box{
+  height: 54vh;
+}
+.art-products2-inner{
+  bottom: 10%;
+}
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1400px) {
+  .second-banner::before {
+    clip-path: polygon(47% 0, 67% 0%, 29% 100%, 10% 100%);
+    left: 33%;
+  }
+  .art-products-inner {
+    bottom: 1%;
+}
+.art-product-box{
+  height: 46vh;
+}
+.art-products, .second-banner{
+  height: 163vh;
+}
+.art-product2-box{
+  height: 71vh;
+}
+.art-product-box{
+  height: 53vh;
+}
+.art-products2-inner{
+  bottom: 12%;
+}
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1500px) {
+  .second-banner::before {
+    clip-path: polygon(47% 0, 67% 0%, 24% 100%, 2% 100%);
+  }
+  .art-product-box{
+    height: 46vh;
+  }
+  .art-products, .second-banner{
+    height: 152vh;
+  }
+  .art-products-inner {
+    bottom: 2%;
+}
+.art-product2-box{
+  height: 71vh;
+}
+.art-products2-inner{
+  bottom: 12%;
+}
 }

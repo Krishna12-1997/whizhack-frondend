@@ -114,6 +114,9 @@
   /* display: grid; */
   /* grid-template-columns: repeat(1, 1fr); */
 }
+.square {
+  height: 100vh;
+}
 .tech_card_details {
   border: 1px solid #fff;
   background: linear-gradient(
@@ -269,7 +272,7 @@
 }
 .row.odd {
   display: flex;
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
 }
 .feature-heading {
   color: #07002f;
@@ -311,7 +314,7 @@
   margin: 0 auto;
   color: #fff;
 }
-.bottom_zero_hids{
+.bottom_zero_hids {
   position: relative;
   left: -47px;
   top: 81%;
@@ -321,13 +324,13 @@
   opacity: 0.8;
 }
 @media only screen and (min-width: 479px) and (max-width: 768px) {
-  .main-feauters-content{
+  .main-feauters-content {
     margin-top: 18px;
   }
-  .hids{
+  .hids {
     padding: 0;
   }
-  .bottom_zero_hids{
+  .bottom_zero_hids {
     display: none;
   }
   .ui1-banner1-parent-solution-zerohack {
@@ -512,17 +515,17 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-  .ui1-banner1-content-solution-hids{
+  .ui1-banner1-content-solution-hids {
     width: 100%;
     text-align: center;
   }
-  .bottom_zero_hids{
+  .bottom_zero_hids {
     display: none;
   }
-  .hids{
+  .hids {
     padding: 0;
   }
-  .main-feauters-content{
+  .main-feauters-content {
     margin-top: 18px;
   }
   .top_zero {
@@ -694,5 +697,35 @@
     position: absolute;
     left: 50%;
     padding: 0 20px 0 90px;
+  }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1280px) {
+  .degree_content {
+    margin: 0 12px;
+  }
+  .square {
+    height: 100%;
+  }
+  .ui1-banner1-parent-solution {
+    background-size: 50% 100%;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1400px) {
+  .degree_content {
+    margin: 0 12px;
+  }
+  .square {
+    height: 100%;
+  }
+  .ui1-banner1-parent-solution {
+    background-size: 50% 100%;
+  }
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1600px) {
+  .ui1-banner1-parent-solution {
+    background-size: 50% 100%;
   }
 }

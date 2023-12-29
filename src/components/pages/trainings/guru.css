@@ -168,6 +168,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+.guru-right-inner-pro {
+  margin-left: 10%;
+  margin-right: 3%;
+}
 .guru-right-inner.samurai-about {
   padding: 0 15%;
 }
@@ -698,5 +702,25 @@
   }
   .degree_content_npti{
     margin: 20px;
+  }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1280px) {
+  .degree_content_npti{
+    margin:0 12px;
+    }
+    
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1400px) {
+  .degree_content_npti{
+    margin:0 12px;
+    }
+    
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1600px) {
+  .ui1-banner1-parent-solution {
+    background-size: 50% 100%;
   }
 }

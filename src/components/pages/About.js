@@ -77,15 +77,13 @@ const About = () => {
               <div className="row">
                 <div
                   id="about"
-                  className="col-md-4 col-sm-8 mx-auto mt-2 mb-2 rounded text-left"
+                  className="col-lg-6 col-md-12 col-sm-12 mx-auto mt-2 mb-2 rounded text-left"
                   data-aos="fadeIn"
                 >
                   {/* <video muted loop autoPlay="autoplay">
                     <source src={data.attributes.header.story.image_url} type="video/mp4" />
                   </video> */}
                   <iframe
-                    width="640"
-                    height="390"
                     src={`https://www.youtube.com/embed/JQD3n2Rh1uM`}
                     title="YouTube Video"
                     frameBorder="0"
@@ -94,7 +92,7 @@ const About = () => {
                 </div>
 
                 <div
-                  className="col-lg-6 col-md-6 col-sm-9 mx-auto mt-2 mb-2 rounded "
+                  className="col-lg-6 col-md-12 col-sm-12 mx-auto mt-2 mb-2 rounded "
                   data-aos="zoom-in"
                   style={{ padding: "2% 6%" }}
                 >
