@@ -206,16 +206,7 @@ const About = () => {
                             position: "relative",
                           }}
                         >
-                          <div
-                            style={{
-                              width: 30,
-                              height: 30,
-                              left: 0,
-                              top: "25px",
-                              position: "absolute",
-                              background: "#0077B5",
-                            }}
-                          >
+                          <div className="linkdin" >
                             {" "}
                             <a href={ab.linkedin_url}>
                               <img src={lin} alt="" height="" width="100%" />

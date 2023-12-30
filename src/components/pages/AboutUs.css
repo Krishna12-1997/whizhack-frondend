@@ -1,4 +1,4 @@
-.heading{
+.heading {
   color: white;
   text-align: center;
   font-size: 50px;
@@ -6,18 +6,25 @@
   font-weight: 700;
   word-wrap: break-word;
 }
-.about_section_partner{
+.about_section_partner {
   background: url(../../components/images/bg/w.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#about iframe{
+#about iframe {
   width: 640px;
   height: 390px;
 }
-
-.lead{
+.linkdin {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  background: #0077b5;
+}
+.lead {
   color: white;
   text-align: center;
   font-size: 25px;
@@ -27,9 +34,9 @@
   font-weight: 400;
   word-wrap: break-word;
 }
-.about_story{
+.about_story {
   width: 100%;
-  color: #07002F;
+  color: #07002f;
   font-size: 40px;
   /* font-family: "Pulse"; */
   font-weight: 700;
@@ -150,12 +157,12 @@
   backdrop-filter: blur(1.5px);
   opacity: 0.5;
 }
-.pratnership_text{
+.pratnership_text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    height: 100%;
+  height: 100%;
 }
 .recon_card {
   border: 1px solid #fff;
@@ -231,7 +238,7 @@
   #about iframe {
     width: 490px;
     height: 390px;
-}
+  }
   .pratnership_text::before {
     content: "";
     position: absolute;
@@ -277,31 +284,30 @@
     display: flex;
     flex-direction: column-reverse;
   }
-  .ourstory iframe{
+  .ourstory iframe {
     width: 100%;
   }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   #about iframe {
     width: 490px;
     height: 390px;
-}
-  .slick-slide slick-active slick-current{
+  }
+  .slick-slide slick-active slick-current {
     width: 220px;
     height: auto;
   }
-  .recon_card p{
+  .recon_card p {
     width: 100%;
   }
-  .ourstory iframe{
+  .ourstory iframe {
     width: 100%;
   }
 }
 
-
 /* about vision section css */
-.about-vision-section{
+.about-vision-section {
   height: 100vh;
   background: url(../../components/images/bg/avout-vision.png);
   background-size: 100%;
@@ -312,151 +318,163 @@
   align-items: center;
 }
 
-.mission-vector{
+.mission-vector {
   display: flex;
   align-items: center;
   height: 100%;
   margin: 0 2.5rem;
-
 }
-.mission-content{
+.mission-content {
   background: #fff;
-  margin:0 3.5rem;
+  margin: 0 3.5rem;
   padding: 3% 25% 3% 3%;
   clip-path: polygon(0 0, 71% 0, 100% 100%, 0 100%);
 }
-.mission-content p{
+.mission-content p {
   margin-bottom: 0;
-  
 }
-.mission-vector img{
+.mission-vector img {
   width: 12%;
   margin-right: 5%;
 }
-.mission-vector h4{
+.mission-vector h4 {
   color: #fff;
 }
-.vision-content{
+.vision-content {
   background: #fff;
-  margin:0 2.5rem;
+  margin: 0 2.5rem;
   padding: 3% 3% 3% 10%;
   clip-path: polygon(0 0, 100% 1%, 100% 100%, 25% 100%);
-
 }
-.vision-content p{
+.vision-content p {
   text-align: right;
   margin-bottom: 0;
 }
-.vision-vector img{
+.vision-vector img {
   width: 12%;
   margin-right: 5%;
 }
-.vision-vector h4{
+.vision-vector h4 {
   color: #fff;
 }
-.vision-vector{
+.vision-vector {
   display: flex;
   justify-content: right;
   align-items: center;
   height: 100%;
   margin: 0 2.5rem;
 }
-.mission-row, .vision-row{
+.mission-row,
+.vision-row {
   padding: 2% 0;
 }
-@media only screen and (min-width: 479px) and (max-width: 768px){
+@media only screen and (min-width: 479px) and (max-width: 768px) {
+  .recognition_card .slick-next {
+    right: 0;
+  }
+  .recognition_card .slick-prev {
+    left: 0;
+  }
+
   #about iframe {
     width: 615px;
     height: 390px;
-}
-  .pratnership_text::before, .pratnership_text::after{
+  }
+  .pratnership_text::before,
+  .pratnership_text::after {
     display: none;
   }
-  .heading{
+  .heading {
     font-size: 30px;
   }
-  .lead{
+  .lead {
     font-size: 20px;
   }
-  .about-vision-section{
+  .about-vision-section {
     height: auto;
-    padding:12% 0;
-    background-size:cover;
+    padding: 12% 0;
+    background-size: cover;
   }
-  .about-vision-section .container .row:first-child{
+  .about-vision-section .container .row:first-child {
     flex-direction: column-reverse;
   }
-  .mission-content, .vision-content{
+  .mission-content,
+  .vision-content {
     margin: 3% 0 0 0;
   }
-  .vision-content{
+  .vision-content {
     clip-path: polygon(20% 0, 100% 1%, 100% 100%, 0 100%);
-
   }
-  .mission-vector{
+  .mission-vector {
     margin: 0;
   }
-  .mission-content p, .vision-content p{
+  .mission-content p,
+  .vision-content p {
     font-size: 0.9rem;
   }
-  .pratnership_text::before{
+  .pratnership_text::before {
     display: none;
   }
-  .pratnership_text::after{
+  .pratnership_text::after {
     display: none;
   }
-
 }
 
-@media only screen and (min-width: 320px) and (max-width: 479px){
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .recognition_card .slick-next {
+    right: 0;
+  }
+  .recognition_card .slick-prev {
+    left: 0;
+  }
+  .linkdin {
+    top: 0;
+  }
   #about iframe {
-    width: 300px;
+    width: 415px;
     height: 390px;
-}
-  .pratnership_text::before, .pratnership_text::after{
+  }
+  .pratnership_text::before,
+  .pratnership_text::after {
     display: none;
   }
-  .heading{
+  .heading {
     font-size: 30px;
   }
-  .lead{
+  .lead {
     font-size: 20px;
   }
-  .about-vision-section{
+  .about-vision-section {
     height: auto;
-    padding:12% 0;
-    background-size:cover;
+    padding: 12% 0;
+    background-size: cover;
   }
-  .about-vision-section .container .row:first-child{
+  .about-vision-section .container .row:first-child {
     flex-direction: column-reverse;
   }
-  .mission-content, .vision-content{
+  .mission-content,
+  .vision-content {
     margin: 3% 0 0 0;
   }
-  .vision-content{
+  .vision-content {
     clip-path: polygon(20% 0, 100% 1%, 100% 100%, 0 100%);
-
   }
-  .mission-vector{
+  .mission-vector {
     margin: 0;
   }
-  .mission-content p, .vision-content p{
+  .mission-content p,
+  .vision-content p {
     font-size: 0.9rem;
   }
-  .about_story{
+  .about_story {
     text-align: center;
     font-size: 25px;
   }
-
 }
 /* about vision section css */
 
 @media only screen and (min-width: 996px) and (max-width: 1200px) {
-
-    
 }
 
 @media only screen and (min-width: 1201px) and (max-width: 1400px) {
- 
-    
 }

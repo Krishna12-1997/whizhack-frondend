@@ -56,7 +56,7 @@ export default function Home() {
       <div className="banner1">
         <SimpleSlider />
       </div>
-      <div className="banner2">
+      <div className="banner2" id="productid">
         <div className="second-banner">
           {/* {data.attributes.productleft.map((product) => ( */}
           <div className="art-product-content">
@@ -113,18 +113,23 @@ export default function Home() {
                     data-aos-delay="300"
                     data-aos-duration={1500}
                   >
+                     <a
+                          href={`${whiz_box.button.redirect_url}`}
+                          className=""
+                        >
                     <div className="art-product-box">
                       <div className="art-product-box-inner-whizrange">
                         {/* <img src={whiz_box.image_url} alt="" /> */}
                         <img src={whiz_box.logo_url} alt="" />
                         <p>{whiz_box.description}</p>
+                        <a
+                          href={`${whiz_box.button.redirect_url}`}
+                          className=""
+                        >
+                          <i class="fas fa-arrow-right"></i>
+                        </a>
                       </div>
                     </div>
-                    <a
-                      href={`${whiz_box.button.redirect_url}`}
-                      className="clipped-btns"
-                    >
-                      {whiz_box.button.label}
                     </a>
                   </div>
                 ))}
@@ -151,6 +156,10 @@ export default function Home() {
                     data-aos-delay="300"
                     data-aos-duration={1500}
                   >
+                     <a
+                          href={`${box.button.redirect_url}`}
+                          className=""
+                        >
                     <div className="art-product-box">
                       <div className="art-product-box-inner">
                         <img
@@ -165,14 +174,14 @@ export default function Home() {
                             <img src={box.logo_url} alt="" />
                           </>
                         )}
-                        <p>{box.description}</p>
+                        <p>{box.description.split(" ")
+                            .slice(0, 20)
+                            .join(" ")}</p>
+                       
+                          <i class="fas fa-arrow-right"></i>
+                        
                       </div>
                     </div>
-                    <a
-                      href={`${box.button.redirect_url}`}
-                      className="clipped-btns"
-                    >
-                      {box.button.label}
                     </a>
                   </div>
                 ))}
@@ -208,7 +217,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="banner3">
+      <div className="banner3" id="servicesid">
         <div className="fourth-banner">
           <div className="art-product-content2">
             <div className="art-product2-content-inner">
@@ -279,7 +288,7 @@ export default function Home() {
           <div className="form-row form-row2">
             <div className="div-left">
               <div className="form-img2">
-              <Lottie
+                <Lottie
                   loop
                   animationData={animationData}
                   play
@@ -305,7 +314,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="banner4">
+      <div className="banner4" id="trainingid">
         <div className="fourth-banner">
           <div
             className="art-product4-content"
@@ -320,51 +329,11 @@ export default function Home() {
               >
                 {data.attributes.career.title}
               </h3>
-              {/* <div
-                className="art-product4-buttons"
-                data-aos="fade-right"
-                data-aos-delay="300"
-                data-aos-duration={1500}
-              >
-                {data.attributes.career.link.map((link) => (
-                  <a href={link.redirect_url} className="clipped-btns">
-                    {link.label}
-                  </a>
-                ))} */}
-              {/* <a href="/" className="clipped-btns">
-                  Know more
-                </a>
-                <a href="/" className="clipped-btns">
-                  Know more
-                </a> */}
-              {/* </div> */}
-              {/* <img
-                data-aos="fade-right"
-                data-aos-delay="300"
-                data-aos-duration={1500}
-                src={data.attributes.career.certificate_url}
-                alt="certificate"
-              />
-              <p>{data.attributes.career.certified_name}</p> */}
-              {/* <p>Whizhack is your trusted partner for IT/OT security services. Our specialized teams have years of experience and unparalleled commitment to work with select customers in meeting most extreme security challenges for durable partnerships.</p> */}
             </div>
           </div>
           <div className="art-products4">
             <div className="art-product4-content-parent">
-              {/* <h3
-                data-aos="fade-down"
-                data-aos-delay="300"
-                data-aos-duration={1500}
-              >
-                {data.attributes.career.career_right.title}
-              </h3> */}
-              {/* <p
-                data-aos="fade-up"
-                data-aos-delay="300"
-                data-aos-duration={1500}
-              >
-                {data.attributes.career.career_right.content}
-              </p> */}
+             
               {data.attributes.career.career_right.map((career) => (
                 <div
                   className="art-product-box-outer"
@@ -372,58 +341,24 @@ export default function Home() {
                   data-aos-delay="300"
                   data-aos-duration={1500}
                 >
+                  <a href={`${career.label_redirect}`} className="">
                   <div className="art-product-box">
                     <div className="art-product-box-inner">
                       <img src={career.icon_url} alt="" />
                       <h3>{career.title}</h3>
 
-                      <p>{career.content}</p>
+                      <p>{career.content .split(" ")
+                            .slice(0, 20)
+                            .join(" ")}</p>
+                      <i class="fas fa-arrow-right"></i>
                     </div>
                   </div>
-                  <a href={`${career.label_redirect}`} className="clipped-btns">
-                    {career.label}
+                  
                   </a>
                 </div>
               ))}
 
-              {/* <div
-                    className="art-product-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
-                  >
-                    <div className="art-product-box">
-                      <div className="art-product-box-inner">
-                          <h3>Industry Specific</h3>
-                        
-                        <p>NPTI</p>
-                      </div>
-                    </div>
-                    <a
-                      href={``}
-                      className="clipped-btns"
-                    >
-                      Know more
-                    </a>
-                  </div>
-
-                  <div
-                    className="art-product-box-outer"
-                  >
-                    <div className="art-product-box">
-                      <div className="art-product-box-inner">
-                          <h3>Govt</h3>
-                        
-                        <p>NIC</p>
-                      </div>
-                    </div>
-                    <a
-                      href={``}
-                      className="clipped-btns"
-                    >
-                      Know more
-                    </a>
-                  </div> */}
+             
             </div>
           </div>
         </div>
@@ -434,7 +369,7 @@ export default function Home() {
           <div className="row">
             <div className="">
               <div className="ransomeware-content">
-                <video muted loop autoPlay="autoplay">
+                <video muted autoPlay="autoplay" playsinline>
                   <source src={ran_video} type="video/mp4" />
                 </video>
                 <div className="ransomeware-content-img">

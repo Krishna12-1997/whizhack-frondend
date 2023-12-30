@@ -522,6 +522,9 @@
   .bottom_zero_hids {
     display: none;
   }
+  .whiz_degree{
+    padding: 10% 5%;
+  }
   .hids {
     padding: 0;
   }
@@ -542,7 +545,10 @@
     height: auto;
   }
   .trace-about .square_content {
-    padding: 5% 8%;
+    padding: 24% 6%;
+  }
+  .square {
+    height: auto;
   }
   .partner_trace .partner_form input,
   .partner_trace .partner_form textarea {
@@ -574,6 +580,7 @@
   }
   .threat.key-features .container-fluid .row .col-lg-6 {
     padding-left: 0;
+    padding-right: 0;
   }
 
   .threat.key-benefits .square {
@@ -587,7 +594,7 @@
     margin: 0 !important;
   }
   .threat.key-benefits .square_content {
-    padding: 5%;
+    padding: 23% 6% 25% 6%;
   }
   .threat.key-features .square_content {
     height: 100vh !important;
@@ -667,6 +674,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 10% 0;
   }
   .top-border {
     border-right: none;

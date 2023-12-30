@@ -47,19 +47,19 @@ export default function ContactForm({option}) {
             type="text"
             className="form-control"
             id="ProductType"
-            name="producttype"
+            name="productname"
             onChange={formik.handleChange}
-            value={formik.values.producttype}
+            value={formik.values.productname}
           />
-          <label htmlFor="ProductType">Product Type * </label>
+          <label htmlFor="ProductType">Name of the Product * </label>
         </div>
         <div className="form-group">
           <select
             className="form-control"
             id="ProductName"
-            name="productname"
+            name="producttype"
             onChange={formik.handleChange}
-            value={formik.values.productname}
+            value={formik.values.producttype}
           >
             <option value="">Select an option</option>
             {option.map((type) => (
@@ -68,7 +68,7 @@ export default function ContactForm({option}) {
               </option>
             ))}
           </select>
-          <label htmlFor="ProductName">Name of the Product *</label>
+          <label htmlFor="ProductName"> Product Type *</label>
         </div>
         <div className="form-group">
           <input
