@@ -276,7 +276,10 @@
   }
   .first_form .form-group input,
   .first_form .form-group select {
-    border: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-right: none;
+    border-left: none;
     background: transparent;
   }
   .div-right .form-content {
