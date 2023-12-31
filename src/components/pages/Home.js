@@ -177,9 +177,9 @@ export default function Home() {
                         <p>{box.description.split(" ")
                             .slice(0, 20)
                             .join(" ")}</p>
-                       
+                       <div>
                           <i class="fas fa-arrow-right"></i>
-                        
+                          </div>
                       </div>
                     </div>
                     </a>

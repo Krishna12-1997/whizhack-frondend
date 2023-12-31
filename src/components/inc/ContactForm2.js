@@ -108,20 +108,17 @@ export default function ContactForm2({ option, city }) {
           <label htmlFor="ContactEmailid2">Email Id *</label>
         </div>
         <div className="form-group">
-          <select
+          <input
+          type="text"
             className="form-control"
             id="CityName"
             name="CityName"
+            placeholder="&nbsp;"
             onChange={formik.handleChange}
             value={formik.values.CityName}
           >
-             <option value="">Select an option</option>
-            {city.map((type) => (
-              <option key={type.id} value={type.label}>
-                {type.label}
-              </option>
-            ))}
-          </select>
+           
+          </input>
           <label htmlFor="CityName"> City*</label>
         </div>
         <button
