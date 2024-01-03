@@ -73,8 +73,9 @@ export default function Partners() {
                   <h3>{tit.attributes.title}</h3>
                 </div>
               </div>
+              <div className="col-lg-12 partners-alliances-card">
               {tit.attributes.partner_card.map((content) => (
-                <div className="col-lg-10">
+                
                   <div className="partners-alliances">
                     <div className="partner-alliance-inner">
                       <img src={content.logo_url} alt="" />
@@ -82,8 +83,9 @@ export default function Partners() {
                       <p data-aos="fade-up" data-aos-delay="300" data-aos-duration={1500}>{content.description}</p>
                     </div>
                   </div>
-                </div>
+                
               ))}
+              </div>
             </div>
           </div>
         </div>

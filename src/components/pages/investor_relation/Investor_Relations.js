@@ -8,7 +8,7 @@ import modal_img from "../../images/total_return.svg";
 
 export default function Investor_Relations() {
   const uri =
-    "http://15.207.20.62:1337/api/investor-relation?populate=year.investors.investor_shareholder_content";
+    "http://15.207.20.62:1337/api/investor-relation?populate=year.investors.investor_shareholder_content, advisorpartner";
   const { loading, error, data } = useFetch(uri);
   // 15.207.20.62 15.207.20.62
   // console.log(data.attributes);
@@ -260,6 +260,29 @@ export default function Investor_Relations() {
                 </div>
               </div>
             </div>
+          </div>
+
+
+
+          <div className="row investor-reports">
+            <div className="col-lg-12">
+              <div className="section-title">
+                <h4>Our Investors</h4>
+              </div>
+            </div>
+            {data.attributes.advisorpartner.map((adpar) => (
+            <div className="col-lg-4">
+              <div className="investor-profile">
+              <img src={adpar.image_url} alt="img" />
+              </div>
+              <div className="investor-profile-content">
+              <h4>{adpar.title}</h4>
+              <p>{adpar.description}</p>
+             
+              </div>
+            </div>
+            ))}
+           
           </div>
         </div>
       </div>

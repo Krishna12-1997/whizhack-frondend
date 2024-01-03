@@ -3,7 +3,8 @@
 }
 .section-title-partner{
   font-size: 2.2rem;
-  margin-bottom: 15px;
+  margin-bottom: 48px;
+  text-align: center;
 }
 .section-title-partner h3 {
   color: #07002f;
@@ -12,11 +13,17 @@
   font-weight: 600;
   line-height: normal;
 }
+.partners-alliances-card{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .partners-alliances {
   margin-bottom: 8%;
 }
 .partner-alliance-inner {
-  padding: 4% 2%;
+  padding: 4% 6%;
+  height: 60vh;
+  margin: 0 4%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -60,8 +67,14 @@ color: #62666A;
   .partner-alliance-inner h3 {
     font-size: 1.5rem;
   }
+  .partners-alliances-card{
+  grid-template-columns: revert;
+  }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
+  .partners-alliances-card{
+    grid-template-columns: revert;
+    }
   .section-title-partner h3 {
     margin: 8% 0;
   }

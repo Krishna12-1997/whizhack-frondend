@@ -74,42 +74,55 @@ export default function White_Paper() {
           </div>
           <div className="row">
             {data.attributes.white_paper_cards.data.map((paper) => (
+              <>
               <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 <div className="industry-products-single d-flex flex-column justify-content-center">
                   <div className="products-single-inner">
                     <h5 className="title">{paper.attributes.title}</h5>
                     <p>{paper.attributes.description}</p>
-                    <PdfDisplayComponent pdfUrl={paper.attributes.pdf} />
-                    <a href="/" className='clipped-btns' data-toggle="modal" data-target="#enquiryModal" >
+                    
+                    <a
+                      href="/"
+                      className="clipped-btns"
+                      data-toggle="modal"
+                      data-target={`#enquiryModal${paper.id}`}
+                    >
                       Know more
                     </a>
                   </div>
                 </div>
               </div>
+               <div class="modal fade" id={`enquiryModal${paper.id}`} role="dialog">
+               <div class="modal-dialog">
+                 <div class="modal-content">
+                   <div class="modal-body">
+                     <button type="button" class="close" data-dismiss="modal">
+                       &times;
+                     </button>
+                     <br />
+                     <Whitepaper_Form pdfUrlForm={paper.attributes.pdf_url}/>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             </>
             ))}
           </div>
         </div>
       </div>
-      <div class="modal fade" id="enquiryModal" role="dialog">
-                <div class="modal-dialog">
-                
-                        <div class="modal-content">
-                            {/* <div class="modal-header">
-                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div> */}
-                            <div class="modal-body">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <br/>
-                            
-                            <Whitepaper_Form/>
-                            </div>
-                            {/* <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div> */}
-                        </div>
-                
-                </div>
+      {/* <div class="modal fade" id="enquiryModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+              <br />
+              <Whitepaper_Form />
             </div>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 }

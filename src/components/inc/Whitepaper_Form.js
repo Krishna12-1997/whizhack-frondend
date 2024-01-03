@@ -1,8 +1,9 @@
 import React from "react";
 import { useFormik } from "formik";
 import axios from "axios";
+import PdfDisplayComponent from "../inc/PdfDisplayComponent";
 
-export default function Whitepaper_Form() {
+export default function Whitepaper_Form({ pdfUrlForm }) {
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -28,7 +29,20 @@ export default function Whitepaper_Form() {
         )
         .then((response) => {
           console.log("POST request successful:", response.data);
-          // Do something after a successful post, e.g., show a success message or redirect to another page.
+
+          const pdfUrl = pdfUrlForm;
+
+          const newWindow = window.open(pdfUrl, "_blank");
+
+          // Close the modal
+          if (newWindow) {
+            const modal = document.getElementById("enquiryModal");
+            modal.style.display = "none";
+          } else {
+            console.error(
+              "Unable to open the new window. Please check your browser settings."
+            );
+          }
         })
         .catch((error) => {
           console.error("POST request error:", error);
@@ -38,8 +52,11 @@ export default function Whitepaper_Form() {
 
   return (
     <div>
-      <form className="white_paper_form"  onSubmit={formik.handleSubmit}>
+      <form className="white_paper_form" onSubmit={formik.handleSubmit}>
         <h4 className="mb-4">Please fill the details to download</h4>
+        <div id="pdfDisplay">
+          <PdfDisplayComponent pdfUrl={pdfUrlForm} />
+        </div>
         <div className="form-group">
           <input
             type="text"
