@@ -6,7 +6,7 @@ import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../../hooks/useFetch";
 
-export default function Contact() {
+export default function Contact({ data }) {
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -40,27 +40,7 @@ export default function Contact() {
     },
   });
 
-  const uri =
- "http://15.207.20.62:1337/api/contact-form";
-const { loading, error, data } = useFetch(uri);
-// console.log(data.attributes);
-if (loading) {
-  return (
-    <div className="d-flex justify-content-center">
-      <ThreeDots
-        height="80"
-        width="80"
-        radius="9"
-        color="#4fa94d"
-        ariaLabel="three-dots-loading"
-        wrapperStyle={{}}
-        wrapperClassName=""
-        visible={true}
-      />
-    </div>
-  );
-}
-
+ 
   return (
     <div>
       <div className="contact-section-single">

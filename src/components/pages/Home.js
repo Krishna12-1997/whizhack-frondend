@@ -14,32 +14,7 @@ import Lottie from "react-lottie-player";
 import animationData from "../json/animation.json";
 import { useInView } from "react-intersection-observer";
 
-export default function Home() {
-  const uri =
-    "http://15.207.20.62:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right ";
-  const { loading, error, data } = useFetch(uri);
-  // 15.207.20.62 15.207.20.62
-  // console.log(data.attributes);
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center">
-        <ThreeDots
-          height="80"
-          width="80"
-          radius="9"
-          color="#4fa94d"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
+export default function Home({data}) {
 
   const colorizeImageStyle = {
     filter: "brightness(80%) saturate(100%)",
@@ -54,7 +29,7 @@ export default function Home() {
   return (
     <>
       <div className="banner1">
-        <SimpleSlider />
+        <SimpleSlider data={data}/>
       </div>
       <div className="banner2" id="productid">
         <div className="second-banner">

@@ -4,7 +4,7 @@ import { Nav, Tab } from "react-bootstrap";
 import logo from "../images/logo.svg";
 import useFetch from "../../hooks/useFetch";
 
-export default function Navbar() {
+export default function Navbar({ data }) {
 
   const [activeSection, setActiveSection] = useState(0);
 
@@ -12,18 +12,6 @@ export default function Navbar() {
     event.preventDefault();
       setActiveSection(index); 
   };
-
-  const uri =
-    " http://15.207.20.62:1337/api/top-right-menu?populate=body.sections.links, body.single_sections";
-  const { loading, error, data } = useFetch(uri);
-  // console.log(data.attributes); 15.207.20.62
-  if (loading) {
-    return <p>Loading data...</p>;
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
 
   // Check if 'data' exists and has a 'body' property
   if (data && data.attributes && data.attributes.body) {
@@ -101,7 +89,6 @@ export default function Navbar() {
                         {section.attributes.label}
                       </a>
                     </li>
-
                   </ul>
                 </div>
                 <div className="col-lg-8 col-md-8 col-sm-12">

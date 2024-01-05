@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import img1 from ".././images/service-slider/1.png";
-import img2 from ".././images/service-slider/2.png";
-import useFetch from "../../hooks/useFetch";
-import { ThreeDots } from  'react-loader-spinner'
 
-const SimpleSlider = (props) => {
+const SimpleSlider = ({ data }) => {
   const [settings] = useState({
     dots: false,
     infinite: true,
@@ -50,28 +46,6 @@ const SimpleSlider = (props) => {
       }
     ]
   });
-
-  const uri =
-  "http://15.207.20.62:1337/api/service?populate=testing";
-const { loading, error, data } = useFetch(uri);
-// console.log(data.attributes);
-if (loading) {
-  return <ThreeDots 
-  height="80" 
-  width="80" 
-  radius="9"
-  color="#4fa94d" 
-  ariaLabel="three-dots-loading"
-  wrapperStyle={{}}
-  wrapperClassName=""
-  visible={true}
-   /> 
-  // <p>Loading data...</p>;
-}
-
-if (error) {
-  return <p>Error: {error.message}</p>;
-}
 
 
   return (

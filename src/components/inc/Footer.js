@@ -1,19 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import useFetch from "../../hooks/useFetch";
 
-export default function Footer() {
-
-  const uri = "http://15.207.20.62:1337/api/footer?populate=left_footer";
-const { loading, error, data } = useFetch(uri);
-// console.log(data.attributes);
-if (loading) {
-  return <p>Loading data...</p>;
-}
-
-if (error) {
-  return <p>Error: {error.message}</p>;
-}
+export default function Footer({ data }) {
 
   return (
     <>
@@ -24,8 +12,6 @@ if (error) {
                   backgroundColor: "#07002F",
                 }}>
               <div
-              
-               
               >
                 <div className="footer pt-4">
                   <div
@@ -66,7 +52,6 @@ if (error) {
                   >
                     {" "}
                     © Whizhack Technologies 2023
-                    {/* <a href="/"> MDBootstrap.com</a> */}
                   </div>
                 </div>
               </div>

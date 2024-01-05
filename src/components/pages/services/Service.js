@@ -1,40 +1,10 @@
 import React from "react";
 import "../services/service.css";
-import Slider from "react-slick";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
-import service_sample from "../../images/video/service_sample_video.mp4";
-import services1 from "../../images/service.png";
-import service from "../../images/it_ot_services.jpeg";
 import TestingSlider from "../../inc/ServiceTestingSlider";
-import useFetch from "../../../hooks/useFetch";
-import { ThreeDots } from "react-loader-spinner";
 
-export default function Service() {
-  const uri =
-    "http://15.207.20.62:1337/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing, Service_security.service_homes.service_content";
-  const { loading, error, data } = useFetch(uri);
-  // console.log(data.attributes);
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center">
-        <ThreeDots
-          height="80"
-          width="80"
-          radius="9"
-          color="#4fa94d"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
-      </div>
-    );
-  }
 
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
-
+export default function Service({ data }) {
   return (
     <div>
       <div className="service-banner-section">
@@ -272,24 +242,8 @@ export default function Service() {
             </div>
             <div className="col-lg-10">
               <div className="penestration-service-slider">
-                {/* {data.attributes.testing.map((test) => ( */}
-                <TestingSlider />
-                {/* //   ))} */}
-                {/* <Slider {...settings} >
-          <div> */}
-                {/* {data.attributes.testing.map((test) => ( */}
-                {/* //     <div className="testing-slider" key={test.id}>
-            
-        //       <div className="testing-slider-img">
-        //         <img src={test.image_url} alt="" />
-        //       </div>
-        //       <h3>{test.box_title}</h3>
-        //       <p></p>
-            
-        //     </div>
-        //      ))}
-        //   </div>
-        //   </Slider> */}
+                <TestingSlider data={data}/>
+              
               </div>
             </div>
           </div>

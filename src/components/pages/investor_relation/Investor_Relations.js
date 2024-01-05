@@ -1,37 +1,10 @@
 import React from "react";
 import "../industry/industry.css";
 import "../privacy.css";
-import { ThreeDots } from "react-loader-spinner";
-import useFetch from "../../../hooks/useFetch";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
 import modal_img from "../../images/total_return.svg";
 
-export default function Investor_Relations() {
-  const uri =
-    "http://15.207.20.62:1337/api/investor-relation?populate=year.investors.investor_shareholder_content, advisorpartner";
-  const { loading, error, data } = useFetch(uri);
-  // 15.207.20.62 15.207.20.62
-  // console.log(data.attributes);
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center">
-        <ThreeDots
-          height="80"
-          width="80"
-          radius="9"
-          color="#4fa94d"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
+export default function Investor_Relations({ data }) {
 
   return (
     <div>

@@ -5,30 +5,7 @@ import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../hooks/useFetch";
 import service_banner_icon from "../images/decors/service_banner_icon.png";
 
-export default function Terms_Conditions() {
-  const uri = "http://15.207.20.62:1337/api/terms-condition";
-  const { loading, error, data } = useFetch(uri);
-  // 15.207.20.62
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center">
-        <ThreeDots
-          height="80"
-          width="80"
-          radius="9"
-          color="#4fa94d"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
+export default function Terms_Conditions({ data }) {
 
   return (
     <div>

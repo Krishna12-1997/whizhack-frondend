@@ -1,36 +1,9 @@
 import React from "react";
 import "./blogs.css";
 import { useParams } from "react-router-dom";
-import useFetch from "../../../hooks/useFetch";
-import { ThreeDots } from "react-loader-spinner";
 
-export default function Blog_details() {
+export default function Blog_details({ data }) {
   const { blogId } = useParams();
-
-  const uri = `http://15.207.20.62:1337/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.Single_blog_details, all_blog.all_blog.latest_blogs.blog_button/${blogId}, all_blog.all_blog.latest_blogs.Single_blog_details/${blogId}`;
-  const { loading, error, data } = useFetch(uri);
-  // console.log(data.attributes);
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center">
-        <ThreeDots
-          height="80"
-          width="80"
-          radius="9"
-          color="#4fa94d"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
-
   // Filter the array to find the blog with the matching ID
   const selectedBlog = data.attributes.all_blog.all_blog.latest_blogs.data.find(
     (blog) => blog.id === parseInt(blogId, 10)

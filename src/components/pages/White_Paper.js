@@ -1,38 +1,11 @@
 import React from "react";
 import "./industry/industry.css";
 import "./privacy.css";
-import { ThreeDots } from "react-loader-spinner";
-import useFetch from "../../hooks/useFetch";
 import Whitepaper_Form from "../inc/Whitepaper_Form";
 import service_banner_icon from "../images/decors/service_banner_icon.png";
-import PdfDisplayComponent from "../inc/PdfDisplayComponent";
 
-export default function White_Paper() {
-  const uri =
-    "http://15.207.20.62:1337/api/white-paper?populate=white_paper_cards";
-  const { loading, error, data } = useFetch(uri);
-  // 15.207.20.62 15.207.20.62
-  // console.log(data.attributes);
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center">
-        <ThreeDots
-          height="80"
-          width="80"
-          radius="9"
-          color="#4fa94d"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
+export default function White_Paper({ data }) {
+ 
   return (
     <div>
       <div
@@ -110,19 +83,7 @@ export default function White_Paper() {
           </div>
         </div>
       </div>
-      {/* <div class="modal fade" id="enquiryModal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button type="button" class="close" data-dismiss="modal">
-                &times;
-              </button>
-              <br />
-              <Whitepaper_Form />
-            </div>
-          </div>
-        </div>
-      </div> */}
+     
     </div>
   );
 }

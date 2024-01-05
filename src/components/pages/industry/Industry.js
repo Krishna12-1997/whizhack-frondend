@@ -1,41 +1,14 @@
 import React, { useState } from "react";
 import "../industry/industry.css";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
-import service_sample from "../../images/video/service_sample_video.mp4";
-import useFetch from "../../../hooks/useFetch";
-import { ThreeDots } from "react-loader-spinner";
 
-export default function Industry() {
+
+export default function Industry({ data }) {
   const [activeTab, setActiveTab] = useState("Finance");
 
   const handleTabClick = (industryType) => {
     setActiveTab(industryType);
   };
-
-  const uri =
-    "http://15.207.20.62:1337/api/industry?populate=industry_left.industry_lefts, section, industry_right.industry_rights.button";
-  const { loading, error, data } = useFetch(uri);
-  // console.log(data.attributes);
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center">
-        <ThreeDots
-          height="80"
-          width="80"
-          radius="9"
-          color="#4fa94d"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
 
   // Filter the industry_rights.data based on the activeTab
   const filteredIndustryRights =

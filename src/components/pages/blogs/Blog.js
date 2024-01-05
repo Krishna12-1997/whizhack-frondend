@@ -1,40 +1,9 @@
 import React, { useState } from "react";
 import "./blogs.css";
-import blog_banner from "../../images/video/blog_video.mp4";
 import { Link } from "react-router-dom";
-import blog1_img from "../../images/blogs_img/1.png";
-import blog2_img from "../../images/blogs_img/2.png";
-import blog3_img from "../../images/blogs_img/3.png";
-import useFetch from "../../../hooks/useFetch";
-import { ThreeDots } from "react-loader-spinner";
 
-export default function Blog() {
+export default function Blog({ data }) {
   const [showAll, setShowAll] = useState(false);
-
-  const uri =
-    "http://15.207.20.62:1337/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.blog_button,  all_blog.all_blog.latest_blogs.Single_blog_details";
-  const { loading, error, data } = useFetch(uri);
-  // console.log(data.attributes);
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center">
-        <ThreeDots
-          height="80"
-          width="80"
-          radius="9"
-          color="#4fa94d"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
 
   return (
     <div>

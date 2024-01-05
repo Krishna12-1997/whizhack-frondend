@@ -7,19 +7,8 @@ import bg from "../../asset/m-BG.png";
 import useFetch from "../../hooks/useFetch";
 import AboutSlider from "../inc/AboutSlider";
 
-const About = () => {
-  const uri =
-    "http://15.207.20.62:1337/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
-  const { loading, error, data } = useFetch(uri);
-  if (loading) {
-    return <p>Loading data...</p>;
-  }
+const About = ({ data }) => {
 
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
-
-  // Assuming data is available
   const header = data.attributes.header;
   const management = header.management;
   const story = header.story;
