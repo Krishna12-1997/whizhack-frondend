@@ -26,7 +26,7 @@ export default function Partners({ data }) {
         />
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-10">
+            <div className="col-lg-12">
               <div className="industry-banner-title">
                 <h3 data-aos="fade-down" data-aos-delay="300" data-aos-duration={1500}>{data.attributes.title}</h3>
                 <p data-aos="fade-up" data-aos-delay="300" data-aos-duration={1500}>{data.attributes.description}</p>

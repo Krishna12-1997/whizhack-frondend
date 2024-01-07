@@ -20,7 +20,7 @@ export default function Service({ data }) {
         />
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-10">
+            <div className="col-lg-12">
               <div className="service-banner-title">
                 <h3
                   data-aos="fade-down"
@@ -240,7 +240,7 @@ export default function Service({ data }) {
                 <h3>Penetration Testing Service Categories</h3>
               </div>
             </div>
-            <div className="col-lg-10">
+            <div className="col-lg-12">
               <div className="penestration-service-slider">
                 <TestingSlider data={data}/>
               

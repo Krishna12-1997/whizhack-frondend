@@ -26,7 +26,7 @@ export default function Privacy_policy({ data }) {
         />
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-10">
+            <div className="col-lg-12">
               <div className="industry-banner-title">
                 <h3
                   data-aos="fade-down"

@@ -27,7 +27,7 @@ export default function White_Paper({ data }) {
         />
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-10">
+            <div className="col-lg-12">
               <div className="industry-banner-title">
                 <h3>{data.attributes.title}</h3>
                 <p>{data.attributes.description}</p>

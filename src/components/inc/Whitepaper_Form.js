@@ -24,7 +24,7 @@ export default function Whitepaper_Form({ pdfUrlForm }) {
       // Make a POST request to your Strapi API
       axios
         .post(
-          "http://15.207.20.62:1337/api/white-paper-download-details",
+          "http://15.207.226.239:1337/api/white-paper-download-details",
           formData
         )
         .then((response) => {

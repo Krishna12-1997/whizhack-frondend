@@ -27,7 +27,7 @@ export default function Contact({ data }) {
 
       // Make a POST request to your Strapi API
       axios
-        .post("http://15.207.20.62:1337/api/contact-details", formData)
+        .post("http://15.207.226.239:1337/api/contact-details", formData)
         .then((response) => {
           console.log("POST request successful:", response.data);
           alert("Thank You")

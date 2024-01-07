@@ -28,7 +28,7 @@ export default function ContactForm2({ option, city }) {
 
       // Make a POST request to your Strapi API
       axios
-        .post("http://15.207.20.62:1337/api/institution-contacts", formData)
+        .post("http://15.207.226.239:1337/api/institution-contacts", formData)
         .then((response) => {
           console.log("POST request successful:", response.data);
           alert("Thank You")
