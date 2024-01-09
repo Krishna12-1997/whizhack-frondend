@@ -2,7 +2,7 @@
   "name": "whizhack",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://www.whizhack.com",
+  "proxy": "http://whizhack.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -25,7 +25,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=80 && react-scripts start --host=whizhack.com --env.PUBLIC_URL=http://whizhack.com",
+    "start": "set PORT=80 && react-scripts start --host=whizhack.com ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
