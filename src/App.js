@@ -37,10 +37,10 @@ function App() {
   }, []);
 
   const homeUri =
-    "http://15.207.226.239:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images ";
-  const footerUri = "http://15.207.226.239:1337/api/footer?populate=left_footer";
+    "/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images ";
+  const footerUri = "/api/footer?populate=left_footer";
   const navbarUri =
-    " http://15.207.226.239:1337/api/top-right-menu?populate=body.sections.links, body.single_sections";
+    " /api/top-right-menu?populate=body.sections.links, body.single_sections";
   const aboutUri =
     "http://15.207.226.239:1337/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
   const productsUri =
