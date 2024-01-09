@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "set PORT=80 && react-scripts start --host=whizhack.com",
-    "build": "react-scripts build",
+    "build": "react-scripts build --env.PUBLIC_URL=http://whizhack.com",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
