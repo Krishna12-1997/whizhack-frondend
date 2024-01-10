@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 
-export default function ContactForm({option}) {
+export default function ContactForm({ option }) {
   const formik = useFormik({
     initialValues: {
       producttype: "",
@@ -27,7 +27,7 @@ export default function ContactForm({option}) {
 
       // Make a POST request to your Strapi API
       axios
-        .post("http://15.207.226.239:1337/api/product-contacts", formData)
+        .post("https://test.whizhack.com/api/product-contacts", formData)
         .then((response) => {
           console.log("POST request successful:", response.data);
           // Do something after a successful post, e.g., show a success message or redirect to another page.

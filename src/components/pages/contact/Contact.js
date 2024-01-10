@@ -27,10 +27,10 @@ export default function Contact({ data }) {
 
       // Make a POST request to your Strapi API
       axios
-        .post("http://15.207.226.239:1337/api/contact-details", formData)
+        .post("https://test.whizhack.com/api/contact-details", formData)
         .then((response) => {
           console.log("POST request successful:", response.data);
-          alert("Thank You")
+          alert("Thank You");
           // Do something after a successful post, e.g., show a success message or redirect to another page.
         })
         .catch((error) => {
@@ -40,7 +40,6 @@ export default function Contact({ data }) {
     },
   });
 
- 
   return (
     <div>
       <div className="contact-section-single">
@@ -133,9 +132,7 @@ export default function Contact({ data }) {
                       <div id="menu1" class="tab-pane fade">
                         <div className="contact-page-detail">
                           <h6>Address</h6>
-                          <p>
-                          {data.attributes.address}
-                          </p>
+                          <p>{data.attributes.address}</p>
                         </div>
                         <div className="contact-page-detail">
                           <h6>Email id</h6>

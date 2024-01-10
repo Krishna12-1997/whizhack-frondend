@@ -28,10 +28,10 @@ export default function ContactForm2({ option, city }) {
 
       // Make a POST request to your Strapi API
       axios
-        .post("http://15.207.226.239:1337/api/institution-contacts", formData)
+        .post("https://test.whizhack.com/api/institution-contacts", formData)
         .then((response) => {
           console.log("POST request successful:", response.data);
-          alert("Thank You")
+          alert("Thank You");
           // Do something after a successful post, e.g., show a success message or redirect to another page.
         })
         .catch((error) => {
@@ -40,7 +40,7 @@ export default function ContactForm2({ option, city }) {
         });
     },
   });
-  
+
   return (
     <div>
       <form
@@ -67,8 +67,7 @@ export default function ContactForm2({ option, city }) {
             onChange={formik.handleChange}
             value={formik.values.institutionname}
             placeholder="&nbsp;"
-          >
-          </input>
+          ></input>
           <label htmlFor="InstitutionName">Name of the Institution *</label>
         </div>
         <div className="form-group">
@@ -109,16 +108,14 @@ export default function ContactForm2({ option, city }) {
         </div>
         <div className="form-group">
           <input
-          type="text"
+            type="text"
             className="form-control"
             id="CityName"
             name="CityName"
             placeholder="&nbsp;"
             onChange={formik.handleChange}
             value={formik.values.CityName}
-          >
-           
-          </input>
+          ></input>
           <label htmlFor="CityName"> City*</label>
         </div>
         <button
