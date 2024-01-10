@@ -38,40 +38,40 @@ function App() {
 
   // 15.207.226.239
   const homeUri =
-    "http://localhost:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images ";
-  const footerUri = "http://localhost:1337/api/footer?populate=left_footer";
+    "http://15.207.226.239:1337/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images ";
+  const footerUri = "http://15.207.226.239:1337/api/footer?populate=left_footer";
   const navbarUri =
-    " http://localhost:1337/api/top-right-menu?populate=body.sections.links, body.single_sections";
+    " http://15.207.226.239:1337/api/top-right-menu?populate=body.sections.links, body.single_sections";
   const aboutUri =
-    "http://localhost:1337/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
+    "http://15.207.226.239:1337/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
   const productsUri =
-    " http://localhost:1337/api/solution?populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.about_cybers, solution.hids_section.hids_features.feature_hids";
+    " http://15.207.226.239:1337/api/solution?populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.about_cybers, solution.hids_section.hids_features.feature_hids";
   const trainingUri =
-    "http://localhost:1337/api/training?populate=training.cyber_gurus.price , training.about_cybers.cyber_link, training.cyber_modules.cyber_module, training.btogs.btog_card, training.solution_cases.case_impact";
+    "http://15.207.226.239:1337/api/training?populate=training.cyber_gurus.price , training.about_cybers.cyber_link, training.cyber_modules.cyber_module, training.btogs.btog_card, training.solution_cases.case_impact";
   const serviceUri =
-    "http://localhost:1337/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing, Service_security.service_homes.service_content";
+    "http://15.207.226.239:1337/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing, Service_security.service_homes.service_content";
   const blogUri =
-    "http://localhost:1337/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.blog_button,  all_blog.all_blog.latest_blogs.Single_blog_details";
-  const blogDetailsUri = `http://localhost:1337/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.Single_blog_details, all_blog.all_blog.latest_blogs.blog_button/${blogId}, all_blog.all_blog.latest_blogs.Single_blog_details/${blogId}`;
+    "http://15.207.226.239:1337/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.blog_button,  all_blog.all_blog.latest_blogs.Single_blog_details";
+  const blogDetailsUri = `http://15.207.226.239:1337/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.Single_blog_details, all_blog.all_blog.latest_blogs.blog_button/${blogId}, all_blog.all_blog.latest_blogs.Single_blog_details/${blogId}`;
   const whitePaperUri =
-    "http://localhost:1337/api/white-paper?populate=white_paper_cards";
+    "http://15.207.226.239:1337/api/white-paper?populate=white_paper_cards";
   const partnersUri =
-    "http://localhost:1337/api/partner?populate=partner_contents.partner_card";
+    "http://15.207.226.239:1337/api/partner?populate=partner_contents.partner_card";
   const serviceItUri =
-    "http://localhost:1337/api/service-it?populate=service_IT_content";
+    "http://15.207.226.239:1337/api/service-it?populate=service_IT_content";
   const serviceOtUri =
-    "http://localhost:1337/api/service-ot?populate=service_ot_content";
+    "http://15.207.226.239:1337/api/service-ot?populate=service_ot_content";
   const careerUri =
-    "http://localhost:1337/api/career-pathway?populate=career_path_video, career_programs.duration, career_programs.module";
-  const termsAndConditionUri = "http://localhost:1337/api/terms-condition";
+    "http://15.207.226.239:1337/api/career-pathway?populate=career_path_video, career_programs.duration, career_programs.module";
+  const termsAndConditionUri = "http://15.207.226.239:1337/api/terms-condition";
   const ransomwareUri =
-    "http://localhost:1337/api/ransomeware?populate=ransomeware_content.ransomeware_content_inner";
+    "http://15.207.226.239:1337/api/ransomeware?populate=ransomeware_content.ransomeware_content_inner";
   const investorRelationUri =
-    "http://localhost:1337/api/investor-relation?populate=year.investors.investor_shareholder_content, advisorpartner";
-  const contactUri = "http://localhost:1337/api/contact-form";
+    "http://15.207.226.239:1337/api/investor-relation?populate=year.investors.investor_shareholder_content, advisorpartner";
+  const contactUri = "http://15.207.226.239:1337/api/contact-form";
   const industryUri =
-    "http://localhost:1337/api/industry?populate=industry_left.industry_lefts, section, industry_right.industry_rights.button";
-  const privacyUri = "http://localhost:1337/api/privacy-policy";
+    "http://15.207.226.239:1337/api/industry?populate=industry_left.industry_lefts, section, industry_right.industry_rights.button";
+  const privacyUri = "http://15.207.226.239:1337/api/privacy-policy";
 
   // Use the useFetch hook for each API endpoint
   const homeData = useFetch(homeUri);
