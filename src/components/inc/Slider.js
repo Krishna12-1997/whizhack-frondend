@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import Persons from "../images/Persons.png";
-import xdr from "../images/XDR.png"
+import xdr from "../images/XDR.png";
 
 const SimpleSlider = ({ data }) => {
   function scrollToSection(e, sectionId) {
@@ -17,7 +17,7 @@ const SimpleSlider = ({ data }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     fade: true,
     autoplay: true,
     arrows: false,
@@ -60,36 +60,31 @@ const SimpleSlider = ({ data }) => {
               </div>
             </div>
             <div className="col-lg-7 banner-text-img">
-              <div className="banner-slider">
-              <div
-                    className="banner-img"
-                    style={{
-                      backgroundImage: `url(${xdr}) `,
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  >
-                 
+               <div className="banner-slider">
                 <div
                   className="banner-img"
                   style={{
-                    backgroundImage: `url(${img.bg_image_url}) `,
+                    backgroundImage: `url(${xdr})`,
                     backgroundRepeat: "no-repeat",
                   }}
-                > </div> </div>
-                <div>
-                   <div
-                    className="banner-img-persons"
-                    style={{
-                      backgroundImage: `url(${Persons}) `,
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  >
-                   
-                   
-                   </div>
+                >
+
+                <div
+                  className="banner-img"
+                  style={{
+                    backgroundImage: `url(${img.bg_image_url})`,
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+
+                 <img
+                  className="person"
+                  src={Persons}
+                  alt="person"
+                />
                 </div>
-                
-              </div>
+                </div>
+              </div> 
             </div>
           </div>
         ))}

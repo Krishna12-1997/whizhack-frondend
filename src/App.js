@@ -36,6 +36,7 @@ function App() {
     AOS.init();
   }, []);
 
+  // 15.207.226.239
   const homeUri =
     "https://test.whizhack.com/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images ";
   const footerUri = "https://test.whizhack.com/api/footer?populate=left_footer";
