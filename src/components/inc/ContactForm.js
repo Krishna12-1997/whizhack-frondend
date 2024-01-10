@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 
-export default function ContactForm({option}) {
+export default function ContactForm({ option }) {
   const formik = useFormik({
     initialValues: {
       producttype: "",
