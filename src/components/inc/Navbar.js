@@ -7,6 +7,7 @@ import useFetch from "../../hooks/useFetch";
 export default function Navbar({ data }) {
 
   const [activeSection, setActiveSection] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleSectionHover = (index, event) => {
     event.preventDefault();

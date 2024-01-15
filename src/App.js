@@ -8,7 +8,6 @@ import Loader from "./components/inc/Loader";
 import { useParams } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 const Home = React.lazy(() => import("./components/pages/Home"));
 const About = React.lazy(() => import("./components/pages/About"));
 const Navbar = React.lazy(() => import("./components/inc/Navbar"));
