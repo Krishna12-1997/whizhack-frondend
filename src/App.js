@@ -1,33 +1,50 @@
-// import logo from './logo.svg';
+
+import React, { useEffect, Suspense } from "react";
 import "./App.css";
-import React, { useEffect } from "react";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Navbar from "./components/inc/Navbar";
-import Footer from "./components/inc/Footer";
 import "./responsive.css";
-import Trace from "./pages/trace/Trace";
-import Guru from "./components/pages/trainings/Guru";
 import useFetch from "../src/hooks/useFetch";
 import { Routes, Route } from "react-router-dom";
-import Blog from "./components/pages/blogs/Blog";
-import Blog_details from "./components/pages/blogs/Blog_details";
-import Contact from "./components/pages/contact/Contact";
-import Service from "./components/pages/services/Service";
-import Industry from "./components/pages/industry/Industry";
-import Privcy from "./components/pages/Privacy_policy";
-import Partner from "./components/pages/Partners";
-import Condition from "./components/pages/Terms_Conditions";
-import Ransomeware from "./components/pages/ransomeware/Ransomeware";
-import Career from "./components/pages/trainings/Career";
-import Investor_Relations from "./components/pages/investor_relation/Investor_Relations";
-import Service_IT from "./components/pages/service_infra/Service_IT";
-import Service_OT from "./components/pages/service_infra/Service_OT";
-import White_Paper from "./components/pages/White_Paper";
 import Loader from "./components/inc/Loader";
 import { useParams } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+const Home = React.lazy(() => import("./components/pages/Home"));
+const About = React.lazy(() => import("./components/pages/About"));
+const Navbar = React.lazy(() => import("./components/inc/Navbar"));
+const Footer = React.lazy(() => import("./components/inc/Footer"));
+const Trace = React.lazy(() => import("./pages/trace/Trace"));
+const Guru = React.lazy(() => import("./components/pages/trainings/Guru"));
+const Blog = React.lazy(() => import("./components/pages/blogs/Blog"));
+const Blog_details = React.lazy(() => import("./components/pages/blogs/Blog_details"));
+const Contact = React.lazy(() => import("./components/pages/contact/Contact"));
+const Service = React.lazy(() => import("./components/pages/services/Service"));
+const Industry = React.lazy(() => import("./components/pages/industry/Industry"));
+const Privcy = React.lazy(() => import("./components/pages/Privacy_policy"));
+const Partner = React.lazy(() => import("./components/pages/Partners"));
+const Condition = React.lazy(() => import("./components/pages/Terms_Conditions"));
+const Ransomeware = React.lazy(() => import("./components/pages/ransomeware/Ransomeware"));
+const Career = React.lazy(() => import("./components/pages/trainings/Career"));
+const Investor_Relations = React.lazy(() => import("./components/pages/investor_relation/Investor_Relations"));
+const Service_IT = React.lazy(() => import("./components/pages/service_infra/Service_IT"));
+const Service_OT = React.lazy(() => import("./components/pages/service_infra/Service_OT"));
+const White_Paper = React.lazy(() => import("./components/pages/White_Paper"));
+
+// import Blog from "./components/pages/blogs/Blog";
+// import Blog_details from "./components/pages/blogs/Blog_details";
+// import Contact from "./components/pages/contact/Contact";
+// import Service from "./components/pages/services/Service";
+// import Industry from "./components/pages/industry/Industry";
+// import Privcy from "./components/pages/Privacy_policy";
+// import Partner from "./components/pages/Partners";
+// import Condition from "./components/pages/Terms_Conditions";
+// import Ransomeware from "./components/pages/ransomeware/Ransomeware";
+// import Career from "./components/pages/trainings/Career";
+// import Investor_Relations from "./components/pages/investor_relation/Investor_Relations";
+// import Service_IT from "./components/pages/service_infra/Service_IT";
+// import Service_OT from "./components/pages/service_infra/Service_OT";
+// import White_Paper from "./components/pages/White_Paper";
+
 
 function App() {
   const { blogId } = useParams();
@@ -36,7 +53,7 @@ function App() {
     AOS.init();
   }, []);
 
-  // 15.207.226.239
+  // https://test.whizhack.com
   const homeUri =
     "https://test.whizhack.com/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images ";
   const footerUri = "https://test.whizhack.com/api/footer?populate=left_footer";
@@ -145,6 +162,7 @@ function App() {
     <div className="Home">
       <Loader loading={loading}>
         <Navbar title="Whizhack" data={navbarData.data} />
+        <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home data={homeData.data} />} />
           <Route path="/about" element={<About data={aboutData.data} />} />
@@ -204,6 +222,7 @@ function App() {
           />
           <Route path="/career" element={<Career data={careerData.data} />} />
         </Routes>
+        </Suspense>
         <Footer data={footerData.data} />
       </Loader>
     </div>

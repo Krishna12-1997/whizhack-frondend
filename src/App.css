@@ -1,15 +1,29 @@
 .App {
   text-align: center;
 }
-.banner-text-content, .banner-text-img{
+.banner-text-content {
   height: 100vh;
   padding: 0;
 }
-.slider{
+
+.banner-text-img {
+  height: 100vh;
+  padding: 0;
+}
+
+.slider {
   display: flex;
 }
-.person{
-    height: 100vh;
+.banner-img {
+  object-fit: contain;
+  mix-blend-mode: normal;
+  height: 100vh;
+}
+.person {
+  height: 67%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: normal;
 }
 .fade-in-text {
   opacity: 0;
@@ -403,18 +417,18 @@
   overflow: hidden;
   transition: background-color 0.3s, color 0.3s;
 }
-.art-product-box:hover{
+.art-product-box:hover {
   background-color: #002c55;
   color: #fff;
 }
-.art-product-box:hover .art-product-box-inner p, 
+.art-product-box:hover .art-product-box-inner p,
 .art-product-box:hover .art-product-box-inner h3,
-.art-product-box:hover .art-product-box-inner-whizrange p{
+.art-product-box:hover .art-product-box-inner-whizrange p {
   color: #fff;
 }
 .art-product-box:hover .art-product-box-inner img {
   /* filter: brightness(0) invert(1) ; */
-  filter: brightness(100%) ;
+  filter: brightness(100%);
 }
 .art-product-box:hover .fas.fa-arrow-right {
   color: #fff;
@@ -490,10 +504,10 @@
 
 .art-product-box-outer i:last-child {
   color: gray;
-    font-size: 23px;
-    position: relative;
-    right: 40%;
-    opacity: 0.6;
+  font-size: 23px;
+  position: relative;
+  right: 40%;
+  opacity: 0.6;
 }
 
 .art-product-box-inner-whizrange i:last-child {
@@ -848,14 +862,15 @@ a:hover {
   position: relative;
   border-bottom: 13px solid purple;
 }
-.art-product2-box:hover{
+.art-product2-box:hover {
   background-color: #002c55;
   border-bottom: 13px solid blueviolet;
 }
-.art-product2-box:hover .art-product2-box-inner ul li{
-color: #fff;
+.art-product2-box:hover .art-product2-box-inner ul li {
+  color: #fff;
 }
-.art-product2-box:hover .art-product2-box-inner img, .art-product2-box:hover .art-product2-box-inner h3 {
+.art-product2-box:hover .art-product2-box-inner img,
+.art-product2-box:hover .art-product2-box-inner h3 {
   filter: brightness(100%);
 }
 .art-product2-box-inner {
@@ -1316,7 +1331,7 @@ color: #fff;
   grid-template-columns: repeat(2, 1fr);
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  .art-product-box-outer i:last-child{
+  .art-product-box-outer i:last-child {
     padding: 0 0 8% 0;
     right: 0;
   }
@@ -1482,10 +1497,10 @@ color: #fff;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
- .banner-text-img {
+  .banner-text-img {
     display: none;
-}
-  .art-product-box-outer i:last-child{
+  }
+  .art-product-box-outer i:last-child {
     padding: 0 0 8% 0;
     right: 0;
   }
@@ -1605,10 +1620,10 @@ color: #fff;
     top: 0;
     left: 7px;
   }
-  .nav_right_solution .image-container{
+  .nav_right_solution .image-container {
     width: 100%;
   }
-  .mobile_dropdown{
+  .mobile_dropdown {
     margin-left: 20px;
   }
   .nav_right_solution {
@@ -1660,7 +1675,6 @@ color: #fff;
   .zerohack-product {
     display: block;
   }
-
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
@@ -1777,12 +1791,11 @@ color: #fff;
     display: block;
     width: 100%;
     position: static;
-
   }
-  .nav_right_solution .image-container{
+  .nav_right_solution .image-container {
     width: 100%;
   }
- 
+
   .nav_right_solution {
     display: flex;
     align-items: center;
@@ -1832,37 +1845,70 @@ color: #fff;
   .zerohack-product {
     display: block;
   }
+  .person {
+    height: 73%;
+  }
+  .person {
+    height: 100%;
+  }
+  .banner-text-img {
+    height: 100vh;
+  }
+  .slider-home-manf-serv {
+    flex-direction: column !important;
+    justify-content: flex-start;
+  }
 }
-
+@media only screen and (min-width: 769px) and (max-width: 995px) {
+  .person {
+    height: 100%;
+  }
+  .person {
+    height: 73%;
+  }
+  .banner-text-img {
+    height: 100vh;
+  }
+  .slider-home-manf-serv {
+    flex-direction: column !important;
+  }
+}
 @media only screen and (min-width: 996px) and (max-width: 1280px) {
   .second-banner::before {
     clip-path: polygon(47% 0, 67% 0%, 35% 100%, 15% 100%);
     left: 32%;
   }
- 
+
   .art-products-inner {
     bottom: 1%;
-}
-.art-product-box{
-  height: 48vh;
-}
-.art-products, .second-banner{
-  height: 165vh;
-}
-.art-product-content-inner{
-  width: 28%;
-  left: 3%;
-  bottom: 62%;
-}
-.art-product2-box{
-  height: 71vh;
-}
-.art-product-box{
-  height: 54vh;
-}
-.art-products2-inner{
-  bottom: 10%;
-}
+  }
+  .art-product-box {
+    height: 48vh;
+  }
+  .art-products,
+  .second-banner {
+    height: 165vh;
+  }
+  .art-product-content-inner {
+    width: 28%;
+    left: 3%;
+    bottom: 62%;
+  }
+  .art-product2-box {
+    height: 71vh;
+  }
+  .art-product-box {
+    height: 54vh;
+  }
+  .art-products2-inner {
+    bottom: 10%;
+  }
+  .person {
+    height: 100%;
+  }
+  .person {
+    height: 73%;
+  }
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1400px) {
@@ -1872,41 +1918,61 @@ color: #fff;
   }
   .art-products-inner {
     bottom: 1%;
-}
-.art-product-box{
-  height: 46vh;
-}
-.art-products, .second-banner{
-  height: 163vh;
-}
-.art-product2-box{
-  height: 71vh;
-}
-.art-product-box{
-  height: 53vh;
-}
-.art-products2-inner{
-  bottom: 12%;
-}
+  }
+  .art-product-box {
+    height: 46vh;
+  }
+  .art-products,
+  .second-banner {
+    height: 163vh;
+  }
+  .art-product2-box {
+    height: 71vh;
+  }
+  .art-product-box {
+    height: 53vh;
+  }
+  .art-products2-inner {
+    bottom: 12%;
+  }
+  .person {
+    height: 100%;
+  }
+  .person {
+    height: 73%;
+  }
 }
 
 @media only screen and (min-width: 1401px) and (max-width: 1500px) {
   .second-banner::before {
     clip-path: polygon(47% 0, 67% 0%, 24% 100%, 2% 100%);
   }
-  .art-product-box{
+  .art-product-box {
     height: 46vh;
   }
-  .art-products, .second-banner{
+  .art-products,
+  .second-banner {
     height: 152vh;
   }
   .art-products-inner {
     bottom: 2%;
+  }
+  .art-product2-box {
+    height: 71vh;
+  }
+  .art-products2-inner {
+    bottom: 12%;
+  }
+  .person {
+    height: 100%;
+  }
+  .person {
+    height: 73%;
+  }
 }
-.art-product2-box{
-  height: 71vh;
-}
-.art-products2-inner{
-  bottom: 12%;
-}
+
+@media only screen and (min-width: 1501px) and (max-width: 1900px) {
+  .person {
+    height: 87%;
+  }
 }

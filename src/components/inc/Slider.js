@@ -15,7 +15,7 @@ const SimpleSlider = ({ data }) => {
   }
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1000,
     fade: true,
@@ -29,7 +29,7 @@ const SimpleSlider = ({ data }) => {
     <div className="">
       <Slider {...settings}>
         {data.attributes.images.map((img) => (
-          <div className="d-flex">
+          <div className="d-flex slider-home-manf-serv">
             <div className="col-lg-5 banner-text-content">
               <div className="banner-text">
                 <img
@@ -59,7 +59,7 @@ const SimpleSlider = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-7 banner-text-img">
+            <div className="col-lg-7 banner-text-img ">
                <div className="banner-slider">
                 <div
                   className="banner-img"
