@@ -10,10 +10,10 @@ const Service_OT = ({ data }) => {
     <>
     <div>
        <div
-        className="industry-banner-section"
+        className="serviceIT-banner-section"
         style={{
           background: `url(${data.attributes.bg_url})`,
-          backgroundPosition: "center",
+          backgroundPosition: "center"
         }}
       >
         <img
@@ -29,7 +29,7 @@ const Service_OT = ({ data }) => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-12">
-              <div className="industry-banner-title">
+              <div className="serviceIT-banner-title">
                 <h3>{data.attributes.title}</h3>
                 <p>{data.attributes.description}</p>
               </div>
@@ -46,7 +46,7 @@ const Service_OT = ({ data }) => {
             <div className={`mt-4 mb-5 OT ${
               index % 2 === 0 ? "even" : "odd"
             }`}>
-            <div className="col-lg-6 my-auto">
+            <div className="col-lg-6 ">
                <img src={it.image_url} alt="image" width="100%" />
             </div>
             <div className="col-lg-6">
@@ -66,7 +66,7 @@ const Service_OT = ({ data }) => {
       <div className="get-in-touch-service">
         <div className="container-flu">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 ser-it">
               <div className="head-title connect-us-new">
                 <h3>If you have any queries related to our services, Connect with us</h3>
               </div>

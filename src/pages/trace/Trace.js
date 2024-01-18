@@ -198,7 +198,7 @@ export default function Trace({ data }) {
                         <div className="bottom"></div>
                       </div>
 
-                      <div className="col-lg-4 col-md-3 col-sm-122">
+                      <div className="col-lg-4 col-md-5 col-sm-122">
                         <div className="square_content">
                           <h3
                             data-aos="fade-right"
@@ -234,7 +234,7 @@ export default function Trace({ data }) {
                         </div>
                       </div>
 
-                      <div className="col-lg-7 col-md-6 col-sm-122">
+                      <div className="col-lg-7 col-md-7 col-sm-122">
                         <div
                           className="square"
                           style={{
@@ -293,7 +293,7 @@ export default function Trace({ data }) {
                   <div className="threat key-features mt-5">
                     <div className="container-fluid">
                       <div className="row">
-                        <div className="col-lg-6 col-md-6 col-sm-12">
+                        <div className="col-lg-6 col-md-12 col-sm-12">
                           <div
                             className="square_content"
                             style={{
@@ -306,7 +306,7 @@ export default function Trace({ data }) {
                           ></div>
                         </div>
 
-                        <div className="col-lg-6 col-md-6 col-sm-12">
+                        <div className="col-lg-6 col-md-12 col-sm-12">
                           <div className="square">
                             <div className="degree-2">
                               <div className="d-flex mt-4">
@@ -392,10 +392,7 @@ export default function Trace({ data }) {
                                 {features.attributes.feature_trace.map(
                                   (list) => (
                                     <div
-                                      className="d-flex mx-4"
-                                      data-aos="fade-down"
-                                      data-aos-delay="300"
-                                      data-aos-duration={1500}
+                                      
                                     >
                                       <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -461,7 +458,7 @@ export default function Trace({ data }) {
                           <div className="bottom"></div>
                         </div>
 
-                        <div className="col-lg-4 col-md-3 col-sm-122">
+                        <div className="col-lg-4 col-md-12 col-sm-122">
                           <div className="square_content">
                             <div className="d-flex">
                               <img
@@ -515,7 +512,7 @@ export default function Trace({ data }) {
                           </div>
                         </div>
 
-                        <div className="col-lg-7 col-md-6 col-sm-122">
+                        <div className="col-lg-7 col-md-12 col-sm-122">
                           <div
                             className="square"
                             style={{
@@ -681,7 +678,7 @@ export default function Trace({ data }) {
                       }}
                     >
                       <div className="container text-white text-center mt-5">
-                        <div className="col-lg-12 col-md-8 col-sm-12 justify-content-center d-flex align-items-center">
+                        <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
                           <div className="line_left"></div>
                           <h1 style={{ fontWeight: 600 }}>
                             {impact.attributes.title}
@@ -689,7 +686,7 @@ export default function Trace({ data }) {
                           <div className="line_right"></div>
                         </div>
 
-                        <div className="col-lg-12 col-md-8 col-sm-12 mx-auto mt-3 mb-5">
+                        <div className="col-lg-12 col-md-12 col-sm-12 mx-auto mt-3 mb-5">
                           <div className="tech_card_index">
                             {impact.attributes.case_impact.map((imp) => (
                               <div className="tech_card_index_details">
@@ -904,7 +901,7 @@ export default function Trace({ data }) {
                         <div className="bottom"></div>
                       </div>
 
-                      <div className="col-lg-4 col-md-3 col-sm-12 square_content">
+                      <div className="col-lg-4 col-md-4 col-sm-12 square_content">
                         <div className=" mt-5 ">
                           <h3
                             data-aos="fade-right"
@@ -933,7 +930,7 @@ export default function Trace({ data }) {
                         </div>
                       </div>
 
-                      <div className="col-lg-7 col-md-6 col-sm-122">
+                      <div className="col-lg-7 col-md-8 col-sm-12">
                         <div className="whiz">
                           <div className="degree">
                             {firstSolution.bg_image_url.card.map((card) => (
@@ -1129,7 +1126,7 @@ export default function Trace({ data }) {
                         }}
                       >
                         <div className="container text-white text-center mt-5">
-                          <div className="col-lg-12 col-md-8 col-sm-12 justify-content-center d-flex align-items-center">
+                          <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
                             <div className="line_left"></div>
                             <h1
                               style={{ fontFamily: "Pulse", fontWeight: 600 }}
@@ -1139,7 +1136,7 @@ export default function Trace({ data }) {
                             <div className="line_right"></div>
                           </div>
 
-                          <div className="col-lg-12 col-md-8 col-sm-12 mx-auto mt-3 mb-5">
+                          <div className="col-lg-12 col-md-12 col-sm-12 mx-auto mt-3 mb-5">
                             <div className="tech_card">
                               {impact.attributes.case_impact.map((imp) => (
                                 <div
@@ -1172,7 +1169,7 @@ export default function Trace({ data }) {
                         }}
                       >
                         <div className="container text-white text-center mt-5">
-                          <div className="col-lg-12 col-md-8 col-sm-12 justify-content-center d-flex align-items-center">
+                          <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
                             <div className="line_left"></div>
                             <h1
                               style={{ fontFamily: "Pulse", fontWeight: 600 }}
@@ -1182,7 +1179,7 @@ export default function Trace({ data }) {
                             <div className="line_right"></div>
                           </div>
 
-                          <div className="col-lg-12 col-md-8 col-sm-12 mx-auto mt-3 mb-5">
+                          <div className="col-lg-12 col-md-12 col-sm-12 mx-auto mt-3 mb-5">
                             <div className="tech_card_index">
                               {impact.attributes.case_impact.map((imp) => (
                                 <div
@@ -1397,7 +1394,7 @@ export default function Trace({ data }) {
                 <div className="threat mt-5">
                   <div className="container-fluid">
                     <div className="row">
-                      <div className="col-lg-7 col-md-6 col-sm-122">
+                      <div className="col-lg-7 col-md-8 col-sm-122">
                         <div className="zerohack_whiz">
                           <div className="degree">
                             {firstSolution.bg_image_url.card.map((card) => (
@@ -1435,7 +1432,7 @@ export default function Trace({ data }) {
                         <div className="bottom_zero"></div>
                       </div>
 
-                      <div className="col-lg-4 col-md-3 col-sm-12 square_content">
+                      <div className="col-lg-4 col-md-4 col-sm-12 square_content">
                         <div className=" mt-5 ">
                           <h3
                             data-aos="fade-right"
@@ -1626,7 +1623,7 @@ export default function Trace({ data }) {
                         }}
                       >
                         <div className="container text-white text-center mt-5">
-                          <div className="col-lg-12 col-md-8 col-sm-12 justify-content-center d-flex align-items-center">
+                          <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
                             <div className="line_left"></div>
                             <h1
                               style={{ fontFamily: "Pulse", fontWeight: 600 }}
@@ -1636,7 +1633,7 @@ export default function Trace({ data }) {
                             <div className="line_right"></div>
                           </div>
 
-                          <div className="col-lg-12 col-md-8 col-sm-12 mx-auto mt-3 mb-5">
+                          <div className="col-lg-12 col-md-12 col-sm-12 mx-auto mt-3 mb-5">
                             <div className="tech_card">
                               {impact.attributes.case_impact.map((imp) => (
                                 <div
@@ -1669,7 +1666,7 @@ export default function Trace({ data }) {
                         }}
                       >
                         <div className="container text-white text-center mt-5">
-                          <div className="col-lg-12 col-md-8 col-sm-12 justify-content-center d-flex align-items-center">
+                          <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
                             <div className="line_left"></div>
                             <h1
                               style={{ fontFamily: "Pulse", fontWeight: 600 }}
@@ -1679,7 +1676,7 @@ export default function Trace({ data }) {
                             <div className="line_right"></div>
                           </div>
 
-                          <div className="col-lg-12 col-md-8 col-sm-12 mx-auto mt-3 mb-5">
+                          <div className="col-lg-12 col-md-12 col-sm-12 mx-auto mt-3 mb-5">
                             <div className="tech_card_index">
                               {impact.attributes.case_impact.map((imp) => (
                                 <div
@@ -1884,7 +1881,7 @@ export default function Trace({ data }) {
                         <div className="bottom_zero_hids"></div>
                       </div>
 
-                      <div className="col-lg-5 col-md-3 col-sm-12 square_content">
+                      <div className="col-lg-5 col-md-6 col-sm-12 square_content">
                         <div className=" mt-5 ">
                           <h3
                             data-aos="fade-right"
@@ -2095,7 +2092,7 @@ export default function Trace({ data }) {
                         <div className="bottom_zero_hids"></div>
                       </div>
 
-                      <div className="col-lg-5 col-md-3 col-sm-12 square_content">
+                      <div className="col-lg-5 col-md-6 col-sm-12 square_content">
                         <div className=" mt-5 ">
                           <h3
                             data-aos="fade-right"

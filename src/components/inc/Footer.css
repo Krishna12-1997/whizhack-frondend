@@ -61,7 +61,11 @@
   line-height: normal;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 469px) and (max-width: 768px) {
+  .list-unstyled {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
   .footer-section {
     background: #07002f;
   }
@@ -85,7 +89,13 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 320px) and (max-width: 468px) {
+  .location svg path , .email svg path, .site svg path, .mobile svg path {
+    fill: #183893;
+  }
+  .location .address, .email .address, .site .address, .mobile .address {
+    color: #62666a;
+  }
   .footer_link {
     clip-path: none;
   }

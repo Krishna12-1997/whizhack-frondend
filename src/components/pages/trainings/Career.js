@@ -8,7 +8,7 @@ const Career = ({ data }) => {
     <>
       <div>
         <div
-          className="industry-banner-section"
+          className="career-banner-section"
           style={{
             background: `url(${data.attributes.bg_url})`,
             backgroundPosition: "center",
@@ -27,7 +27,7 @@ const Career = ({ data }) => {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-10">
-                <div className="industry-banner-title">
+                <div className="career-banner-title">
                   <h3
                     data-aos="fade-down"
                     data-aos-delay="300"

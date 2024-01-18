@@ -6,6 +6,7 @@ import useFetch from "../src/hooks/useFetch";
 import { Routes, Route } from "react-router-dom";
 import Loader from "./components/inc/Loader";
 import { useParams } from "react-router-dom";
+import { useCache } from "./CacheContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Home = React.lazy(() => import("./components/pages/Home"));
@@ -29,24 +30,11 @@ const Service_IT = React.lazy(() => import("./components/pages/service_infra/Ser
 const Service_OT = React.lazy(() => import("./components/pages/service_infra/Service_OT"));
 const White_Paper = React.lazy(() => import("./components/pages/White_Paper"));
 
-// import Blog from "./components/pages/blogs/Blog";
-// import Blog_details from "./components/pages/blogs/Blog_details";
-// import Contact from "./components/pages/contact/Contact";
-// import Service from "./components/pages/services/Service";
-// import Industry from "./components/pages/industry/Industry";
-// import Privcy from "./components/pages/Privacy_policy";
-// import Partner from "./components/pages/Partners";
-// import Condition from "./components/pages/Terms_Conditions";
-// import Ransomeware from "./components/pages/ransomeware/Ransomeware";
-// import Career from "./components/pages/trainings/Career";
-// import Investor_Relations from "./components/pages/investor_relation/Investor_Relations";
-// import Service_IT from "./components/pages/service_infra/Service_IT";
-// import Service_OT from "./components/pages/service_infra/Service_OT";
-// import White_Paper from "./components/pages/White_Paper";
 
 
 function App() {
   const { blogId } = useParams();
+  const { setCachedData, getCachedData } = useCache();
 
   useEffect(() => {
     AOS.init();

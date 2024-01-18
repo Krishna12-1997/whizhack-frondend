@@ -531,13 +531,13 @@
     height: 85%;
     margin: 0 auto;
   }
-  .npti_degree{
+  .npti_degree {
     display: flex;
     flex-direction: column;
     padding: 10% 0;
     height: auto;
   }
-  .degree_content_npti{
+  .degree_content_npti {
     margin: 20px;
   }
 }
@@ -694,29 +694,115 @@
   .guru-banner2-content .guru-banner-box {
     background-color: #fff;
   }
-  .npti_degree{
+  .npti_degree {
     display: flex;
     flex-direction: column;
     padding: 10% 0;
     height: auto;
   }
-  .degree_content_npti{
+  .degree_content_npti {
     margin: 20px;
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .ui1-banner1-content-training {
+    width: 50%;
+  }
+  .guru-section2 {
+    height: auto;
+  }
+  .guru-banner2-content {
+    padding: 0 8% 10% 13%;
+    background: url(http://localhost:3000/static/media/banner2.f5eae32….png);
+    background-repeat: no-repeat;
+    background-size: 180% 110%;
+    background-position: 23%;
+    height: auto;
+    text-align: center;
+  }
+  .guru-banner-box {
+    position: absolute;
+    /* left: 0; */
+    bottom: -197%;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 70%;
+    z-index: 1;
+    /* margin: 0 30px; */
+  }
+  .price_img {
+    filter: blur(4px);
+    height: auto;
+  }
+  .top_training {
+    width: 300px;
+    height: 55px;
+    background-color: #07002f;
+    position: relative;
+    top: -75px;
+    opacity: 0.7;
+    margin: 0 auto;
+  }
+  .top_training::before {
+    display: none;
+  }
+  .bottom_training {
+    display: none;
+  }
+  .guru-section3 {
+    height: auto;
+  }
+  .guru-right-inner-pro {
+    margin-top: 8%;
+  }
+  .guru-section4 {
+    background-size: unset;
+  }
+  .degree_content_npti {
+    margin: 0 12px;
+  }
+  .guru-left-parent img {
+    /* width: 100%; */
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+  }
+  .tech_card-npti {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .guru-left-parent {
+    height: 96vh;
+  }
+  .line_bottom{
+    display: none;
+  }
+  .technology{
+    padding: 1% 0;
+  }
+  .guru-right-parent {
+    height: 100vh;
+  }
+  .ui1-banner1-parent-solution-zerohack {
+    background-size: 55% 127%;
+  }
+}
 @media only screen and (min-width: 991px) and (max-width: 1280px) {
-  .degree_content_npti{
-    margin:0 12px;
-    }
-    
+  .degree_content_npti {
+    margin: 0 12px;
+  }
+  .guru-section4 {
+    background-size: unset;
+  }
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1400px) {
-  .degree_content_npti{
-    margin:0 12px;
-    }
-    
+  .degree_content_npti {
+    margin: 0 12px;
+  }
+  .guru-section4 {
+    background-size: unset;
+  }
 }
 
 @media only screen and (min-width: 1401px) and (max-width: 1600px) {

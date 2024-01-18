@@ -1,3 +1,32 @@
+.serviceIT-banner-section{
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+   margin-top: 3%;
+}
+.serviceIT-banner-title h3{
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+.serviceIT-banner-title p{
+    color: #fff;
+    text-align: center;
+    }
+    .serviceIT-banner-section .left-industry-banner-icon{
+        position: absolute;
+        
+        left: 0;
+        bottom:0;
+    }
+    .serviceIT-banner-section .right-industry-banner-icon{
+        position: absolute;
+        right: 0;
+        top:0;
+    }
 .IT, .OT{
  display: flex;
  justify-content: space-between;
@@ -11,6 +40,18 @@
     display: flex;
     flex-direction: row-reverse;
 }
+.get-in-touch-service{
+    background: rgb(228, 226, 226);
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.touch-button{
+    margin-top: 30px;
+    text-align: center;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
     .IT, .OT{
@@ -21,6 +62,10 @@
         display: flex;
         flex-direction: column; 
     }
+    .policies-inner{
+        margin-top: 30px;
+    }
+ 
 }
 
 
@@ -32,5 +77,40 @@
     .IT.odd, .OT.odd{
         display: flex;
         flex-direction: column; 
+    }
+    .policies-inner{
+        margin-top: 30px;
+    }
+    .ser-it{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+        align-items: center;
+        width: 67%;
+        margin: 0 auto;
+    }
+    .touch-button{
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 996px){
+    .IT.odd img, .IT.even img, .OT.odd img, .OT.even img{
+        height: 100%;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+    .ser-it{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+        align-items: center;
+        width: 67%;
+        margin: 0 auto;
+    }
+    .touch-button{
+        margin-top: 30px;
     }
 }

@@ -2,23 +2,50 @@
   padding: 0 10%;
   color: #fff;
 }
-
+.guru-section1 {
+  height: 100vh;
+  position: relative;
+}
+.guru-section1 video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .ui1-banner1-parent-solution {
   position: relative;
   background: url(../../components//images/bg/whizrange_BG.png);
   height: 100vh;
-  background-size: 70% 100%;
+  background-size: 50% 100%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   padding-top: 100px;
 }
+.ui1-banner1-content-solution {
+  padding: 0 5%;
+}
+.ui1-banner1-content-solution h5 {
+  color: #72abff;
+}
+.ui1-banner1-content-solution img {
+  width: 116px;
+  height: 85px;
+}
+.ui1-banner1-content-solution h3 {
+  color: #fff;
+  font-weight: 700;
+}
+.ui1-banner1-content-solution p {
+  color: #fff;
+  width: 76%;
+}
+
 .ui1-banner1-parent-solution-zerohack {
   position: relative;
-  left: -60px;
   background: url(../../components//images//bg/Bg\ Purple.svg);
   height: 100vh;
-  background-size: 50% 100%;
+  background-size: 40% 108%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -522,7 +549,7 @@
   .bottom_zero_hids {
     display: none;
   }
-  .whiz_degree{
+  .whiz_degree {
     padding: 10% 5%;
   }
   .hids {
@@ -708,6 +735,70 @@
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .guru-section1 video {
+    width: 100%;
+  }
+  .tech_card_index {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cyber_content {
+    display: block;
+}
+.top-border, .bottom-border{
+  display: none;
+}
+.w-50{
+  text-align: center;
+  width: 100% !important;
+  margin-top: 0;
+  margin-bottom: 34px;
+}
+.tech_card_details:last-child {
+  grid-column: unset;
+}
+.tech_card {
+  grid-template-columns: repeat(2, 1fr);
+}
+.partner_form .input{
+   width: 100%;
+}
+.ui1-banner1-content-solution p {
+  width: 50%;
+}
+.line{
+  display: none;
+}
+.degree_content{
+  margin: 0 12px;
+}
+.ui1-banner1-parent-solution-zerohack {
+  background-size: 56% 116%;
+}
+.square{
+  height: auto;
+  padding: 0 7%;
+}
+.square_content{
+  height: 100vh !important;
+}
+.square .degree-2 svg {
+  width: 21px;
+  height: 44px;
+}
+.degree{
+  padding: 7% 0;
+}
+.ui1-banner1-content-solution-hids {
+  width: 86%;
+}
+.ui1-banner1-content-solution-hids h3{
+   width: 50%;
+}
+}
 @media only screen and (min-width: 991px) and (max-width: 1280px) {
   .degree_content {
     margin: 0 12px;

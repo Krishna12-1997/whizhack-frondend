@@ -761,7 +761,7 @@ export default function Guru({ data }) {
                     }}
                   >
                     <div className="container text-white text-center mt-5">
-                      <div className="col-lg-12 col-md-8 col-sm-1 justify-content-center d-flex align-items-center">
+                      <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
                         <div className="line_left"></div>
                         <h1 style={{ fontFamily: "Pulse", fontWeight: 600 }}>
                           {impact.attributes.title}
@@ -769,7 +769,7 @@ export default function Guru({ data }) {
                         <div className="line_right"></div>
                       </div>
 
-                      <div className="col-lg-12 col-md-8 col-sm-1 mx-auto mt-3 mb-5">
+                      <div className="col-lg-12 col-md-12 col-sm-12 mx-auto mt-3 mb-5">
                         <div className="tech_card-npti">
                           {impact.attributes.case_impact.map((imp) => (
                             <div className="tech_card_details-npti" data-aos="fade-up" data-aos-delay="300" data-aos-duration={1500}>

@@ -1333,7 +1333,6 @@ a:hover {
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .art-product-box-outer i:last-child {
     padding: 0 0 8% 0;
-    right: 0;
   }
   .art-product-box-outer:nth-child(4),
   .art-product-box-outer:nth-child(5) {
@@ -1678,6 +1677,9 @@ a:hover {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
+  .banner-text-img {
+    display: none;
+  }
   .art-product-box-outer:nth-child(4),
   .art-product-box-outer:nth-child(5) {
     left: 0;
@@ -1704,7 +1706,7 @@ a:hover {
   .ransomeware .ransomeware-content video {
     height: 600px;
     object-fit: cover;
-    width: 100%;
+    width: 97%;
   }
   .ransomeware .ransomeware-content .ransomeware-content-img {
     display: block;
@@ -1863,8 +1865,9 @@ a:hover {
   .person {
     height: 100%;
   }
-  .person {
-    height: 73%;
+  .zerohack-product{
+    width: 90%;
+    margin: 0 auto;
   }
   .banner-text-img {
     height: 100vh;
@@ -1906,9 +1909,7 @@ a:hover {
   .person {
     height: 100%;
   }
-  .person {
-    height: 73%;
-  }
+ 
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1400px) {
@@ -1938,9 +1939,7 @@ a:hover {
   .person {
     height: 100%;
   }
-  .person {
-    height: 73%;
-  }
+
 }
 
 @media only screen and (min-width: 1401px) and (max-width: 1500px) {
@@ -1965,9 +1964,6 @@ a:hover {
   }
   .person {
     height: 100%;
-  }
-  .person {
-    height: 73%;
   }
 }
 

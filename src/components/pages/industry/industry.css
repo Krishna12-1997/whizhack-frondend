@@ -1,5 +1,6 @@
 .industry-banner-section{
     height: 100vh;
+    background-position: center;
     /* background: url(../../images/bg/industry_banner1.png); */
     /* background-size: 100% 100%; */
     background-repeat: no-repeat;
@@ -449,4 +450,8 @@ text-align: center;
         margin-top: 10% !important;
         /* background-size: cover; */
     }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 996px){
+
 }

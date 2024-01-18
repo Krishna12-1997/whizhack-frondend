@@ -433,7 +433,7 @@
   }
   .art-products-inner {
     position: absolute;
-    bottom: -4%;
+    /* bottom: -4%; */
     width: 100%;
   }
   .section3,
@@ -493,9 +493,10 @@
   }
   .art-product4-content-inner {
     transform: none;
-    width: 100%;
+    width: 33%;
     position: static;
-    text-align: center;
+    /* text-align: center; */
+    margin: 0 auto;
   }
   .art-product4-content {
     background-position: center;
@@ -505,7 +506,11 @@
     top: 0;
     clip-path: none;
     object-fit: cover;
-    height: 1769px;
+    /* height: 1895px; */
+    height: -webkit-fill-available;
+  }
+  .art-product2-box-outer {
+    margin-right: 0;
   }
   .art-product4-content-parent {
     text-align: center;
@@ -593,8 +598,8 @@
       0 86%,
       0 13%
     );
-    height: 270px;
-    width: 250px;
+    height: auto;
+    width: 400px;
   }
   .art-products2 {
     padding: 5% 0;
@@ -808,13 +813,27 @@
     left: 1%;
     color: #fff;
   }
+  .second_form .form-group input.dirty + label,
+  .second_form .form-group input:focus + label,
+  .second_form .form-group input:not(:placeholder-shown) + label {
+    background: transparent;
+    left: 1%;
+    color: #fff;
+  }
   .first_form .form-group input:focus {
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #fff;
   }
+  .second_form .form-group input:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #fff;
+  }
   .first_form .form-group input,
+  .first_form .form-group select, .second_form .form-group input,
   .first_form .form-group select {
     border: 1px solid #fff;
     background: transparent;
@@ -890,9 +909,49 @@
     display: block;
   }
   .art-product2-content-inner{
-   width: 100%;
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 6% 3%;
+    text-align: center;
   }
-   
+  .art-product-content2 {
+    width: 100%;
+    height: auto;
+    padding: 6% 3%;
+    background: url(http://localhost:3000/static/media/banner2.f5eae32….png);
+    background-size: cover;
+}
+.art-products2-inner {
+  width: 90%;
+  margin: 0 auto;
+}
+.art-products2{
+  width: 100%;
+}
+.art-products4{
+  width: 90%;
+  margin: 0 auto;
+}
+.art-product-box{
+height: 51vh;
+width: 95%;
+}
+.ransomeware {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.ransomeware .ransomeware-content video{
+  width: 100%;
+  object-fit: cover;
+  height: 600px;
+}
+  .ransomeware .ransomeware-content .ransomeware-content-img{
+    width: 100%;
+  }
+  .footer-section{
+    margin-top: 0;
+  }
   .banner-text h2 {
     margin: 0 2%;
     text-align: center;

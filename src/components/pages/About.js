@@ -66,7 +66,7 @@ const About = ({ data }) => {
               <div className="row">
                 <div
                   id="about"
-                  className="col-lg-6 col-md-12 col-sm-12 mx-auto mt-2 mb-2 rounded text-left"
+                  className="col-lg-6 col-md-6 col-sm-12 mx-auto mt-2 mb-2 rounded text-left"
                   data-aos="fadeIn"
                 >
                   {/* <video muted loop autoPlay="autoplay">
@@ -81,7 +81,7 @@ const About = ({ data }) => {
                 </div>
 
                 <div
-                  className="col-lg-6 col-md-12 col-sm-12 mx-auto mt-2 mb-2 rounded "
+                  className="col-lg-6 col-md-6 col-sm-12 mx-auto mt-2 mb-2 rounded "
                   data-aos="zoom-in"
                   style={{ padding: "2% 6%" }}
                 >
@@ -139,7 +139,7 @@ const About = ({ data }) => {
                   management.map((ab) => (
                     <div className="row" key={ab.id}>
                       <div
-                        className="col-md-4 col-sm-8 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-left"
+                        className="col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-left"
                         data-aos="fadeIn"
                       >
                         <img
@@ -150,7 +150,7 @@ const About = ({ data }) => {
                         />
                       </div>
                       <div
-                        className="col-lg-6 col-md-6 col-sm-9 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 about-team-content"
+                        className="col-lg-6 col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 about-team-content"
                         data-aos="zoom-in"
                       >
                         <div
@@ -269,7 +269,7 @@ const About = ({ data }) => {
         <section>
           <div className="container-fluid">
             <div className="row">
-              <div className="col-lg-12 col-md-8 col-sm-6 mx-auto mt-5 mb-4 pt-2 pb-2 ">
+              <div className="col-lg-12 col-md-8 col-sm-6 mx-auto mt-5 mb-4 pt-2 pb-2 advisor-title">
                 <div
                   style={{
                     color: "#07002F",
@@ -287,7 +287,7 @@ const About = ({ data }) => {
 
             <div className="row">
               <div
-                className="col-md-4 col-sm-8 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-left"
+                className="col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-left"
                 data-aos="fadeIn"
               >
                 <img
@@ -298,7 +298,7 @@ const About = ({ data }) => {
               </div>
 
               <div
-                className="col-lg-6 col-md-6 col-sm-9 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 about-team-content"
+                className="col-lg-6 col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 about-team-content"
                 data-aos="zoom-in"
               >
                 <div
@@ -434,7 +434,7 @@ const About = ({ data }) => {
         <section className="about_section_partner">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-lg-4 col-md-8 col-sm-12 mx-auto pt-2 pb-2 ">
+              <div className="col-lg-4 col-md-6 col-sm-12 mx-auto pt-2 pb-2 ">
                 <div className="pratnership_text">
                   <div
                     style={{
@@ -480,7 +480,7 @@ const About = ({ data }) => {
                 </div>
               </div>
 
-              <div className="col-lg-6 col-md-8 col-sm-12 ">
+              <div className="col-lg-6 col-md-6 col-sm-12 ">
                 <div className="pratnership">
                   <img
                     src={header.partnership.image_url}

@@ -87,7 +87,6 @@
   display: inline-block;
 }
 .blog-title .blog-view-all {
-  
 }
 .blog-view-all {
   transition: height 0.3s ease-in-out;
@@ -102,7 +101,7 @@
   color: #a3a3a3;
   text-decoration: none;
 }
-.blog-view-all i{
+.blog-view-all i {
   padding: 0px 10px;
 }
 .blog-section1-detail {
@@ -184,5 +183,11 @@
   .blog-section-single {
     background: cover;
     background-position: 100% 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 996px) {
+  .blog-banner1-content-parent {
+    width: 50%;
   }
 }
