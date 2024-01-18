@@ -1,4 +1,3 @@
-
 import React, { useEffect, Suspense } from "react";
 import "./App.css";
 import "./responsive.css";
@@ -16,21 +15,33 @@ const Footer = React.lazy(() => import("./components/inc/Footer"));
 const Trace = React.lazy(() => import("./pages/trace/Trace"));
 const Guru = React.lazy(() => import("./components/pages/trainings/Guru"));
 const Blog = React.lazy(() => import("./components/pages/blogs/Blog"));
-const Blog_details = React.lazy(() => import("./components/pages/blogs/Blog_details"));
+const Blog_details = React.lazy(() =>
+  import("./components/pages/blogs/Blog_details")
+);
 const Contact = React.lazy(() => import("./components/pages/contact/Contact"));
 const Service = React.lazy(() => import("./components/pages/services/Service"));
-const Industry = React.lazy(() => import("./components/pages/industry/Industry"));
+const Industry = React.lazy(() =>
+  import("./components/pages/industry/Industry")
+);
 const Privcy = React.lazy(() => import("./components/pages/Privacy_policy"));
 const Partner = React.lazy(() => import("./components/pages/Partners"));
-const Condition = React.lazy(() => import("./components/pages/Terms_Conditions"));
-const Ransomeware = React.lazy(() => import("./components/pages/ransomeware/Ransomeware"));
+const Condition = React.lazy(() =>
+  import("./components/pages/Terms_Conditions")
+);
+const Ransomeware = React.lazy(() =>
+  import("./components/pages/ransomeware/Ransomeware")
+);
 const Career = React.lazy(() => import("./components/pages/trainings/Career"));
-const Investor_Relations = React.lazy(() => import("./components/pages/investor_relation/Investor_Relations"));
-const Service_IT = React.lazy(() => import("./components/pages/service_infra/Service_IT"));
-const Service_OT = React.lazy(() => import("./components/pages/service_infra/Service_OT"));
+const Investor_Relations = React.lazy(() =>
+  import("./components/pages/investor_relation/Investor_Relations")
+);
+const Service_IT = React.lazy(() =>
+  import("./components/pages/service_infra/Service_IT")
+);
+const Service_OT = React.lazy(() =>
+  import("./components/pages/service_infra/Service_OT")
+);
 const White_Paper = React.lazy(() => import("./components/pages/White_Paper"));
-
-
 
 function App() {
   const { blogId } = useParams();
@@ -145,70 +156,103 @@ function App() {
     industryData.error ||
     privacyData.error;
 
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      fetchDataFromStrapi();
+    }, 20000);
+    return () => clearTimeout(delay);
+  }, []);
+
+  const fetchDataFromStrapi = async () => {
+      const cachedData = getCachedData(homeUri);
+
+      if (cachedData) {
+        // Use the cached data
+        console.log("Data fetched from cache:", cachedData);
+      } else {
+        const response = await fetch(homeUri);
+        const apiResponse = await response.json();
+
+        if (apiResponse && apiResponse.data) {
+          // Use the fetched data
+          console.log("Fetching data from Strapi:", apiResponse.data);
+
+          // Save data to cache
+          setCachedData(homeUri, apiResponse.data);
+        } else {
+          console.error("Invalid API response format.");
+        }
+      }
+   
+  };
+
   return (
     <div className="Home">
       <Loader loading={loading}>
         <Navbar title="Whizhack" data={navbarData.data} />
         <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Home data={homeData.data} />} />
-          <Route path="/about" element={<About data={aboutData.data} />} />
-          <Route
-            path="/industry"
-            element={<Industry data={industryData.data} />}
-          />
-          <Route
-            path="Products/:solutionName"
-            element={<Trace data={productsData.data} />}
-          />
-          <Route
-            path="Trainings/:paramName"
-            element={<Guru data={trainingData.data} />}
-          />
-          <Route path="/blog" element={<Blog data={blogData.data} />} />
-          <Route
-            path="/blog/:blogId"
-            element={<Blog_details data={blogDetailsData.data} />}
-          />
-          <Route
-            path="/contact"
-            element={<Contact data={contactData.data} />}
-          />
-          <Route
-            path="/services"
-            element={<Service data={serviceData.data} />}
-          />
-          <Route path="/privacy" element={<Privcy data={privacyData.data} />} />
-          <Route
-            path="/partners"
-            element={<Partner data={partnerData.data} />}
-          />
-          <Route
-            path="/termsandcondition"
-            element={<Condition data={termsAndConditionData.data} />}
-          />
-          <Route
-            path="/ransomeware"
-            element={<Ransomeware data={ransomwareData.data} />}
-          />
-          <Route
-            path="/investor"
-            element={<Investor_Relations data={investorRelationData.data} />}
-          />
-          <Route
-            path="/serviceIT"
-            element={<Service_IT data={serviceItData.data} />}
-          />
-          <Route
-            path="/serviceOT"
-            element={<Service_OT data={serviceOtData.data} />}
-          />
-          <Route
-            path="/White Paper"
-            element={<White_Paper data={whitePaperData.data} />}
-          />
-          <Route path="/career" element={<Career data={careerData.data} />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home data={homeData.data} />} />
+            <Route path="/about" element={<About data={aboutData.data} />} />
+            <Route
+              path="/industry"
+              element={<Industry data={industryData.data} />}
+            />
+            <Route
+              path="Products/:solutionName"
+              element={<Trace data={productsData.data} />}
+            />
+            <Route
+              path="Trainings/:paramName"
+              element={<Guru data={trainingData.data} />}
+            />
+            <Route path="/blog" element={<Blog data={blogData.data} />} />
+            <Route
+              path="/blog/:blogId"
+              element={<Blog_details data={blogDetailsData.data} />}
+            />
+            <Route
+              path="/contact"
+              element={<Contact data={contactData.data} />}
+            />
+            <Route
+              path="/services"
+              element={<Service data={serviceData.data} />}
+            />
+            <Route
+              path="/privacy"
+              element={<Privcy data={privacyData.data} />}
+            />
+            <Route
+              path="/partners"
+              element={<Partner data={partnerData.data} />}
+            />
+            <Route
+              path="/termsandcondition"
+              element={<Condition data={termsAndConditionData.data} />}
+            />
+            <Route
+              path="/ransomeware"
+              element={<Ransomeware data={ransomwareData.data} />}
+            />
+            <Route
+              path="/investor"
+              element={<Investor_Relations data={investorRelationData.data} />}
+            />
+            <Route
+              path="/serviceIT"
+              element={<Service_IT data={serviceItData.data} />}
+            />
+            <Route
+              path="/serviceOT"
+              element={<Service_OT data={serviceOtData.data} />}
+            />
+            <Route
+              path="/White Paper"
+              element={<White_Paper data={whitePaperData.data} />}
+            />
+            <Route path="/career" element={<Career data={careerData.data} />} />
+          </Routes>
         </Suspense>
         <Footer data={footerData.data} />
       </Loader>

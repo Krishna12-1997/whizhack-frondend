@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 
 import SimpleSlider from "../inc/Slider";
@@ -317,7 +317,7 @@ export default function Home({data}) {
                   data-aos-duration={1500}
                 >
                   <a href={`${career.label_redirect}`} className="">
-                  <div className="art-product-box">
+                  <div className="art-product-box art-product-box-training">
                     <div className="art-product-box-inner">
                       <img src={career.icon_url} alt="" />
                       <h3>{career.title}</h3>

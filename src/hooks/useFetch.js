@@ -33,13 +33,12 @@
 
 // export default useFetch;
 
-
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useCache } from '../CacheContext';
 
 const useFetch = (uri) => {
-  const { getCachedData, setCachedData } = useCache(); 
-  const [data, setData] = useState([]);
+  const { getCachedData, setCachedData } = useCache();
+  const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -48,37 +47,21 @@ const useFetch = (uri) => {
       setLoading(true);
 
       try {
-        // Check if data is in the cache
         const cachedData = getCachedData(uri);
 
         if (cachedData) {
+          console.log(`Data fetched from cache for URI: ${uri}`);
           setData(cachedData);
-          setLoading(false);
-
-          // Fetch in the background to update the cache with the latest data
-          fetchAndCacheData();
         } else {
-          // If not in the cache, make a network request
-          await fetchAndCacheData();
-        }
-      } catch (error) {
-        setError(error);
-        setLoading(false);
-      }
-    };
+          const response = await fetch(uri);
+          const apiResponse = await response.json();
 
-    const fetchAndCacheData = async () => {
-      try {
-        const response = await fetch(uri);
-        const apiResponse = await response.json();
-        
-        if (apiResponse && apiResponse.data) {
-          setData(apiResponse.data);
-
-          // Update the cache with the latest data
-          setCachedData(uri, apiResponse.data);
-        } else {
-          setError(new Error('Invalid API response format.'));
+          if (response.ok) {
+            setData(apiResponse.data);
+            setCachedData(uri, apiResponse.data);
+          } else {
+            setError(new Error(`Failed to fetch data: ${apiResponse.message}`));
+          }
         }
 
         setLoading(false);
