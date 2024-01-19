@@ -7,7 +7,7 @@ const CacheContext = createContext();
 export const CacheProvider = ({ children }) => {
   const setCachedData = (key, data) => {
     try {
-      localStorage.setItem(key, JSON.stringify(data));
+      sessionStorage.setItem(key, JSON.stringify(data));
     } catch (error) {
       console.error('Error saving data to cache:', error);
     }
@@ -15,7 +15,7 @@ export const CacheProvider = ({ children }) => {
 
   const getCachedData = (key) => {
     try {
-      const cachedData = localStorage.getItem(key);
+      const cachedData = sessionStorage.getItem(key);
       return cachedData ? JSON.parse(cachedData) : null;
     } catch (error) {
       console.error('Error retrieving data from cache:', error);

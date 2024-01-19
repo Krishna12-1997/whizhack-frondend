@@ -159,7 +159,7 @@ function App() {
   useEffect(() => {
     const delay = setTimeout(() => {
       fetchDataFromStrapi();
-    }, 20000);
+    }, 2000);
     return () => clearTimeout(delay);
   }, []);
 
@@ -175,7 +175,7 @@ function App() {
 
         if (apiResponse && apiResponse.data) {
           // Use the fetched data
-          console.log("Fetching data from Strapi:", apiResponse.data);
+          console.log("Fetching data from Strapi:");
 
           // Save data to cache
           setCachedData(homeUri, apiResponse.data);
