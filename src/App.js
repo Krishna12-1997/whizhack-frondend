@@ -53,40 +53,40 @@ function App() {
 
   // https://test.whizhack.com
   const homeUri =
-    "https://test.whizhack.com/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images ";
-  const footerUri = "https://test.whizhack.com/api/footer?populate=left_footer";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images ";
+  const footerUri = "https://d2vyuniai6aaiz.cloudfront.net/api/footer?populate=left_footer";
   const navbarUri =
-    " https://test.whizhack.com/api/top-right-menu?populate=body.sections.links, body.single_sections";
+    " https://d2vyuniai6aaiz.cloudfront.net/api/top-right-menu?populate=body.sections.links, body.single_sections";
   const aboutUri =
-    "https://test.whizhack.com/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/about?populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button";
   const productsUri =
-    " https://test.whizhack.com/api/solution?populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.about_cybers, solution.hids_section.hids_features.feature_hids";
+    " https://d2vyuniai6aaiz.cloudfront.net/api/solution?populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.about_cybers, solution.hids_section.hids_features.feature_hids";
   const trainingUri =
-    "https://test.whizhack.com/api/training?populate=training.cyber_gurus.price , training.about_cybers.cyber_link, training.cyber_modules.cyber_module, training.btogs.btog_card, training.solution_cases.case_impact";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/training?populate=training.cyber_gurus.price , training.about_cybers.cyber_link, training.cyber_modules.cyber_module, training.btogs.btog_card, training.solution_cases.case_impact";
   const serviceUri =
-    "https://test.whizhack.com/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing, Service_security.service_homes.service_content";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing, Service_security.service_homes.service_content";
   const blogUri =
-    "https://test.whizhack.com/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.blog_button,  all_blog.all_blog.latest_blogs.Single_blog_details";
-  const blogDetailsUri = `https://test.whizhack.com/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.Single_blog_details, all_blog.all_blog.latest_blogs.blog_button/${blogId}, all_blog.all_blog.latest_blogs.Single_blog_details/${blogId}`;
+    "https://d2vyuniai6aaiz.cloudfront.net/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.blog_button,  all_blog.all_blog.latest_blogs.Single_blog_details";
+  const blogDetailsUri = `https://d2vyuniai6aaiz.cloudfront.net/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.Single_blog_details, all_blog.all_blog.latest_blogs.blog_button/${blogId}, all_blog.all_blog.latest_blogs.Single_blog_details/${blogId}`;
   const whitePaperUri =
-    "https://test.whizhack.com/api/white-paper?populate=white_paper_cards";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/white-paper?populate=white_paper_cards";
   const partnersUri =
-    "https://test.whizhack.com/api/partner?populate=partner_contents.partner_card";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/partner?populate=partner_contents.partner_card";
   const serviceItUri =
-    "https://test.whizhack.com/api/service-it?populate=service_IT_content";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/service-it?populate=service_IT_content";
   const serviceOtUri =
-    "https://test.whizhack.com/api/service-ot?populate=service_ot_content";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/service-ot?populate=service_ot_content";
   const careerUri =
-    "https://test.whizhack.com/api/career-pathway?populate=career_path_video, career_programs.duration, career_programs.module";
-  const termsAndConditionUri = "https://test.whizhack.com/api/terms-condition";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/career-pathway?populate=career_path_video, career_programs.duration, career_programs.module";
+  const termsAndConditionUri = "https://d2vyuniai6aaiz.cloudfront.net/api/terms-condition";
   const ransomwareUri =
-    "https://test.whizhack.com/api/ransomeware?populate=ransomeware_content.ransomeware_content_inner";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/ransomeware?populate=ransomeware_content.ransomeware_content_inner";
   const investorRelationUri =
-    "https://test.whizhack.com/api/investor-relation?populate=year.investors.investor_shareholder_content, advisorpartner";
-  const contactUri = "https://test.whizhack.com/api/contact-form";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/investor-relation?populate=year.investors.investor_shareholder_content, advisorpartner";
+  const contactUri = "https://d2vyuniai6aaiz.cloudfront.net/api/contact-form";
   const industryUri =
-    "https://test.whizhack.com/api/industry?populate=industry_left.industry_lefts, section, industry_right.industry_rights.button";
-  const privacyUri = "https://test.whizhack.com/api/privacy-policy";
+    "https://d2vyuniai6aaiz.cloudfront.net/api/industry?populate=industry_left.industry_lefts, section, industry_right.industry_rights.button";
+  const privacyUri = "https://d2vyuniai6aaiz.cloudfront.net/api/privacy-policy";
 
   // Use the useFetch hook for each API endpoint
   const homeData = useFetch(homeUri);
