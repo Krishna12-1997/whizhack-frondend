@@ -32,7 +32,6 @@ export default function Blog({ data }) {
               <div className="blog-title">
                 <h3>{data.attributes.blog.title}</h3>
                 <div className={`blog-view-all ${showAll ? 'view-less' : ''}`}>
-                  {/* <a href="">{data.attributes.blog.right_title} <i class="fa fa-angle-right"></i></a> */}
                   <a href="#" onClick={() => setShowAll(!showAll)}>
                     {showAll
                       ? "View Less"
@@ -79,7 +78,6 @@ export default function Blog({ data }) {
                           >
                             {blog.attributes.blog_button.label}
                           </Link>
-                          {/* <a href="" className="clipped-btns">{blog.attributes.blog_button.label}</a> */}
                         </div>
                       </div>
                     </div>
@@ -96,7 +94,6 @@ export default function Blog({ data }) {
               <div className="blog-title">
                 <h3>{data.attributes.all_blog.all_blog.title}</h3>
                 <div className={`blog-view-all ${showAll ? 'view-less' : ''}`}>
-                  {/* <a href="">{data.attributes.blog.right_title} <i class="fa fa-angle-right"></i></a> */}
                   <a href="#" onClick={() => setShowAll(!showAll)}>
                     {showAll
                       ? "View Less"
@@ -140,7 +137,6 @@ export default function Blog({ data }) {
                             .join(" ")}
                         </p>
                         <div className="blogs-btn-container">
-                          {/* <a href="#" className="clipped-btns">{allblog.attributes.blog_button.label}</a> */}
                           <Link
                             to={`/blog/${allblog.id}`}
                             className="clipped-btns"

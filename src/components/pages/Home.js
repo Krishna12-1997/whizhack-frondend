@@ -4,15 +4,12 @@ import { Link } from "react-router-dom";
 import SimpleSlider from "../inc/Slider";
 import ContactForm from "../inc/ContactForm";
 import ContactForm2 from "../inc/ContactForm2";
-import { ThreeDots } from "react-loader-spinner";
-import useFetch from "../../hooks/useFetch";
 import ran_video from "../images/video/Ransomware Section.mp4";
 import product_video from "../images/video/product BG.mp4";
 import zerohack from "../images/2Zero.svg";
 import whizrange from "../images/whizrange logo.png";
 import Lottie from "react-lottie-player";
 import animationData from "../json/animation.json";
-import { useInView } from "react-intersection-observer";
 
 export default function Home({data}) {
 
@@ -51,15 +48,7 @@ export default function Home({data}) {
               >
                 {data.attributes.productleft.description}
               </p>
-              {/* <a
-                data-aos="fade-down"
-                data-aos-delay="400"
-                data-aos-duration={1500}
-                href="/"
-                className="clipped-btns"
-              >
-                {data.attributes.productleft.product_button.label}
-              </a> */}
+            
             </div>
           </div>
           {/* ))} */}

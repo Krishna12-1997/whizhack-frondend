@@ -9,8 +9,6 @@
   height: 130%;
   right: -25%;
   top: -6%;
-  /* object-fit: contain;
-    object-position: right; */
 }
 
 .blog-banner1-content {
@@ -115,12 +113,9 @@
   height: 130%;
   right: -25%;
   top: -6%;
-  /* object-fit: contain;
-    object-position: right; */
 }
 .blog-section-single {
   height: 100vh;
-  /* background: url(../../images/blogs_img/blog_single1.png); */
   background-size: cover;
   position: relative;
 }

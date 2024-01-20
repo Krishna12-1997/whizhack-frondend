@@ -51,7 +51,7 @@ function App() {
     AOS.init();
   }, []);
 
-  // https://test.whizhack.com
+  // https://d2vyuniai6aaiz.cloudfront.net
   const homeUri =
     "https://d2vyuniai6aaiz.cloudfront.net/api/home?populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images ";
   const footerUri = "https://d2vyuniai6aaiz.cloudfront.net/api/footer?populate=left_footer";
@@ -168,7 +168,7 @@ function App() {
 
       if (cachedData) {
         // Use the cached data
-        console.log("Data fetched from cache:", cachedData);
+        console.log("Data fetched from cache:");
       } else {
         const response = await fetch(homeUri);
         const apiResponse = await response.json();

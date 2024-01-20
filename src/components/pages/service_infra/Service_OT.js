@@ -1,6 +1,4 @@
 import React from 'react'
-import { ThreeDots } from "react-loader-spinner";
-import useFetch from "../../../hooks/useFetch";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
 import './service.css';
 
