@@ -3,7 +3,7 @@ import w from "../../asset/W.png";
 import "./Trace.css";
 import thred from "../../asset/thread.png";
 import digital from "../../asset/digital.png";
-import partner from "../../asset/saaa0560_cbersecurity_person_teaching_7ed30544-c3e4-493f-b8b5-b4f52e854a8f 1.png";
+import partner from "../../asset/saaa0560_cbersecurity_person_teaching_7ed30544-c3e4-493f-b8b5-b4f52e854a8f 1 (1).png";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { useFormik } from "formik";

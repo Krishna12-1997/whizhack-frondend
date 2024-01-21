@@ -49,6 +49,7 @@ function App() {
 
   useEffect(() => {
     AOS.init();
+      
   }, []);
 
   // https://d2vyuniai6aaiz.cloudfront.net

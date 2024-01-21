@@ -6,6 +6,8 @@ import ContactForm from "../inc/ContactForm";
 import ContactForm2 from "../inc/ContactForm2";
 import ran_video from "../images/video/Ransomware Section.mp4";
 import product_video from "../images/video/product BG.mp4";
+import service_img from "../images/home-bg5.png";
+import training_img from "../images/training_img.png";
 import zerohack from "../images/2Zero.svg";
 import whizrange from "../images/whizrange logo.png";
 import Lottie from "react-lottie-player";
@@ -209,7 +211,7 @@ export default function Home({data}) {
           <div
             className="art-products2"
             style={{
-              backgroundImage: `url(${data.attributes.service_compo.right_bg_url})`,
+              backgroundImage: `url(${service_img})`,
             }}
           >
             <div className="art-products2-inner">
@@ -282,7 +284,7 @@ export default function Home({data}) {
         <div className="fourth-banner">
           <div
             className="art-product4-content"
-            style={{ backgroundImage: `url(${data.attributes.career.bg_url})` }}
+            style={{ backgroundImage: `url(${training_img})` }}
           >
             <div className="art-product4-content-inner">
               <h3
