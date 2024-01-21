@@ -45,11 +45,9 @@ const White_Paper = React.lazy(() => import("./components/pages/White_Paper"));
 
 function App() {
   const { blogId } = useParams();
-  const { setCachedData, getCachedData } = useCache();
 
   useEffect(() => {
     AOS.init();
-      
   }, []);
 
   // https://d2vyuniai6aaiz.cloudfront.net
@@ -157,35 +155,34 @@ function App() {
     industryData.error ||
     privacyData.error;
 
-  useEffect(() => {
-    const delay = setTimeout(() => {
-      fetchDataFromStrapi();
-    }, 2000);
-    return () => clearTimeout(delay);
-  }, []);
+  // useEffect(() => {
+  //   const delay = setTimeout(() => {
+  //     fetchDataFromStrapi();
+  //   }, 2000);
+  //   return () => clearTimeout(delay);
+  // }, []);
 
-  const fetchDataFromStrapi = async () => {
-      const cachedData = getCachedData(homeUri);
+  // const fetchDataFromStrapi = async () => {
+  //   const cachedData = getCachedData(homeUri);
 
-      if (cachedData) {
-        // Use the cached data
-        console.log("Data fetched from cache:");
-      } else {
-        const response = await fetch(homeUri);
-        const apiResponse = await response.json();
+  //   if (cachedData) {
+  //     // Use the cached data
+  //     console.log("Data fetched from cache:");
+  //   } else {
+  //     const response = await fetch(homeUri);
+  //     const apiResponse = await response.json();
 
-        if (apiResponse && apiResponse.data) {
-          // Use the fetched data
-          console.log("Fetching data from Strapi:");
+  //     if (apiResponse && apiResponse.data) {
+  //       // Use the fetched data
+  //       console.log("Fetching data from Strapi:");
 
-          // Save data to cache
-          setCachedData(homeUri, apiResponse.data);
-        } else {
-          console.error("Invalid API response format.");
-        }
-      }
-   
-  };
+  //       // Save data to cache
+  //       setCachedData(homeUri, apiResponse.data);
+  //     } else {
+  //       console.error("Invalid API response format.");
+  //     }
+  //   }
+  // };
 
   return (
     <div className="Home">

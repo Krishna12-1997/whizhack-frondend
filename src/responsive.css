@@ -15,7 +15,7 @@
   }
   .art-product2-box-outer {
     margin-right: 0;
-}
+  }
   .art-product-box-inner img:first-child {
     width: 35%;
   }
@@ -220,9 +220,8 @@
     flex-direction: column;
   }
   .fourth-banner {
-      flex-direction: column; 
-      height: auto;
-  
+    flex-direction: column;
+    height: auto;
   }
   .art-product-content2 {
     padding: 6% 3%;
@@ -515,7 +514,7 @@
   .art-product4-content-parent {
     text-align: center;
     grid-template-columns: repeat(1, 1fr);
-}
+  }
   .banner4 {
     background: none;
   }
@@ -787,7 +786,7 @@
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .second-banner::before{
+  .second-banner::before {
     display: none;
   }
   .first_form .form-group select.dirty + label,
@@ -833,7 +832,8 @@
     border-bottom: 1px solid #fff;
   }
   .first_form .form-group input,
-  .first_form .form-group select, .second_form .form-group input,
+  .first_form .form-group select,
+  .second_form .form-group input,
   .first_form .form-group select {
     border: 1px solid #fff;
     background: transparent;
@@ -878,7 +878,7 @@
     width: 100%;
     clip-path: none;
   }
-  .art-products-inner-whizrange{
+  .art-products-inner-whizrange {
     width: 100%;
     top: 0;
     /* left: 1%; */
@@ -900,15 +900,15 @@
     object-fit: cover;
     height: 834px;
   }
-  .art-products-inner{
+  .art-products-inner {
     position: absolute;
     bottom: 18px;
     width: 100%;
   }
-  .fourth-banner{
+  .fourth-banner {
     display: block;
   }
-  .art-product2-content-inner{
+  .art-product2-content-inner {
     position: static;
     transform: none;
     width: 100%;
@@ -921,37 +921,37 @@
     padding: 6% 3%;
     background: url(http://localhost:3000/static/media/banner2.f5eae32….png);
     background-size: cover;
-}
-.art-products2-inner {
-  width: 90%;
-  margin: 0 auto;
-}
-.art-products2{
-  width: 100%;
-}
-.art-products4{
-  width: 90%;
-  margin: 0 auto;
-}
-.art-product-box{
-width: 95%;
-}
-.art-product-box-training{
-  height: 51vh;
   }
-.ransomeware {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.ransomeware .ransomeware-content video{
-  width: 100%;
-  object-fit: cover;
-  height: 600px;
-}
-  .ransomeware .ransomeware-content .ransomeware-content-img{
+  .art-products2-inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .art-products2 {
     width: 100%;
   }
-  .footer-section{
+  .art-products4 {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .art-product-box {
+    width: 95%;
+  }
+  .art-product-box-training {
+    height: 51vh;
+  }
+  .ransomeware {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .ransomeware .ransomeware-content video {
+    width: 100%;
+    object-fit: cover;
+    height: 600px;
+  }
+  .ransomeware .ransomeware-content .ransomeware-content-img {
+    width: 100%;
+  }
+  .footer-section {
     margin-top: 0;
   }
   .banner-text h2 {
@@ -987,5 +987,4 @@ width: 95%;
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1280px) {
-  
 }

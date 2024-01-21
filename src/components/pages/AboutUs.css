@@ -12,6 +12,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.management-bg{
+  color: #07002F;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  background: url(../../asset/m-BG.png);
+  background-size: cover;
+  background-repeat: no-repeat,
+}
 #about iframe {
   width: 100%;
   height: 100%;
@@ -222,7 +231,7 @@
 }
 
 .recognition {
-  background-image: url("../../asset/Mask\ group.png");
+  background-image: url("../../asset/recognition.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

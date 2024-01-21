@@ -3,7 +3,6 @@ import "./AboutUs.css";
 import lin from "../../asset/Icon (1).svg";
 import mission_icon from "../../components/images/icons/mission_icon.svg";
 import vision_icon from "../../components/images/icons/vision_icon.svg";
-import bg from "../../asset/m-BG.png";
 import useFetch from "../../hooks/useFetch";
 import AboutSlider from "../inc/AboutSlider";
 
@@ -59,7 +58,6 @@ const About = ({ data }) => {
           </div>
         </div>
 
-        {/* -------------------- Our Story Start----------------------------- */}
         <div>
           <section className="ourstory">
             <div className="container-fluid">
@@ -69,9 +67,6 @@ const About = ({ data }) => {
                   className="col-lg-6 col-md-6 col-sm-12 mx-auto mt-2 mb-2 rounded text-left"
                   data-aos="fadeIn"
                 >
-                  {/* <video muted loop autoPlay="autoplay">
-                    <source src={data.attributes.header.story.image_url} type="video/mp4" />
-                  </video> */}
                   <iframe
                     src={`https://www.youtube.com/embed/JQD3n2Rh1uM`}
                     title="YouTube Video"
@@ -108,9 +103,6 @@ const About = ({ data }) => {
             </div>
           </section>
         </div>
-        {/* -------------------- Our Story End----------------------------- */}
-
-        {/* -------------------- Management Team Start----------------------------- */}
 
         <div>
           <section className="management">
@@ -118,17 +110,7 @@ const About = ({ data }) => {
               <div className="row">
                 <div className="col-lg-12 col-md-8 col-sm-6 mx-auto mt-2 mb-2 pt-2 pb-2 ">
                   <div
-                    style={{
-                      color: "#07002F",
-                      fontSize: 40,
-                      fontFamily: "Pulse",
-                      fontWeight: "600",
-                      wordWrap: "break-word",
-                      textAlign: "center",
-                      backgroundImage: `url(${bg})`,
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                    }}
+                    className="management-bg"
                   >
                     Management Team
                   </div>
@@ -213,10 +195,6 @@ const About = ({ data }) => {
           </section>
         </div>
 
-        {/* -------------------- Management Team End----------------------------- */}
-
-        {/* About page vision mission page start */}
-
         <section className="about-vision-section">
           <div className="container">
             <div className="row mission-row justify-content-center">
@@ -263,9 +241,6 @@ const About = ({ data }) => {
             </div>
           </div>
         </section>
-        {/* About page vision mission page end */}
-
-        {/* -------------------- Advisors Start----------------------------- */}
         <section>
           <div className="container-fluid">
             <div className="row">
@@ -357,10 +332,6 @@ const About = ({ data }) => {
             </div>
           </div>
         </section>
-
-        {/* -------------------- Advisors End----------------------------- */}
-
-        {/* -------------------- Strategic Alliances End----------------------------- */}
         <section>
           <div className="container-fluid">
             <div className="row">
@@ -428,9 +399,6 @@ const About = ({ data }) => {
             </div>
           </div>
         </section>
-        {/* -------------------- Strategic Alliances End----------------------------- */}
-
-        {/* -------------------- PARTNERSHIP PROGRAM (VAR & VAS) Start----------------------------- */}
         <section className="about_section_partner">
           <div className="container-fluid">
             <div className="row">
@@ -494,9 +462,6 @@ const About = ({ data }) => {
           </div>
         </section>
 
-        {/* -------------------- PARTNERSHIP PROGRAM (VAR & VAS) End----------------------------- */}
-
-        {/* -------------------- Recognition End----------------------------- */}
         <section>
           <div className="recognition">
             <div className="">
@@ -505,7 +470,6 @@ const About = ({ data }) => {
                   <h2
                     style={{
                       color: "#fff",
-                      // fontFamily: "Pulse",
                       fontWeight: 600,
                       fontSize: "50px",
                     }}
@@ -525,7 +489,6 @@ const About = ({ data }) => {
             </div>
           </div>
         </section>
-        {/* -------------------- Recognition End----------------------------- */}
       </>
     );
   } else {
