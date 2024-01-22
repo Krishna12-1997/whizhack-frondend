@@ -30,8 +30,6 @@ const About = ({ data }) => {
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               zIndex: 0,
-              // background:
-              //   "linear-gradient(301deg, rgba(0, 0, 0, 0) 0%, black 100%)",
             }}
           >
             <div>
@@ -491,9 +489,7 @@ const About = ({ data }) => {
         </section>
       </>
     );
-  } else {
-    return <p>Error: Data structure is not as expected.</p>;
-  }
+  } 
 };
 
 export default About;
