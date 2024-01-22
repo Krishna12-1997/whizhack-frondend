@@ -31,9 +31,9 @@ export default function Footer({ data }) {
                   <div className="link_small">
                     <ul className="list-unstyled mt-4">
                     {data.attributes.left_footer.map((link) => (
-                      <li key={link.id} >
+                      <p key={link.id} >
                         <a href={link.url}>{link.menu}</a>
-                      </li>
+                      </p>
                      ))}
                     </ul>
                   </div>

@@ -494,9 +494,6 @@
   font-size: 0.9rem;
 }
 
-/* section5 css end */
-
-/* section 6 css start */
 .service-section6 {
   margin-top: 50px;
   height: 100vh;
@@ -577,9 +574,7 @@
   margin-bottom: 5px;
   font-size: 0.8rem;
 }
-/* section 6 css end */
 
-/* section 7 css end */
 .service-section7 {
   margin-top: 50px;
   height: 100vh;
@@ -614,9 +609,7 @@
   font-size: 0.9rem;
   font-weight: 200;
 }
-/* section 7 css end */
 
-/* section 7 css end */
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   .odd_ot {
     clip-path: none;
@@ -677,17 +670,13 @@
   }
   .timeline ul li:before {
     left: 1% !important;
-    /* right: 100% !important; */
     top: 50% !important;
   }
   .timeline ul li:after {
     left: 3% !important;
-    /* right:100% !important; */
     top: 60% !important;
   }
   .timeline ul li:nth-child(2n + 1)::after {
-    /* top:35% !important; */
-    /* display: none; */
     width: 0.5px;
   }
   .ot-security-lists .security-list {

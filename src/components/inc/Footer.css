@@ -1,9 +1,8 @@
 .footer-section {
   margin-top: 30px;
 }
-.footer .list-unstyled li a {
+.footer .list-unstyled p a {
   color: #62666a;
-  /* font-family: "Satoshi"; */
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -11,8 +10,9 @@
   line-height: inherit;
   text-decoration: none;
 }
-.footer .list-unstyled li {
+.footer .list-unstyled p {
   padding: 5px 0;
+
 }
 .info {
   width: 100%;

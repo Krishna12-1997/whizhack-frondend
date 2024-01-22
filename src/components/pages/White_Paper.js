@@ -1,5 +1,5 @@
 import React from "react";
-import "./industry/industry.css";
+import "./white_paper.css";
 import "./privacy.css";
 import Whitepaper_Form from "../inc/Whitepaper_Form";
 import service_banner_icon from "../images/decors/service_banner_icon.png";

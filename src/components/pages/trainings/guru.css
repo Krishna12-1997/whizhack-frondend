@@ -91,7 +91,6 @@
 }
 
 .guru-banner2-content .guru-banner-box {
-  /* background-color: #fff; */
   padding: 5%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -129,30 +128,9 @@
   padding-left: 0;
 }
 
-/* .guru-left-bg:before{
-    content: "";
-    background-image: url(../../images/decors/guru2.png);
-    height: 23%;
-    position: absolute;
-    right: -4%;
-    top: 0;
-    width: 60px;
-    z-index: 2;
-}
-.guru-left-bg:after{
-    content: "";
-    background-image: url(../../images/decors/guru1.png);
-    background-repeat: no-repeat;
-    height: 26%;
-    position: absolute;
-    right: -12%;
-    bottom: 0%;
-    width: 60%;
-    z-index: 2;
-} */
+
 .guru-left-parent {
   height: 110vh;
-  /* clip-path: polygon(100% 0, 100% 74%, 75% 100%, 0 100%, 0 0); */
 }
 .guru-left-parent img {
   width: 100%;
@@ -488,9 +466,7 @@
   .threat .container-fluid .row {
     flex-direction: column-reverse;
   }
-  /* .threat .container-fluid .row .col-lg-6{
-    padding-right: ;
-  } */
+
   .guru-right-parent {
     position: static !important;
   }
@@ -635,7 +611,6 @@
     margin: 0 auto;
     width: 70%;
     z-index: 1;
-    /* margin: 0 30px; */
   }
   .price_img {
     filter: blur(4px);
@@ -723,13 +698,11 @@
   }
   .guru-banner-box {
     position: absolute;
-    /* left: 0; */
     bottom: -197%;
     background-color: #fff;
     margin: 0 auto;
     width: 70%;
     z-index: 1;
-    /* margin: 0 30px; */
   }
   .price_img {
     filter: blur(4px);

@@ -11,8 +11,7 @@ import whizrange from "../images/whizrange logo.png";
 import Lottie from "react-lottie-player";
 import animationData from "../json/animation.json";
 
-export default function Home({data}) {
-
+export default function Home({ data }) {
   const colorizeImageStyle = {
     filter: "brightness(80%) saturate(100%)",
     color: "#a002fb",
@@ -26,7 +25,7 @@ export default function Home({data}) {
   return (
     <>
       <div className="banner1">
-        <SimpleSlider data={data}/>
+        <SimpleSlider data={data} />
       </div>
       <div className="banner2" id="productid">
         <div className="second-banner">
@@ -48,7 +47,6 @@ export default function Home({data}) {
               >
                 {data.attributes.productleft.description}
               </p>
-            
             </div>
           </div>
           {/* ))} */}
@@ -77,23 +75,20 @@ export default function Home({data}) {
                     data-aos-delay="300"
                     data-aos-duration={1500}
                   >
-                     <a
-                          href={`${whiz_box.button.redirect_url}`}
-                          className=""
-                        >
-                    <div className="art-product-box">
-                      <div className="art-product-box-inner-whizrange">
-                        {/* <img src={whiz_box.image_url} alt="" /> */}
-                        <img src={whiz_box.logo_url} alt="" />
-                        <p>{whiz_box.description}</p>
-                        <a
-                          href={`${whiz_box.button.redirect_url}`}
-                          className=""
-                        >
-                          <i class="fas fa-arrow-right"></i>
-                        </a>
+                    <a href={`${whiz_box.button.redirect_url}`} className="">
+                      <div className="art-product-box">
+                        <div className="art-product-box-inner-whizrange">
+                          {/* <img src={whiz_box.image_url} alt="" /> */}
+                          <img src={whiz_box.logo_url} alt="" />
+                          <p>{whiz_box.description}</p>
+                          <a
+                            href={`${whiz_box.button.redirect_url}`}
+                            className=""
+                          >
+                            <i class="fas fa-arrow-right"></i>
+                          </a>
+                        </div>
                       </div>
-                    </div>
                     </a>
                   </div>
                 ))}
@@ -120,32 +115,32 @@ export default function Home({data}) {
                     data-aos-delay="300"
                     data-aos-duration={1500}
                   >
-                     <a
-                          href={`${box.button.redirect_url}`}
-                          className=""
-                        >
-                    <div className="art-product-box">
-                      <div className="art-product-box-inner">
-                        <img
-                          src={box.image_url}
-                          alt=""
-                          style={{ ...colorizeImageStyle, objectFit: "cover" }}
-                        />
-                        {box.text_logo ? (
-                          <h3>{box.text_logo}</h3>
-                        ) : (
-                          <>
-                            <img src={box.logo_url} alt="" />
-                          </>
-                        )}
-                        <p>{box.description.split(" ")
-                            .slice(0, 20)
-                            .join(" ")}</p>
-                       <div>
-                          <i class="fas fa-arrow-right"></i>
+                    <a href={`${box.button.redirect_url}`} className="">
+                      <div className="art-product-box">
+                        <div className="art-product-box-inner">
+                          <img
+                            src={box.image_url}
+                            alt=""
+                            style={{
+                              ...colorizeImageStyle,
+                              objectFit: "cover",
+                            }}
+                          />
+                          {box.text_logo ? (
+                            <h3>{box.text_logo}</h3>
+                          ) : (
+                            <>
+                              <img src={box.logo_url} alt="" />
+                            </>
+                          )}
+                          <p>
+                            {box.description.split(" ").slice(0, 20).join(" ")}
+                          </p>
+                          <div>
+                            <i class="fas fa-arrow-right"></i>
                           </div>
+                        </div>
                       </div>
-                    </div>
                     </a>
                   </div>
                 ))}
@@ -206,9 +201,7 @@ export default function Home({data}) {
               </a> */}
             </div>
           </div>
-          <div
-            className="art-products2"
-          >
+          <div className="art-products2">
             <div className="art-products2-inner">
               {data.attributes.service_compo.service_box.map((box) => (
                 <div
@@ -277,10 +270,13 @@ export default function Home({data}) {
       </div>
       <div className="banner4" id="trainingid">
         <div className="fourth-banner">
-          <div
-            className="art-product4-content"
-          >
-            <div className="art-product4-content-inner">
+          <div className="art-product4-content" 
+           style={{
+            backgroundImage: `url(${data.attributes.career.bg_url})`,
+          }}>
+            <div
+              className="art-product4-content-inner"
+            >
               <h3
                 className="section-title"
                 data-aos="fade-right"
@@ -293,7 +289,6 @@ export default function Home({data}) {
           </div>
           <div className="art-products4">
             <div className="art-product4-content-parent">
-             
               {data.attributes.career.career_right.map((career) => (
                 <div
                   className="art-product-box-outer"
@@ -302,23 +297,20 @@ export default function Home({data}) {
                   data-aos-duration={1500}
                 >
                   <a href={`${career.label_redirect}`} className="">
-                  <div className="art-product-box art-product-box-training">
-                    <div className="art-product-box-inner">
-                      <img src={career.icon_url} alt="" />
-                      <h3>{career.title}</h3>
+                    <div className="art-product-box art-product-box-training">
+                      <div className="art-product-box-inner">
+                        <img src={career.icon_url} alt="" />
+                        <h3>{career.title}</h3>
 
-                      <p>{career.content .split(" ")
-                            .slice(0, 20)
-                            .join(" ")}</p>
-                      <i class="fas fa-arrow-right"></i>
+                        <p>
+                          {career.content.split(" ").slice(0, 20).join(" ")}
+                        </p>
+                        <i class="fas fa-arrow-right"></i>
+                      </div>
                     </div>
-                  </div>
-                  
                   </a>
                 </div>
               ))}
-
-             
             </div>
           </div>
         </div>
