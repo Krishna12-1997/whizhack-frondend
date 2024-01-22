@@ -5,13 +5,16 @@ import logo from "../images/logo.svg";
 import useFetch from "../../hooks/useFetch";
 
 export default function Navbar({ data }) {
-
   const [activeSection, setActiveSection] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  const [activeSections, setActiveSections] = useState(false);
 
-  const handleSectionHover = (index, event) => {
+  const handleSectionHover = (index) => {
+    setActiveSection(index);
+  };
+
+  const handleDropdownClick = (index, event) => {
     event.preventDefault();
-      setActiveSection(index); 
+    setActiveSection((prevIndex) => (prevIndex === index ? 0 : index));
   };
 
   // Check if 'data' exists and has a 'body' property
@@ -20,117 +23,120 @@ export default function Navbar({ data }) {
       const key = menuItem.id;
       const label = menuItem.label;
 
-      // If it's a dropdown, generate a dropdown menu
       if (
         menuItem.__component === "navbar.dropdown" &&
         menuItem.sections.data
       ) {
-        const dropdownItems = menuItem.sections.data.map((section, index) =>
+        const dropdownItems = menuItem.sections.data.map(
+          (section, drop_index) =>
+            label === "Products" ? (
+              <div>
+                <div className="row mt-5">
+                  <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
+                    <ul className="nav nav-tabs">
+                      <li className="nav-item nav_header active">
+                        <a
+                          onClick={(event) => {
+                            handleDropdownClick(drop_index, event);
+                            event.stopPropagation();
+                          }}
+                        >
+                          {section.attributes.label}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-lg-8 col-md-8 col-sm-12">
+                    <div className="tab-content">
+                      <div
+                        className={`tab-pane  ${
+                          activeSection === drop_index ? "active" : ""
+                        }`}
+                      >
+                        <div className="singledropdown">
+                          {section.attributes.links.map((link, linkIndex) => (
+                            <Link
+                              to={`/${menuItem.label}/${link.icon}`}
+                              key={link.id}
+                              className={`nav-link active`}
+                            >
+                              <div className="nav_right_solution">
+                                <div className="image-container">
+                                  <img
+                                    src={link.icon_url}
+                                    alt="icon"
+                                    width="220px"
+                                    height="173px"
+                                    className="mb-3"
+                                  />
+                                </div>
+                                <div className="mobile_dropdown">
+                                  <h4>{link.label}</h4>
+                                  <p>{link.description}</p>
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div>
+                <div className="row mt-5">
+                  <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
+                    <ul className="nav nav-tabs">
+                      <li className="nav-item nav_header active">
+                        <a
+                          onClick={(event) => {
+                            handleDropdownClick(drop_index, event);
+                            event.stopPropagation();
+                          }}
+                        >
+                          {section.attributes.label}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-lg-8 col-md-8 col-sm-12">
+                    <div className="tab-content">
+                      <div
+                        className={`tab-pane ${
+                          activeSection === drop_index ? "active" : ""
+                        }`}
+                      >
+                        <div className="singledropdown">
+                          {section.attributes.links.map((link, linkIndex) => (
+                            <Link
+                              to={`/${menuItem.label}/${link.icon}`}
+                              key={link.id}
+                              className={`nav-link active`}
+                            >
+                              <div className="nav_right">
+                                <div className="nav_right_mobile">
+                                  <img
+                                    src={link.icon_url}
+                                    alt="icon"
+                                    width="32px"
+                                    height="32px"
+                                    className="mb-3"
+                                  />
 
-          label === "Products" ? (
-            <div>
-              <div className="row mt-5">
-                <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
-                  <ul className="nav nav-tabs">
-                    <li className="nav-item nav_header active">
-                      <a
-                        onMouseEnter={(event) => handleSectionHover(index, event)}
-                      >
-                        {section.attributes.label}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-lg-8 col-md-8 col-sm-12">
-                  <div className="tab-content">
-                    <div
-                      className={`tab-pane  ${
-                        activeSection === index ? "active" : ""
-                      }`}
-                    >
-                      <div className="singledropdown">
-                        {section.attributes.links.map((link, linkIndex) => (
-                          <Link
-                            to={`/${menuItem.label}/${link.icon}`}
-                            key={link.id}
-                            className={`nav-link active`}
-                          >
-                            <div className="nav_right_solution">
-                            <div className="image-container">
-                              <img
-                                src={link.icon_url}
-                                alt="icon"
-                                width="220px"
-                                height="173px"
-                                className="mb-3"
-                              />
+                                  <h4>{link.label}</h4>
+                                </div>
+                                <p>{link.description}</p>
                               </div>
-                              <div className="mobile_dropdown">
-                              <h4>{link.label}</h4>
-                              <p>{link.description}</p>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ) : (
-            <div>
-              <div className="row mt-5">
-                <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
-                  <ul className="nav nav-tabs">
-                    <li className="nav-item nav_header active">
-                      <a
-                        onMouseEnter={(event) => handleSectionHover(index, event)}
-                      >
-                        {section.attributes.label}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-lg-8 col-md-8 col-sm-12">
-                  <div className="tab-content">
-                    <div
-                      className={`tab-pane  ${
-                        activeSection === index ? "active" : ""
-                      }`}
-                      // ${activeSection === section.id ? 'active' : ''}
-                    >
-                      <div className="singledropdown">
-                        {section.attributes.links.map((link, linkIndex) => (
-                          <Link
-                            to={`/${menuItem.label}/${link.icon}`}
-                            key={link.id}
-                            className={`nav-link active`}
-                          >
-                            <div className="nav_right">
-                            <div className="nav_right_mobile">
-                              <img
-                                src={link.icon_url}
-                                alt="icon"
-                                width="32px"
-                                height="32px"
-                                className="mb-3"
-                              />
-                              
-                              <h4>{link.label}</h4>
-                              </div>
-                              <p>{link.description}</p>
-                              </div>
-                            
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )
+            )
         );
 
         return (
@@ -138,26 +144,25 @@ export default function Navbar({ data }) {
             <a
               className="nav-link dropdown-toggle"
               href="#"
-              id={`dropdown-${key}`}
+              id={`${activeSections ? `dropdown-${key}` : null}`}
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
             >
               {label}
             </a>
+
             <div
               className="dropdown-menu"
               aria-labelledby={`dropdown-${key}`}
-              style={{
-              
-              }}
+              onMouseEnter={() => setActiveSections(true)}
+              onMouseLeave={() => setActiveSections(false)}
             >
               {dropdownItems}
             </div>
           </li>
         );
       } else if (menuItem.__component === "navbar.menu") {
-        // For regular menu items
         return (
           <li key={key} className="nav-item">
             <Link to={`/${menuItem.icon}`} className="nav-link">
@@ -175,9 +180,7 @@ export default function Navbar({ data }) {
                     to={`/${section.attributes.label}`}
                     className="product_demos_content_reso "
                   >
-                    <p>
-                      {section.attributes.label}
-                    </p>
+                    <p>{section.attributes.label}</p>
                     <img
                       src={section.attributes.icon_url}
                       alt="icon"
@@ -198,20 +201,19 @@ export default function Navbar({ data }) {
                   className="product_demos_content ww"
                 >
                   <div className="product_demos_mobile">
-                  <img
-                    src={section.attributes.icon_url}
-                    alt="icon"
-                    width="32px"
-                    height="32px"
-                    className="mb-3"
-                  />
-                  <p className="content_ph">{section.attributes.label}</p>
+                    <img
+                      src={section.attributes.icon_url}
+                      alt="icon"
+                      width="32px"
+                      height="32px"
+                      className="mb-3"
+                    />
+                    <p className="content_ph">{section.attributes.label}</p>
                   </div>
                   <p className="content_p">{section.attributes.description}</p>
                 </Link>
               </li>
             )
-           
         );
 
         if (label !== "Resources") {
@@ -230,9 +232,7 @@ export default function Navbar({ data }) {
               <div
                 className="dropdown-menu"
                 aria-labelledby={`dropdown-${key}`}
-                style={{
-                  
-                }}
+                style={{}}
               >
                 <div className="singledropdown">{singledropdownItems}</div>
               </div>
@@ -254,9 +254,7 @@ export default function Navbar({ data }) {
               <div
                 className="dropdown-menu"
                 aria-labelledby={`dropdown-${key}`}
-                style={{
-                 
-                }}
+                style={{}}
               >
                 {singledropdownItems}
               </div>
@@ -265,7 +263,7 @@ export default function Navbar({ data }) {
         }
       }
 
-      return null; 
+      return null;
     });
 
     return (
@@ -285,11 +283,11 @@ export default function Navbar({ data }) {
           <ul className="nav navbar-nav ml-auto">
             <div className="nav-bg"></div>
             {menuItems}
-            </ul>
+          </ul>
         </div>
       </nav>
     );
   }
 
-  return null; 
+  return null;
 }

@@ -61,29 +61,25 @@ const SimpleSlider = ({ data }) => {
             </div>
             <div className="col-lg-7 banner-text-img ">
                <div className="banner-slider">
-                <div
-                  className="banner-img"
-                  style={{
-                    backgroundImage: `url(${xdr})`,
-                    backgroundRepeat: "no-repeat",
-                  }}
-                >
+                <img
+                  className=""
+                  src={xdr}
+                  alt="xdr"
+                />
 
-                <div
+                <img
                   className="banner-img"
-                  style={{
-                    backgroundImage: `url(${img.bg_image_url})`,
-                    backgroundRepeat: "no-repeat",
-                  }}
-                >
+                  src={img.bg_image_url}
+                  alt="industry"
+                />
 
                  <img
                   className="person"
                   src={Persons}
                   alt="person"
                 />
-                </div>
-                </div>
+                {/* </img>
+                </img> */}
               </div> 
             </div>
           </div>
