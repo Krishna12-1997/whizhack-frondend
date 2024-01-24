@@ -7,6 +7,7 @@ import useFetch from "../../hooks/useFetch";
 export default function Navbar({ data }) {
   const [activeSection, setActiveSection] = useState(0);
   const [activeSections, setActiveSections] = useState(false);
+  const [activeSingleSections, setActiveSingleSections] = useState(false);
 
   const handleSectionHover = (index) => {
     setActiveSection(index);
@@ -17,7 +18,7 @@ export default function Navbar({ data }) {
     setActiveSection((prevIndex) => (prevIndex === index ? 0 : index));
   };
 
-  // Check if 'data' exists and has a 'body' property
+
   if (data && data.attributes && data.attributes.body) {
     const menuItems = data.attributes.body.map((menuItem) => {
       const key = menuItem.id;
@@ -144,19 +145,21 @@ export default function Navbar({ data }) {
             <a
               className="nav-link dropdown-toggle"
               href="#"
-              id={`${activeSections ? `dropdown-${key}` : null}`}
+              id={`dropdown-${key}`}
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
+              onMouseEnter={() => setActiveSections(key)}
             >
               {label}
             </a>
 
             <div
-              className="dropdown-menu"
+              className={`dropdown-menu ${
+                activeSections === key ? "show" : ""
+              }`}
               aria-labelledby={`dropdown-${key}`}
-              onMouseEnter={() => setActiveSections(true)}
-              onMouseLeave={() => setActiveSections(false)}
+              onMouseLeave={() => setActiveSections(null)}
             >
               {dropdownItems}
             </div>
@@ -242,19 +245,25 @@ export default function Navbar({ data }) {
           return (
             <li key={key} className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className={`nav-link dropdown-toggle ${
+                  activeSingleSections === key ? "active" : ""
+                }`}
                 href="#"
                 id={`dropdown-${key}`}
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
+                onMouseEnter={() => setActiveSingleSections(key)}
               >
                 {label}
               </a>
               <div
-                className="dropdown-menu"
                 aria-labelledby={`dropdown-${key}`}
+                className={`dropdown-menu ${
+                  activeSingleSections === key ? "show" : ""
+                }`}
                 style={{}}
+                onMouseLeave={() => setActiveSingleSections(null)}
               >
                 {singledropdownItems}
               </div>
