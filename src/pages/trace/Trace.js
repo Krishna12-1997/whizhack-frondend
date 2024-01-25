@@ -315,7 +315,7 @@ export default function Trace({ data }) {
                                 {features.attributes.feature_trace.map(
                                   (list) => (
                                     <div
-                                      
+                                      className="d-flex cir-feature-icon"
                                     >
                                       <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -825,7 +825,7 @@ export default function Trace({ data }) {
                       </div>
 
                       <div className="col-lg-4 col-md-4 col-sm-12 square_content">
-                        <div className=" mt-5 ">
+                        <div className=" mt-5 next-gene">
                           <h3
                             data-aos="fade-right"
                             data-aos-delay="300"
@@ -1356,7 +1356,7 @@ export default function Trace({ data }) {
                       </div>
 
                       <div className="col-lg-4 col-md-4 col-sm-12 square_content">
-                        <div className=" mt-5 ">
+                        <div className=" mt-5 next-gene">
                           <h3
                             data-aos="fade-right"
                             data-aos-delay="300"
