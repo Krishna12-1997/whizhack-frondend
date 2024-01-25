@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import Persons from "../images/Persons.png";
-import xdr from "../images/XDR.png";
+import xdr from "../images/XDR Securing Digital NEW.png";
 
 const SimpleSlider = ({ data }) => {
   function scrollToSection(e, sectionId) {
