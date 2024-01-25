@@ -51,7 +51,7 @@ export default function Footer({ data }) {
                     }}
                   >
                     {" "}
-                    © Whizhack Technologies 2023
+                    © {data.attributes.copywrite_text}
                   </div>
                 </div>
               </div>
