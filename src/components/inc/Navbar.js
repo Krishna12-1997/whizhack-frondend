@@ -7,6 +7,7 @@ import useFetch from "../../hooks/useFetch";
 export default function Navbar({ data }) {
   const [activeSection, setActiveSection] = useState(0);
   const [activeSections, setActiveSections] = useState(false);
+  const [activeLink, setActiveLink] = useState(null);
 
   const handleSectionHover = (index) => {
     setActiveSection(index);
@@ -15,6 +16,8 @@ export default function Navbar({ data }) {
   const handleDropdownClick = (index, event) => {
     event.preventDefault();
     setActiveSection((prevIndex) => (prevIndex === index ? 0 : index));
+    setActiveSections(false);
+  setActiveLink(index);
   };
 
 
@@ -34,7 +37,7 @@ export default function Navbar({ data }) {
                 <div className="row mt-5">
                   <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
                     <ul className="nav nav-tabs">
-                      <li className="nav-item nav_header active">
+                      <li className= {`{nav-item nav_header ${activeLink === drop_index ? 'active' : ''}`}>
                         <a
                           onClick={(event) => {
                             handleDropdownClick(drop_index, event);
@@ -88,7 +91,7 @@ export default function Navbar({ data }) {
                 <div className="row mt-5">
                   <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
                     <ul className="nav nav-tabs">
-                      <li className="nav-item nav_header active">
+                      <li className={`nav-item nav_header ${activeLink === drop_index ? 'active' : ''}`}>
                         <a
                           onClick={(event) => {
                             handleDropdownClick(drop_index, event);
