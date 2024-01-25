@@ -7,7 +7,6 @@ import useFetch from "../../hooks/useFetch";
 export default function Navbar({ data }) {
   const [activeSection, setActiveSection] = useState(0);
   const [activeSections, setActiveSections] = useState(false);
-  const [activeSingleSections, setActiveSingleSections] = useState(false);
 
   const handleSectionHover = (index) => {
     setActiveSection(index);
@@ -149,15 +148,13 @@ export default function Navbar({ data }) {
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-              onMouseEnter={() => setActiveSections(key)}
+              onMouseEnter={() => setActiveSections(true)}
             >
               {label}
             </a>
 
             <div
-              className={`dropdown-menu ${
-                activeSections === key ? "show" : ""
-              }`}
+              className="dropdown-menu "
               aria-labelledby={`dropdown-${key}`}
               onMouseLeave={() => setActiveSections(null)}
             >
@@ -245,25 +242,19 @@ export default function Navbar({ data }) {
           return (
             <li key={key} className="nav-item dropdown">
               <a
-                className={`nav-link dropdown-toggle ${
-                  activeSingleSections === key ? "active" : ""
-                }`}
+                className= "nav-link dropdown-toggle "
                 href="#"
                 id={`dropdown-${key}`}
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-                onMouseEnter={() => setActiveSingleSections(key)}
               >
                 {label}
               </a>
               <div
                 aria-labelledby={`dropdown-${key}`}
-                className={`dropdown-menu ${
-                  activeSingleSections === key ? "show" : ""
-                }`}
+                className="dropdown-menu"
                 style={{}}
-                onMouseLeave={() => setActiveSingleSections(null)}
               >
                 {singledropdownItems}
               </div>
