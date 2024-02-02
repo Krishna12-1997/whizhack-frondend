@@ -9,22 +9,27 @@ export default function Navbar({ data }) {
   const [activeSections, setActiveSections] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
 
-  const handleSectionHover = (index) => {
-    setActiveSection(index);
+  const [hoveredKey, setHoveredKey] = useState(null);
+
+  const handleSectionLeave = () => {
+    setHoveredKey(null);
   };
 
   const handleDropdownClick = (index, event) => {
     event.preventDefault();
     setActiveSection((prevIndex) => (prevIndex === index ? 0 : index));
     setActiveSections(false);
-  setActiveLink(index);
+    setActiveLink(index);
   };
-
 
   if (data && data.attributes && data.attributes.body) {
     const menuItems = data.attributes.body.map((menuItem) => {
       const key = menuItem.id;
       const label = menuItem.label;
+
+      const handleSectionHover = () => {
+        setHoveredKey(key);
+      };
 
       if (
         menuItem.__component === "navbar.dropdown" &&
@@ -37,7 +42,11 @@ export default function Navbar({ data }) {
                 <div className="row mt-5">
                   <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
                     <ul className="nav nav-tabs">
-                      <li className= {`{nav-item nav_header ${activeLink === drop_index ? 'active' : ''}`}>
+                      <li
+                        className={`{nav-item nav_header ${
+                          activeLink === drop_index ? "active" : ""
+                        }`}
+                      >
                         <a
                           onClick={(event) => {
                             handleDropdownClick(drop_index, event);
@@ -58,8 +67,8 @@ export default function Navbar({ data }) {
                       >
                         <div className="singledropdown">
                           {section.attributes.links.map((link, linkIndex) => (
-                            <Link
-                              to={`/${menuItem.label}/${link.icon}`}
+                            <a
+                              href={`/${menuItem.label}/${link.icon}`}
                               key={link.id}
                               className={`nav-link active`}
                             >
@@ -78,7 +87,7 @@ export default function Navbar({ data }) {
                                   <p>{link.description}</p>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                           ))}
                         </div>
                       </div>
@@ -91,7 +100,11 @@ export default function Navbar({ data }) {
                 <div className="row mt-5">
                   <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
                     <ul className="nav nav-tabs">
-                      <li className={`nav-item nav_header ${activeLink === drop_index ? 'active' : ''}`}>
+                      <li
+                        className={`nav-item nav_header ${
+                          activeLink === drop_index ? "active" : ""
+                        }`}
+                      >
                         <a
                           onClick={(event) => {
                             handleDropdownClick(drop_index, event);
@@ -112,8 +125,8 @@ export default function Navbar({ data }) {
                       >
                         <div className="singledropdown">
                           {section.attributes.links.map((link, linkIndex) => (
-                            <Link
-                              to={`/${menuItem.label}/${link.icon}`}
+                            <a
+                              href={`/${menuItem.label}/${link.icon}`}
                               key={link.id}
                               className={`nav-link active`}
                             >
@@ -131,7 +144,7 @@ export default function Navbar({ data }) {
                                 </div>
                                 <p>{link.description}</p>
                               </div>
-                            </Link>
+                            </a>
                           ))}
                         </div>
                       </div>
@@ -143,23 +156,29 @@ export default function Navbar({ data }) {
         );
 
         return (
-          <li key={key} className="nav-item dropdown">
+          <li
+            key={key}
+            className={`nav-item dropdown ${
+              hoveredKey === key ? "hovered" : ""
+            }`}
+            onMouseEnter={(e) => handleSectionHover(e, key)}
+          >
             <a
               className="nav-link dropdown-toggle"
               href="#"
               id={`dropdown-${key}`}
               data-toggle="dropdown"
               aria-haspopup="true"
-              aria-expanded="false"
-              onMouseEnter={() => setActiveSections(true)}
+              aria-expanded={hoveredKey === key ? "true" : "false"}
+              onMouseEnter={handleSectionHover}
             >
               {label}
             </a>
 
             <div
-              className="dropdown-menu "
+              className={`dropdown-menu ${hoveredKey === key ? "show" : ""}`}
               aria-labelledby={`dropdown-${key}`}
-              onMouseLeave={() => setActiveSections(null)}
+              onMouseLeave={handleSectionLeave}
             >
               {dropdownItems}
             </div>
@@ -179,8 +198,8 @@ export default function Navbar({ data }) {
             label === "Resources" ? (
               <div className="product_resources">
                 <li key={section.id} className=" ">
-                  <Link
-                    to={`/${section.attributes.label}`}
+                  <a
+                    href={`/${section.attributes.label}`}
                     className="product_demos_content_reso "
                   >
                     <p>{section.attributes.label}</p>
@@ -191,7 +210,7 @@ export default function Navbar({ data }) {
                       height="32px"
                       className="mb-3"
                     />
-                  </Link>
+                  </a>
                 </li>
               </div>
             ) : (
@@ -199,8 +218,8 @@ export default function Navbar({ data }) {
                 key={section.id}
                 className="product_demos d-flex justify-content-center align-items-center "
               >
-                <Link
-                  to={`/${section.attributes.label}`}
+                <a
+                  href={`/${section.attributes.label}`}
                   className="product_demos_content ww"
                 >
                   <div className="product_demos_mobile">
@@ -214,7 +233,7 @@ export default function Navbar({ data }) {
                     <p className="content_ph">{section.attributes.label}</p>
                   </div>
                   <p className="content_p">{section.attributes.description}</p>
-                </Link>
+                </a>
               </li>
             )
         );
@@ -243,21 +262,28 @@ export default function Navbar({ data }) {
           );
         } else {
           return (
-            <li key={key} className="nav-item dropdown">
+            <li
+              key={key}
+              className={`nav-item dropdown ${
+                hoveredKey === key ? "hovered" : ""
+              }`}
+              onMouseEnter={(e) => handleSectionHover(e, key)}
+            >
               <a
-                className= "nav-link dropdown-toggle "
+                className="nav-link dropdown-toggle "
                 href="#"
                 id={`dropdown-${key}`}
                 data-toggle="dropdown"
                 aria-haspopup="true"
-                aria-expanded="false"
+                aria-expanded={hoveredKey === key ? "true" : "false"}
+                onMouseEnter={handleSectionHover}
               >
                 {label}
               </a>
               <div
+                className={`dropdown-menu ${hoveredKey === key ? "show" : ""}`}
                 aria-labelledby={`dropdown-${key}`}
-                className="dropdown-menu"
-                style={{}}
+                onMouseLeave={handleSectionLeave}
               >
                 {singledropdownItems}
               </div>
@@ -271,9 +297,9 @@ export default function Navbar({ data }) {
 
     return (
       <nav className="navbar fixed-top navbar-expand-sm navbar-light ">
-        <Link to="/" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           <img src={logo} alt="" />
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
