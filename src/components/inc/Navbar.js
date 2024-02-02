@@ -187,9 +187,9 @@ export default function Navbar({ data }) {
       } else if (menuItem.__component === "navbar.menu") {
         return (
           <li key={key} className="nav-item">
-            <Link to={`/${menuItem.icon}`} className="nav-link">
+            <a href={`/${menuItem.icon}`} className="nav-link">
               {label}
-            </Link>
+            </a>
           </li>
         );
       } else if (menuItem.__component === "navbar.single-dropdown") {
