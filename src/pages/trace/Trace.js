@@ -232,7 +232,7 @@ export default function Trace({ data }) {
                         <div className="col-lg-6 col-md-12 col-sm-12">
                           <div className="square">
                             <div className="degree-2">
-                              <div className="d-flex mt-4">
+                              <div className="d-flex mt-4 svg">
                                 <svg
                                   className="mx-4"
                                   xmlns="http://www.w3.org/2000/svg"
@@ -314,13 +314,13 @@ export default function Trace({ data }) {
                               <div className="key">
                                 {features.attributes.feature_trace.map(
                                   (list) => (
-                                    <div
-                                      className="d-flex cir-feature-icon"
-                                    >
+                                    <div className="d-flex
+                                     cir-feature-icon">
+                                      <div >
                                       <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="32"
-                                        height="43"
+                                        width="30"
+                                        height="30"
                                         viewBox="0 0 43 43"
                                         fill="none"
                                       >
@@ -329,7 +329,8 @@ export default function Trace({ data }) {
                                           fill="#5F5FED"
                                         />
                                       </svg>
-                                      <div>
+                                      </div>
+                                      <div className="feature-text">
                                         <h6
                                           className="mb-3 my-2 mx-3"
                                           style={{
@@ -626,7 +627,7 @@ export default function Trace({ data }) {
                                     }}
                                   >
                                     {imp.label}
-                                  </span>{" "}
+                                  </span>{" "}<br/>
                                   {imp.title}
                                 </h4>
                                 <p
@@ -811,10 +812,6 @@ export default function Trace({ data }) {
                 </div>
               </div>
 
-              {/* --------------  Trace Header End -------------------- */}
-
-              {/* --------------  Trace Simulation Start -------------------- */}
-
               <section>
                 <div className="threat mt-5">
                   <div className="container-fluid">
@@ -890,10 +887,6 @@ export default function Trace({ data }) {
                   </div>
                 </div>
               </section>
-
-              {/* --------------  Trace Simulation End -------------------- */}
-
-              {/* --------------  Trace About WHIZRANGE Start -------------------- */}
 
               <section>
                 <div className=" mt-5 about-whiz-section">
@@ -976,10 +969,6 @@ export default function Trace({ data }) {
                   </div>
                 </div>
               </section>
-
-              {/* --------------  Trace About WHIZRANGE End -------------------- */}
-
-              {/* --------------  Trace Our Technology Start -------------------- */}
 
               {firstSolution.bg_image_url.solution_cases.data.map(
                 (impact, index) => {
@@ -1124,7 +1113,7 @@ export default function Trace({ data }) {
                                       }}
                                     >
                                       {imp.label}
-                                    </span>{" "}
+                                    </span>{" "}<br/>
                                     {imp.title}
                                   </h4>
                                   <p
@@ -1149,7 +1138,7 @@ export default function Trace({ data }) {
                   }
                 }
               )}
-              {/* --------------  Trace Our Technology Start -------------------- */}
+            
 
               <section>
                 <div className="partner_trace mt-5">
@@ -1309,9 +1298,6 @@ export default function Trace({ data }) {
                 </div>
               </div>
 
-              {/* --------------  Trace Header End -------------------- */}
-
-              {/* --------------  Trace Simulation Start -------------------- */}
 
               <section>
                 <div className="threat mt-5">
@@ -1474,9 +1460,6 @@ export default function Trace({ data }) {
                 </div>
               </section>
 
-              {/* --------------  Trace About WHIZRANGE End -------------------- */}
-
-              {/* --------------  Trace Our Technology Start -------------------- */}
 
               {firstSolution.bg_image_url.solution_cases.data.map(
                 (impact, index) => {
@@ -1621,7 +1604,7 @@ export default function Trace({ data }) {
                                       }}
                                     >
                                       {imp.label}
-                                    </span>{" "}
+                                    </span>{" "}<br/>
                                     {imp.title}
                                   </h4>
                                   <p
