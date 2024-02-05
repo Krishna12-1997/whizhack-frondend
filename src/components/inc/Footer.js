@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 export default function Footer({ data }) {
 
@@ -32,7 +33,7 @@ export default function Footer({ data }) {
                     <ul className="list-unstyled mt-4">
                     {data.attributes.left_footer.map((link) => (
                       <p key={link.id} >
-                        <a href={link.url}>{link.menu}</a>
+                        <Link to={link.url}>{link.menu}</Link>
                       </p>
                      ))}
                     </ul>
