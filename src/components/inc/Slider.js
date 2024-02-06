@@ -14,16 +14,28 @@ const SimpleSlider = ({ data }) => {
     }
   }
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    fade: true,
-    autoplay: true,
-    arrows: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  const isMobile = window.innerWidth <= 480; 
+
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 1000,
+  fade: true,
+  autoplay: !isMobile,
+  arrows: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 0,
+        slidesToScroll: 0,
+        autoplay: false 
+      }
+    }
+  ]
+};
 
   return (
     <div className="">
