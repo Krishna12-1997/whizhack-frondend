@@ -11,6 +11,12 @@ export default function Navbar({ data }) {
 
   const [hoveredKey, setHoveredKey] = useState(null);
 
+  const [isNavbarCollapsed, setNavbarCollapsed] = useState(true);
+
+  const handleNavbarToggle = () => {
+    setNavbarCollapsed(!isNavbarCollapsed);
+  };
+
   const handleSectionLeave = () => {
     setHoveredKey(null);
   };
@@ -146,6 +152,7 @@ export default function Navbar({ data }) {
                               </div>
                             </a>
                           ))}
+                         
                         </div>
                       </div>
                     </div>
@@ -178,7 +185,7 @@ export default function Navbar({ data }) {
             <div
               className={`dropdown-menu ${hoveredKey === key ? "show" : ""}`}
               aria-labelledby={`dropdown-${key}`}
-              onMouseLeave={handleSectionLeave}
+              // onMouseLeave={handleSectionLeave}
             >
               {dropdownItems}
             </div>
@@ -303,12 +310,11 @@ export default function Navbar({ data }) {
         <button
           className="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbar-collapse"
+          onClick={handleNavbarToggle}
         >
           ☰
         </button>
-        <div className="collapse navbar-collapse" id="navbar-collapse">
+        <div className={`collapse navbar-collapse ${isNavbarCollapsed ? '' : 'show'}`} id="navbar-collapse">
           <ul className="nav navbar-nav ml-auto">
             <div className="nav-bg"></div>
             {menuItems}
