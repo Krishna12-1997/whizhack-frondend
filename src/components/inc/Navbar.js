@@ -152,7 +152,6 @@ export default function Navbar({ data }) {
                               </div>
                             </a>
                           ))}
-                         
                         </div>
                       </div>
                     </div>
@@ -312,9 +311,14 @@ export default function Navbar({ data }) {
           type="button"
           onClick={handleNavbarToggle}
         >
-          ☰
+          {isNavbarCollapsed ? "☰" : "✕"}
         </button>
-        <div className={`collapse navbar-collapse ${isNavbarCollapsed ? '' : 'show'}`} id="navbar-collapse">
+        <div
+          className={`collapse navbar-collapse ${
+            isNavbarCollapsed ? "" : "show"
+          }`}
+          id="navbar-collapse"
+        >
           <ul className="nav navbar-nav ml-auto">
             <div className="nav-bg"></div>
             {menuItems}
