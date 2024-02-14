@@ -25,8 +25,8 @@ path="/serviceIT"
 element={<Service_IT data={serviceItData.data}/>}/><Route
 path="/serviceOT"
 element={<Service_OT data={serviceOtData.data}/>}/><Route
-path="/White Paper"
+path="/white-paper"
 element={<White_Paper data={whitePaperData.data}/>}/><Route
-path="/use case"
+path="/use-case"
 element={<Use_case data={useCaseData.data}/>}/><Route path="/career" element={<Career data={careerData.data}/>}/></Routes></Suspense><Footer data={footerData.data}/></Loader></div>)}
 export default App

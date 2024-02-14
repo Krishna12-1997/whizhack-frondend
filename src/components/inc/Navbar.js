@@ -40,7 +40,7 @@ export default function Navbar({ data }) {
       if (
         menuItem.__component === "navbar.dropdown" &&
         menuItem.sections.data
-      ) {
+      ) {  
         const dropdownItems = menuItem.sections.data.map(
           (section, drop_index) =>
             label === "Products" ? (
@@ -205,7 +205,7 @@ export default function Navbar({ data }) {
               <div className="product_resources">
                 <li key={section.id} className=" ">
                   <a
-                    href={`/${section.attributes.label}`}
+                    href={`/${section.attributes.icon}`}
                     className="product_demos_content_reso "
                   >
                     <p>{section.attributes.label}</p>
