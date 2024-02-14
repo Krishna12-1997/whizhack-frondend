@@ -28,7 +28,7 @@ export default function Whitepaper_Form({ pdfUrlForm }) {
 
       // Make a POST request to your Strapi API
       axios
-        .post("http://localhost:1337/api/use-case-download-details", formData)
+        .post("https://test.whizhack.com/api/use-case-download-details", formData)
         .then((response) => {
           console.log("POST request successful:", response.data);
 
