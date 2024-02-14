@@ -1,0 +1,64 @@
+.usecase-banner-section {
+    height: 100vh;
+    background: url(../../../asset/BG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 3%;
+  }
+  .usecase-banner-title h3 {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+  }
+  .tab-content {
+    display: flex;
+  }
+  .usecase-banner-title p {
+    color: #fff;
+    text-align: center;
+  }
+  .usecase-banner-section .left-usecase-banner-icon {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .usecase-banner-section .right-usecase-banner-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .usecase-products-single h5{
+      text-transform: uppercase;
+  }
+  .usecase-products-single p{
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+  }
+  .usecase-products .tab-pane .col-lg-4{
+      padding: 0;
+  }
+  .usecase-products-single{
+      padding: 10px;
+      margin: 0px 15px 30px 15px;
+      height: 720px;
+      box-shadow: 8px 7px 7px -5px rgba(0, 0, 0, 0.10);
+      max-height: 250px;
+  }
+  
+  .usecase-products-single a.clipped-btns{
+      font-size: 0.8rem;
+      padding: 4px 20px;
+      text-decoration: none;
+  }
+  .usecase-type{
+      padding: 0 3%;
+      border-right: 1px solid #000;
+      height: 100%;
+  }
+
+  #pdfDisplay{
+    display: none;
+  }
