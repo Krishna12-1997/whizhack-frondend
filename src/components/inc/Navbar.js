@@ -184,7 +184,7 @@ export default function Navbar({ data }) {
             <div
               className={`dropdown-menu ${hoveredKey === key ? "show" : ""}`}
               aria-labelledby={`dropdown-${key}`}
-              // onMouseLeave={handleSectionLeave}
+              onMouseLeave={handleSectionLeave}
             >
               {dropdownItems}
             </div>
