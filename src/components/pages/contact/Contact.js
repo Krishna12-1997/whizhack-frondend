@@ -43,9 +43,10 @@ export default function Contact({ data }) {
   return (
     <div>
       <div className="contact-section-single">
-        <video muted loop autoPlay="autoplay">
+        <img src={data.attributes.bg_url} alt="contact-img" />
+        {/* <video muted loop autoPlay="autoplay">
           <source src={contact_banner} type="video/mp4" />
-        </video>
+        </video> */}
         <div className="contact-section-outer">
           <div className="container">
             <div className="row">
