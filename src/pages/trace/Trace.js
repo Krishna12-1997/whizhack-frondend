@@ -762,9 +762,10 @@ export default function Trace({ data }) {
               {/* --------------  Trace Header Start -------------------- */}
 
               <div className="guru-section1">
-                <video muted loop autoPlay="autoplay">
+                <img src={firstSolution.bg_url} alt="whizrange" className="hids-imgs"/>
+                {/* <video muted loop autoPlay="autoplay">
                   <source src={firstSolution.bg_url} type="video/mp4" />
-                </video>
+                </video> */}
                 <div className="ui1-banner1-parent-solution">
                   <div className="container-fluid">
                     <div className="row justify-content-between">
@@ -1739,9 +1740,10 @@ export default function Trace({ data }) {
           return (
             <>
               <div className="guru-section1">
-                <video muted loop autoPlay="autoplay">
+                <img src={firstSolution.bg_url} alt="hids" className="hids-imgs"/>
+                {/* <video muted loop autoPlay="autoplay">
                   <source src={firstSolution.bg_url} type="video/mp4" />
-                </video>
+                </video> */}
                 <div className="ui1-banner1-parent-solution-zerohack">
                   <div className="container-fluid">
                     <div className="row justify-content-between">
@@ -1950,9 +1952,10 @@ export default function Trace({ data }) {
           return (
             <>
               <div className="guru-section1">
-                <video muted loop autoPlay="autoplay">
+              <img src={firstSolution.bg_url} alt="nids" className="hids-imgs"/>
+                {/* <video muted loop autoPlay="autoplay">
                   <source src={firstSolution.bg_url} type="video/mp4" />
-                </video>
+                </video> */}
                 <div className="ui1-banner1-parent-solution-zerohack">
                   <div className="container-fluid">
                     <div className="row justify-content-between">
