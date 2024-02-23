@@ -106,7 +106,7 @@ const About = ({ data }) => {
           <section className="management">
             <div className="container-fluid">
               <div className="row">
-                <div className="col-lg-12 col-md-8 col-sm-6 mx-auto mt-2 mb-2 pt-2 pb-2 ">
+                <div className="col-lg-12 col-md-8 col-sm-6 mx-auto mt-5 mb-4 pt-2 pb-2 ">
                   <div
                     className="management-bg"
                   >
@@ -119,14 +119,13 @@ const About = ({ data }) => {
                   management.map((ab) => (
                     <div className="row" key={ab.id}>
                       <div
-                        className="col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-left"
+                        className="col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-center"
                         data-aos="fadeIn"
                       >
                         <img
                           src={ab.image_url}
                           alt=""
-                          height="100%"
-                          width="100%"
+                          
                         />
                       </div>
                       <div
@@ -260,13 +259,12 @@ const About = ({ data }) => {
 
             <div className="row">
               <div
-                className="col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-left"
+                className="col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-center"
                 data-aos="fadeIn"
               >
                 <img
                   src={header.Advisor.image_url}
                   alt="somitra"
-                  width="100%"
                 />
               </div>
 
