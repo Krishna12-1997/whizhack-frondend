@@ -3,11 +3,32 @@ import "./guru.css";
 import guru_img2 from "../../images/bg/guru_img2.png";
 import SimpleSlider2 from "../../inc/CyberSlider";
 import useFetch from "../../../hooks/useFetch";
+import play from "../../images/bg/Video.png";
+import trainingcs from "../../images/bg/cstraining.png";
+import icon1 from "../../images/bg/icon1.png";
+import icon2 from "../../images/bg/icon2.png";
+import Loader from "../../inc/Loader";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 
-export default function Guru({ data }) {
+export default function Guru({}) {
   const { paramName } = useParams();
+
+  const uri =
+    "http://localhost:1337/api/training?populate=training.cyber_gurus.price , training.about_cybers.cyber_link, training.cyber_modules.cyber_module, training.btogs.btog_card, training.solution_cases.case_impact";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return (
+      <div>
+        <Loader loading={loading} />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   const solutions = data.attributes.training;
 
@@ -1088,6 +1109,401 @@ export default function Guru({ data }) {
                `}
                   </script>
                 </Helmet>
+              </div>
+            </>
+          );
+        } else if (
+          firstSolution.__component === "training.btog" &&
+          firstSolution.title === "Enterprise" &&
+          paramName === "enterprise"
+        ) {
+          return (
+            <>
+              <div key={index}>
+                <div className="guru-section1">
+                  <img src={firstSolution.right_bg_url} alt="npti" />
+                  {/* <video muted loop autoPlay="autoplay">
+                    <source src={firstSolution.right_bg_url} type="video/mp4" />
+                  </video> */}
+                  <div className="ui1-banner1-parent-training-npti">
+                    <div className="container-fluid">
+                      <div className="row justify-content-between">
+                        <div className="col-lg-5">
+                          <div className="ui1-banner1-content-training">
+                            <h5
+                              data-aos="fade-down"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                            >
+                              {firstSolution.small_title}
+                            </h5>
+                            <h3
+                              data-aos="fade-up"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                            >
+                              {firstSolution.title}
+                            </h3>
+                            <p
+                              data-aos="fade-up"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                            >
+                              {firstSolution.description}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="col-lg-6"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section>
+                  <div className="introduction-section">
+                    <div className="Introduction-description">
+                      <div className="desc">
+                        <div className="introduction-title">
+                          <h3>Introduction</h3>
+                          <h6>Enterprise</h6>
+                        </div>
+                        <p>
+                          Cybersecurity training includes educational programs
+                          and courses aimed at teaching individuals and
+                          organizations how to protect themselves against cyber
+                          threats and vulnerabilities. These comprehensive
+                          programs address crucial areas such as network
+                          security, data protection, malware mitigation, and
+                          adherence to industry regulations and standards.
+                          Delivery formats for cybersecurity training include
+                          in-person workshops, online courses, and webinars. The
+                          overarching goal of cybersecurity training is to
+                          empower both individuals and organizations with the
+                          requisite knowledge and competencies to effectively
+                          counter cyber-attacks, thereby mitigating the
+                          likelihood of data breaches, malware infiltrations,
+                          and other cybersecurity risks.
+                          <br />
+                          <br /> At its core, cybersecurity training endeavors
+                          to imbue participants with the requisite knowledge,
+                          proficiency, and strategic acumen essential for
+                          navigating the intricate complexities of contemporary
+                          cyber warfare. Armed with this arsenal of insights and
+                          competencies, individuals and organizations can
+                          proactively mitigate the inherent risks posed by cyber
+                          threats, thereby fortifying their digital fortresses
+                          against potential data breaches, insidious malware
+                          infections, and a myriad of other pernicious cyber
+                          assailments.
+                        </p>
+                      </div>
+                      {/* <div className="image-desc"> */}
+                      <img src={play} alt="img" />
+                      {/* </div> */}
+                    </div>
+                  </div>
+                </section>
+
+                <section className="cop-training-imp">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="imp-content">
+                          <h3 className="text-center">
+                            Why is corporate training important?
+                          </h3>
+                          <p>
+                            Training employees is an essential investment for
+                            any business. While leaders may sometimes question
+                            the need for certain learning and development
+                            activities, it's important to remember the wisdom of
+                            Henry Ford: "It's better to train your employees and
+                            have them leave than to not train them and have them
+                            stay!"
+                          </p>
+                          <div className="list-enterprise-imp">
+                            <ul>
+                              <li>
+                                Escalation of Cyber Crimes: With the continuous
+                                evolution of new technologies, the likelihood of
+                                cyber threats and risks is on the rise.
+                              </li>
+                              <li>
+                                Proliferation of IoT Devices: Improper handling
+                                of internet-connected devices can create
+                                gateways or vulnerabilities for hackers to
+                                exploit in cybercrimes.{" "}
+                              </li>
+                              <li>
+                                Protection of Data: Deploying effective
+                                cybersecurity solutions enables organizations to
+                                mitigate potential cyber risks associated with
+                                sensitive data.{" "}
+                              </li>
+                              <li>
+                                Mitigation of Cyber Risks: Cyber-attacks can
+                                inflict substantial financial and reputational
+                                damage on organizations lacking adequate
+                                security measures.{" "}
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="our-deliver">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-6">
+                        <div className="our-deliverables">
+                          <h1>
+                            <span>Our </span> <br />
+                            Deliverables
+                          </h1>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-6">
+                        <div className="our-deliverables-card">
+                          <div className="cards-dev">
+                            <img src={icon2} alt="icon" className="mb-2" />
+                            <h5>Online Training</h5>
+                          </div>
+                          <div className="cards-dev">
+                            <img src={icon1} alt="icon" className="mb-2" />
+                            <h5>On-site Training</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="cyber-security-training">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="cyber-security-training-title">
+                          <h3>Types of Cyber Security Training</h3>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col-lg-6">
+                        <div className="cyber-security-training-content">
+                          <h4>General Awareness Training</h4>
+                          <p>
+                            General awareness training serves to educate
+                            employees on fundamental cybersecurity concepts,
+                            emphasizing the significance of robust security
+                            practices. It covers essential topics including:
+                          </p>
+                          <div className="list-general-awareness">
+                            <ul>
+                              <li>
+                                The collective responsibility for cybersecurity
+                                across the organization.
+                              </li>
+                              <li>
+                                Identification and recognition of common cyber
+                                threats.
+                              </li>
+                              <li>
+                                Strategies for creating and maintaining strong
+                                passwords.
+                              </li>
+                              <li>
+                                Techniques to detect and thwart phishing scams
+                                and social engineering attacks.
+                              </li>
+                              <li>
+                                The importance of regular software updates and
+                                system maintenance.
+                              </li>
+                              <li>
+                                Safeguarding personal and sensitive information.
+                              </li>
+                              <li>
+                                Procedures for reporting potential security
+                                incidents to relevant authorities.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-6">
+                        <div className="cyber-security-training-img">
+                          <img alt="" src={trainingcs} />
+                        </div>
+                      </div> 
+                    </div>
+
+                    <div className="technical-training">
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <div className="technical-training-img">
+                            <img alt="" src={trainingcs} />
+                          </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                          <div className="technical-training-content">
+                            <h4>Technical Training</h4>
+                            <p>
+                              Technical training delves deeper into specific
+                              technical aspects of cybersecurity, tailored for
+                              employees with technical roles, particularly IT
+                              staff. It encompasses advanced topics such as:
+                            </p>
+                            <div className="list-technical-training">
+                              <ul>
+                                <li>
+                                  Network security protocols and countermeasures
+                                  against prevalent network-based attacks.
+                                </li>
+                                <li>
+                                  Implementation of robust data encryption
+                                  techniques to safeguard sensitive information.
+                                </li>
+                                <li>
+                                  Configuration and management of firewalls to
+                                  fortify network defenses.
+                                </li>
+                                <li>
+                                  Best practices for securing web applications
+                                  and servers from cyber threats.
+                                </li>
+                                <li>
+                                  Conducting comprehensive vulnerability
+                                  assessments and penetration testing.
+                                </li>
+                                <li>
+                                  Protocols for incident response and effective
+                                  management of cybersecurity incidents.
+                                </li>
+                                <li>
+                                  Secure access management strategies for
+                                  systems and data protection.
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* </div> */}
+                  </div>
+                </section>
+
+                <section className="providing">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="providing-title">
+                          <h3>What are we providing?</h3>
+                          <p>
+                            We offer training across three distinct levels,
+                            allowing organizations the flexibility to select the
+                            level that best aligns with their interests and
+                            specific requirements. Here are some additional
+                            details clarifying each level.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col-lg-4">
+                        <div className="cards-items">
+                          <div className="cards-items-content">
+                            <h5>Training Level 1</h5>
+                            <p>
+                              Training Access Level I is geared towards
+                              individuals who are keen on grasping the
+                              fundamentals of cybersecurity. It offers essential
+                              resources to kickstart a security awareness
+                              training program, making it ideal for
+                              organizations that are just starting out or have
+                              yet to implement such training. This level
+                              includes basic training modules, assessments, and
+                              educational materials aimed at providing a
+                              foundational understanding of security awareness.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-4">
+                        <div className="cards-items">
+                          <div className="cards-items-content">
+                            <h5>Training Level 2</h5>
+                            <p>
+                              Level 2 training caters to individuals with a
+                              basic understanding of cybersecurity, aiming to
+                              enhance their expertise through practical
+                              application. This level encompasses in-depth
+                              exploration of penetration testing methodologies,
+                              strategies for evading Intrusion Detection Systems
+                              (IDS), firewall administration techniques, the
+                              implementation and monitoring of honeypots,
+                              mitigation of SQL injection vulnerabilities, and
+                              the utilization of Security Information and Event
+                              Management (SIEM) solutions.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-4">
+                        <div className="cards-items">
+                          <div className="cards-items-content">
+                            <h5>Training Level 3</h5>
+                            <p>
+                              Level 3 training is designed for professionals in
+                              senior positions within organizations, offering an
+                              in-depth exploration of cybersecurity. This
+                              program covers a wide range of topics, from basic
+                              principles to more advanced concepts, including
+                              hacking, vulnerability assessment, malware
+                              defense, encryption, cloud security, network
+                              protection, and more.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="long-training">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="long-training-title">
+                          <h3>How long is the Training?</h3>
+                        </div>
+                        <p>
+                          The duration of cyber security training can vary
+                          significantly depending on the chosen program and its
+                          intensity. You might choose an intensive workshop that
+                          condenses relevant material into several days or
+                          weeks. Alternatively, you could opt for a more
+                          extensive learning path spanning multiple classes over
+                          a month. Some programs can be completed in hours,
+                          while others may require a more extended commitment.
+                          It's essential to thoroughly review program details
+                          before enrolling to gain a clear understanding of the
+                          time required for completion.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>
             </>
           );
