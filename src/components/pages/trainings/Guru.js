@@ -3,8 +3,16 @@ import "./guru.css";
 import guru_img2 from "../../images/bg/guru_img2.png";
 import SimpleSlider2 from "../../inc/CyberSlider";
 import useFetch from "../../../hooks/useFetch";
+import univlogo from "../../images/bg/university-logo.png";
 import play from "../../images/bg/Video.png";
 import trainingcs from "../../images/bg/cstraining.png";
+import backgd from "../../images/bg/background.png";
+import additionall from "../../images/bg/additinall.png";
+import whizhack from "../../images/bg/whizhack-logo.png";
+import technicalcs from "../../images/bg/technical.jpg";
+import varsity from "../../images/bg/versity.svg";
+import value from "../../images/bg/value.png";
+import carerr from "../../images/bg/carerr.png";
 import icon1 from "../../images/bg/icon1.png";
 import icon2 from "../../images/bg/icon2.png";
 import Loader from "../../inc/Loader";
@@ -294,10 +302,7 @@ export default function Guru({ data }) {
               </div>
             </>
           );
-        }
-
-        // You can add more conditions for other solutions as needed
-        else if (
+        } else if (
           firstSolution.__component === "training.training-program" &&
           firstSolution.title === "CYBER SAMURAI" &&
           paramName === "samurai"
@@ -1324,14 +1329,14 @@ export default function Guru({ data }) {
                         <div className="cyber-security-training-img">
                           <img alt="" src={trainingcs} />
                         </div>
-                      </div> 
+                      </div>
                     </div>
 
                     <div className="technical-training">
                       <div className="row">
                         <div className="col-lg-6">
                           <div className="technical-training-img">
-                            <img alt="" src={trainingcs} />
+                            <img alt="" src={technicalcs} />
                           </div>
                         </div>
 
@@ -1484,6 +1489,337 @@ export default function Guru({ data }) {
                           before enrolling to gain a clear understanding of the
                           time required for completion.
                         </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </>
+          );
+        } else if (
+          firstSolution.__component === "training.btog" &&
+          firstSolution.title === "International Bridge Courses" &&
+          paramName === "bridge"
+        ) {
+          return (
+            <>
+              <div key={index}>
+                <div className="guru-section1">
+                  <img src={firstSolution.right_bg_url} alt="bridge" />
+                  <div className="ui1-banner1-parent-training-bridge">
+                    <div className="container-fluid">
+                      <div className="row justify-content-between">
+                        <div className="col-lg-5">
+                          <div className="ui1-banner1-content-training">
+                            <h5
+                              data-aos="fade-down"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                            >
+                              {firstSolution.small_title}
+                            </h5>
+                            <h3
+                              data-aos="fade-up"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                            >
+                              {firstSolution.title}
+                            </h3>
+                            <p
+                              data-aos="fade-up"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                            >
+                              {firstSolution.description}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="col-lg-6"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section className="state-university">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-6">
+                        <div className="state-university-content" 
+                        data-aos="fade-left"
+                        data-aos-delay="300"
+                        data-aos-duration={1500}>
+                          <p>
+                            The State University of New York at Albany, commonly
+                            referred to as the University at Albany, UAlbany or
+                            SUNY Albany, is a public research university with
+                            campuses in Albany, Rensselaer, and Guilderland, New
+                            York. Founded in 1844, it is one of four “university
+                            centers” of the State University of New York (SUNY)
+                            system.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-6">
+                        <div className="state-university-content-img" 
+                        data-aos="fade-right"
+                        data-aos-delay="300"
+                        data-aos-duration={1500}>
+                          <img src={univlogo} alt="logo-university" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="course-details">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="course-details-title">
+                          <h3 className="text-center">
+                            Who is this Course for?
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col-lg-3">
+                        <div className="cards-content" 
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        data-aos-duration={1500}>
+                          <img src={backgd} alt="background-icon" />
+                          <h4>Background Knowledge</h4>
+                          <div className="list-cards-content">
+                            <p>Technical and Engineering Students</p>
+                            <p>Final Year students or past Graduates</p>
+                            <p>Good Academic Record</p>
+                            <p>
+                              Proficiency in English (to Clear TOEFL or IELTS or
+                              Duolingo or PTE)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-3">
+                        <div className="cards-content" 
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        data-aos-duration={1500}>
+                          <img src={additionall} alt="add-icon" />
+                          <h4>Additional Requirement</h4>
+                          <div className="list-cards-content">
+                            <p>Advanced knowledge of Math’s and Calculus</p>
+                            <p>Programming knowledge preferred.</p>
+                            <p>Financial Viability</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-3">
+                        <div className="cards-content" 
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        data-aos-duration={1500}>
+                          <img src={value} alt="value-icon" />
+                          <h4>Value Proposition</h4>
+                          <div className="list-cards-content">
+                            <p>
+                              Premium Degree from State University of New York
+                              (NSA certified center of excellence in cyber
+                              defense education)
+                            </p>
+                            <p>Work VISA for 3 Years</p>
+                            <p>STEM Program with 3 Years OPT</p>
+                            <p>Certification from IIT Bhubaneswar</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-3">
+                        <div className="cards-content"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        data-aos-duration={1500}>
+                          <img src={carerr} alt="career-icon" />
+                          <h4>Career Aspiration</h4>
+                          <div className="list-cards-content">
+                            <p>
+                              To Study & Build a Technical career in US & other
+                              developed countries.
+                            </p>
+                            <p>
+                              {" "}
+                              Build Career Pathway for Work in the following
+                              roles as Cyber Security Analyst , SOC Analyst,
+                              Penetration Testers in Core Cyber Roles.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="approximate-timeline">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="approximate-timeline-title">
+                          <h3>Approximate Timeline</h3>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-12">
+                        <div className="timeline">
+                          <ul>
+                            <li>
+                              <div
+                                class="right_content"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <h6>February - March 2024</h6>
+                                <div className="timeline-list-content">
+                                  <p>Appear for AMCAT and Interview</p>
+                                  <p>Apply for VISA</p>
+                                  <p>Start your Bootcamp / Bridge program</p>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li>
+                              <div
+                                class="right_content"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <h6>April - June 2024</h6>
+                                <div className="timeline-list-content">
+                                  <p>Bridge Program Application</p>
+                                  <p>Initiation of Bridge Program</p>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li>
+                              <div
+                                class="right_content"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <h6>July - August 2024</h6>
+                                <div className="timeline-list-content">
+                                  <p>Fly to USA</p>
+                                  <p>Receive Student Visa</p>
+                                  <p>Start your masters degree in the USA</p>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li>
+                              <div
+                                class="right_content"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <h6>May 2025</h6>
+                                <div className="timeline-list-content">
+                                  <p>Eligibility to work</p>
+                                </div>
+                              </div>
+                            </li>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="direct-apply-uni-content">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-5">
+                         <div className="direct-apply-uni-content-title">
+                          <h3>Why not directly apply to University at Albany?
+                             <span>Because it's 25% Economical!</span></h3>
+                         </div>
+                      </div>
+
+                      <div className="col-lg-7">
+                        <div className="fee-structure">
+                          <div className="fee">
+                            <h3>Tuition <br/> Fee</h3>
+                            <div className="fee-price">
+                              <div className="fee-price-structure">
+                                <p>Without Bridge</p>
+                                <span>$37,632</span>
+                              </div>
+                              <div className="fee-price-structure">
+                                <p>With Bridge</p>
+                                <strong>$28,161</strong>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="fee">
+                            <h3>Living <br/> Cost</h3>
+                            <div className="fee-price">
+                              <div className="fee-price-structure">
+                                <p>Without Bridge</p>
+                                <span>$14,400</span>
+                              </div>
+                              <div className="fee-price-structure">
+                                <p>With Bridge</p>
+                                <strong>$10,800</strong>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div className="fee">
+                            <h3>Total<br/> Cost</h3>
+                            <div className="fee-price">
+                              <div className="fee-price-structure">
+                                <p>Without Bridge</p>
+                                <span>$52,032</span>
+                              </div>
+                              <div className="fee-price-structure">
+                                <p>With Bridge</p>
+                                <strong>$38,961</strong>
+                              </div>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="technology-partners">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="technology-partners-title">
+                          <h3>Technology Partners</h3>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-12">
+                        <div className="technology-partners-logo" 
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        data-aos-duration={1500}>
+                          <img src={whizhack} alt="whizhack" />
+                          <img src={varsity} alt="varsity" />
+                        </div>
                       </div>
                     </div>
                   </div>
