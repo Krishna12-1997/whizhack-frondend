@@ -2,7 +2,8 @@
   height: 100vh;
   position: relative;
 }
-.guru-section1 img, .guru-section1 video {
+.guru-section1 img,
+.guru-section1 video {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -110,116 +111,487 @@
   color: #2c81fe;
   font-size: 1rem;
 }
-.introduction-section{
+.introduction-section {
   margin-left: 10rem;
 }
-.introduction-section .introduction-title{
-   margin: 4rem 0;
+.introduction-section .introduction-title {
+  margin: 4rem 0;
 }
-.introduction-section .introduction-title h3{
-  color: #2C81FE;
+.introduction-section .introduction-title h3 {
+  color: #2c81fe;
 }
-.introduction-section .Introduction-description .desc p{
-  color: #62666A;
+.introduction-section .Introduction-description .desc p {
+  color: #62666a;
 }
-.introduction-section .Introduction-description{
+.introduction-section .Introduction-description {
   display: flex;
   margin: 2rem 0;
 }
-.introduction-section .Introduction-description .desc{
+.introduction-section .Introduction-description .desc {
   padding: 0 3rem 0 0;
 }
-.introduction-section .Introduction-description span{
+.introduction-section .Introduction-description span {
   width: 100%;
 }
-.cop-training-imp, .cyber-security-training , .providing, .long-training{
+.cop-training-imp,
+.cyber-security-training,
+.providing,
+.long-training {
   margin-top: 7rem;
 }
-.our-deliver{
+.our-deliver {
   margin-top: 3rem;
 }
-.imp-content h3{
+.imp-content h3 {
   margin-bottom: 3rem;
-  color: #07002F;
+  color: #07002f;
 }
-.long-training-title h3{
+.long-training-title h3 {
   margin-bottom: 1rem;
 }
-.long-training p{
+.long-training p {
   margin-bottom: 2rem;
-  color: #62666A;
+  color: #62666a;
 }
-.list-enterprise-imp ul li{
+.list-enterprise-imp ul li {
   padding: 1rem 0;
 }
-.our-deliver .our-deliverables{
+.our-deliver .our-deliverables {
   display: flex;
   align-items: center;
   height: 100%;
 }
-.our-deliver .our-deliverables-card{
+.our-deliver .our-deliverables-card {
   display: flex;
   gap: 1rem;
   justify-content: space-evenly;
   text-align: center;
 }
-.cyber-security-training .cyber-security-training-title{
-  color: #07002F;
+.cyber-security-training .cyber-security-training-title {
+  color: #07002f;
   margin-bottom: 3rem;
   text-align: center;
 }
-.our-deliver .our-deliverables-card .cards-dev{
+.our-deliver .our-deliverables-card .cards-dev {
   padding: 3rem;
-  box-shadow: 0 10px 30px 0 rgba(38,49,209,.2);
+  box-shadow: 0 10px 30px 0 rgba(38, 49, 209, 0.2);
 }
-.cards-items-content{
+.cards-items-content {
   margin-top: 2rem;
   padding: 2rem;
   height: 70vh;
-  box-shadow: 0 10px 30px 0 rgba(38,49,209,.2);
+  box-shadow: 0 10px 30px 0 rgba(38, 49, 209, 0.2);
 }
-.cards-items-content p{
-  color: #62666A;
+.cards-items-content p {
+  color: #62666a;
   margin-top: 1rem;
 }
-.cyber-security-training-content{
+.cyber-security-training-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
-.technical-training{
+.technical-training {
   margin-top: 5rem;
 }
-.technical-training-content{
+.technical-training-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
-.technical-training-img img, .cyber-security-training-img img{
-  width: 400px;
+.technical-training-img{
+  height: 100%;
+  display: flex;
+}
+.technical-training-img img,
+.cyber-security-training-img img {
+  width: 511px;
 }
 
-.cyber-security-training-content .list-general-awareness , .cyber-security-training-content p,
-.technical-training-content .list-technical-training, .technical-training-content p{
-  color: #62666A;
+.cyber-security-training-content .list-general-awareness,
+.cyber-security-training-content p,
+.technical-training-content .list-technical-training,
+.technical-training-content p {
+  color: #62666a;
 }
-.cyber-security-training-content h4 , .technical-training-content h4{
+.cyber-security-training-content h4,
+.technical-training-content h4 {
   margin-bottom: 1.5rem;
-  color: #1D1D1D;
+  color: #1d1d1d;
 }
-.providing-title{
+.providing-title {
   text-align: center;
 }
-.providing-title h3{
-  color: #07002F;
+.providing-title h3 {
+  color: #07002f;
 }
-.our-deliver .our-deliverables h1 span{
+.our-deliver .our-deliverables h1 span {
+  color: #9747ff;
+}
+.imp-content p,
+.list-enterprise-imp ul li {
+  color: #62666a;
+}
+
+.state-university {
+  margin-top: 5rem;
+  position: relative;
+  background-image: url(../../images/bg/university-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.state-university::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.state-university-content,
+.state-university-content-img {
+  position: relative;
+  padding: 4rem 0;
+  z-index: 2;
+}
+.state-university-content-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.state-university-content-img img {
+  width: 80%;
+  text-align: center;
+}
+.state-university-content p {
+  color: #fff;
+  font-size: 20px;
+}
+.course-details,
+.approximate-timeline {
+  margin-top: 5rem;
+}
+.course-details .course-details-title {
+  margin-bottom: 4rem;
+}
+.course-details .course-details-title h3 {
+  color: #07002f;
+  font-weight: 600;
+}
+
+.course-details .cards-content {
+  background: #fff;
+  padding: 2rem;
+  height: 70vh;
+  box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.course-details .cards-content h4 {
+  color: #1d1d1d;
+  padding: 1rem 0 1.5rem 0;
+}
+.course-details .cards-content img {
+  height: 70px;
+}
+.course-details .cards-content .list-cards-content {
+  color: #62666a;
+}
+.course-details .cards-content .list-cards-content p {
+  font-size: 14px;
+}
+.approximate-timeline .approximate-timeline-title {
+  margin-bottom: 4rem;
+}
+.approximate-timeline .approximate-timeline-title h3 {
+  color: #07002f;
+  font-weight: 600;
+  text-align: center;
+}
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  width: 100%;
+  padding: 0;
+  height: 100%;
+  counter-reset: oddCard evenCard;
+}
+
+.timeline ul {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline ul li {
+  list-style: none;
+  box-sizing: border-box;
+  line-height: normal;
+  position: relative;
+  width: 50%;
+  padding: 0px 70px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.timeline ul li p {
+  margin-bottom: 0;
+}
+
+.timeline ul li:nth-child(odd) {
+  float: left;
+  text-align: right;
+  clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+  float: right;
+  text-align: left;
+  clear: both;
+}
+
+.left_content {
+  padding-bottom: 20px;
+}
+.right_content{
+  background: #fff;
+  padding: 2rem;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.1);
+}
+/* .right_content:nth-child(even)::before { */
+  /* content: counter(evenCard, decimal);
+  counter-increment: evenCard;
+
+} */
+.right_content::before {
+  content: counter(oddCard, decimal);
+  counter-increment: oddCard;
+  position: absolute;
+  right: 0;
+  top: 30%;
+  padding: 0 1rem 0 0;
+  transform: translateY(-50%);
+  color: gainsboro;
+  font-weight: bold; 
+  font-size: 50px; 
+}
+.right_content h6{
+  font-size: 20px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+.right_content .timeline-list-content{
+  text-align: left;
+}
+.right_content .timeline-list-content p{
+   color: #07002f;
+   font-size: 14px;
+   padding: 0.5rem 0;
+}
+.timeline ul li:nth-child(odd):after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  right: -2px;
+  width: 1px;
+  top: 50%;
+  background-image: repeating-linear-gradient(
+      -16deg,
+      #1d1d1d,
+      #1d1d1d 20px,
+      transparent 20px,
+      transparent 31px,
+      #1d1d1d 31px
+    ),
+    repeating-linear-gradient(
+      74deg,
+      #1d1d1d,
+      #1d1d1d 20px,
+      transparent 20px,
+      transparent 31px,
+      #1d1d1d 31px
+    ),
+    repeating-linear-gradient(
+      164deg,
+      #1d1d1d,
+      #1d1d1d 20px,
+      transparent 20px,
+      transparent 31px,
+      #1d1d1d 31px
+    ),
+    repeating-linear-gradient(
+      254deg,
+      #1d1d1d,
+      #1d1d1d 20px,
+      transparent 20px,
+      transparent 31px,
+      #1d1d1d 31px
+    );
+  background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.timeline ul li:nth-child(odd):before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #9747ff;
+  box-shadow: 0 0 10px #9747ff;
+  border-radius: 50%;
+  right: -9px;
+  top: 50%;
+  z-index: 2;
+}
+.timeline ul li:nth-child(even):after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 1px;
+  width: 0.5px;
+  top: 50%;
+  background-image: repeating-linear-gradient(
+      -16deg,
+      #1d1d1d,
+      #1d1d1d 20px,
+      transparent 20px,
+      transparent 31px,
+      #1d1d1d 31px
+    ),
+    repeating-linear-gradient(
+      74deg,
+      #1d1d1d,
+      #1d1d1d 20px,
+      transparent 20px,
+      transparent 31px,
+      #1d1d1d 31px
+    ),
+    repeating-linear-gradient(
+      164deg,
+      #1d1d1d,
+      #1d1d1d 20px,
+      transparent 20px,
+      transparent 31px,
+      #1d1d1d 31px
+    ),
+    repeating-linear-gradient(
+      254deg,
+      #1d1d1d,
+      #1d1d1d 20px,
+      transparent 20px,
+      transparent 31px,
+      #1d1d1d 31px
+    );
+  /* background-image: repeating-linear-gradient(-16deg, #1D1D1D, #1D1D1D 20px, transparent 20px, transparent 31px, #1D1D1D 31px), repeating-linear-gradient(74deg, #1D1D1D, #1D1D1D 20px, transparent 20px, transparent 31px, #1D1D1D 31px), repeating-linear-gradient(164deg, #1D1D1D, #1D1D1D 20px, transparent 20px, transparent 31px, #1D1D1D 31px), repeating-linear-gradient(254deg, #1D1D1D, #1D1D1D 20px, transparent 20px, transparent 31px, #1D1D1D 31px); */
+  background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  /* border-right: 2px dashed #000; */
+  z-index: 1;
+}
+.timeline ul li:nth-child(even):before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #9747ff;
+  box-shadow: 0 0 10px #9747ff;
+  border-radius: 50%;
+  left: -6px;
+  top: 50%;
+  z-index: 2;
+}
+
+.timeline ul li:last-child:after {
+  content: none;
+}
+.direct-apply-uni-content{
+  margin-top: 8rem;
+}
+.fee-structure{
+  display: flex;
+}
+.fee-structure .fee{
+  width: 100%;
+  margin-right: 1rem;
+}
+.fee-price-structure{
+  display: flex;
+  gap: 1rem;
+}
+.fee-price-structure p{
+  color: #1D1D1D;
+  font-size: 14px;
+}
+.fee-price-structure span{
+  color: #DA1937;
+  font-size: 14px;
+}
+.fee-price-structure strong{
+  color: #9747FF;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 0 1.5rem;
+}
+.direct-apply-uni-content-title{
+  width: 90%;
+}
+.direct-apply-uni-content-title h3{
+  font-weight: 600;
+  line-height: 37px;
+}
+.direct-apply-uni-content-title span{
   color: #9747FF;
 }
-.imp-content p, .list-enterprise-imp ul li{
-  color: #62666A;
+.fee{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fee h3{
+  color: #9747FF;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 0;
+}
+.fee h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; 
+  background: linear-gradient(90deg, #9747FF 0%, rgba(134, 65, 223, 0.86) 50%, rgba(255, 255, 255, 0.00) 100%);;
+}
+
+.technology-partners{
+  margin: 5rem 0;
+}
+.technology-partners .technology-partners-title h3{
+  text-align: center;
+  color: #07002F;
+  font-weight: 600;
+  padding-bottom: 3rem;
+}
+.technology-partners .technology-partners-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 100px;
+}
+
+.technology-partners .technology-partners-logo img{
+  height: 147px;
 }
 /* .introduction-section .Introduction-description img{
   width: 50%;
@@ -241,7 +613,6 @@
   position: relative;
   padding-left: 0;
 }
-
 
 .guru-left-parent {
   height: 110vh;
@@ -472,6 +843,16 @@
   align-items: center;
   padding-top: 100px;
 }
+.ui1-banner1-parent-training-bridge {
+  position: relative;
+  background: url(../../images/bg/guru_banner1.png);
+  height: 100vh;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
 .npti {
   background-position: center;
   background-size: cover;
@@ -571,16 +952,29 @@
   justify-content: center;
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-  .introduction-section .introduction-title h3, .introduction-section .introduction-title h6{
+  .introduction-section .introduction-title {
+    margin: 1rem 0;
+}
+  .our-deliver .our-deliverables-card {
+    display: block;
+  }
+  .cards-items-content {
+    height: auto;
+  }
+  .technical-training-img img, .cyber-security-training-img img {
+    width: 343px;
+}
+  .introduction-section .introduction-title h3,
+  .introduction-section .introduction-title h6 {
     margin-left: 1rem;
   }
-  .introduction-section .Introduction-description .desc{
+  .introduction-section .Introduction-description .desc {
     margin-left: 1rem;
   }
-  .introduction-section .Introduction-description{
+  .introduction-section .Introduction-description {
     flex-direction: column;
   }
-  .introduction-section{
+  .introduction-section {
     margin-left: 0;
   }
   .threat .container-fluid {
@@ -873,10 +1267,10 @@
   .guru-left-parent {
     height: 96vh;
   }
-  .line_bottom{
+  .line_bottom {
     display: none;
   }
-  .technology{
+  .technology {
     padding: 1% 0;
   }
   .guru-right-parent {
