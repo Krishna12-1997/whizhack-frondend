@@ -10,6 +10,11 @@ import backgd from "../../images/bg/background.png";
 import additionall from "../../images/bg/additinall.png";
 import whizhack from "../../images/bg/whizhack-logo.png";
 import technicalcs from "../../images/bg/technical.jpg";
+import madraslogo from "../../images/logo/iit-madras.png";
+import bhulogo from "../../images/logo/iit-bhun.svg";
+import jodhpurlogo from "../../images/logo/iit-jodhpur.svg";
+import rrulogo from "../../images/logo/iit-rru.svg";
+import nptiogo from "../../images/logo/npti.svg";
 import varsity from "../../images/bg/versity.svg";
 import value from "../../images/bg/value.png";
 import carerr from "../../images/bg/carerr.png";
@@ -19,8 +24,24 @@ import Loader from "../../inc/Loader";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 
-export default function Guru({ data }) {
+export default function Guru({}) {
   const { paramName } = useParams();
+
+  const uri =
+    "http://localhost:1337/api/training?populate=training.cyber_gurus.price , training.about_cybers.cyber_link, training.cyber_modules.cyber_module, training.btogs.btog_card, training.solution_cases.case_impact";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return (
+      <div>
+        <Loader loading={loading} />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   const solutions = data.attributes.training;
 
@@ -1544,10 +1565,12 @@ export default function Guru({ data }) {
                   <div className="container">
                     <div className="row">
                       <div className="col-lg-6">
-                        <div className="state-university-content" 
-                        data-aos="fade-left"
-                        data-aos-delay="300"
-                        data-aos-duration={1500}>
+                        <div
+                          className="state-university-content"
+                          data-aos="fade-left"
+                          data-aos-delay="300"
+                          data-aos-duration={1500}
+                        >
                           <p>
                             The State University of New York at Albany, commonly
                             referred to as the University at Albany, UAlbany or
@@ -1561,10 +1584,12 @@ export default function Guru({ data }) {
                       </div>
 
                       <div className="col-lg-6">
-                        <div className="state-university-content-img" 
-                        data-aos="fade-right"
-                        data-aos-delay="300"
-                        data-aos-duration={1500}>
+                        <div
+                          className="state-university-content-img"
+                          data-aos="fade-right"
+                          data-aos-delay="300"
+                          data-aos-duration={1500}
+                        >
                           <img src={univlogo} alt="logo-university" />
                         </div>
                       </div>
@@ -1586,10 +1611,12 @@ export default function Guru({ data }) {
 
                     <div className="row">
                       <div className="col-lg-3">
-                        <div className="cards-content" 
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                        data-aos-duration={1500}>
+                        <div
+                          className="cards-content"
+                          data-aos="fade-up"
+                          data-aos-delay="300"
+                          data-aos-duration={1500}
+                        >
                           <img src={backgd} alt="background-icon" />
                           <h4>Background Knowledge</h4>
                           <div className="list-cards-content">
@@ -1605,10 +1632,12 @@ export default function Guru({ data }) {
                       </div>
 
                       <div className="col-lg-3">
-                        <div className="cards-content" 
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                        data-aos-duration={1500}>
+                        <div
+                          className="cards-content"
+                          data-aos="fade-up"
+                          data-aos-delay="300"
+                          data-aos-duration={1500}
+                        >
                           <img src={additionall} alt="add-icon" />
                           <h4>Additional Requirement</h4>
                           <div className="list-cards-content">
@@ -1620,10 +1649,12 @@ export default function Guru({ data }) {
                       </div>
 
                       <div className="col-lg-3">
-                        <div className="cards-content" 
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                        data-aos-duration={1500}>
+                        <div
+                          className="cards-content"
+                          data-aos="fade-up"
+                          data-aos-delay="300"
+                          data-aos-duration={1500}
+                        >
                           <img src={value} alt="value-icon" />
                           <h4>Value Proposition</h4>
                           <div className="list-cards-content">
@@ -1640,10 +1671,12 @@ export default function Guru({ data }) {
                       </div>
 
                       <div className="col-lg-3">
-                        <div className="cards-content"
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                        data-aos-duration={1500}>
+                        <div
+                          className="cards-content"
+                          data-aos="fade-up"
+                          data-aos-delay="300"
+                          data-aos-duration={1500}
+                        >
                           <img src={carerr} alt="career-icon" />
                           <h4>Career Aspiration</h4>
                           <div className="list-cards-content">
@@ -1736,7 +1769,6 @@ export default function Guru({ data }) {
                                 </div>
                               </div>
                             </li>
-                            
                           </ul>
                         </div>
                       </div>
@@ -1748,16 +1780,20 @@ export default function Guru({ data }) {
                   <div className="container">
                     <div className="row">
                       <div className="col-lg-5">
-                         <div className="direct-apply-uni-content-title">
-                          <h3>Why not directly apply to University at Albany?
-                             <span>Because it's 25% Economical!</span></h3>
-                         </div>
+                        <div className="direct-apply-uni-content-title">
+                          <h3>
+                            Why not directly apply to University at Albany?
+                            <span>Because it's 25% Economical!</span>
+                          </h3>
+                        </div>
                       </div>
 
                       <div className="col-lg-7">
                         <div className="fee-structure">
                           <div className="fee">
-                            <h3>Tuition <br/> Fee</h3>
+                            <h3>
+                              Tuition <br /> Fee
+                            </h3>
                             <div className="fee-price">
                               <div className="fee-price-structure">
                                 <p>Without Bridge</p>
@@ -1771,7 +1807,9 @@ export default function Guru({ data }) {
                           </div>
 
                           <div className="fee">
-                            <h3>Living <br/> Cost</h3>
+                            <h3>
+                              Living <br /> Cost
+                            </h3>
                             <div className="fee-price">
                               <div className="fee-price-structure">
                                 <p>Without Bridge</p>
@@ -1782,10 +1820,13 @@ export default function Guru({ data }) {
                                 <strong>$10,800</strong>
                               </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div className="fee">
-                            <h3>Total<br/> Cost</h3>
+                          <div className="fee">
+                            <h3>
+                              Total
+                              <br /> Cost
+                            </h3>
                             <div className="fee-price">
                               <div className="fee-price-structure">
                                 <p>Without Bridge</p>
@@ -1796,7 +1837,7 @@ export default function Guru({ data }) {
                                 <strong>$38,961</strong>
                               </div>
                             </div>
-                        </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1813,12 +1854,149 @@ export default function Guru({ data }) {
                       </div>
 
                       <div className="col-lg-12">
-                        <div className="technology-partners-logo" 
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                        data-aos-duration={1500}>
+                        <div
+                          className="technology-partners-logo"
+                          data-aos="fade-up"
+                          data-aos-delay="300"
+                          data-aos-duration={1500}
+                        >
                           <img src={whizhack} alt="whizhack" />
                           <img src={varsity} alt="varsity" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </>
+          );
+        } else if (
+          firstSolution.__component === "training.btog" &&
+          firstSolution.title === "Government" &&
+          paramName === "government"
+        ) {
+          return (
+            <>
+              <div key={index}>
+                <div className="guru-section1">
+                  <img src={firstSolution.right_bg_url} alt="bridge" />
+                  <div className="ui1-banner1-parent-training-bridge">
+                    <div className="container-fluid">
+                      <div className="row justify-content-between">
+                        <div className="col-lg-5">
+                          <div className="ui1-banner1-content-training">
+                            <h5
+                              data-aos="fade-down"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                            >
+                              {firstSolution.small_title}
+                            </h5>
+                            <h3
+                              data-aos="fade-up"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                            >
+                              {firstSolution.title}
+                            </h3>
+                            <p
+                              data-aos="fade-up"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                            >
+                              {firstSolution.description}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="col-lg-6"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section className="b2g-training">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="b2g-training-title">
+                          <h3>Our B2G Training Programs</h3>
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="b2g-training-content">
+                          <p>
+                            WhizHack is providing security against some of the
+                            most advanced cyber-attacks perpetuated by state
+                            actors and cyber criminals in key Govt departments
+                            of Centre and States in India. These solutions are
+                            developed, deployed and managed end-to-end by its
+                            in-house teams. Our highly capable certified service
+                            teams are deploying our products and services in
+                            India and key countries including US/Canada,
+                            Tanzania, Vietnam and Sri Lanka. As a vertically
+                            integrated player, WhizHack also empowers
+                            Governmental organizations with a range of training
+                            across multiple departments that ranges for general
+                            awareness to master's programs in Cyber Security.{" "}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="whizHack-partnerships">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="whizHack-partnerships-title">
+                          <h3>WhizHack’s partnerships</h3>
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="whizHack-partnerships-content">
+                          <p>
+                            We are actively involved in delivering our training
+                            programs and services across a wide spectrum of
+                            sectors, collaborating with esteemed institutions
+                            such as Rashtriya Raksha University, the National
+                            Power Training Institute, and various governmental
+                            entities. Our clientele primarily consists of
+                            individuals from the technology industry, including
+                            delegates and professionals. To cater to the diverse
+                            requirements of our clients, we offer training
+                            programs structured into different tiers, ensuring
+                            personalized learning experiences tailored to
+                            individuals' roles and proficiency levels within the
+                            technical domain.{" "}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="iit-partnerships">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="iit-partnerships-title">
+                          <h3>
+                            {" "}
+                            Additionally, we have established partnerships with
+                            IIT Jodhpur, IIT Bhubaneshwar, and IIT Madras to
+                            seamlessly deliver our training programs.
+                          </h3>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-12">
+                        <div className="iit-partnerships-logo">
+                          <img src={jodhpurlogo} alt="jodhpur-logo" />
+                          <img src={rrulogo} alt="rru-logo" />
+                          <img src={madraslogo} alt="madras-logo" />
+                          <img src={nptiogo} alt="npti-logo" />
+                          <img src={bhulogo} alt="bhu-logo" />
                         </div>
                       </div>
                     </div>
