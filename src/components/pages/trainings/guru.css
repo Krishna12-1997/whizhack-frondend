@@ -201,7 +201,7 @@
   justify-content: center;
   height: 100%;
 }
-.technical-training-img{
+.technical-training-img {
   height: 100%;
   display: flex;
 }
@@ -356,7 +356,7 @@
 .left_content {
   padding-bottom: 20px;
 }
-.right_content{
+.right_content {
   background: #fff;
   padding: 2rem;
   width: 100%;
@@ -365,7 +365,7 @@
   box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.1);
 }
 /* .right_content:nth-child(even)::before { */
-  /* content: counter(evenCard, decimal);
+/* content: counter(evenCard, decimal);
   counter-increment: evenCard;
 
 } */
@@ -378,22 +378,22 @@
   padding: 0 1rem 0 0;
   transform: translateY(-50%);
   color: gainsboro;
-  font-weight: bold; 
-  font-size: 50px; 
+  font-weight: bold;
+  font-size: 50px;
 }
-.right_content h6{
+.right_content h6 {
   font-size: 20px;
   margin-bottom: 1rem;
   font-weight: 600;
   text-align: left;
 }
-.right_content .timeline-list-content{
+.right_content .timeline-list-content {
   text-align: left;
 }
-.right_content .timeline-list-content p{
-   color: #07002f;
-   font-size: 14px;
-   padding: 0.5rem 0;
+.right_content .timeline-list-content p {
+  color: #07002f;
+  font-size: 14px;
+  padding: 0.5rem 0;
 }
 .timeline ul li:nth-child(odd):after {
   content: "";
@@ -513,51 +513,51 @@
 .timeline ul li:last-child:after {
   content: none;
 }
-.direct-apply-uni-content{
+.direct-apply-uni-content {
   margin-top: 8rem;
 }
-.fee-structure{
+.fee-structure {
   display: flex;
 }
-.fee-structure .fee{
+.fee-structure .fee {
   width: 100%;
   margin-right: 1rem;
 }
-.fee-price-structure{
+.fee-price-structure {
   display: flex;
   gap: 1rem;
 }
-.fee-price-structure p{
-  color: #1D1D1D;
+.fee-price-structure p {
+  color: #1d1d1d;
   font-size: 14px;
 }
-.fee-price-structure span{
-  color: #DA1937;
+.fee-price-structure span {
+  color: #da1937;
   font-size: 14px;
 }
-.fee-price-structure strong{
-  color: #9747FF;
+.fee-price-structure strong {
+  color: #9747ff;
   font-size: 14px;
   font-weight: 400;
   margin: 0 0 0 1.5rem;
 }
-.direct-apply-uni-content-title{
+.direct-apply-uni-content-title {
   width: 90%;
 }
-.direct-apply-uni-content-title h3{
+.direct-apply-uni-content-title h3 {
   font-weight: 600;
   line-height: 37px;
 }
-.direct-apply-uni-content-title span{
-  color: #9747FF;
+.direct-apply-uni-content-title span {
+  color: #9747ff;
 }
-.fee{
+.fee {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.fee h3{
-  color: #9747FF;
+.fee h3 {
+  color: #9747ff;
   font-weight: 600;
   position: relative;
   display: inline-block;
@@ -569,20 +569,25 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 2px; 
-  background: linear-gradient(90deg, #9747FF 0%, rgba(134, 65, 223, 0.86) 50%, rgba(255, 255, 255, 0.00) 100%);;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #9747ff 0%,
+    rgba(134, 65, 223, 0.86) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
-.technology-partners{
+.technology-partners {
   margin: 5rem 0;
 }
-.technology-partners .technology-partners-title h3{
+.technology-partners .technology-partners-title h3 {
   text-align: center;
-  color: #07002F;
+  color: #07002f;
   font-weight: 600;
   padding-bottom: 3rem;
 }
-.technology-partners .technology-partners-logo{
+.technology-partners .technology-partners-logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -590,8 +595,40 @@
   gap: 100px;
 }
 
-.technology-partners .technology-partners-logo img{
+.technology-partners .technology-partners-logo img {
   height: 147px;
+}
+.b2g-training,
+.whizHack-partnerships,
+.iit-partnerships {
+  margin-top: 5rem;
+}
+.b2g-training-title h3,
+.whizHack-partnerships h3,
+.iit-partnerships h3 {
+  color: #07002f;
+  font-weight: 600;
+}
+.iit-partnerships {
+  text-align: center;
+}
+.b2g-training .b2g-training-content,
+.whizHack-partnerships .whizHack-partnerships-content {
+  margin: 0.5rem 0;
+}
+.b2g-training .b2g-training-content p,
+.whizHack-partnerships .whizHack-partnerships-content p {
+  color: #62666a;
+}
+.iit-partnerships .iit-partnerships-logo {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.iit-partnerships .iit-partnerships-logo img {
+  width: 120px;
+  height: 120px;
 }
 /* .introduction-section .Introduction-description img{
   width: 50%;
@@ -952,13 +989,18 @@
   justify-content: center;
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-  .timeline{
+  .timeline {
     margin: 0;
+  }
+  .iit-partnerships .iit-partnerships-logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
   .right_content h6 {
     margin-top: 2rem;
   }
-  .right_content{
+  .right_content {
     height: auto;
   }
   .timeline ul li {
@@ -980,51 +1022,52 @@
   }
   .fee-structure {
     display: block;
-}
-.right_content::before {
-  top: 32px;
-  left: 32px;
-  font-size: 30px;
-}
-.timeline ul li:nth-child(odd) {
-  text-align: left;
-}
-.timeline ul li:nth-child(odd):after, .timeline ul li:nth-child(even):after {
-  height: 21%;
-}
-.direct-apply-uni-content-title {
-  text-align: center;
-  width: 100%;
-}
-.fee-structure .fee {
-  align-items: center;
-}
-.technology-partners .technology-partners-logo {
-  text-align: center;
-  flex-direction: column;
-}
-.technology-partners .technology-partners-logo img {
-  height: 98px;
-}
-.cards-content{
-  margin-bottom: 2rem;
-}
-  .state-university-content{
+  }
+  .right_content::before {
+    top: 32px;
+    left: 32px;
+    font-size: 30px;
+  }
+  .timeline ul li:nth-child(odd) {
+    text-align: left;
+  }
+  .timeline ul li:nth-child(odd):after,
+  .timeline ul li:nth-child(even):after {
+    height: 21%;
+  }
+  .direct-apply-uni-content-title {
+    text-align: center;
+    width: 100%;
+  }
+  .fee-structure .fee {
+    align-items: center;
+  }
+  .technology-partners .technology-partners-logo {
+    text-align: center;
+    flex-direction: column;
+  }
+  .technology-partners .technology-partners-logo img {
+    height: 98px;
+  }
+  .cards-content {
+    margin-bottom: 2rem;
+  }
+  .state-university-content {
     position: absolute;
     top: 190px;
   }
   .state-university-content p {
     text-align: center;
   }
-  .state-university{
-    height: 68vh;
+  .state-university {
+    height: 100vh;
   }
-  .ui1-banner1-parent-training-bridge{
+  .ui1-banner1-parent-training-bridge {
     background-size: cover;
   }
   .introduction-section .introduction-title {
     margin: 1rem 0;
-}
+  }
   .our-deliver .our-deliverables-card {
     display: block;
   }
@@ -1034,10 +1077,10 @@
   .technical-training-img img {
     width: 343px;
     height: 260px;
-}
-.cyber-security-training-img img{
-  width: 343px;
-}
+  }
+  .cyber-security-training-img img {
+    width: 343px;
+  }
   .introduction-section .introduction-title h3,
   .introduction-section .introduction-title h6 {
     margin-left: 1rem;
@@ -1050,7 +1093,7 @@
   }
   .introduction-section .Introduction-description .desc p {
     padding-left: 1rem;
-}
+  }
   .introduction-section {
     margin-left: 0;
   }
@@ -1067,11 +1110,11 @@
   .technical-training-img {
     margin-top: 19rem;
     padding-left: 1.5rem;
-}
-.technical-training-content {
-  margin-top: 1rem;
-  padding-left: 2rem;
-}
+  }
+  .technical-training-content {
+    margin-top: 1rem;
+    padding-left: 2rem;
+  }
   .our-deliver .our-deliverables {
     display: unset;
     text-align: center;
@@ -1137,6 +1180,76 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .ui1-banner1-parent-training-bridge {
+    background-size: cover;
+  }
+  .direct-apply-uni-content-title {
+    text-align: center;
+    width: 100%;
+  }
+  .fee-structure .fee {
+    align-items: center;
+  }
+  .technology-partners .technology-partners-logo {
+    text-align: center;
+    flex-direction: column;
+  }
+  .technology-partners .technology-partners-logo img {
+    height: 98px;
+  }
+  .state-university-content {
+    position: absolute;
+    top: 190px;
+  }
+  .state-university-content p {
+    text-align: center;
+  }
+  .state-university {
+    height: 100vh;
+  }
+  .right_content h6 {
+    margin-top: 2rem;
+  }
+  .right_content {
+    height: auto;
+  }
+  .timeline ul li {
+    float: left !important;
+    height: 259px;
+    width: 100%;
+    z-index: 100;
+    padding: 0px 40px;
+  }
+  .timeline ul li:before {
+    display: none;
+  }
+  .timeline ul li:after {
+    left: 50% !important;
+    top: 100% !important;
+  }
+  .timeline ul li:nth-child(2n + 1)::after {
+    width: 1px;
+  }
+  .fee-structure {
+    display: block;
+  }
+  .right_content::before {
+    top: 32px;
+    left: 32px;
+    font-size: 30px;
+  }
+  .timeline ul li:nth-child(odd) {
+    text-align: left;
+  }
+  .timeline ul li:nth-child(odd):after,
+  .timeline ul li:nth-child(even):after {
+    height: 21%;
+  }
+  .iit-partnerships .iit-partnerships-logo {
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
   .guru-banner2-content {
     padding: 13% 8% 10% 13%;
     background: url(../../images/tablet/banner2.png);
@@ -1300,6 +1413,9 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 990px) {
+  .iit-partnerships .iit-partnerships-logo {
+    gap: 2rem;
+  }
   .ui1-banner1-content-training {
     width: 50%;
   }
