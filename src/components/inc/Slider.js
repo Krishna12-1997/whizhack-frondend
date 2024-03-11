@@ -47,14 +47,14 @@ const settings = {
                 <img
                   data-aos="fade-down"
                   data-aos-delay="300"
-                  data-aos-duration={1500}
+                  data-aos-duration={1000}
                   src={data.attributes.logo_url}
                   alt=""
                 />
                 <h2
                   data-aos="fade-up"
                   data-aos-delay="400"
-                  data-aos-duration={1500}
+                  data-aos-duration={1000}
                 >
                   {data.attributes.title}
                 </h2>
