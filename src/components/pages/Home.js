@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../inc/Loader";
 import SimpleSlider from "../inc/Slider";
+import AOS from "aos";
 import ContactForm from "../inc/ContactForm";
 import ContactForm2 from "../inc/ContactForm2";
 import ran_video from "../images/video/Ransomware Section.webm";
@@ -27,8 +28,13 @@ import { Helmet } from "react-helmet";
 import animationData from "../json/animation.json";
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  
   const uri =
-    "https://test.whizhack.com/api/home?populate=productleft.product_button, contact.product_type, link, images";
+    "http://localhost:1337/api/home?populate=productleft.product_button, contact.product_type, link, images";
   const { loading, error, data } = useFetch(uri);
 
   if (loading) {
@@ -67,12 +73,14 @@ export default function Home() {
                 <h3
                   className="section-title"
                   data-aos="fade-up"
+                  data-aos-delay="300"
                   data-aos-duration={1500}
                 >
                   {data.attributes.productleft.title}
                 </h3>
                 <p
                   data-aos="fade-up"
+                  data-aos-delay="400"
                   data-aos-duration={1500}
                 >
                   {data.attributes.productleft.description}
@@ -88,6 +96,7 @@ export default function Home() {
                 <div className="art-products-inner-logo">
                   <img
                     data-aos="fade-down"
+                    data-aos-delay="300"
                     data-aos-duration={1500}
                     src={whizrange}
                     alt=""
@@ -271,10 +280,13 @@ export default function Home() {
               </div>
               <div className="div-right">
                 <div className="form-content">
-                    <div>
-                      <h3>Partner with us for the next generation products</h3>
-                      <p>To register, please fill out the form with your contact information and we will get back to you shortly.</p>
-                    </div>
+                  <div>
+                    <h3>Partner with us for the next generation products</h3>
+                    <p>
+                      To register, please fill out the form with your contact
+                      information and we will get back to you shortly.
+                    </p>
+                  </div>
                   <ContactForm option={data.attributes.contact.product_type} />
                 </div>
               </div>
@@ -288,16 +300,22 @@ export default function Home() {
                 <h3
                   className="section-title"
                   data-aos="fade-down"
+                  data-aos-delay="300"
                   data-aos-duration={1500}
                 >
                   Services That Keep Securing Digital
                 </h3>
                 <p
                   data-aos="fade-up"
+                  data-aos-delay="400"
                   data-aos-duration={1500}
                 >
                   {" "}
-                  Whizhack is your trusted partner for IT/OT security services. Our specialized teams have years of experience and unparalleled commitment to work with select customers in meeting most extreme security challenges for durable partnerships
+                  Whizhack is your trusted partner for IT/OT security services.
+                  Our specialized teams have years of experience and
+                  unparalleled commitment to work with select customers in
+                  meeting most extreme security challenges for durable
+                  partnerships
                 </p>
                 {/* <a href="/" className="clipped-btns">
                 Know more
@@ -306,65 +324,63 @@ export default function Home() {
             </div>
             <div className="art-products2">
               <div className="art-products2-inner">
-                  <div
-                    className="art-product2-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
-                  >
-                    <div className="art-product2-box">
-                      <div className="art-product2-box-inner">
-                        <img src={iticon} alt="iticon" />
-                          <div>
-                            <h5>Services for IT </h5>
-                            <ul>
-                                  <li> Vulnerability Assessment </li>
-                                  <li> Penetration Testing </li>
-                                  <li>Vendor Risk Assessment</li>
-                                  <li>Threat Modelling</li>
-                                  <li>DevSecOps </li>
-                                  <li> Web Application Security</li>
-                                  <li>Mobile Application Security</li>
-                                  <li>Infrastructure Security</li>
-                                  <li> Red Team Exercise</li>
-                                  <li>SOC</li>
-                               
-                            </ul>
-                          </div>
+                <div
+                  className="art-product2-box-outer"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <div className="art-product2-box">
+                    <div className="art-product2-box-inner">
+                      <img src={iticon} alt="iticon" />
+                      <div>
+                        <h5>Services for IT </h5>
+                        <ul>
+                          <li> Vulnerability Assessment </li>
+                          <li> Penetration Testing </li>
+                          <li>Vendor Risk Assessment</li>
+                          <li>Threat Modelling</li>
+                          <li>DevSecOps </li>
+                          <li> Web Application Security</li>
+                          <li>Mobile Application Security</li>
+                          <li>Infrastructure Security</li>
+                          <li> Red Team Exercise</li>
+                          <li>SOC</li>
+                        </ul>
                       </div>
                     </div>
-                    <a href={`/serviceIT`} className="clipped-btns">
-                      Know more
-                    </a>
                   </div>
+                  <a href={`/serviceIT`} className="clipped-btns">
+                    Know more
+                  </a>
+                </div>
 
-                  <div
-                    className="art-product2-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
-                  >
-                    <div className="art-product2-box">
-                      <div className="art-product2-box-inner">
-                        <img src={oticon} alt="oticon" />
-                          <div>
-                            <h5>Services for OT </h5>
-                            <ul>
-                                  <li> Vendor Risk Assessment </li>
-                                  <li>Threat Modelling </li>
-                                  <li> IoT Device Security </li>
-                                  <li> Vulnerability Assessment</li>
-                                  <li> Infrastructure Security  </li>
-                                  <li>SOC</li>
-                               
-                            </ul>
-                          </div>
+                <div
+                  className="art-product2-box-outer"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <div className="art-product2-box">
+                    <div className="art-product2-box-inner">
+                      <img src={oticon} alt="oticon" />
+                      <div>
+                        <h5>Services for OT </h5>
+                        <ul>
+                          <li> Vendor Risk Assessment </li>
+                          <li>Threat Modelling </li>
+                          <li> IoT Device Security </li>
+                          <li> Vulnerability Assessment</li>
+                          <li> Infrastructure Security </li>
+                          <li>SOC</li>
+                        </ul>
                       </div>
                     </div>
-                    <a href={`/serviceOT`} className="clipped-btns">
-                      Know more
-                    </a>
                   </div>
+                  <a href={`/serviceOT`} className="clipped-btns">
+                    Know more
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -383,13 +399,17 @@ export default function Home() {
                 </div>
               </div>
 
-                  <div className="div-right">
-                    <div className="form-content">
-                      <h3>Partner With Us</h3>
-                      <p>Join WhizHack Technologies in Empowering Individuals and Organizations with the Necessary Skills and Knowledge to Protect Themselves and Their Businesses from Cyber Threats.</p>
-                      <ContactForm2 />
-                    </div>
-                  </div>
+              <div className="div-right">
+                <div className="form-content">
+                  <h3>Partner With Us</h3>
+                  <p>
+                    Join WhizHack Technologies in Empowering Individuals and
+                    Organizations with the Necessary Skills and Knowledge to
+                    Protect Themselves and Their Businesses from Cyber Threats.
+                  </p>
+                  <ContactForm2 />
+                </div>
+              </div>
             </div>
           </div>
         </div>
