@@ -6,6 +6,17 @@ import SimpleSlider from "../inc/Slider";
 import ContactForm from "../inc/ContactForm";
 import ContactForm2 from "../inc/ContactForm2";
 import ran_video from "../images/video/Ransomware Section.webm";
+import enterprise from "../images/icons/Enterprise (1).png";
+import gov from "../images/icons/government (1).png";
+import bridges from "../images/icons/international bridge courses (1).png";
+import industry from "../images/icons/industry (1).png";
+import career from "../images/icons/career pathways (1).png";
+import virtuallab from "../images/icons/Whizhack Virtual labs.png";
+import shooting from "../images/icons/shooting-range (2) (1).png";
+import tracelogo from "../images/icons/Trace Logo 1.svg";
+import traceicon from "../images/icons/trace edited.png";
+import hidsicon from "../images/icons/computer-networks Edit.png";
+import nidesicon from "../images/icons/global-network Edit.png";
 import product_video from "../images/video/product BG.webm";
 import zerohack from "../images/2Zero.svg";
 import whizrange from "../images/whizrange logo.png";
@@ -14,12 +25,16 @@ import { Helmet } from "react-helmet";
 import animationData from "../json/animation.json";
 
 export default function Home() {
-
-  const uri = "https://test.whizhack.com/api/home?_limit=5&populate=productleft.product_button, whizrangeproduct.button, box.button,contact.partner_contact, contact.product_type, service_compo.service_box.service_homes.service_content, Institution_contact.product_type,Institution_contact.cityname, Institution_contact.partner_contact, career.link ,career.career_right, link, images";
+  const uri =
+    "https://test.whizhack.com/api/home?_limit=5&populate=productleft.product_button, contact.product_type, service_compo.service_box.service_homes.service_content, link, images";
   const { loading, error, data } = useFetch(uri);
 
   if (loading) {
-    return <div><Loader loading={loading}/></div>;
+    return (
+      <div>
+        <Loader loading={loading} />
+      </div>
+    );
   }
 
   if (error) {
@@ -83,30 +98,52 @@ export default function Home() {
                   />
                 </div>
                 <div className=" whizrange-product">
-                  {data.attributes.whizrangeproduct.map((whiz_box) => (
-                    <div
-                      className="art-product-box-outer"
-                      data-aos="fade-down"
-                      data-aos-delay="300"
-                      data-aos-duration={1500}
-                    >
-                      <a href={`${whiz_box.button.redirect_url}`} className="">
-                        <div className="art-product-box">
-                          <div className="art-product-box-inner-whizrange">
-                            {/* <img src={whiz_box.image_url} alt="" /> */}
-                            <img src={whiz_box.logo_url} alt="" />
-                            <p>{whiz_box.description}</p>
-                            <a
-                              href={`${whiz_box.button.redirect_url}`}
-                              className=""
-                            >
-                              <i class="fas fa-arrow-right"></i>
-                            </a>
-                          </div>
+                  <div
+                    className="art-product-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <a href={`/Products/whizrange`} className="">
+                      <div className="art-product-box">
+                        <div className="art-product-box-inner-whizrange">
+                          <img src={shooting} alt="shooting" />
+                          <p>
+                            Simulation-based platform that trains professionals
+                            to respond to real-world cyberattacks.
+                          </p>
+                          {/* <img src={whiz_box.logo_url} alt="" />
+                            <p>{whiz_box.description}</p> */}
+
+                          <i class="fas fa-arrow-right"></i>
                         </div>
-                      </a>
-                    </div>
-                  ))}
+                      </div>
+                    </a>
+                  </div>
+
+                  <div
+                    className="art-product-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <a href={`/`} className="">
+                      <div className="art-product-box">
+                        <div className="art-product-box-inner-whizrange">
+                          <img src={virtuallab} alt="virtuallab" />
+                          <p>
+                            An adaptable, triple-layer security system that uses
+                            industry-standard mature signature technology with
+                            highly optimized machine language.
+                          </p>
+                          {/* <img src={whiz_box.logo_url} alt="" />
+                            <p>{whiz_box.description}</p> */}
+
+                          <i class="fas fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -123,45 +160,98 @@ export default function Home() {
                   />
                 </div>
                 <div className="zerohack-product">
-                  {data.attributes.box.map((box) => (
-                    <div
-                      className="art-product-box-outer"
-                      data-aos="fade-down"
-                      data-aos-delay="300"
-                      data-aos-duration={1500}
-                    >
-                      <a href={`${box.button.redirect_url}`} className="">
-                        <div className="art-product-box">
-                          <div className="art-product-box-inner">
-                            <img
-                              src={box.image_url}
-                              alt=""
-                              style={{
-                                ...colorizeImageStyle,
-                                objectFit: "cover",
-                              }}
-                            />
-                            {box.text_logo ? (
-                              <h3>{box.text_logo}</h3>
-                            ) : (
-                              <>
-                                <img src={box.logo_url} alt="" />
-                              </>
-                            )}
-                            <p>
-                              {box.description
-                                .split(" ")
-                                .slice(0, 20)
-                                .join(" ")}
-                            </p>
-                            <div>
-                              <i class="fas fa-arrow-right"></i>
-                            </div>
+                  <div
+                    className="art-product-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <a href={`/Products/trace`} className="">
+                      <div className="art-product-box">
+                        <div className="art-product-box-inner">
+                          <img
+                            src={traceicon}
+                            alt="traceicon"
+                            style={{
+                              ...colorizeImageStyle,
+                              objectFit: "cover",
+                            }}
+                          />
+                          <img src={tracelogo} alt="tracelogo" />
+                          <p>
+                            A highly scalable and adaptable cyber deception
+                            software that has been designed to capture and
+                            analyze live and real attacks on any enterprise.
+                          </p>
+                          <div>
+                            <i class="fas fa-arrow-right"></i>
                           </div>
                         </div>
-                      </a>
-                    </div>
-                  ))}
+                      </div>
+                    </a>
+                  </div>
+
+                  <div
+                    className="art-product-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <a href={`/Products/hids`} className="">
+                      <div className="art-product-box">
+                        <div className="art-product-box-inner">
+                          <img
+                            src={hidsicon}
+                            alt="traceicon"
+                            style={{
+                              ...colorizeImageStyle,
+                              objectFit: "cover",
+                            }}
+                          />
+                          <h3>HIDS</h3>
+                          <p>
+                            WhizHack HIDS solution uses advanced analytics,
+                            machine learning, and rule-based algorithms to
+                            detect anomalies, patterns
+                          </p>
+                          <div>
+                            <i class="fas fa-arrow-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div
+                    className="art-product-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <a href={`/Products/nids`} className="">
+                      <div className="art-product-box">
+                        <div className="art-product-box-inner">
+                          <img
+                            src={nidesicon}
+                            alt="traceicon"
+                            style={{
+                              ...colorizeImageStyle,
+                              objectFit: "cover",
+                            }}
+                          />
+                          <h3>NIDS</h3>
+                          <p>
+                            It is an active response solution which is designed
+                            to alter the flow of network traffic based on threat
+                            detection.
+                          </p>
+                          <div>
+                            <i class="fas fa-arrow-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -182,12 +272,10 @@ export default function Home() {
               </div>
               <div className="div-right">
                 <div className="form-content">
-                  {data.attributes.contact.partner_contact.map((contact) => (
                     <div>
-                      <h3>{contact.title}</h3>
-                      <p>{contact.description}</p>
+                      <h3>Partner with us for the next generation products</h3>
+                      <p>To register, please fill out the form with your contact information and we will get back to you shortly.</p>
                     </div>
-                  ))}
                   <ContactForm option={data.attributes.contact.product_type} />
                 </div>
               </div>
@@ -269,33 +357,19 @@ export default function Home() {
                 </div>
               </div>
 
-              {data.attributes.Institution_contact.partner_contact.map(
-                (datahe) => (
                   <div className="div-right">
                     <div className="form-content">
-                      <h3>{datahe.title}</h3>
-                      <p>{datahe.description}</p>
-                      <ContactForm2
-                        option={
-                          data.attributes.Institution_contact.product_type
-                        }
-                        city={data.attributes.Institution_contact.cityname}
-                      />
+                      <h3>Partner With Us</h3>
+                      <p>Join WhizHack Technologies in Empowering Individuals and Organizations with the Necessary Skills and Knowledge to Protect Themselves and Their Businesses from Cyber Threats.</p>
+                      <ContactForm2 />
                     </div>
                   </div>
-                )
-              )}
             </div>
           </div>
         </div>
         <div className="banner4" id="trainingid">
           <div className="fourth-banner">
-            <div
-              className="art-product4-content"
-              style={{
-                backgroundImage: `url(${data.attributes.career.bg_url})`,
-              }}
-            >
+            <div className="art-product4-content">
               <div className="art-product4-content-inner">
                 <h3
                   className="section-title"
@@ -303,34 +377,150 @@ export default function Home() {
                   data-aos-delay="300"
                   data-aos-duration={1500}
                 >
-                  {data.attributes.career.title}
+                  Training
                 </h3>
               </div>
             </div>
             <div className="art-products4">
               <div className="art-product4-content-parent">
-                {data.attributes.career.career_right.map((career) => (
-                  <div
-                    className="art-product-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
-                  >
-                    <a href={`${career.label_redirect}`} className="">
-                      <div className=" art-product-box-training">
-                        <div className="art-product-box-inner">
-                          <img src={career.icon_url} alt="" />
+                <div
+                  className="art-product-box-outer"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <a href={`/Trainings/enterprise`} className="">
+                    <div className=" art-product-box-training">
+                      <div className="art-product-box-inner">
+                        <img src={enterprise} alt="enterprise" />
+                        <h3>Enterprise </h3>
+                        <p>
+                          Enterprise training is versatile, offered through
+                          in-person sessions, online courses, and interactive
+                          workshops, aimed at fostering a foundational
+                          understanding of cybersecurity principles among
+                          employees to bolster organizational defenses.
+                        </p>
+                        {/* <img src={career.icon_url} alt="" />
                           <h3>{career.title}</h3>
 
                           <p>
-                            {career.content.split(" ").slice(0, 20).join(" ")}
-                          </p>
-                          <i class="fas fa-arrow-right"></i>
-                        </div>
+                            {career.content.split(" ").slice(0, 30).join(" ")}
+                          </p> */}
+                        <i class="fas fa-arrow-right"></i>
                       </div>
-                    </a>
-                  </div>
-                ))}
+                    </div>
+                  </a>
+                </div>
+
+                <div
+                  className="art-product-box-outer"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <a href={`/Trainings/npti`} className="">
+                    <div className=" art-product-box-training">
+                      <div className="art-product-box-inner">
+                        <img src={industry} alt="industry" />
+                        <h3>Industry Specific </h3>
+                        <p>
+                          India’s First Experiential Post Graduate Diploma in
+                          Cyber Security (PGDCS) Program for Core Engineers in
+                          partnership with NPTI (National Power Training
+                          Institute).
+                        </p>
+                        {/* <img src={career.icon_url} alt="" />
+                          <h3>{career.title}</h3>
+
+                          <p>
+                            {career.content.split(" ").slice(0, 30).join(" ")}
+                          </p> */}
+                        <i class="fas fa-arrow-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div
+                  className="art-product-box-outer"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <a href={`/Trainings/government`} className="">
+                    <div className=" art-product-box-training">
+                      <div className="art-product-box-inner">
+                        <img src={gov} alt="goverment" />
+                        <h3>Government </h3>
+                        <p>
+                          WhizHack is providing security against some of the
+                          most advanced cyber-attacks perpetuated by state
+                          actors and cyber criminals in key Govt departments of
+                          Centre and States in India.
+                        </p>
+                        {/* <img src={career.icon_url} alt="" />
+                          <h3>{career.title}</h3>
+
+                          <p>
+                            {career.content.split(" ").slice(0, 30).join(" ")}
+                          </p> */}
+                        <i class="fas fa-arrow-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div
+                  className="art-product-box-outer"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <a href={`/career`} className="">
+                    <div className=" art-product-box-training">
+                      <div className="art-product-box-inner">
+                        <img src={career} alt="career" />
+                        <h3>Career Pathways </h3>
+                        <p>
+                          Teenagers across the country will have the opportunity
+                          to crack codes, fix security flaws and examine .
+                        </p>
+                        {/* <img src={career.icon_url} alt="" />
+                          <h3>{career.title}</h3>
+
+                          <p>
+                            {career.content.split(" ").slice(0, 30).join(" ")}
+                          </p> */}
+                        <i class="fas fa-arrow-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div
+                  className="art-product-box-outer"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration={1500}
+                >
+                  <a href={`/Trainings/bridge`} className="">
+                    <div className=" art-product-box-training">
+                      <div className="art-product-box-inner">
+                        <img src={bridges} alt="bridges" />
+                        <h3>International Bridge Courses </h3>
+                        <p>
+                          Complete your Masters in Cyber Security from
+                          University at Albany (NSA certified center of
+                          excellence) at an Economical value with us.
+                        </p>
+
+                        <i class="fas fa-arrow-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                {/* ))} */}
               </div>
             </div>
           </div>
