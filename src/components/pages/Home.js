@@ -397,9 +397,7 @@ export default function Home() {
                         <p>
                           Enterprise training is versatile, offered through
                           in-person sessions, online courses, and interactive
-                          workshops, aimed at fostering a foundational
-                          understanding of cybersecurity principles among
-                          employees to bolster organizational defenses.
+                          workshops.
                         </p>
                         {/* <img src={career.icon_url} alt="" />
                           <h3>{career.title}</h3>
@@ -427,8 +425,7 @@ export default function Home() {
                         <p>
                           India’s First Experiential Post Graduate Diploma in
                           Cyber Security (PGDCS) Program for Core Engineers in
-                          partnership with NPTI (National Power Training
-                          Institute).
+                          partnership with NPTI.
                         </p>
                         {/* <img src={career.icon_url} alt="" />
                           <h3>{career.title}</h3>
@@ -456,8 +453,7 @@ export default function Home() {
                         <p>
                           WhizHack is providing security against some of the
                           most advanced cyber-attacks perpetuated by state
-                          actors and cyber criminals in key Govt departments of
-                          Centre and States in India.
+                          actors and cyber criminals.
                         </p>
                         {/* <img src={career.icon_url} alt="" />
                           <h3>{career.title}</h3>
@@ -512,7 +508,7 @@ export default function Home() {
                         <p>
                           Complete your Masters in Cyber Security from
                           University at Albany (NSA certified center of
-                          excellence) at an Economical value with us.
+                          excellence).
                         </p>
 
                         <i class="fas fa-arrow-right"></i>
