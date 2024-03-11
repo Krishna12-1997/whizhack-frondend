@@ -44,6 +44,32 @@ const settings = {
 };
 
   return (
+    <>
+    <style>
+    {`
+      @keyframes fadeDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px); /* Adjust the initial position as needed */
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px); /* Adjust the initial position as needed */
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `}
+  </style>
     <div className="">
       <Slider {...settings}>
         {data.attributes.images.map((img) => (
@@ -51,16 +77,18 @@ const settings = {
             <div className="col-lg-5 banner-text-content">
               <div className="banner-text">
                 <img
-                  data-aos="fade-down"
-                  data-aos-delay="100"
-                  data-aos-duration={1500}
+                   style={{
+                    animation: "fadeDown 1.5s ease-in-out",
+                    animationDelay: "0.1s",
+                  }}
                   src={data.attributes.logo_url}
                   alt=""
                 />
                 <h2
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                  data-aos-duration={1500}
+                   style={{
+                    animation: "fadeUp 1.5s ease-in-out",
+                    animationDelay: "0.2s",
+                  }}
                 >
                   {data.attributes.title}
                 </h2>
@@ -104,6 +132,7 @@ const settings = {
         ))}
       </Slider>
     </div>
+    </>
   );
 };
 
