@@ -15,6 +15,8 @@ import virtuallab from "../images/icons/Whizhack Virtual labs.png";
 import shooting from "../images/icons/shooting-range (2) (1).png";
 import tracelogo from "../images/icons/Trace Logo 1.svg";
 import traceicon from "../images/icons/trace edited.png";
+import iticon from "../images/icons/IT icon (1).svg";
+import oticon from "../images/icons/OT icon (1).svg";
 import hidsicon from "../images/icons/computer-networks Edit.png";
 import nidesicon from "../images/icons/global-network Edit.png";
 import product_video from "../images/video/product BG.webm";
@@ -26,7 +28,7 @@ import animationData from "../json/animation.json";
 
 export default function Home() {
   const uri =
-    "https://test.whizhack.com/api/home?_limit=5&populate=productleft.product_button, contact.product_type, service_compo.service_box.service_homes.service_content, link, images";
+    "https://test.whizhack.com/api/home?_limit=5&populate=productleft.product_button, contact.product_type, link, images";
   const { loading, error, data } = useFetch(uri);
 
   if (loading) {
@@ -292,7 +294,7 @@ export default function Home() {
                   data-aos-delay="300"
                   data-aos-duration={1500}
                 >
-                  {data.attributes.service_compo.title}
+                  Services That Keep Securing Digital
                 </h3>
                 <p
                   data-aos="fade-up"
@@ -300,7 +302,7 @@ export default function Home() {
                   data-aos-duration={1500}
                 >
                   {" "}
-                  {data.attributes.service_compo.description}
+                  Whizhack is your trusted partner for IT/OT security services. Our specialized teams have years of experience and unparalleled commitment to work with select customers in meeting most extreme security challenges for durable partnerships
                 </p>
                 {/* <a href="/" className="clipped-btns">
                 Know more
@@ -309,36 +311,65 @@ export default function Home() {
             </div>
             <div className="art-products2">
               <div className="art-products2-inner">
-                {data.attributes.service_compo.service_box.map((box) => (
                   <div
                     className="art-product2-box-outer"
-                    key={box.id}
                     data-aos="fade-down"
                     data-aos-delay="300"
                     data-aos-duration={1500}
                   >
                     <div className="art-product2-box">
                       <div className="art-product2-box-inner">
-                        <img src={box.image_url} alt="" />
-                        {box.service_homes.data.map((service) => (
+                        <img src={iticon} alt="iticon" />
                           <div>
-                            <h5>{service.attributes.title}</h5>
+                            <h5>Services for IT </h5>
                             <ul>
-                              {service.attributes.service_content.map(
-                                (content) => (
-                                  <li>{content.title}</li>
-                                )
-                              )}
+                                  <li> Vulnerability Assessment </li>
+                                  <li> Penetration Testing </li>
+                                  <li>Vendor Risk Assessment</li>
+                                  <li>Threat Modelling</li>
+                                  <li>DevSecOps </li>
+                                  <li> Web Application Security</li>
+                                  <li>Mobile Application Security</li>
+                                  <li>Infrastructure Security</li>
+                                  <li> Red Team Exercise</li>
+                                  <li>SOC</li>
+                               
                             </ul>
                           </div>
-                        ))}
                       </div>
                     </div>
-                    <a href={`${box.redirect_url}`} className="clipped-btns">
+                    <a href={`/serviceIT`} className="clipped-btns">
                       Know more
                     </a>
                   </div>
-                ))}
+
+                  <div
+                    className="art-product2-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <div className="art-product2-box">
+                      <div className="art-product2-box-inner">
+                        <img src={oticon} alt="oticon" />
+                          <div>
+                            <h5>Services for OT </h5>
+                            <ul>
+                                  <li> Vendor Risk Assessment </li>
+                                  <li>Threat Modelling </li>
+                                  <li> IoT Device Security </li>
+                                  <li> Vulnerability Assessment</li>
+                                  <li> Infrastructure Security  </li>
+                                  <li>SOC</li>
+                               
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                    <a href={`/serviceOT`} className="clipped-btns">
+                      Know more
+                    </a>
+                  </div>
               </div>
             </div>
           </div>
