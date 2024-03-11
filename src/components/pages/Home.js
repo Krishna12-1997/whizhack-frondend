@@ -28,7 +28,7 @@ import animationData from "../json/animation.json";
 
 export default function Home() {
   const uri =
-    "http://localhost:1337/api/home?populate=productleft.product_button, contact.product_type, link, images";
+    "https://test.whizhack.com/api/home?populate=productleft.product_button, contact.product_type, link, images";
   const { loading, error, data } = useFetch(uri);
 
   if (loading) {
