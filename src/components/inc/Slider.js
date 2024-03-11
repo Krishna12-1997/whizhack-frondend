@@ -45,16 +45,16 @@ const settings = {
             <div className="col-lg-5 banner-text-content">
               <div className="banner-text">
                 <img
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1000}
+                  // data-aos="fade-down"
+                  // data-aos-delay="300"
+                  // data-aos-duration={1500}
                   src={data.attributes.logo_url}
                   alt=""
                 />
                 <h2
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                  data-aos-duration={1000}
+                  // data-aos="fade-up"
+                  // data-aos-delay="400"
+                  // data-aos-duration={1500}
                 >
                   {data.attributes.title}
                 </h2>
