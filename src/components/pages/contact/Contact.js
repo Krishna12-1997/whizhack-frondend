@@ -3,10 +3,12 @@ import "../../pages/contact/contact.css";
 import contact_banner from "../../images/video/contact_video.mp4";
 import { useFormik } from "formik";
 import axios from "axios";
+import Loader from "../../inc/Loader";
 import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../../hooks/useFetch";
 
-export default function Contact({ data }) {
+export default function Contact() {
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -39,6 +41,18 @@ export default function Contact({ data }) {
         });
     },
   });
+
+  const uri = "https://test.whizhack.com/api/contact-form";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+ 
 
   return (
     <div>

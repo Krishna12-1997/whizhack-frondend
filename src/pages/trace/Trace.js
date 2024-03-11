@@ -5,12 +5,13 @@ import thred from "../../asset/thread.png";
 import digital from "../../asset/digital.png";
 import partner from "../../asset/saaa0560_cbersecurity_person_teaching_7ed30544-c3e4-493f-b8b5-b4f52e854a8f 1 (1).png";
 import useFetch from "../../hooks/useFetch";
+import Loader from "../../components/inc/Loader";
 import { useParams } from "react-router-dom";
 import { useFormik } from "formik";
 import axios from "axios";
 import { Helmet } from "react-helmet";
 
-export default function Trace({ data }) {
+export default function Trace() {
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -51,6 +52,17 @@ export default function Trace({ data }) {
   });
 
   const { solutionName } = useParams();
+
+  const uri = "https://test.whizhack.com/api/solution?_limit=5&populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.about_cybers, solution.hids_section.hids_features.feature_hids";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   const solutions = data.attributes.solution;
 

@@ -2,8 +2,21 @@ import React from 'react'
 import './usecase.css';
 import UseCaseForm from '../../inc/UseCaseForm';
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
+import Loader from '../../inc/Loader';
+import useFetch from '../../../hooks/useFetch';
 
-const Use_case = ({ data }) => {
+const Use_case = () => {
+
+  const uri = "https://test.whizhack.com/api/use-case?populate=use_case_cards";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
   return (
     <div>
        <div

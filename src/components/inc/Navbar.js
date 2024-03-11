@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Nav, Tab } from "react-bootstrap";
+import Loader from "./Loader";
 import logo from "../images/logo.svg";
 import useFetch from "../../hooks/useFetch";
 
-export default function Navbar({ data }) {
+export default function Navbar() {
+
   const [activeSection, setActiveSection] = useState(0);
   const [activeSections, setActiveSections] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
@@ -12,6 +14,17 @@ export default function Navbar({ data }) {
   const [hoveredKey, setHoveredKey] = useState(null);
 
   const [isNavbarCollapsed, setNavbarCollapsed] = useState(true);
+
+  const uri = "https://test.whizhack.com/api/top-right-menu?_limit=5&populate=body.sections.links, body.single_sections"; // Specify the URI for this page
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   const handleNavbarToggle = () => {
     setNavbarCollapsed(!isNavbarCollapsed);

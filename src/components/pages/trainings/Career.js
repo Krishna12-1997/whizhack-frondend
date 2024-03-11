@@ -1,8 +1,21 @@
 import React from "react";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
 import "./career.css";
+import Loader from "../../inc/Loader";
+import useFetch from "../../../hooks/useFetch";
 
-const Career = ({ data }) => {
+const Career = () => {
+
+  const uri = "https://test.whizhack.com/api/career-pathway?populate=career_path_video, career_programs.duration, career_programs.module";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <>

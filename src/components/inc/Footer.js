@@ -1,8 +1,21 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
+import Loader from "../inc/Loader";
 
-export default function Footer({ data }) {
+export default function Footer({  }) {
+
+  const uri = "https://test.whizhack.com/api/footer?_limit=5&populate=left_footer"; // Specify the URI for this page
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <>
@@ -18,7 +31,6 @@ export default function Footer({ data }) {
                   <div
                     style={{
                       color: "#FFF",
-                      fontFamily: "Satoshi",
                       fontSize: "32px",
                       fontStyle: "normal",
                       fontWeight: 400,
@@ -43,7 +55,6 @@ export default function Footer({ data }) {
                     className="footer-copyright py-3 mt-5"
                     style={{
                       color: "#FFF",
-                      // fontFamily: "Satoshi",
                       fontSize: "20px",
                       fontStyle: "normal",
                       fontWeight: 400,

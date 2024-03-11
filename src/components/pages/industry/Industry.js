@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 import "../industry/industry.css";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
+import Loader from "../../inc/Loader";
+import useFetch from "../../../hooks/useFetch";
 
-
-export default function Industry({ data }) {
+export default function Industry() {
   const [activeTab, setActiveTab] = useState("Finance");
+
+  const uri = "https://test.whizhack.com/api/industry?populate=industry_left.industry_lefts, section, industry_right.industry_rights.button";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   const handleTabClick = (industryType) => {
     setActiveTab(industryType);

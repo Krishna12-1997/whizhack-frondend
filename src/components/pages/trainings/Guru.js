@@ -24,8 +24,24 @@ import Loader from "../../inc/Loader";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 
-export default function Guru({ data }) {
+export default function Guru({}) {
   const { paramName } = useParams();
+
+  const uri =
+    "https://test.whizhack.com/api/training?populate=training.cyber_gurus.price , training.about_cybers.cyber_link, training.cyber_modules.cyber_module, training.btogs.btog_card, training.solution_cases.case_impact";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return (
+      <div>
+        <Loader loading={loading} />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   const solutions = data.attributes.training;
 

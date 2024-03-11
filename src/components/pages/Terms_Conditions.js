@@ -3,9 +3,21 @@ import "./industry/industry.css";
 import "./privacy.css";
 import { ThreeDots } from "react-loader-spinner";
 import useFetch from "../../hooks/useFetch";
+import Loader from "../inc/Loader";
 import service_banner_icon from "../images/decors/service_banner_icon.png";
 
-export default function Terms_Conditions({ data }) {
+export default function Terms_Conditions() {
+
+  const uri = "https://test.whizhack.com/api/terms-condition";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div>

@@ -38,6 +38,8 @@ export default function ContactForm2({ option, city }) {
           console.error("POST request error:", error);
           // Handle the error, e.g., show an error message to the user.
         });
+
+     
     },
   });
 

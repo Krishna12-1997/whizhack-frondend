@@ -2,9 +2,23 @@ import React from "react";
 import "../services/service.css";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
 import TestingSlider from "../../inc/ServiceTestingSlider";
+import Loader from "../../inc/Loader";
+import useFetch from "../../../hooks/useFetch";
 
 
-export default function Service({ data }) {
+export default function Service() {
+
+  const uri = "https://test.whizhack.com/api/service?populate=section, security_zone.service_links.assessment, timeline.timelines, testing, Service_security.service_homes.service_content";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
   return (
     <div>
       <div className="service-banner-section">

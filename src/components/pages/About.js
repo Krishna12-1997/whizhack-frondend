@@ -4,10 +4,21 @@ import lin from "../../asset/Icon (1).svg";
 import mission_icon from "../../components/images/icons/mission_icon.svg";
 import vision_icon from "../../components/images/icons/vision_icon.svg";
 import useFetch from "../../hooks/useFetch";
+import Loader from "../inc/Loader";
 import AboutSlider from "../inc/AboutSlider";
 
-const About = ({ data }) => {
+const About = ({  }) => {
 
+  const uri = "https://test.whizhack.com/api/about?_limit=5&populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button"; // Specify the URI for this page
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
   const header = data.attributes.header;
   const management = header.management;
   const story = header.story;

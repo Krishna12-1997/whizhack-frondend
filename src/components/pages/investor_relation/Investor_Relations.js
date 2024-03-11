@@ -2,9 +2,22 @@ import React from "react";
 import "../industry/industry.css";
 import "../privacy.css";
 import service_banner_icon from "../../images/decors/service_banner_icon.png";
+import Loader from "../../inc/Loader";
+import useFetch from "../../../hooks/useFetch";
 import modal_img from "../../images/total_return.svg";
 
-export default function Investor_Relations({ data }) {
+export default function Investor_Relations() {
+
+  const uri = "https://test.whizhack.com/api/investor-relation?populate=year.investors.investor_shareholder_content, advisorpartner";
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div>

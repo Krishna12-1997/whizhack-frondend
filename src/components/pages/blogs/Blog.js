@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import "./blogs.css";
 import { Link } from "react-router-dom";
+import Loader from "../../inc/Loader";
+import useFetch from "../../../hooks/useFetch";
 
-export default function Blog({ data }) {
+export default function Blog() {
+
   const [showAll, setShowAll] = useState(false);
+  const uri = "https://test.whizhack.com/api/blog?populate=blog.latest_blogs.blog_button, all_blog.all_blog.latest_blogs.blog_button,  all_blog.all_blog.latest_blogs.Single_blog_details"; // Specify the URI for this page
+  const { loading, error, data } = useFetch(uri);
+
+  if (loading) {
+    return <div><Loader loading={loading}/></div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div>

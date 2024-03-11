@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from 'react';
 import { useCache } from '../CacheContext';
 
@@ -17,15 +15,14 @@ const useFetch = (uri) => {
         const cachedData = getCachedData(uri);
 
         if (cachedData) {
-          console.log(`Data fetched from cache for URI: ${uri}`);
           setData(cachedData);
         } else {
           const response = await fetch(uri);
           const apiResponse = await response.json();
 
           if (response.ok) {
-            setData(apiResponse.data);
-            setCachedData(uri, apiResponse.data);
+            setData(apiResponse?.data);
+            setCachedData(uri, apiResponse?.data);
           } else {
             setError(new Error(`Failed to fetch data: ${apiResponse.message}`));
           }
