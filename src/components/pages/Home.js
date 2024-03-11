@@ -28,7 +28,7 @@ import animationData from "../json/animation.json";
 
 export default function Home() {
   const uri =
-    "https://test.whizhack.com/api/home?_limit=5&populate=productleft.product_button, contact.product_type, link, images";
+    "http://localhost:1337/api/home?populate=productleft.product_button, contact.product_type, link, images";
   const { loading, error, data } = useFetch(uri);
 
   if (loading) {
@@ -67,14 +67,12 @@ export default function Home() {
                 <h3
                   className="section-title"
                   data-aos="fade-up"
-                  data-aos-delay="300"
                   data-aos-duration={1500}
                 >
                   {data.attributes.productleft.title}
                 </h3>
                 <p
                   data-aos="fade-up"
-                  data-aos-delay="400"
                   data-aos-duration={1500}
                 >
                   {data.attributes.productleft.description}
@@ -90,7 +88,6 @@ export default function Home() {
                 <div className="art-products-inner-logo">
                   <img
                     data-aos="fade-down"
-                    data-aos-delay="300"
                     data-aos-duration={1500}
                     src={whizrange}
                     alt=""
@@ -291,14 +288,12 @@ export default function Home() {
                 <h3
                   className="section-title"
                   data-aos="fade-down"
-                  data-aos-delay="300"
                   data-aos-duration={1500}
                 >
                   Services That Keep Securing Digital
                 </h3>
                 <p
                   data-aos="fade-up"
-                  data-aos-delay="400"
                   data-aos-duration={1500}
                 >
                   {" "}
