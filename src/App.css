@@ -1102,6 +1102,7 @@ a:hover {
   color: #000;
 }
 .art-product4-content {
+  background-image: url(./components//images/icons/training-img.webp);
   height: auto;
   width: 56%;
   clip-path: polygon(
