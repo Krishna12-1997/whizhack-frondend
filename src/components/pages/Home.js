@@ -34,7 +34,7 @@ export default function Home() {
   }, []);
 
   const uri =
-    "https://test.whizhack.com/api/home?populate=productleft.product_button, contact.product_type, link, images";
+    "http://localhost:1337/api/home?populate=productleft.product_button, contact.product_type, link, images";
   const { loading, error, data } = useFetch(uri);
 
   if (loading) {
@@ -61,6 +61,31 @@ export default function Home() {
 
   return (
     <>
+    <style>
+    {`
+      @keyframes fadeDown {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `}
+  </style>
       <div>
         <div className="banner1">
           <SimpleSlider data={data} />
@@ -72,16 +97,18 @@ export default function Home() {
               <div className="art-product-content-inner">
                 <h3
                   className="section-title"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeUp 1.5s ease-in-out",
+                    animationDelay: "0.2s",
+                  }}
                 >
                   {data.attributes.productleft.title}
                 </h3>
                 <p
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                  data-aos-duration={1500}
+                   style={{
+                    animation: "fadeUp 1.5s ease-in-out",
+                    animationDelay: "0.2s",
+                  }}
                 >
                   {data.attributes.productleft.description}
                 </p>
@@ -95,22 +122,24 @@ export default function Home() {
               <div className="art-products-inner">
                 <div className="art-products-inner-logo">
                   <img
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
+                     style={{
+                      animation: "fadeDown 1.5s ease-in-out",
+                      animationDelay: "0.1s",
+                      ...whiteImageStyle
+                    }}
                     src={whizrange}
                     alt=""
                     width="100px"
                     height="70px"
-                    style={whiteImageStyle}
                   />
                 </div>
                 <div className=" whizrange-product">
                   <div
                     className="art-product-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
+                    style={{
+                      animation: "fadeDown 1.5s ease-in-out",
+                      animationDelay: "0.1s",
+                    }}
                   >
                     <a href={`/Products/whizrange`} className="">
                       <div className="art-product-box">
@@ -131,9 +160,10 @@ export default function Home() {
 
                   <div
                     className="art-product-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
+                    style={{
+                      animation: "fadeDown 1.5s ease-in-out",
+                      animationDelay: "0.1s",
+                    }}
                   >
                     <a href={`/`} className="">
                       <div className="art-product-box">
@@ -158,9 +188,10 @@ export default function Home() {
               <div className="art-products-inner-whizrange">
                 <div className="art-products-inner-logo-zerohack">
                   <img
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
+                     style={{
+                      animation: "fadeDown 1.5s ease-in-out",
+                      animationDelay: "0.1s",
+                    }}
                     src={zerohack}
                     alt=""
                     width="150px"
@@ -170,9 +201,10 @@ export default function Home() {
                 <div className="zerohack-product">
                   <div
                     className="art-product-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
+                    style={{
+                      animation: "fadeDown 1.5s ease-in-out",
+                      animationDelay: "0.1s",
+                    }}
                   >
                     <a href={`/Products/trace`} className="">
                       <div className="art-product-box">
@@ -201,9 +233,10 @@ export default function Home() {
 
                   <div
                     className="art-product-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
+                    style={{
+                      animation: "fadeDown 1.5s ease-in-out",
+                      animationDelay: "0.1s",
+                    }}
                   >
                     <a href={`/Products/hids`} className="">
                       <div className="art-product-box">
@@ -232,9 +265,10 @@ export default function Home() {
 
                   <div
                     className="art-product-box-outer"
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
+                    style={{
+                      animation: "fadeDown 1.5s ease-in-out",
+                      animationDelay: "0.1s",
+                    }}
                   >
                     <a href={`/Products/nids`} className="">
                       <div className="art-product-box">
@@ -299,16 +333,18 @@ export default function Home() {
               <div className="art-product2-content-inner">
                 <h3
                   className="section-title"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeDown 1.5s ease-in-out",
+                    animationDelay: "0.1s",
+                  }}
                 >
                   Services That Keep Securing Digital
                 </h3>
                 <p
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                  data-aos-duration={1500}
+                   style={{
+                    animation: "fadeUp 1.5s ease-in-out",
+                    animationDelay: "0.2s",
+                  }}
                 >
                   {" "}
                   Whizhack is your trusted partner for IT/OT security services.
@@ -326,9 +362,10 @@ export default function Home() {
               <div className="art-products2-inner">
                 <div
                   className="art-product2-box-outer"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeDown 1.5s ease-in-out",
+                    animationDelay: "0.1s",
+                  }}
                 >
                   <div className="art-product2-box">
                     <div className="art-product2-box-inner">
@@ -357,9 +394,10 @@ export default function Home() {
 
                 <div
                   className="art-product2-box-outer"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeDown 1.5s ease-in-out",
+                    animationDelay: "0.1s",
+                  }}
                 >
                   <div className="art-product2-box">
                     <div className="art-product2-box-inner">
@@ -419,9 +457,10 @@ export default function Home() {
               <div className="art-product4-content-inner">
                 <h3
                   className="section-title"
-                  data-aos="fade-right"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeUp 1.5s ease-in-out",
+                    animationDelay: "0.2s",
+                  }}
                 >
                   Training
                 </h3>
@@ -431,9 +470,10 @@ export default function Home() {
               <div className="art-product4-content-parent">
                 <div
                   className="art-product-box-outer"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeDown 1.5s ease-in-out",
+                    animationDelay: "0.1s",
+                  }}
                 >
                   <a href={`/Trainings/enterprise`} className="">
                     <div className=" art-product-box-training">
@@ -459,9 +499,10 @@ export default function Home() {
 
                 <div
                   className="art-product-box-outer"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeDown 1.5s ease-in-out",
+                    animationDelay: "0.1s",
+                  }}
                 >
                   <a href={`/Trainings/npti`} className="">
                     <div className=" art-product-box-training">
@@ -487,9 +528,10 @@ export default function Home() {
 
                 <div
                   className="art-product-box-outer"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeDown 1.5s ease-in-out",
+                    animationDelay: "0.1s",
+                  }}
                 >
                   <a href={`/Trainings/government`} className="">
                     <div className=" art-product-box-training">
@@ -515,9 +557,10 @@ export default function Home() {
 
                 <div
                   className="art-product-box-outer"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeDown 1.5s ease-in-out",
+                    animationDelay: "0.1s",
+                  }}
                 >
                   <a href={`/career`} className="">
                     <div className=" art-product-box-training">
@@ -542,9 +585,10 @@ export default function Home() {
 
                 <div
                   className="art-product-box-outer"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  data-aos-duration={1500}
+                  style={{
+                    animation: "fadeDown 1.5s ease-in-out",
+                    animationDelay: "0.1s",
+                  }}
                 >
                   <a href={`/Trainings/bridge`} className="">
                     <div className=" art-product-box-training">
@@ -586,9 +630,10 @@ export default function Home() {
                       cybersecurity measures.
                     </p>
                     <a
-                      data-aos="fade-down"
-                      data-aos-delay="400"
-                      data-aos-duration={1500}
+                       style={{
+                        animation: "fadeDown 1.5s ease-in-out",
+                        animationDelay: "0.1s",
+                      }}
                       href="/ransomeware"
                       className="ransomeware-btns"
                     >
