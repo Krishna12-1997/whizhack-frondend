@@ -1057,7 +1057,7 @@ export default function Guru({}) {
                       backgroundImage: `url(${impact.attributes.bg_url})`,
                     }}
                   >
-                    <div className="container text-white text-center mt-5">
+                    <div className="container text-white text-center mt-5 pt-5 pb-5">
                       <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
                         <div className="line_left"></div>
                         <h1 style={{ fontFamily: "Pulse", fontWeight: 600 }}>
