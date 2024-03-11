@@ -52,14 +52,14 @@ const settings = {
               <div className="banner-text">
                 <img
                   data-aos="fade-down"
-                  data-aos-delay="300"
+                  data-aos-delay="100"
                   data-aos-duration={1500}
                   src={data.attributes.logo_url}
                   alt=""
                 />
                 <h2
                   data-aos="fade-up"
-                  data-aos-delay="400"
+                  data-aos-delay="200"
                   data-aos-duration={1500}
                 >
                   {data.attributes.title}
