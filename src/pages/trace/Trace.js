@@ -3,6 +3,13 @@ import w from "../../asset/W.png";
 import "./Trace.css";
 import thred from "../../asset/thread.png";
 import digital from "../../asset/digital.png";
+import video from "../../components/images/bg/Video.png";
+import CSicon from "../../components/images/icons/CS-removebg-preview 1.svg";
+import CSicon2 from "../../components/images/icons/CS-removebg-preview-removebg-preview 1 (1).svg";
+import attact from "../../components/images/icons/Attack-removebg-preview 1.svg";
+import isomet from "../../components/images/icons/ISOMET_1-removebg-preview 1.svg";
+import isomet1 from "../../components/images/icons/101994-OM0XMB-226-removebg-preview 1.svg";
+import isomet2 from "../../components/images/icons/Successful_Leaders_invest_money_in_isometric_illustration-removebg-preview (1) 1.svg";
 import partner from "../../asset/saaa0560_cbersecurity_person_teaching_7ed30544-c3e4-493f-b8b5-b4f52e854a8f 1 (1).png";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/inc/Loader";
@@ -53,11 +60,16 @@ export default function Trace() {
 
   const { solutionName } = useParams();
 
-  const uri = "https://test.whizhack.com/api/solution?_limit=5&populate=solution.threat.card, solution.bg_image_url.about_cybers, solution.bg_image_url.card, solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.about_cybers, solution.hids_section.hids_features.feature_hids";
+  const uri =
+    "https://test.whizhack.com/api/solution?_limit=5&populate=solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.hids_features.feature_hids";
   const { loading, error, data } = useFetch(uri);
 
   if (loading) {
-    return <div><Loader loading={loading}/></div>;
+    return (
+      <div>
+        <Loader loading={loading} />
+      </div>
+    );
   }
 
   if (error) {
@@ -144,7 +156,7 @@ export default function Trace() {
                               className="mb-4"
                               style={{ color: "#07002F", fontWeight: "700" }}
                             >
-                              {firstSolution.threat.big_title}
+                              Threat Reconnaissance And Classification Engine
                             </h3>
                             <h6
                               data-aos="fade-right"
@@ -153,7 +165,7 @@ export default function Trace() {
                               className="mb-3"
                               style={{ color: "#1D1D1D", fontWeight: "500" }}
                             >
-                              {firstSolution.threat.small_title}
+                              Whizhack's TRACE augmenting endpoint security solutions.
                             </h6>
                             <p
                               style={{ color: "#62666A", fontWeight: "500" }}
@@ -164,9 +176,17 @@ export default function Trace() {
                               <span
                                 style={{ color: "#185893", fontWeight: "500" }}
                               >
-                                {firstSolution.threat.label}
+                               TRACE
                               </span>{" "}
-                              {firstSolution.threat.description}
+                              is a security tool that assists security analysts and network
+administrators in enhancing their network's security by providing
+them with logs of threat events. It integrates effortlessly with an
+organization's existing IT, OT, IoT, and cloud infrastructure to lure
+both external and internal attackers into revealing themselves. The sensors are strategically placed in an organization's DMZ and
+internal network to monitor network activity and produce threat
+logs upon detecting an attack. The sensor captures the threat data
+and sends it to a collector for automatic analysis and generation of threat intelligence. The sensors update themselves automatically
+as new updates are released.
                             </p>
                           </div>
                         </div>
@@ -183,11 +203,10 @@ export default function Trace() {
                             }}
                           >
                             <div className="degree">
-                              {firstSolution.threat.card.map((thred) => (
                                 <div className="degree_content">
                                   <img
-                                    src={thred.logo_url}
-                                    alt=""
+                                    src={CSicon}
+                                    alt="CSicon"
                                     width="111px"
                                     height="125px"
                                   />
@@ -203,9 +222,9 @@ export default function Trace() {
                                         fontWeight: "600",
                                       }}
                                     >
-                                      {thred.label}
+                                      30
                                     </span>{" "}
-                                    {thred.title}
+                                    Cyber Attacks Daily
                                   </h5>
                                   <p
                                     style={{
@@ -213,10 +232,76 @@ export default function Trace() {
                                       fontWeight: "400",
                                     }}
                                   >
-                                    {thred.description}
+                                    Reported by India in 2019, as per reports.
                                   </p>
                                 </div>
-                              ))}
+
+                                <div className="degree_content">
+                                  <img
+                                    src={CSicon2}
+                                    alt="CSicon2"
+                                    width="111px"
+                                    height="125px"
+                                  />
+                                  <h5
+                                    style={{
+                                      color: "#07002F",
+                                      fontWeight: "600",
+                                    }}
+                                  >
+                                    <span
+                                      style={{
+                                        color: "#6A49F2",
+                                        fontWeight: "600",
+                                      }}
+                                    >
+                                      300%
+                                    </span>{" "}
+                                    Increase in Cyber Attacks
+                                  </h5>
+                                  <p
+                                    style={{
+                                      color: "#62666A",
+                                      fontWeight: "400",
+                                    }}
+                                  >
+                                    In India amid the Covid-19 Pandemic.
+                                  </p>
+                                </div>
+
+                                <div className="degree_content">
+                                  <img
+                                    src={attact}
+                                    alt="attact"
+                                    width="111px"
+                                    height="125px"
+                                  />
+                                  <h5
+                                    style={{
+                                      color: "#07002F",
+                                      fontWeight: "600",
+                                    }}
+                                  >
+                                    <span
+                                      style={{
+                                        color: "#6A49F2",
+                                        fontWeight: "600",
+                                      }}
+                                    >
+                                      6,07,220
+                                    </span>{" "}
+                                    Breaches
+                                  </h5>
+                                  <p
+                                    style={{
+                                      color: "#62666A",
+                                      fontWeight: "400",
+                                    }}
+                                  >
+                                   Recorded till June 2021, according to Government sources
+                                  </p>
+                                </div>
+                             
                             </div>
                           </div>
                         </div>
@@ -883,7 +968,7 @@ export default function Trace() {
                             className="mb-4"
                             style={{ color: "#07002F", fontWeight: "700" }}
                           >
-                            {firstSolution.bg_image_url.big_title}
+                            Simulation-based platform that trains professionals
                           </h3>
                           <h6
                             data-aos="fade-right"
@@ -892,7 +977,7 @@ export default function Trace() {
                             className="mb-3"
                             style={{ color: "#62666A", fontWeight: "500" }}
                           >
-                            {firstSolution.bg_image_url.description}
+                            There is an immediate need for India to invest more in cybersecurity learning and awareness of the war footing to address the mismatch in the demand and supply of cybersecurity professionals.
                           </h6>
                           <button
                             type="submit"
@@ -906,11 +991,10 @@ export default function Trace() {
                       <div className="col-lg-7 col-md-8 col-sm-12">
                         <div className="whiz">
                           <div className="degree">
-                            {firstSolution.bg_image_url.card.map((card) => (
                               <div className="degree_content">
                                 <img
-                                  src={card.logo_url}
-                                  alt=""
+                                  src={isomet}
+                                  alt="isomet"
                                   width="141px"
                                   height="145px"
                                 />
@@ -926,13 +1010,65 @@ export default function Trace() {
                                       fontWeight: "600",
                                     }}
                                   >
-                                    {card.label}
+                                    9%
                                   </span>{" "}
                                   <br />
-                                  {card.title}
+                                  Higher
                                 </h5>
                               </div>
-                            ))}
+
+                              <div className="degree_content">
+                                <img
+                                  src={isomet1}
+                                  alt="isomet1"
+                                  width="141px"
+                                  height="145px"
+                                />
+                                <h5
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  <span
+                                    style={{
+                                      color: "#6A49F2",
+                                      fontWeight: "600",
+                                    }}
+                                  >
+                                    35 USD
+                                  </span>{" "}
+                                  <br />
+                                  Billion
+                                </h5>
+                              </div>
+
+                              <div className="degree_content">
+                                <img
+                                  src={isomet2}
+                                  alt="isomet2"
+                                  width="141px"
+                                  height="145px"
+                                />
+                                <h5
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  <span
+                                    style={{
+                                      color: "#6A49F2",
+                                      fontWeight: "600",
+                                    }}
+                                  >
+                                    10%  
+                                  </span>{" "}
+                                  <br />
+                                  Revenue
+                                </h5>
+                              </div>
+
                           </div>
                         </div>
                       </div>
@@ -958,9 +1094,7 @@ export default function Trace() {
                         ></div>
                       </div>
 
-                      <div className="col-lg-6 col-md-6 col-sm-122">
-                        {firstSolution.bg_image_url.about_cybers.data.map(
-                          (about) => (
+                      <div className="col-lg-6 col-md-6 col-sm-12">
                             <div className="about_whiz">
                               <div className="whiz_degree mx-4">
                                 <h3
@@ -973,14 +1107,14 @@ export default function Trace() {
                                     fontWeight: "600",
                                   }}
                                 >
-                                  {about.attributes.title}{" "}
+                                  About {" "}
                                   <span
                                     style={{
                                       color: "#2C81FE",
                                       fontWeight: "600",
                                     }}
                                   >
-                                    {about.attributes.color_title}
+                                    WHIZRANGE
                                   </span>
                                 </h3>
                                 <p
@@ -1004,7 +1138,7 @@ export default function Trace() {
                                     fontWeight: "500",
                                   }}
                                 >
-                                  {about.attributes.description}
+                                 WhizHack has developed a platform – Cyber Range - that trains professionals in a simulated environment that helps them learn how to respond to real-world cyberattacks.
                                 </h5>
                                 <button
                                   type="submit"
@@ -1014,8 +1148,6 @@ export default function Trace() {
                                 </button>
                               </div>
                             </div>
-                          )
-                        )}
                       </div>
                       <div className=""></div>
                     </div>
@@ -1192,496 +1324,6 @@ export default function Trace() {
                   }
                 }
               )}
-
-              <section>
-                <div className="partner_trace mt-5">
-                  <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 ">
-                      <img
-                        src={partner}
-                        alt="partner"
-                        width="100%"
-                        height="100%"
-                      />
-                    </div>
-
-                    <div className="col-lg-6 col-md-6 col-sm-12 mx-auto">
-                      <form onSubmit={formik.handleSubmit}>
-                        <div className="partner_form mx-5">
-                          <h1
-                            style={{
-                              color: "#07002F",
-                              fontWeight: "700",
-                            }}
-                            className="mb-2"
-                          >
-                            Partner with us for the next generation products
-                          </h1>
-                          <h6
-                            style={{
-                              color: "#62666A",
-                              fontWeight: "500",
-                            }}
-                            className="mb-4"
-                          >
-                            To register, please fill out the form with your
-                            contact information and we will get back to you
-                            shortly.
-                          </h6>
-
-                          <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            placeholder="Contact Person Name *"
-                            className="mt-3 input"
-                            onChange={formik.handleChange}
-                            value={formik.values.name}
-                            style={{
-                              color: "#363636",
-                            }}
-                          />
-                          <input
-                            type="number"
-                            name="mobile"
-                            id="number"
-                            placeholder="Contact Person No.*"
-                            className="mt-3 input"
-                            onChange={formik.handleChange}
-                            value={formik.values.mobile}
-                            style={{
-                              color: "#363636",
-                            }}
-                          />
-                          <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="Email Id *"
-                            className="mt-3 input"
-                            onChange={formik.handleChange}
-                            value={formik.values.email}
-                            style={{
-                              color: "#363636",
-                            }}
-                          />
-                          <textarea
-                            type="text"
-                            name="message"
-                            id="message"
-                            placeholder="Message (optional)"
-                            rows="5"
-                            className="mt-3 input"
-                            onChange={formik.handleChange}
-                            value={formik.values.message}
-                            style={{
-                              color: "#363636",
-                            }}
-                          />
-
-                          <button
-                            type="submit"
-                            className="d-flex justify-content-end clipped-btns"
-                          >
-                            Submit
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </>
-          );
-        } else if (
-          firstSolution.__component === "solution.zero-hack" &&
-          firstSolution.big_title === "ZEROHACK" &&
-          solutionName === "zerohack"
-        ) {
-          return (
-            <>
-              <div className="guru-section1">
-                <video muted loop autoPlay="autoplay">
-                  <source src={firstSolution.bg_url} type="video/mp4" />
-                </video>
-                <div className="ui1-banner1-parent-solution-zerohack">
-                  <div className="container-fluid">
-                    <div className="row justify-content-between">
-                      <div className="col-lg-6">
-                        <div className="ui1-banner1-content-solution">
-                          <img
-                            data-aos="fade-down"
-                            data-aos-delay="300"
-                            data-aos-duration={1500}
-                            src={firstSolution.logo_url}
-                            alt="zerohack_logo"
-                            width="191px"
-                            height="50px"
-                            className="mb-5"
-                          />
-                          <h5
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            data-aos-duration={1500}
-                            style={{ color: "#00B85F" }}
-                            className="mb-3"
-                          >
-                            {firstSolution.small_title}
-                          </h5>
-                          <h3
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            data-aos-duration={1500}
-                            className="mb-4"
-                          >
-                            {firstSolution.big_title}
-                          </h3>
-                          <p
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            data-aos-duration={1500}
-                          >
-                            {firstSolution.description}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="col-lg-6"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <section>
-                <div className="threat mt-5">
-                  <div className="container-fluid">
-                    <div className="row">
-                      <div className="col-lg-7 col-md-8 col-sm-122">
-                        <div className="zerohack_whiz">
-                          <div className="degree">
-                            {firstSolution.bg_image_url.card.map((card) => (
-                              <div className="degree_content">
-                                <img
-                                  src={card.logo_url}
-                                  alt=""
-                                  width="141px"
-                                  height="145px"
-                                />
-                                <h5
-                                  style={{
-                                    color: "#07002F",
-                                    fontWeight: "600",
-                                  }}
-                                >
-                                  <span
-                                    style={{
-                                      color: "#6A49F2",
-                                      fontWeight: "600",
-                                    }}
-                                  >
-                                    {card.label}
-                                  </span>{" "}
-                                  <br />
-                                  {card.title}
-                                </h5>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="line">
-                        <div className="top_zero"></div>
-                        <div className="bottom_zero"></div>
-                      </div>
-
-                      <div className="col-lg-4 col-md-4 col-sm-12 square_content">
-                        <div className=" mt-5 next-gene">
-                          <h3
-                            data-aos="fade-right"
-                            data-aos-delay="300"
-                            data-aos-duration={1500}
-                            className="mb-4"
-                            style={{ color: "#07002F", fontWeight: "700" }}
-                          >
-                            {firstSolution.bg_image_url.big_title}
-                          </h3>
-                          <h6
-                            data-aos="fade-right"
-                            data-aos-delay="300"
-                            data-aos-duration={1500}
-                            className="mb-3"
-                            style={{ color: "#62666A", fontWeight: "500" }}
-                          >
-                            {firstSolution.bg_image_url.description}
-                          </h6>
-                          <button
-                            type="submit"
-                            className="know_more clipped-btns mt-4"
-                          >
-                            Know More
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <div className=" mt-5 about-whiz-section">
-                  <div className="container-fluid">
-                    <div className="row bottom_bg">
-                      <div className="col-lg-6 col-md-6 col-sm-122">
-                        {firstSolution.bg_image_url.about_cybers.data.map(
-                          (about) => (
-                            <div className="about_whiz">
-                              <div className="whiz_degree mx-4">
-                                <h3
-                                  data-aos="fade-down"
-                                  data-aos-delay="300"
-                                  data-aos-duration={1500}
-                                  className="mb-1"
-                                  style={{
-                                    color: "#07002F",
-                                    fontWeight: "600",
-                                  }}
-                                >
-                                  {about.attributes.title}{" "}
-                                  <span
-                                    style={{
-                                      color: "#2C81FE",
-                                      fontWeight: "600",
-                                    }}
-                                  >
-                                    {about.attributes.color_title}
-                                  </span>
-                                </h3>
-                                <p
-                                  data-aos="fade-down"
-                                  data-aos-delay="300"
-                                  data-aos-duration={1500}
-                                  className="mb-3"
-                                  style={{
-                                    color: "#62666A",
-                                    fontWeight: "400",
-                                  }}
-                                >
-                                  Triple Layered Threat Detection Engine
-                                </p>
-                                <h5
-                                  data-aos="fade-down"
-                                  data-aos-delay="300"
-                                  data-aos-duration={1500}
-                                  style={{
-                                    color: "#62666A",
-                                    fontWeight: "500",
-                                  }}
-                                >
-                                  {about.attributes.description}
-                                </h5>
-                                <button
-                                  type="submit"
-                                  className="know_more clipped-btns mt-4"
-                                >
-                                  Know More
-                                </button>
-                              </div>
-                            </div>
-                          )
-                        )}
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-12">
-                        {firstSolution.bg_image_url.about_cybers.data.map(
-                          (about) => (
-                            <div
-                              className="mt-2"
-                              style={{
-                                background: `url(${about.attributes.bg_image_url})`,
-                                height: "100vh",
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                                backgroundRepeat: "no-repeat",
-                              }}
-                            ></div>
-                          )
-                        )}
-                      </div>
-
-                      <div className=""></div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {firstSolution.bg_image_url.solution_cases.data.map(
-                (impact, index) => {
-                  if (index === 0) {
-                    return (
-                      <section
-                        className="cyber mt-5"
-                        style={{
-                          backgroundImage: `url(${impact.attributes.bg_url})`,
-                        }}
-                      >
-                        <div className="container" key={impact.id}>
-                          <div className="row">
-                            <div className="col-lg-12 col-md-12 col-sm-122 cyber_content">
-                              <div className=" text-light w-50 ">
-                                <div className="top-border"></div>
-                                <h1>{impact.attributes.title}</h1>
-                                <h6>{impact.attributes.description}</h6>
-                                <div className="bottom-border"></div>
-                              </div>
-                              <div className="card_content">
-                                {impact.attributes.case_impact.map((imp) => (
-                                  <div
-                                    className="card_content_details"
-                                    data-aos="fade-down"
-                                    data-aos-delay="300"
-                                    data-aos-duration={1500}
-                                  >
-                                    <h4
-                                      style={{
-                                        color: "#1D1D1D",
-                                        fontWeight: 600,
-                                      }}
-                                    >
-                                      <span
-                                        style={{
-                                          color: "#185893",
-                                          fontWeight: 600,
-                                        }}
-                                      >
-                                        {imp.label}
-                                      </span>{" "}
-                                      {imp.title}
-                                    </h4>
-                                    <p
-                                      style={{
-                                        color: "#626664",
-                                        fontWeight: 500,
-                                      }}
-                                    >
-                                      {imp.description}
-                                    </p>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                    );
-                  } else if (index === 2) {
-                    return (
-                      <section
-                        className="technology mt-5"
-                        style={{
-                          backgroundImage: `url(${impact.attributes.bg_url})`,
-                        }}
-                      >
-                        <div className="container text-white text-center mt-5">
-                          <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
-                            <div className="line_left"></div>
-                            <h1
-                              style={{ fontFamily: "Pulse", fontWeight: 600 }}
-                            >
-                              {impact.attributes.title}
-                            </h1>
-                            <div className="line_right"></div>
-                          </div>
-
-                          <div className="col-lg-12 col-md-12 col-sm-12 mx-auto mt-3 mb-5">
-                            <div className="tech_card">
-                              {impact.attributes.case_impact.map((imp) => (
-                                <div
-                                  className={`tech_card_details ${
-                                    index % 3 === 0 ? "even" : "odd"
-                                  }`}
-                                  key={index}
-                                  data-aos="fade-up"
-                                  data-aos-delay="300"
-                                  data-aos-duration={1500}
-                                >
-                                  <h5>{imp.description}</h5>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div className="col-lg-12 col-md-8 col-sm-12">
-                            <div className="line_bottom"></div>
-                          </div>
-                        </div>
-                      </section>
-                    );
-                  } else if (index === 1) {
-                    return (
-                      <section
-                        className="technology mt-5"
-                        style={{
-                          backgroundImage: `url(${impact.attributes.bg_url})`,
-                        }}
-                      >
-                        <div className="container text-white text-center mt-5">
-                          <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
-                            <div className="line_left"></div>
-                            <h1
-                              style={{ fontFamily: "Pulse", fontWeight: 600 }}
-                            >
-                              {impact.attributes.title}
-                            </h1>
-                            <div className="line_right"></div>
-                          </div>
-
-                          <div className="col-lg-12 col-md-12 col-sm-12 mx-auto mt-3 mb-5">
-                            <div className="tech_card_index">
-                              {impact.attributes.case_impact.map((imp) => (
-                                <div
-                                  className="tech_card_index_details"
-                                  data-aos="fade-up"
-                                  data-aos-delay="300"
-                                  data-aos-duration={1500}
-                                >
-                                  <h4
-                                    style={{
-                                      color: "#1D1D1D",
-                                      fontWeight: 600,
-                                    }}
-                                  >
-                                    <span
-                                      style={{
-                                        color: "#185893",
-                                        fontWeight: 600,
-                                      }}
-                                    >
-                                      {imp.label}
-                                    </span>{" "}
-                                    <br />
-                                    {imp.title}
-                                  </h4>
-                                  <p
-                                    style={{
-                                      color: "#626664",
-                                      fontWeight: 500,
-                                    }}
-                                  >
-                                    {imp.description}
-                                  </p>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div className="col-lg-12 col-md-8 col-sm-12">
-                            <div className="line_bottom"></div>
-                          </div>
-                        </div>
-                      </section>
-                    );
-                  }
-                }
-              )}
-              {/* --------------  Trace Our Technology Start -------------------- */}
 
               <section>
                 <div className="partner_trace mt-5">
@@ -1883,8 +1525,6 @@ export default function Trace() {
                     <div className="container-fluid">
                       <div className="row bottom_bg">
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                          {firstSolution.hids_section.about_cybers.data.map(
-                            (about) => (
                               <div className="about_whiz">
                                 <div className="whiz_degree mx-4">
                                   <h3
@@ -1897,14 +1537,14 @@ export default function Trace() {
                                       fontWeight: "600",
                                     }}
                                   >
-                                    {about.attributes.title}{" "}
+                                    About{" "}
                                     <span
                                       style={{
                                         color: "#2C81FE",
                                         fontWeight: "600",
                                       }}
                                     >
-                                      {about.attributes.color_title}
+                                      HIDS
                                     </span>
                                   </h3>
                                   <p
@@ -1928,7 +1568,21 @@ export default function Trace() {
                                       fontWeight: "500",
                                     }}
                                   >
-                                    {about.attributes.description}
+                                    The main benefits include enhanced
+                                    visibility into an organization's security
+                                    posture, improved Incident detection and
+                                    response capabilities, compliance with
+                                    security regulations, and the ability to
+                                    track and analyze security incidents over
+                                    time for continuous improvement. It has been
+                                    designed to collect event data from various
+                                    sources like endpoints, network devices,
+                                    cloud workloads, and applications for
+                                    broader security coverage. By providing a
+                                    centralized and holistic view of an
+                                    organization's security landscape, WhizHack
+                                    HIDS helps organizations identify and
+                                    mitigate security risks effectively.
                                   </p>
                                   <button
                                     type="submit"
@@ -1938,24 +1592,19 @@ export default function Trace() {
                                   </button>
                                 </div>
                               </div>
-                            )
-                          )}
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 hids">
-                          {firstSolution.hids_section.about_cybers.data.map(
-                            (about) => (
                               <div
                                 className="mt-2"
                                 style={{
-                                  background: `url(${about.attributes.bg_image_url})`,
+                                  background: `url(${video})`,
                                   height: "100vh",
                                   backgroundSize: "cover",
                                   backgroundPosition: "center",
                                   backgroundRepeat: "no-repeat",
                                 }}
                               ></div>
-                            )
-                          )}
+                        
                         </div>
 
                         {/* <div className=""></div> */}
@@ -2126,8 +1775,6 @@ export default function Trace() {
                     <div className="container-fluid">
                       <div className="row bottom_bg">
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                          {firstSolution.hids_section.about_cybers.data.map(
-                            (about) => (
                               <div className="about_whiz">
                                 <div className="whiz_degree mx-4">
                                   <h3
@@ -2140,14 +1787,14 @@ export default function Trace() {
                                       fontWeight: "600",
                                     }}
                                   >
-                                    {about.attributes.title}{" "}
+                                    About {" "}
                                     <span
                                       style={{
                                         color: "#2C81FE",
                                         fontWeight: "600",
                                       }}
                                     >
-                                      {about.attributes.color_title}
+                                      NIDS
                                     </span>
                                   </h3>
                                   <p
@@ -2171,7 +1818,21 @@ export default function Trace() {
                                       fontWeight: "500",
                                     }}
                                   >
-                                    {about.attributes.description}
+                                    The system has been designed in such a way that it
+harnesses and augment the potentials of the
+signature-based technologies with new
+technologies such as Machine Learning and
+Artificial Intelligence on live traffic making it one of
+the fastest threat detection and remediation
+platform in the world. It has the provision to
+integrate with various commercial and opensource
+SOAR to take remedial action.
+WhizHack has been collecting real-time attack
+data for the past one year by deploying their
+Honeynet Sensors on the public internet. The
+training datasets thus collected from our won
+sources and other have been used to train various
+ML and DL models.
                                   </p>
                                   <button
                                     type="submit"
@@ -2181,24 +1842,20 @@ export default function Trace() {
                                   </button>
                                 </div>
                               </div>
-                            )
-                          )}
+                           
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 hids">
-                          {firstSolution.hids_section.about_cybers.data.map(
-                            (about) => (
                               <div
                                 className="mt-2"
                                 style={{
-                                  background: `url(${about.attributes.bg_image_url})`,
+                                  background: `url(${video})`,
                                   height: "100vh",
                                   backgroundSize: "cover",
                                   backgroundPosition: "center",
                                   backgroundRepeat: "no-repeat",
                                 }}
                               ></div>
-                            )
-                          )}
+                          
                         </div>
 
                         <div className=""></div>
