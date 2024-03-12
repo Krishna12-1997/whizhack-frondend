@@ -2160,7 +2160,7 @@ export default function Trace() {
                                       fontWeight: "400",
                                     }}
                                   >
-                                    Host Intrusion and Detection System
+                                    Network Intrusion Detection System
                                   </p>
                                   <p
                                     data-aos="fade-down"
