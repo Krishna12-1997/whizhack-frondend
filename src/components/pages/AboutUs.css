@@ -12,6 +12,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.row{
+  margin-right: 0 !important;
+}
 .management-bg{
   color: #07002F;
   font-size: 40px;
