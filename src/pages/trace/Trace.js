@@ -65,7 +65,7 @@ export default function Trace() {
   const { solutionName } = useParams();
 
   const uri =
-    "http://localhost:1337/api/solution?_limit=5&populate=solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.hids_features.feature_hids";
+    "https://test.whizhack.com/api/solution?_limit=5&populate=solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.hids_features.feature_hids";
   const { loading, error, data } = useFetch(uri);
 
   if (loading) {
