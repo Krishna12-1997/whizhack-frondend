@@ -7,6 +7,10 @@ import video from "../../components/images/bg/Video.png";
 import CSicon from "../../components/images/icons/CS-removebg-preview 1.svg";
 import CSicon2 from "../../components/images/icons/CS-removebg-preview-removebg-preview 1 (1).svg";
 import attact from "../../components/images/icons/Attack-removebg-preview 1.svg";
+import vector from "../../components/images/icons/Vector (1).svg";
+import icon1 from "../../components/images/icons/Group 74.svg";
+import icon2 from "../../components/images/icons/Group 75.svg";
+import icon3 from "../../components/images/icons/Group 76.svg";
 import isomet from "../../components/images/icons/ISOMET_1-removebg-preview 1.svg";
 import isomet1 from "../../components/images/icons/101994-OM0XMB-226-removebg-preview 1.svg";
 import isomet2 from "../../components/images/icons/Successful_Leaders_invest_money_in_isometric_illustration-removebg-preview (1) 1.svg";
@@ -61,7 +65,7 @@ export default function Trace() {
   const { solutionName } = useParams();
 
   const uri =
-    "https://test.whizhack.com/api/solution?_limit=5&populate=solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.trace_benefits.trace_benefit , solution.threat.trace_benefits.benefit_card, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.hids_features.feature_hids";
+    "http://localhost:1337/api/solution?_limit=5&populate=solution.threat.traces.feature_trace, solution.threat.traces, solution.threat.solution_cases.case_impact, solution.bg_image_url.solution_cases.case_impact, solution.bg_image_url.trace_features.feature_trace, solution.hids_section.hids_features.feature_hids";
   const { loading, error, data } = useFetch(uri);
 
   if (loading) {
@@ -165,7 +169,8 @@ export default function Trace() {
                               className="mb-3"
                               style={{ color: "#1D1D1D", fontWeight: "500" }}
                             >
-                              Whizhack's TRACE augmenting endpoint security solutions.
+                              Whizhack's TRACE augmenting endpoint security
+                              solutions.
                             </h6>
                             <p
                               style={{ color: "#62666A", fontWeight: "500" }}
@@ -176,17 +181,23 @@ export default function Trace() {
                               <span
                                 style={{ color: "#185893", fontWeight: "500" }}
                               >
-                               TRACE
+                                TRACE
                               </span>{" "}
-                              is a security tool that assists security analysts and network
-administrators in enhancing their network's security by providing
-them with logs of threat events. It integrates effortlessly with an
-organization's existing IT, OT, IoT, and cloud infrastructure to lure
-both external and internal attackers into revealing themselves. The sensors are strategically placed in an organization's DMZ and
-internal network to monitor network activity and produce threat
-logs upon detecting an attack. The sensor captures the threat data
-and sends it to a collector for automatic analysis and generation of threat intelligence. The sensors update themselves automatically
-as new updates are released.
+                              is a security tool that assists security analysts
+                              and network administrators in enhancing their
+                              network's security by providing them with logs of
+                              threat events. It integrates effortlessly with an
+                              organization's existing IT, OT, IoT, and cloud
+                              infrastructure to lure both external and internal
+                              attackers into revealing themselves. The sensors
+                              are strategically placed in an organization's DMZ
+                              and internal network to monitor network activity
+                              and produce threat logs upon detecting an attack.
+                              The sensor captures the threat data and sends it
+                              to a collector for automatic analysis and
+                              generation of threat intelligence. The sensors
+                              update themselves automatically as new updates are
+                              released.
                             </p>
                           </div>
                         </div>
@@ -203,105 +214,105 @@ as new updates are released.
                             }}
                           >
                             <div className="degree">
-                                <div className="degree_content">
-                                  <img
-                                    src={CSicon}
-                                    alt="CSicon"
-                                    width="111px"
-                                    height="125px"
-                                  />
-                                  <h5
+                              <div className="degree_content">
+                                <img
+                                  src={CSicon}
+                                  alt="CSicon"
+                                  width="111px"
+                                  height="125px"
+                                />
+                                <h5
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  <span
                                     style={{
-                                      color: "#07002F",
+                                      color: "#6A49F2",
                                       fontWeight: "600",
                                     }}
                                   >
-                                    <span
-                                      style={{
-                                        color: "#6A49F2",
-                                        fontWeight: "600",
-                                      }}
-                                    >
-                                      30
-                                    </span>{" "}
-                                    Cyber Attacks Daily
-                                  </h5>
-                                  <p
-                                    style={{
-                                      color: "#62666A",
-                                      fontWeight: "400",
-                                    }}
-                                  >
-                                    Reported by India in 2019, as per reports.
-                                  </p>
-                                </div>
+                                    30
+                                  </span>{" "}
+                                  Cyber Attacks Daily
+                                </h5>
+                                <p
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "400",
+                                  }}
+                                >
+                                  Reported by India in 2019, as per reports.
+                                </p>
+                              </div>
 
-                                <div className="degree_content">
-                                  <img
-                                    src={CSicon2}
-                                    alt="CSicon2"
-                                    width="111px"
-                                    height="125px"
-                                  />
-                                  <h5
+                              <div className="degree_content">
+                                <img
+                                  src={CSicon2}
+                                  alt="CSicon2"
+                                  width="111px"
+                                  height="125px"
+                                />
+                                <h5
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  <span
                                     style={{
-                                      color: "#07002F",
+                                      color: "#6A49F2",
                                       fontWeight: "600",
                                     }}
                                   >
-                                    <span
-                                      style={{
-                                        color: "#6A49F2",
-                                        fontWeight: "600",
-                                      }}
-                                    >
-                                      300%
-                                    </span>{" "}
-                                    Increase in Cyber Attacks
-                                  </h5>
-                                  <p
-                                    style={{
-                                      color: "#62666A",
-                                      fontWeight: "400",
-                                    }}
-                                  >
-                                    In India amid the Covid-19 Pandemic.
-                                  </p>
-                                </div>
+                                    300%
+                                  </span>{" "}
+                                  Increase in Cyber Attacks
+                                </h5>
+                                <p
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "400",
+                                  }}
+                                >
+                                  In India amid the Covid-19 Pandemic.
+                                </p>
+                              </div>
 
-                                <div className="degree_content">
-                                  <img
-                                    src={attact}
-                                    alt="attact"
-                                    width="111px"
-                                    height="125px"
-                                  />
-                                  <h5
+                              <div className="degree_content">
+                                <img
+                                  src={attact}
+                                  alt="attact"
+                                  width="111px"
+                                  height="125px"
+                                />
+                                <h5
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  <span
                                     style={{
-                                      color: "#07002F",
+                                      color: "#6A49F2",
                                       fontWeight: "600",
                                     }}
                                   >
-                                    <span
-                                      style={{
-                                        color: "#6A49F2",
-                                        fontWeight: "600",
-                                      }}
-                                    >
-                                      6,07,220
-                                    </span>{" "}
-                                    Breaches
-                                  </h5>
-                                  <p
-                                    style={{
-                                      color: "#62666A",
-                                      fontWeight: "400",
-                                    }}
-                                  >
-                                   Recorded till June 2021, according to Government sources
-                                  </p>
-                                </div>
-                             
+                                    6,07,220
+                                  </span>{" "}
+                                  Breaches
+                                </h5>
+                                <p
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "400",
+                                  }}
+                                >
+                                  Recorded till June 2021, according to
+                                  Government sources
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -465,142 +476,324 @@ as new updates are released.
                 </section>
 
                 <section>
-                  {firstSolution.threat.trace_benefits.data.map((benefit) => (
-                    <div className="threat key-benefits mt-5">
-                      <div className="container-fluid">
-                        <div
-                          className="row"
-                          style={{
-                            background: `url(${w}) `,
-                            backgroundSize: "cover",
-                            backgroundRepeat: "no-repeat",
-                            width: "100wv",
-                            height: "100%",
-                          }}
-                        >
-                          <div className="col-lg-1 col-md-1  line">
-                            <div className="top"></div>
-                            <div className="bottom"></div>
-                          </div>
+                  <div className="threat key-benefits mt-5">
+                    <div className="container-fluid">
+                      <div
+                        className="row"
+                        style={{
+                          background: `url(${w}) `,
+                          backgroundSize: "cover",
+                          backgroundRepeat: "no-repeat",
+                          width: "100wv",
+                          height: "100%",
+                        }}
+                      >
+                        <div className="col-lg-1 col-md-1  line">
+                          <div className="top"></div>
+                          <div className="bottom"></div>
+                        </div>
 
-                          <div className="col-lg-4 col-md-12 col-sm-122">
-                            <div className="square_content">
-                              <div className="d-flex">
-                                <img
-                                  src={benefit.attributes.bg_url}
-                                  alt="icon"
-                                  height="46px"
-                                  width="52px"
-                                  className="mx-4"
-                                />
-                                <h3
-                                  data-aos="fade-right"
-                                  data-aos-delay="300"
-                                  data-aos-duration={1500}
-                                  className="mb-4 mt-2"
-                                  style={{
-                                    color: "#5F5FED",
-                                    fontWeight: "700",
-                                  }}
-                                >
-                                  {benefit.attributes.title}
-                                </h3>
+                        <div className="col-lg-4 col-md-12 col-sm-12">
+                          <div className="square_content">
+                            <div className="d-flex">
+                              <img
+                                src={vector}
+                                alt="icon"
+                                height="46px"
+                                width="52px"
+                                className="mx-4"
+                              />
+                              <h3
+                                data-aos="fade-right"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                                className="mb-4 mt-2"
+                                style={{
+                                  color: "#5F5FED",
+                                  fontWeight: "700",
+                                }}
+                              >
+                                Key Benefits
+                              </h3>
+                            </div>
+                            <div className="key">
+                              <div
+                                className="d-flex mx-4"
+                                data-aos="fade-right"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <div>
+                                  <h6
+                                    className="mb-3 my-2 mx-3"
+                                    style={{
+                                      color: "#5F5FED",
+                                      fontWeight: "500",
+                                    }}
+                                  >
+                                    Early-Warning
+                                  </h6>
+                                  <p
+                                    style={{
+                                      color: "#8C8C8C",
+                                      fontWeight: "400",
+                                    }}
+                                    className="mx-3"
+                                  >
+                                    Security teams are alerted as soon as
+                                    deception assets are accessed, allowing for
+                                    a prompt response before any damage or loss
+                                    occurs to real assets. This feature reduces
+                                    the time it takes to detect attacks.
+                                  </p>
+                                </div>
                               </div>
-                              <div className="key">
-                                {benefit.attributes.trace_benefit.map(
-                                  (bene) => (
-                                    <div
-                                      className="d-flex mx-4"
-                                      data-aos="fade-right"
-                                      data-aos-delay="300"
-                                      data-aos-duration={1500}
-                                    >
-                                      <div>
-                                        <h6
-                                          className="mb-3 my-2 mx-3"
-                                          style={{
-                                            color: "#5F5FED",
-                                            fontWeight: "500",
-                                          }}
-                                        >
-                                          {bene.title}
-                                        </h6>
-                                        <p
-                                          style={{
-                                            color: "#8C8C8C",
-                                            fontWeight: "400",
-                                          }}
-                                          className="mx-3"
-                                        >
-                                          {bene.description}
-                                        </p>
-                                      </div>
-                                    </div>
-                                  )
-                                )}
+
+                              <div
+                                className="d-flex mx-4"
+                                data-aos="fade-right"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <div>
+                                  <h6
+                                    className="mb-3 my-2 mx-3"
+                                    style={{
+                                      color: "#5F5FED",
+                                      fontWeight: "500",
+                                    }}
+                                  >
+                                    Deception-based Detection
+                                  </h6>
+                                  <p
+                                    style={{
+                                      color: "#8C8C8C",
+                                      fontWeight: "400",
+                                    }}
+                                    className="mx-3"
+                                  >
+                                    Deceives intruders in a public or private
+                                    network to expose their presence. The decoys
+                                    will act as a an additional layer of
+                                    security when standard security measures
+                                    fail to detect the breach.
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div
+                                className="d-flex mx-4"
+                                data-aos="fade-right"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <div>
+                                  <h6
+                                    className="mb-3 my-2 mx-3"
+                                    style={{
+                                      color: "#5F5FED",
+                                      fontWeight: "500",
+                                    }}
+                                  >
+                                    Actionable deception
+                                  </h6>
+                                  <p
+                                    style={{
+                                      color: "#8C8C8C",
+                                      fontWeight: "400",
+                                    }}
+                                    className="mx-3"
+                                  >
+                                    Produce alerts that are both reliable and
+                                    actionable. Deception technology is
+                                    distinguished by its lack of false
+                                    positives, enabling IT teams to have
+                                    confidence that alerts triggered by
+                                    deception indicates a genuine event and
+                                    should be given top priority.
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div
+                                className="d-flex mx-4"
+                                data-aos="fade-right"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <div>
+                                  <h6
+                                    className="mb-3 my-2 mx-3"
+                                    style={{
+                                      color: "#5F5FED",
+                                      fontWeight: "500",
+                                    }}
+                                  >
+                                    Threat Visibility
+                                  </h6>
+                                  <p
+                                    style={{
+                                      color: "#8C8C8C",
+                                      fontWeight: "400",
+                                    }}
+                                    className="mx-3"
+                                  >
+                                    Provides easy to understand real-time Threat
+                                    Intelligence Dashboard to enable security
+                                    teams to obtain a clear understanding of the
+                                    type and characteristics of an ongoing
+                                    attack in their system, facilitating the
+                                    strengthening of other defense measures.
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
+                        </div>
 
-                          <div className="col-lg-7 col-md-12 col-sm-122">
-                            <div
-                              className="square"
-                              style={{
-                                background: `url(${thred})`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                                backgroundRepeat: "no-repeat",
-                              }}
-                            >
-                              <div className="degree">
-                                {benefit.attributes.benefit_card.map((card) => (
-                                  <div
-                                    className="degree_content"
-                                    data-aos="fade-down"
-                                    data-aos-delay="300"
-                                    data-aos-duration={1500}
+                        <div className="col-lg-7 col-md-12 col-sm-12">
+                          <div
+                            className="square"
+                            style={{
+                              background: `url(${thred})`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                              backgroundRepeat: "no-repeat",
+                            }}
+                          >
+                            <div className="degree">
+                              <div
+                                className="degree_content"
+                                data-aos="fade-down"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <img
+                                  src={icon1}
+                                  alt="icon1"
+                                  height="46px"
+                                  width="52px"
+                                />
+                                <h5
+                                  className="mt-2"
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  Less than{" "}
+                                  <span
+                                    style={{
+                                      color: "#6A49F2",
+                                      fontWeight: "600",
+                                    }}
                                   >
-                                    <img
-                                      src={card.logo_url}
-                                      alt="icon"
-                                      height="46px"
-                                      width="52px"
-                                    />
-                                    <h5
-                                      className="mt-2"
-                                      style={{
-                                        color: "#07002F",
-                                        fontWeight: "600",
-                                      }}
-                                    >
-                                      Less than{" "}
-                                      <span
-                                        style={{
-                                          color: "#6A49F2",
-                                          fontWeight: "600",
-                                        }}
-                                      >
-                                        {card.label}
-                                      </span>{" "}
-                                      Response time
-                                    </h5>
-                                    <p
-                                      style={{
-                                        color: "#62666A",
-                                        fontWeight: "400",
-                                      }}
-                                    >
-                                      {card.description}
-                                    </p>
-                                  </div>
-                                ))}
+                                    2 min
+                                  </span>{" "}
+                                  Response time
+                                </h5>
+                                <p
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "400",
+                                  }}
+                                >
+                                  Security teams can respond to potential
+                                  threats before any damage or loss occurs as
+                                  the system raises a flag as soon as deception
+                                  assets are accessed, hereby reducing the time
+                                  taken to detect attacks.
+                                </p>
+                              </div>
+
+                              <div
+                                className="degree_content"
+                                data-aos="fade-down"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <img
+                                  src={icon2}
+                                  alt="icon2"
+                                  height="46px"
+                                  width="52px"
+                                />
+                                <h5
+                                  className="mt-2"
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  Signature{" "}
+                                  <span
+                                    style={{
+                                      color: "#6A49F2",
+                                      fontWeight: "600",
+                                    }}
+                                  >
+                                    Analysis
+                                  </span>{" "}
+                                </h5>
+                                <p
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "400",
+                                  }}
+                                >
+                                  Create new signatures to catch even zero-day
+                                  exploits before they can cause damage once DPI
+                                  in the sensor data is activated.
+                                </p>
+                              </div>
+
+                              <div
+                                className="degree_content"
+                                data-aos="fade-down"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                              >
+                                <img
+                                  src={icon3}
+                                  alt="icon3"
+                                  height="46px"
+                                  width="52px"
+                                />
+                                <h5
+                                  className="mt-2"
+                                  style={{
+                                    color: "#07002F",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  Deliver a Threat{" "}
+                                  <span
+                                    style={{
+                                      color: "#6A49F2",
+                                      fontWeight: "600",
+                                    }}
+                                  >
+                                    intelligence
+                                  </span>{" "}
+                                  Dashboard
+                                </h5>
+                                <p
+                                  style={{
+                                    color: "#62666A",
+                                    fontWeight: "400",
+                                  }}
+                                >
+                                  Provides security team a clear, real-time view
+                                  of exactly what is occurring within their
+                                  environment.
+                                </p>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </section>
 
                 {firstSolution.threat.solution_cases.data.map(
@@ -977,7 +1170,10 @@ as new updates are released.
                             className="mb-3"
                             style={{ color: "#62666A", fontWeight: "500" }}
                           >
-                            There is an immediate need for India to invest more in cybersecurity learning and awareness of the war footing to address the mismatch in the demand and supply of cybersecurity professionals.
+                            There is an immediate need for India to invest more
+                            in cybersecurity learning and awareness of the war
+                            footing to address the mismatch in the demand and
+                            supply of cybersecurity professionals.
                           </h6>
                           <button
                             type="submit"
@@ -991,84 +1187,83 @@ as new updates are released.
                       <div className="col-lg-7 col-md-8 col-sm-12">
                         <div className="whiz">
                           <div className="degree">
-                              <div className="degree_content">
-                                <img
-                                  src={isomet}
-                                  alt="isomet"
-                                  width="141px"
-                                  height="145px"
-                                />
-                                <h5
+                            <div className="degree_content">
+                              <img
+                                src={isomet}
+                                alt="isomet"
+                                width="141px"
+                                height="145px"
+                              />
+                              <h5
+                                style={{
+                                  color: "#07002F",
+                                  fontWeight: "600",
+                                }}
+                              >
+                                <span
                                   style={{
-                                    color: "#07002F",
+                                    color: "#6A49F2",
                                     fontWeight: "600",
                                   }}
                                 >
-                                  <span
-                                    style={{
-                                      color: "#6A49F2",
-                                      fontWeight: "600",
-                                    }}
-                                  >
-                                    9%
-                                  </span>{" "}
-                                  <br />
-                                  Higher
-                                </h5>
-                              </div>
+                                  9%
+                                </span>{" "}
+                                <br />
+                                Higher
+                              </h5>
+                            </div>
 
-                              <div className="degree_content">
-                                <img
-                                  src={isomet1}
-                                  alt="isomet1"
-                                  width="141px"
-                                  height="145px"
-                                />
-                                <h5
+                            <div className="degree_content">
+                              <img
+                                src={isomet1}
+                                alt="isomet1"
+                                width="141px"
+                                height="145px"
+                              />
+                              <h5
+                                style={{
+                                  color: "#07002F",
+                                  fontWeight: "600",
+                                }}
+                              >
+                                <span
                                   style={{
-                                    color: "#07002F",
+                                    color: "#6A49F2",
                                     fontWeight: "600",
                                   }}
                                 >
-                                  <span
-                                    style={{
-                                      color: "#6A49F2",
-                                      fontWeight: "600",
-                                    }}
-                                  >
-                                    35 USD
-                                  </span>{" "}
-                                  <br />
-                                  Billion
-                                </h5>
-                              </div>
+                                  35 USD
+                                </span>{" "}
+                                <br />
+                                Billion
+                              </h5>
+                            </div>
 
-                              <div className="degree_content">
-                                <img
-                                  src={isomet2}
-                                  alt="isomet2"
-                                  width="141px"
-                                  height="145px"
-                                />
-                                <h5
+                            <div className="degree_content">
+                              <img
+                                src={isomet2}
+                                alt="isomet2"
+                                width="141px"
+                                height="145px"
+                              />
+                              <h5
+                                style={{
+                                  color: "#07002F",
+                                  fontWeight: "600",
+                                }}
+                              >
+                                <span
                                   style={{
-                                    color: "#07002F",
+                                    color: "#6A49F2",
                                     fontWeight: "600",
                                   }}
                                 >
-                                  <span
-                                    style={{
-                                      color: "#6A49F2",
-                                      fontWeight: "600",
-                                    }}
-                                  >
-                                    10%  
-                                  </span>{" "}
-                                  <br />
-                                  Revenue
-                                </h5>
-                              </div>
-
+                                  10%
+                                </span>{" "}
+                                <br />
+                                Revenue
+                              </h5>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1095,59 +1290,62 @@ as new updates are released.
                       </div>
 
                       <div className="col-lg-6 col-md-6 col-sm-12">
-                            <div className="about_whiz">
-                              <div className="whiz_degree mx-4">
-                                <h3
-                                  data-aos="fade-down"
-                                  data-aos-delay="300"
-                                  data-aos-duration={1500}
-                                  className="mb-1"
-                                  style={{
-                                    color: "#07002F",
-                                    fontWeight: "600",
-                                  }}
-                                >
-                                  About {" "}
-                                  <span
-                                    style={{
-                                      color: "#2C81FE",
-                                      fontWeight: "600",
-                                    }}
-                                  >
-                                    WHIZRANGE
-                                  </span>
-                                </h3>
-                                <p
-                                  data-aos="fade-down"
-                                  data-aos-delay="300"
-                                  data-aos-duration={1500}
-                                  className="mb-3"
-                                  style={{
-                                    color: "#62666A",
-                                    fontWeight: "400",
-                                  }}
-                                >
-                                  Simulation-based platform
-                                </p>
-                                <h5
-                                  data-aos="fade-down"
-                                  data-aos-delay="300"
-                                  data-aos-duration={1500}
-                                  style={{
-                                    color: "#62666A",
-                                    fontWeight: "500",
-                                  }}
-                                >
-                                 WhizHack has developed a platform – Cyber Range - that trains professionals in a simulated environment that helps them learn how to respond to real-world cyberattacks.
-                                </h5>
-                                <button
-                                  type="submit"
-                                  className="know_more clipped-btns mt-4"
-                                >
-                                  Know More
-                                </button>
-                              </div>
-                            </div>
+                        <div className="about_whiz">
+                          <div className="whiz_degree mx-4">
+                            <h3
+                              data-aos="fade-down"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                              className="mb-1"
+                              style={{
+                                color: "#07002F",
+                                fontWeight: "600",
+                              }}
+                            >
+                              About{" "}
+                              <span
+                                style={{
+                                  color: "#2C81FE",
+                                  fontWeight: "600",
+                                }}
+                              >
+                                WHIZRANGE
+                              </span>
+                            </h3>
+                            <p
+                              data-aos="fade-down"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                              className="mb-3"
+                              style={{
+                                color: "#62666A",
+                                fontWeight: "400",
+                              }}
+                            >
+                              Simulation-based platform
+                            </p>
+                            <h5
+                              data-aos="fade-down"
+                              data-aos-delay="300"
+                              data-aos-duration={1500}
+                              style={{
+                                color: "#62666A",
+                                fontWeight: "500",
+                              }}
+                            >
+                              WhizHack has developed a platform – Cyber Range -
+                              that trains professionals in a simulated
+                              environment that helps them learn how to respond
+                              to real-world cyberattacks.
+                            </h5>
+                            <button
+                              type="submit"
+                              className="know_more clipped-btns mt-4"
+                            >
+                              Know More
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <div className=""></div>
                     </div>
@@ -1525,86 +1723,84 @@ as new updates are released.
                     <div className="container-fluid">
                       <div className="row bottom_bg">
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                              <div className="about_whiz">
-                                <div className="whiz_degree mx-4">
-                                  <h3
-                                    data-aos="fade-down"
-                                    data-aos-delay="300"
-                                    data-aos-duration={1500}
-                                    className="mb-1"
-                                    style={{
-                                      color: "#07002F",
-                                      fontWeight: "600",
-                                    }}
-                                  >
-                                    About{" "}
-                                    <span
-                                      style={{
-                                        color: "#2C81FE",
-                                        fontWeight: "600",
-                                      }}
-                                    >
-                                      HIDS
-                                    </span>
-                                  </h3>
-                                  <p
-                                    data-aos="fade-down"
-                                    data-aos-delay="300"
-                                    data-aos-duration={1500}
-                                    className="mb-3"
-                                    style={{
-                                      color: "#62666A",
-                                      fontWeight: "400",
-                                    }}
-                                  >
-                                    Host Intrusion and Detection System
-                                  </p>
-                                  <p
-                                    data-aos="fade-down"
-                                    data-aos-delay="300"
-                                    data-aos-duration={1500}
-                                    style={{
-                                      color: "#62666A",
-                                      fontWeight: "500",
-                                    }}
-                                  >
-                                    The main benefits include enhanced
-                                    visibility into an organization's security
-                                    posture, improved Incident detection and
-                                    response capabilities, compliance with
-                                    security regulations, and the ability to
-                                    track and analyze security incidents over
-                                    time for continuous improvement. It has been
-                                    designed to collect event data from various
-                                    sources like endpoints, network devices,
-                                    cloud workloads, and applications for
-                                    broader security coverage. By providing a
-                                    centralized and holistic view of an
-                                    organization's security landscape, WhizHack
-                                    HIDS helps organizations identify and
-                                    mitigate security risks effectively.
-                                  </p>
-                                  <button
-                                    type="submit"
-                                    className="know_more clipped-btns mt-4"
-                                  >
-                                    Know More
-                                  </button>
-                                </div>
-                              </div>
+                          <div className="about_whiz">
+                            <div className="whiz_degree mx-4">
+                              <h3
+                                data-aos="fade-down"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                                className="mb-1"
+                                style={{
+                                  color: "#07002F",
+                                  fontWeight: "600",
+                                }}
+                              >
+                                About{" "}
+                                <span
+                                  style={{
+                                    color: "#2C81FE",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  HIDS
+                                </span>
+                              </h3>
+                              <p
+                                data-aos="fade-down"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                                className="mb-3"
+                                style={{
+                                  color: "#62666A",
+                                  fontWeight: "400",
+                                }}
+                              >
+                                Host Intrusion and Detection System
+                              </p>
+                              <p
+                                data-aos="fade-down"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                                style={{
+                                  color: "#62666A",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                The main benefits include enhanced visibility
+                                into an organization's security posture,
+                                improved Incident detection and response
+                                capabilities, compliance with security
+                                regulations, and the ability to track and
+                                analyze security incidents over time for
+                                continuous improvement. It has been designed to
+                                collect event data from various sources like
+                                endpoints, network devices, cloud workloads, and
+                                applications for broader security coverage. By
+                                providing a centralized and holistic view of an
+                                organization's security landscape, WhizHack HIDS
+                                helps organizations identify and mitigate
+                                security risks effectively.
+                              </p>
+                              <button
+                                type="submit"
+                                className="know_more clipped-btns mt-4"
+                              >
+                                Know More
+                              </button>
+                            </div>
+                          </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 hids">
-                              <div
-                                className="mt-2"
-                                style={{
-                                  background: `url(${video})`,
-                                  height: "100vh",
-                                  backgroundSize: "cover",
-                                  backgroundPosition: "center",
-                                  backgroundRepeat: "no-repeat",
-                                }}
-                              ></div>
-                        
+                          <div
+                            className="mt-2"
+                            style={{
+                              background: `url(${video})`,
+                              height: "100vh",
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                              backgroundRepeat: "no-repeat",
+                            }}
+                          ></div>
                         </div>
 
                         {/* <div className=""></div> */}
@@ -1775,87 +1971,85 @@ as new updates are released.
                     <div className="container-fluid">
                       <div className="row bottom_bg">
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                              <div className="about_whiz">
-                                <div className="whiz_degree mx-4">
-                                  <h3
-                                    data-aos="fade-down"
-                                    data-aos-delay="300"
-                                    data-aos-duration={1500}
-                                    className="mb-1"
-                                    style={{
-                                      color: "#07002F",
-                                      fontWeight: "600",
-                                    }}
-                                  >
-                                    About {" "}
-                                    <span
-                                      style={{
-                                        color: "#2C81FE",
-                                        fontWeight: "600",
-                                      }}
-                                    >
-                                      NIDS
-                                    </span>
-                                  </h3>
-                                  <p
-                                    data-aos="fade-down"
-                                    data-aos-delay="300"
-                                    data-aos-duration={1500}
-                                    className="mb-3"
-                                    style={{
-                                      color: "#62666A",
-                                      fontWeight: "400",
-                                    }}
-                                  >
-                                    Network Intrusion Detection System
-                                  </p>
-                                  <p
-                                    data-aos="fade-down"
-                                    data-aos-delay="300"
-                                    data-aos-duration={1500}
-                                    style={{
-                                      color: "#62666A",
-                                      fontWeight: "500",
-                                    }}
-                                  >
-                                    The system has been designed in such a way that it
-harnesses and augment the potentials of the
-signature-based technologies with new
-technologies such as Machine Learning and
-Artificial Intelligence on live traffic making it one of
-the fastest threat detection and remediation
-platform in the world. It has the provision to
-integrate with various commercial and opensource
-SOAR to take remedial action.
-WhizHack has been collecting real-time attack
-data for the past one year by deploying their
-Honeynet Sensors on the public internet. The
-training datasets thus collected from our won
-sources and other have been used to train various
-ML and DL models.
-                                  </p>
-                                  <button
-                                    type="submit"
-                                    className="know_more clipped-btns mt-4"
-                                  >
-                                    Know More
-                                  </button>
-                                </div>
-                              </div>
-                           
+                          <div className="about_whiz">
+                            <div className="whiz_degree mx-4">
+                              <h3
+                                data-aos="fade-down"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                                className="mb-1"
+                                style={{
+                                  color: "#07002F",
+                                  fontWeight: "600",
+                                }}
+                              >
+                                About{" "}
+                                <span
+                                  style={{
+                                    color: "#2C81FE",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  NIDS
+                                </span>
+                              </h3>
+                              <p
+                                data-aos="fade-down"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                                className="mb-3"
+                                style={{
+                                  color: "#62666A",
+                                  fontWeight: "400",
+                                }}
+                              >
+                                Network Intrusion Detection System
+                              </p>
+                              <p
+                                data-aos="fade-down"
+                                data-aos-delay="300"
+                                data-aos-duration={1500}
+                                style={{
+                                  color: "#62666A",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                The system has been designed in such a way that
+                                it harnesses and augment the potentials of the
+                                signature-based technologies with new
+                                technologies such as Machine Learning and
+                                Artificial Intelligence on live traffic making
+                                it one of the fastest threat detection and
+                                remediation platform in the world. It has the
+                                provision to integrate with various commercial
+                                and opensource SOAR to take remedial action.
+                                WhizHack has been collecting real-time attack
+                                data for the past one year by deploying their
+                                Honeynet Sensors on the public internet. The
+                                training datasets thus collected from our won
+                                sources and other have been used to train
+                                various ML and DL models.
+                              </p>
+                              <button
+                                type="submit"
+                                className="know_more clipped-btns mt-4"
+                              >
+                                Know More
+                              </button>
+                            </div>
+                          </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 hids">
-                              <div
-                                className="mt-2"
-                                style={{
-                                  background: `url(${video})`,
-                                  height: "100vh",
-                                  backgroundSize: "cover",
-                                  backgroundPosition: "center",
-                                  backgroundRepeat: "no-repeat",
-                                }}
-                              ></div>
-                          
+                          <div
+                            className="mt-2"
+                            style={{
+                              background: `url(${video})`,
+                              height: "100vh",
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                              backgroundRepeat: "no-repeat",
+                            }}
+                          ></div>
                         </div>
 
                         <div className=""></div>
