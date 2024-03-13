@@ -247,7 +247,7 @@
 }
 .degree_content {
   width: 250px;
-  height: 300px;
+  height: 400px;
   background-color: #e0e0e0;
   border-radius: 25px;
   text-align: center;
@@ -262,10 +262,10 @@
     0 86%,
     0 13%
   );
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 .cyber_content {
   display: flex;
