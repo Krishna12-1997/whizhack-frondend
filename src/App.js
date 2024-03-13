@@ -68,7 +68,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:blogId" element={<Blog_details />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Service />} />
+          <Route path="/cyber-security-services" element={<Service />} />
           <Route path="/privacy" element={<Privcy />} />
           <Route path="/partners" element={<Partner />} />
           <Route path="/termsandcondition" element={<Condition />} />
