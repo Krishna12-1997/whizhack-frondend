@@ -59,7 +59,7 @@ export default function Navbar() {
             label === "Products" ? (
               <div>
                 <div className="row mt-5">
-                  <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
+                  <div className="col-lg-4 col-md-2 col-sm-12 nav_left">
                     <ul className="nav nav-tabs">
                       <li
                         className={`{nav-item nav_header ${
@@ -77,38 +77,39 @@ export default function Navbar() {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-lg-8 col-md-8 col-sm-12">
+                  <div className="col-lg-8 col-md-10 col-sm-12">
                     <div className="tab-content">
                       <div
                         className={`tab-pane  ${
                           activeSection === drop_index ? "active" : ""
                         }`}
                       >
-                        <div className="singledropdown">
-                          {section.attributes.links.map((link, linkIndex) => (
-                            <a
-                              href={`/${menuItem.label}/${link.icon}`}
-                              key={link.id}
-                              className={`nav-link active`}
-                            >
-                              <div className="nav_right_solution">
-                                <div className="image-container">
-                                  <img
-                                    src={link.icon_url}
-                                    alt="icon"
-                                    width="220px"
-                                    height="173px"
-                                    className="mb-3"
-                                  />
-                                </div>
-                                <div className="mobile_dropdown">
-                                  <h4>{link.label}</h4>
-                                  <p>{link.description}</p>
-                                </div>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
+                           <div className="singledropdown">
+                           {section.attributes.links.map((link, linkIndex) => (
+                             <a
+                               href={`/${menuItem.label}/${link.icon}`}
+                               key={link.id}
+                               className={`nav-link active`}
+                             >
+                               <div className="nav_right_solution">
+                                 <div className="image-container">
+                                   <img
+                                     src={link.icon_url}
+                                     alt="icon"
+                                     width="220px"
+                                     height="173px"
+                                     className="mb-3"
+                                   />
+                                 </div>
+                                 <div className="mobile_dropdown">
+                                   <h4>{link.label}</h4>
+                                   <p>{link.description}</p>
+                                 </div>
+                               </div>
+                             </a>
+                           ))}
+                         </div>
+                       
                       </div>
                     </div>
                   </div>
@@ -117,7 +118,7 @@ export default function Navbar() {
             ) : (
               <div>
                 <div className="row mt-5">
-                  <div className="col-lg-4 col-md-4 col-sm-12 nav_left">
+                  <div className="col-lg-4 col-md-2 col-sm-12 nav_left">
                     <ul className="nav nav-tabs">
                       <li
                         className={`nav-item nav_header ${
@@ -135,7 +136,7 @@ export default function Navbar() {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-lg-8 col-md-8 col-sm-12">
+                  <div className="col-lg-8 col-md-10 col-sm-12">
                     <div className="tab-content">
                       <div
                         className={`tab-pane ${

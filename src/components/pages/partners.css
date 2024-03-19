@@ -22,7 +22,7 @@
 }
 .partner-alliance-inner {
   padding: 4% 6%;
-  height: 60vh;
+  height: 77vh;
   margin: 0 4%;
   display: flex;
   justify-content: center;
@@ -95,6 +95,7 @@ color: #62666A;
 
 @media only screen and (min-width: 769px) and (max-width: 996px) {
 .partner-alliance-inner {
-  height: 75vh;
+  height: 85vh;
 }
+
 }

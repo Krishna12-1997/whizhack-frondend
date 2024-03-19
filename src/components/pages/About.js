@@ -8,7 +8,7 @@ import Loader from "../inc/Loader";
 import AboutSlider from "../inc/AboutSlider";
 
 const About = ({  }) => {
-
+  // https://test.whizhack.com
   const uri = "https://test.whizhack.com/api/about?_limit=5&populate=header.management,header.story,header.Advisor,header.alliance.strategicalliances,header.partnership, header.recognition.recognitions.button"; // Specify the URI for this page
   const { loading, error, data } = useFetch(uri);
 
@@ -130,7 +130,7 @@ const About = ({  }) => {
                   management.map((ab) => (
                     <div className="row" key={ab.id}>
                       <div
-                        className="col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-center"
+                        className="col-md-6 col-sm-12 mx-auto mt-2 mb-2 pt-2 pb-2 rounded p-3 text-center managment-images"
                         data-aos="fadeIn"
                       >
                         <img

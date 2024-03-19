@@ -50,7 +50,7 @@ const settings = {
       @keyframes fadeDown {
         from {
           opacity: 0;
-          transform: translateY(-20px); /* Adjust the initial position as needed */
+          transform: translateY(-50px);
         }
         to {
           opacity: 1;
@@ -61,7 +61,7 @@ const settings = {
       @keyframes fadeUp {
         from {
           opacity: 0;
-          transform: translateY(20px); /* Adjust the initial position as needed */
+          transform: translateY(50px);
         }
         to {
           opacity: 1;

@@ -151,8 +151,8 @@ export default function Trace() {
                           <div className="bottom"></div>
                         </div>
 
-                        <div className="col-lg-4 col-md-5 col-sm-122">
-                          <div className="square_content">
+                        <div className="col-lg-4 col-md-12 col-sm-12">
+                          <div className="square_content square_content_about">
                             <h3
                               data-aos="fade-right"
                               data-aos-delay="300"
@@ -202,7 +202,7 @@ export default function Trace() {
                           </div>
                         </div>
 
-                        <div className="col-lg-7 col-md-7 col-sm-122">
+                        <div className="col-lg-7 col-md-12 col-sm-12">
                           <div
                             className="square"
                             style={{
@@ -653,7 +653,7 @@ export default function Trace() {
 
                         <div className="col-lg-7 col-md-12 col-sm-12">
                           <div
-                            className="square"
+                            className="square square-last"
                             style={{
                               background: `url(${thred})`,
                               backgroundSize: "cover",
@@ -663,7 +663,7 @@ export default function Trace() {
                           >
                             <div className="degree">
                               <div
-                                className="degree_content"
+                                className="degree_content2"
                                 data-aos="fade-down"
                                 data-aos-delay="300"
                                 data-aos-duration={1500}
@@ -707,7 +707,7 @@ export default function Trace() {
                               </div>
 
                               <div
-                                className="degree_content"
+                                className="degree_content2"
                                 data-aos="fade-down"
                                 data-aos-delay="300"
                                 data-aos-duration={1500}
@@ -748,7 +748,7 @@ export default function Trace() {
                               </div>
 
                               <div
-                                className="degree_content"
+                                className="degree_content2"
                                 data-aos="fade-down"
                                 data-aos-delay="300"
                                 data-aos-duration={1500}
@@ -864,7 +864,7 @@ export default function Trace() {
                           }}
                         >
                           <div className="container text-white text-center mt-5">
-                            <div className="col-lg-12 col-md-8 col-sm-12 justify-content-center d-flex align-items-center">
+                            <div className="col-lg-12 col-md-12 col-sm-12 justify-content-center d-flex align-items-center">
                               <div className="line_left"></div>
                               <h1 style={{ fontWeight: 600 }}>
                                 {impact.attributes.title}
@@ -872,7 +872,7 @@ export default function Trace() {
                               <div className="line_right"></div>
                             </div>
 
-                            <div className="col-lg-12 col-md-8 col-sm-12 mx-auto mt-3 mb-5">
+                            <div className="col-lg-12 col-md-12 col-sm-12 mx-auto mt-3 mb-5">
                               <div className="tech_card">
                                 {impact.attributes.case_impact.map((imp) => (
                                   <div
@@ -887,7 +887,7 @@ export default function Trace() {
                               </div>
                             </div>
 
-                            <div className="col-lg-12 col-md-8 col-sm-12">
+                            <div className="col-lg-12 col-md-12 col-sm-12">
                               <div className="line_bottom"></div>
                             </div>
                           </div>
@@ -957,7 +957,7 @@ export default function Trace() {
                 <section>
                   <div className="partner_trace mt-5">
                     <div className="row">
-                      <div className="col-lg-6 col-md-6 col-sm-12 ">
+                      <div className="col-lg-6 col-md-12 col-sm-12 ">
                         <img
                           src={partner}
                           alt="partner"
@@ -966,7 +966,7 @@ export default function Trace() {
                         />
                       </div>
 
-                      <div className="col-lg-6 col-md-6 col-sm-12 mx-auto">
+                      <div className="col-lg-6 col-md-12 col-sm-12 mx-auto">
                         <form onSubmit={formik.handleSubmit}>
                           <div className="partner_form mx-5">
                             <h1
@@ -1152,7 +1152,7 @@ export default function Trace() {
                         <div className="bottom"></div>
                       </div>
 
-                      <div className="col-lg-4 col-md-4 col-sm-12 square_content">
+                      <div className="col-lg-4 col-md-12 col-sm-12 content_content">
                         <div className=" mt-5 next-gene">
                           <h3
                             data-aos="fade-right"
@@ -1184,7 +1184,7 @@ export default function Trace() {
                         </div>
                       </div>
 
-                      <div className="col-lg-7 col-md-8 col-sm-12">
+                      <div className="col-lg-7 col-md-12 col-sm-12">
                         <div className="whiz">
                           <div className="degree">
                             <div className="degree_content">
@@ -1276,7 +1276,7 @@ export default function Trace() {
                 <div className=" mt-5 about-whiz-section">
                   <div className="container-fluid">
                     <div className="row bottom_bg">
-                      <div className="col-lg-6 col-md-6 col-sm-122">
+                      <div className="col-lg-6 col-md-12 col-sm-12">
                         <div
                           className="left-cut-img"
                           style={{
@@ -1289,7 +1289,7 @@ export default function Trace() {
                         ></div>
                       </div>
 
-                      <div className="col-lg-6 col-md-6 col-sm-12">
+                      <div className="col-lg-6 col-md-12 col-sm-12">
                         <div className="about_whiz">
                           <div className="whiz_degree mx-4">
                             <h3
@@ -1365,7 +1365,7 @@ export default function Trace() {
                       >
                         <div className="container" key={impact.id}>
                           <div className="row">
-                            <div className="col-lg-12 col-md-12 col-sm-122 cyber_content">
+                            <div className="col-lg-12 col-md-12 col-sm-12 cyber_content">
                               <div className=" text-light w-50 ">
                                 <div className="top-border"></div>
                                 <h1>{impact.attributes.title}</h1>
@@ -1526,7 +1526,7 @@ export default function Trace() {
               <section>
                 <div className="partner_trace mt-5">
                   <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 ">
+                    <div className="col-lg-6 col-md-12 col-sm-12 ">
                       <img
                         src={partner}
                         alt="partner"
@@ -1535,7 +1535,7 @@ export default function Trace() {
                       />
                     </div>
 
-                    <div className="col-lg-6 col-md-6 col-sm-12 mx-auto">
+                    <div className="col-lg-6 col-md-12 col-sm-12 mx-auto">
                       <form onSubmit={formik.handleSubmit}>
                         <div className="partner_form mx-5">
                           <h1
@@ -1686,7 +1686,7 @@ export default function Trace() {
                         </div>
 
                         <div className="col-lg-5 col-md-6 col-sm-12 square_content">
-                          <div className=" mt-5 ">
+                          <div className=" mt-5 square_content_content">
                             <h3
                               data-aos="fade-right"
                               data-aos-delay="300"
@@ -1934,7 +1934,7 @@ export default function Trace() {
                         </div>
 
                         <div className="col-lg-5 col-md-6 col-sm-12 square_content">
-                          <div className=" mt-5 ">
+                          <div className=" mt-5 square_content_content">
                             <h3
                               data-aos="fade-right"
                               data-aos-delay="300"

@@ -245,9 +245,31 @@
 .whiz_degree {
   padding: 0 10%;
 }
-.degree_content {
+.degree_content2 {
   width: 250px;
   height: 400px;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  text-align: center;
+  padding: 1% 2%;
+  clip-path: polygon(
+    15% 0,
+    85% 0,
+    100% 14%,
+    100% 87%,
+    87% 100%,
+    12% 100%,
+    0 86%,
+    0 13%
+  );
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+.degree_content {
+  width: 250px;
+  height: 300px;
   background-color: #e0e0e0;
   border-radius: 25px;
   text-align: center;
@@ -381,6 +403,10 @@
   .ui1-banner1-parent-solution-zerohack {
     background-size: auto;
     left: 0;
+  }
+  .square_content_content{
+    text-align: center;
+    padding: 2rem 3rem;
   }
   .zerohack_whiz {
     height: auto;
@@ -773,8 +799,21 @@
   .cyber_content {
     display: block;
 }
+.partner_form{
+ padding: 2rem;
+}
 .top-border, .bottom-border{
   display: none;
+}
+.next-gene{
+  text-align: center;
+  padding: 2rem;
+}
+.content_content{
+ height: auto !important;
+}
+.whiz_degree {
+  padding: 3rem;
 }
 .w-50{
   text-align: center;
@@ -797,22 +836,31 @@
 .line{
   display: none;
 }
+.degree_content2 {
+  margin: 0 12px;
+}
+.square-last{
+  margin-top: 5rem;
+}
 .degree_content{
   margin: 0 12px;
 }
 .ui1-banner1-parent-solution-zerohack {
-  background-size: 56% 116%;
+  background-size: 58% 116%;
 }
 .square{
   height: auto;
   padding: 0 7%;
 }
 .square_content{
+  height: 100vh !important;
+}
+.square_content_about{
   height: auto !important;
 }
 .square .degree-2 svg {
-  width: 41px;
-  height: 44px;
+  width: 26px;
+  height: 30px;
 }
 .degree{
   padding: 7% 0;
@@ -828,11 +876,20 @@
   .degree_content {
     margin: 0 12px;
   }
+  .degree_content2 {
+    margin: 0 12px;
+}
   .square {
     height: 100%;
   }
+  .ui1-banner1-parent-solution-zerohack {
+    background-size: 58% 108%;
+  }
   .ui1-banner1-parent-solution {
     background-size: 50% 100%;
+  }
+  .bottom_zero_hids {
+    top: 72%;
   }
 }
 

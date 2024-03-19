@@ -85,12 +85,12 @@ export default function Blog() {
                             .join(" ")}
                         </p>
                         <div className="blogs-btn-container">
-                          <Link
-                            to={`/blog/${blog.id}`}
+                          <a
+                            href={`/blog/${blog.id}`}
                             className="clipped-btns"
                           >
                             {blog.attributes.blog_button.label}
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>

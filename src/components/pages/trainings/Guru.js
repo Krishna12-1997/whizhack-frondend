@@ -169,7 +169,7 @@ export default function Guru({}) {
                         </div>
                         <div className="col-lg-6">
                           <div className="guru-right-parent">
-                            <div className="guru-right-inner">
+                            <div className="guru-right-inner guru-right-parent-next">
                               <h3
                                 data-aos="fade-down"
                                 data-aos-delay="300"
@@ -709,7 +709,7 @@ export default function Guru({}) {
                           </div>
                         </div>
                         <div className="col-lg-6">
-                          <div className="guru-right-parent">
+                          <div className="guru-right-parent guru-right-parent-next">
                             <div className="guru-right-inner">
                               <h3
                                 data-aos="fade-down"
@@ -915,7 +915,7 @@ export default function Guru({}) {
                     <div className="threat mt-5">
                       <div className="container-fluid">
                         <div className="row">
-                          <div className="col-lg-7 col-md-6 col-sm-12">
+                          <div className="col-lg-7 col-md-12 col-sm-12">
                             <div
                               className="square"
                               style={{
@@ -965,7 +965,7 @@ export default function Guru({}) {
                             </div>
                           </div>
 
-                          <div className="col-lg-5 col-md-6 col-sm-12 square_content mx-auto p-3 m-4">
+                          <div className="col-lg-5 col-md-12 col-sm-12 square_content mx-auto p-3 m-4">
                             <div className="npti-card-content mt-5">
                               <h3
                                 data-aos="fade-down"

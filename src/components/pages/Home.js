@@ -35,10 +35,9 @@ export default function Home() {
 
   useEffect(() => {
     if (!loading && !error && data) {
-      // Initialize AOS only when the data is loaded successfully
       AOS.init();
     }
-  }, [loading, error, data]);
+  }, [loading, error, data]);  
 
   if (loading) {
     return (
@@ -189,8 +188,9 @@ export default function Home() {
                               ...colorizeImageStyle,
                               objectFit: "cover",
                             }}
+                            className="product-images"
                           />
-                          <img src={tracelogo} alt="tracelogo" />
+                          <img src={tracelogo} alt="tracelogo" className="product-images2" />
                           <p>
                             A highly scalable and adaptable cyber deception
                             software that has been designed to capture and
@@ -219,7 +219,9 @@ export default function Home() {
                             style={{
                               ...colorizeImageStyle,
                               objectFit: "cover",
+                              
                             }}
+                            className="product-images"
                           />
                           <h3>HIDS</h3>
                           <p>
@@ -251,6 +253,7 @@ export default function Home() {
                               ...colorizeImageStyle,
                               objectFit: "cover",
                             }}
+                            className="product-images"
                           />
                           <h3>NIDS</h3>
                           <p>
@@ -445,7 +448,7 @@ export default function Home() {
                   <a href={`/Trainings/enterprise`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={enterprise} alt="enterprise" />
+                        <img src={enterprise} alt="enterprise" className="training-images" />
                         <h3>Enterprise </h3>
                         <p>
                           Enterprise training is versatile, offered through
@@ -473,7 +476,7 @@ export default function Home() {
                   <a href={`/Trainings/npti`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={industry} alt="industry" />
+                        <img src={industry} alt="industry" className="training-images" />
                         <h3>Industry Specific </h3>
                         <p>
                           India’s First Experiential Post Graduate Diploma in
@@ -501,7 +504,7 @@ export default function Home() {
                   <a href={`/Trainings/government`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={gov} alt="goverment" />
+                        <img src={gov} alt="goverment" className="training-images" />
                         <h3>Government </h3>
                         <p>
                           WhizHack is providing security against some of the
@@ -529,7 +532,7 @@ export default function Home() {
                   <a href={`/career`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={career} alt="career" />
+                        <img src={career} alt="career" className="training-images" />
                         <h3>Career Pathways </h3>
                         <p>
                           Teenagers across the country will have the opportunity
@@ -556,7 +559,7 @@ export default function Home() {
                   <a href={`/Trainings/bridge`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={bridges} alt="bridges" />
+                        <img src={bridges} alt="bridges" className="training-images" />
                         <h3>International Bridge Courses </h3>
                         <p>
                           Complete your Masters in Cyber Security from
