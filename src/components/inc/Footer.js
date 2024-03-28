@@ -1,10 +1,69 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import { useFormik } from "formik";
+import axios from "axios";
 import Loader from "../inc/Loader";
 
-export default function Footer({  }) {
+export default function Footer({}) {
+  const [successMessage, setSuccessMessage] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSuccessMessage("");
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [successMessage]);
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+    },
+    validate: (values) => {
+      const errors = {};
+
+      // Validate email
+      if (!values.email.trim()) {
+        errors.email = "Email id is required";
+      } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
+        errors.email = "Invalid email format";
+      }
+
+      return errors;
+    },
+    onSubmit: (values, { resetForm }) => {
+      // Create an object to hold your form data
+      const formData = {
+        data: {
+          email: values.email,
+        },
+      };
+
+      // Make a POST request to your Strapi API
+      axios
+        .post("https://test.whizhack.com/api/footer-contact-emails", formData)
+        .then((response) => {
+          console.log("POST request successful");
+          setSuccessMessage(
+            "Thank you! Your form has been submitted successfully."
+          );
+          resetForm();
+        })
+        .catch((error) => {
+          console.error("POST request error:", error.response);
+          if (error.response) {
+            console.log("Response data:", error.response.data);
+            console.log("Response status:", error.response.status);
+          } else if (error.request) {
+            console.log("No response received:", error.request);
+          } else {
+            console.log("Error setting up request:", error.message);
+          }
+        });
+    },
+  });
 
   const uri = "https://test.whizhack.com/api/footer?_limit=5&populate=left_footer"; // Specify the URI for this page
   const { loading, error, data } = useFetch(uri);
@@ -22,11 +81,13 @@ export default function Footer({  }) {
       <section className="footer-section">
         <div className="container-fluid ">
           <div className="row">
-            <div className="col-lg-6 col-md-12 col-sm-12 footer_link"  style={{
-                  backgroundColor: "#07002F",
-                }}>
-              <div
-              >
+            <div
+              className="col-lg-6 col-md-12 col-sm-12 footer_link"
+              style={{
+                backgroundColor: "#07002F",
+              }}
+            >
+              <div>
                 <div className="footer pt-4">
                   <div
                     style={{
@@ -40,14 +101,14 @@ export default function Footer({  }) {
                   >
                     Organization
                   </div>
-                 
+
                   <div className="link_small">
                     <ul className="list-unstyled mt-4">
-                    {data.attributes.left_footer.map((link) => (
-                      <p key={link.id} >
-                        <Link to={link.url}>{link.menu}</Link>
-                      </p>
-                     ))}
+                      {data.attributes.left_footer.map((link) => (
+                        <p key={link.id}>
+                          <a href={link.url}>{link.menu}</a>
+                        </p>
+                      ))}
                     </ul>
                   </div>
 
@@ -71,34 +132,61 @@ export default function Footer({  }) {
 
             <div className="col-lg-6 col-md-12 col-sm-12 mt-5 contact">
               <div className="info contact-details">
-              <h3 className=" footer-contact-title">Contact Us</h3>
-              <div className=" footer-newsletter">
-                  <div className="input-group mb-4 ">
-                    <input
-                      type="text"
-                      className=""
-                      id="inlineFormInputGroup"
-                      style={{ width: "66%"}}
-                    />
-                    <div className="input-group-prepend ">
-                      <div className="input-group-text" style={{ backgroundColor: "#185893"}}>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="17"
-                          height="31"
-                          viewBox="0 0 17 31"
-                          fill="none"
-                        >
-                          <path
-                            d="M1 1L15.5 15.5L1 30"
-                            stroke="white"
-                            stroke-width="2"
-                          />
-                        </svg>{" "}
-                      </div>
+                <h3 className=" footer-contact-title">Contact Us</h3>
+                <form onSubmit={formik.handleSubmit}>
+                  <div className="footer-newsletter">
+                  {formik.touched.email && formik.errors.email && (
+                        <div className="error-message">
+                          {formik.errors.email}
+                        </div>
+                      )}
+                    <div className="input-group mb-4 ">
+                      <input
+                        type="email"
+                        className=""
+                        name="email"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.email}
+                        id="inlineFormInputGroup"
+                        style={{ width: "66%" }}
+                      />
+                      
+                      <button
+                        type="submit"
+                        style={{ backgroundColor: "#185893", border: "none" }}
+                      >
+                        <div className="input-group-prepend ">
+                          <div
+                            className="input-group-text"
+                            style={{
+                              backgroundColor: "#185893",
+                              border: "none",
+                            }}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="17"
+                              height="31"
+                              viewBox="0 0 17 31"
+                              fill="none"
+                            >
+                              <path
+                                d="M1 1L15.5 15.5L1 30"
+                                stroke="white"
+                                stroke-width="2"
+                              />
+                            </svg>{" "}
+                          </div>
+                        </div>
+                      </button>
                     </div>
+                    
                   </div>
-                </div>
+                </form>
+                {successMessage && (
+                  <div className="success-message">{successMessage}</div>
+                )}
 
                 <div className="">
                   <div className="location d-flex">
@@ -122,13 +210,8 @@ export default function Footer({  }) {
                         fill="#1D1D1D"
                       />
                     </svg>
-                    <div
-                      style={{
-                        
-                      }}
-                      className="ml-3 address"
-                    >
-                     {data.attributes.address}
+                    <div style={{}} className="ml-3 address">
+                      {data.attributes.address}
                     </div>
                   </div>
 
@@ -149,11 +232,7 @@ export default function Footer({  }) {
                         fill="#1D1D1D"
                       />
                     </svg>
-                    <div
-                      className="ml-3 address"
-                    >
-                     {data.attributes.email}
-                    </div>
+                    <div className="ml-3 address">{data.attributes.email}</div>
                   </div>
 
                   <div className="site d-flex mt-4">
@@ -179,11 +258,7 @@ export default function Footer({  }) {
                         stroke-linejoin="round"
                       />
                     </svg>
-                    <div
-                      className="ml-3 address"
-                    >
-                      {data.attributes.link}
-                    </div>
+                    <div className="ml-3 address">{data.attributes.link}</div>
                   </div>
 
                   <div className="mobile d-flex mt-4">
@@ -202,11 +277,7 @@ export default function Footer({  }) {
                         stroke-linejoin="round"
                       />
                     </svg>
-                    <div
-                      className="ml-3 address"
-                    >
-                      {data.attributes.number}
-                    </div>
+                    <div className="ml-3 address">{data.attributes.number}</div>
                   </div>
                 </div>
               </div>

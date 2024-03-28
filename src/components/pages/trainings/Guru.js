@@ -1520,7 +1520,7 @@ export default function Guru({}) {
         } else if (
           firstSolution.__component === "training.btog" &&
           firstSolution.title === "International Bridge Courses" &&
-          paramName === "bridge"
+          paramName === "international-bridge-courses"
         ) {
           return (
             <>
@@ -1620,13 +1620,12 @@ export default function Guru({}) {
                           <img src={backgd} alt="background-icon" />
                           <h4>Background Knowledge</h4>
                           <div className="list-cards-content">
-                            <p>Technical and Engineering Students</p>
+                            <p>
+                              Technical and Engineering Students(B.Tech, B.S.C,
+                              B.C.A)
+                            </p>
                             <p>Final Year students or past Graduates</p>
                             <p>Good Academic Record</p>
-                            <p>
-                              Proficiency in English (to Clear TOEFL or IELTS or
-                              Duolingo or PTE)
-                            </p>
                           </div>
                         </div>
                       </div>
@@ -1639,11 +1638,13 @@ export default function Guru({}) {
                           data-aos-duration={1500}
                         >
                           <img src={additionall} alt="add-icon" />
-                          <h4>Additional Requirement</h4>
+                          <h4>Admission Requirement</h4>
                           <div className="list-cards-content">
                             <p>Advanced knowledge of Math’s and Calculus</p>
-                            <p>Programming knowledge preferred.</p>
-                            <p>Financial Viability</p>
+                            <p>
+                              Proficiency in English (to Clear TOEFL or IELTS or
+                              Duolingo or PTE)
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -1663,9 +1664,8 @@ export default function Guru({}) {
                               (NSA certified center of excellence in cyber
                               defense education)
                             </p>
-                            <p>Work VISA for 3 Years</p>
                             <p>STEM Program with 3 Years OPT</p>
-                            <p>Certification from IIT Bhubaneswar</p>
+                            <p>Certification from IIT Madras Pravartak</p>
                           </div>
                         </div>
                       </div>
@@ -1681,13 +1681,13 @@ export default function Guru({}) {
                           <h4>Career Aspiration</h4>
                           <div className="list-cards-content">
                             <p>
-                              To Study & Build a Technical career in US & other
-                              developed countries.
+                              Build a Technical career in US & other developed
+                              countries .
                             </p>
                             <p>
                               {" "}
                               Build Career Pathway for Work in the following
-                              roles as Cyber Security Analyst , SOC Analyst,
+                              roles as Cyber Security Analyst , SOC Analyst ,
                               Penetration Testers in Core Cyber Roles.
                             </p>
                           </div>
@@ -1716,7 +1716,7 @@ export default function Guru({}) {
                                 data-aos-delay="300"
                                 data-aos-duration={1500}
                               >
-                                <h6>February - March 2024</h6>
+                                <h6>March - April 2024</h6>
                                 <div className="timeline-list-content">
                                   <p>Appear for AMCAT and Interview</p>
                                   <p>Apply for VISA</p>
@@ -1732,7 +1732,7 @@ export default function Guru({}) {
                                 data-aos-delay="300"
                                 data-aos-duration={1500}
                               >
-                                <h6>April - June 2024</h6>
+                                <h6>May - July 2024</h6>
                                 <div className="timeline-list-content">
                                   <p>Bridge Program Application</p>
                                   <p>Initiation of Bridge Program</p>
@@ -1747,7 +1747,7 @@ export default function Guru({}) {
                                 data-aos-delay="300"
                                 data-aos-duration={1500}
                               >
-                                <h6>July - August 2024</h6>
+                                <h6>August - September 2024</h6>
                                 <div className="timeline-list-content">
                                   <p>Fly to USA</p>
                                   <p>Receive Student Visa</p>
@@ -1763,7 +1763,7 @@ export default function Guru({}) {
                                 data-aos-delay="300"
                                 data-aos-duration={1500}
                               >
-                                <h6>May 2025</h6>
+                                <h6>June 2025</h6>
                                 <div className="timeline-list-content">
                                   <p>Eligibility to work</p>
                                 </div>
@@ -1783,7 +1783,7 @@ export default function Guru({}) {
                         <div className="direct-apply-uni-content-title">
                           <h3>
                             Why not directly apply to University at Albany?
-                            <span>Because it's 25% Economical!</span>
+                            <span>Because it's 24% Economical!</span>
                           </h3>
                         </div>
                       </div>
@@ -1801,7 +1801,7 @@ export default function Guru({}) {
                               </div>
                               <div className="fee-price-structure">
                                 <p>With Bridge</p>
-                                <strong>$28,161</strong>
+                                <strong>$28,620</strong>
                               </div>
                             </div>
                           </div>
@@ -1834,7 +1834,7 @@ export default function Guru({}) {
                               </div>
                               <div className="fee-price-structure">
                                 <p>With Bridge</p>
-                                <strong>$38,961</strong>
+                                <strong>$39,420</strong>
                               </div>
                             </div>
                           </div>

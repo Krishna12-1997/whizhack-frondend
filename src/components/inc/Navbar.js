@@ -158,6 +158,7 @@ export default function Navbar() {
                                     width="32px"
                                     height="32px"
                                     className="mb-3"
+                                    style={{ filter: "grayscale(1)"}}
                                   />
 
                                   <h4>{link.label}</h4>

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import w from "../../asset/W.png";
 import "./Trace.css";
 import thred from "../../asset/thread.png";
 import digital from "../../asset/digital.png";
-import video from "../../components/images/bg/Video.png";
+import video from "../../components/images/hidesabout.jpg";
+import nidesabout from "../../components/images/nidsabout.jpg";
 import CSicon from "../../components/images/icons/CS-removebg-preview 1.svg";
 import CSicon2 from "../../components/images/icons/CS-removebg-preview-removebg-preview 1 (1).svg";
 import attact from "../../components/images/icons/Attack-removebg-preview 1.svg";
@@ -15,6 +16,8 @@ import isomet from "../../components/images/icons/ISOMET_1-removebg-preview 1.sv
 import isomet1 from "../../components/images/icons/101994-OM0XMB-226-removebg-preview 1.svg";
 import isomet2 from "../../components/images/icons/Successful_Leaders_invest_money_in_isometric_illustration-removebg-preview (1) 1.svg";
 import partner from "../../asset/saaa0560_cbersecurity_person_teaching_7ed30544-c3e4-493f-b8b5-b4f52e854a8f 1 (1).png";
+import NidsPdf from "../../components/images/pdf/NIDS.pdf";
+import HidsPdf from "../../components/images/pdf/HIDS.pdf";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/inc/Loader";
 import { useParams } from "react-router-dom";
@@ -23,6 +26,16 @@ import axios from "axios";
 import { Helmet } from "react-helmet";
 
 export default function Trace() {
+  const [successMessage, setSuccessMessage] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSuccessMessage("");
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [successMessage]);
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -30,8 +43,31 @@ export default function Trace() {
       email: "",
       message: "",
     },
-    onSubmit: (values) => {
-      // Create an object to hold your form data
+    validate: (values) => {
+      const errors = {};
+
+      if (!values.name.trim()) {
+        errors.name = "Name is required";
+      }
+      // Validate contact
+      if (!values.mobile) {
+        errors.mobile = "Contact No. is required";
+      } else if (isNaN(values.mobile)) {
+        errors.mobile = "Contact No. must be a number";
+      } else if (values.mobile.length !== 10) {
+        errors.mobile = "Contact No. must be exactly 10 digits long";
+      }
+
+      // Validate email
+      if (!values.email.trim()) {
+        errors.email = "Email is required";
+      } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
+        errors.email = "Invalid email format";
+      }
+
+      return errors;
+    },
+    onSubmit: (values, { resetForm }) => {
       const formData = {
         data: {
           name: values.name,
@@ -46,7 +82,10 @@ export default function Trace() {
         .post("https://test.whizhack.com/api/solution-contacts", formData)
         .then((response) => {
           console.log("POST request successful");
-          alert("Thank You");
+          setSuccessMessage(
+            "Thank you! Your form has been submitted successfully."
+          );
+          resetForm();
         })
         .catch((error) => {
           console.error("POST request error:", error.response);
@@ -61,6 +100,16 @@ export default function Trace() {
         });
     },
   });
+
+  const openHidsPDF = () => {
+    const pdfUrl = HidsPdf;
+    window.open(pdfUrl, '_blank'); 
+  }
+
+  const openNidsPDF = () => {
+    const pdfUrl = NidsPdf;
+    window.open(pdfUrl, '_blank'); 
+  }
 
   const { solutionName } = useParams();
 
@@ -823,7 +872,7 @@ export default function Trace() {
                                       data-aos-delay="300"
                                       data-aos-duration={1500}
                                     >
-                                      <h4
+                                      <h5
                                         style={{
                                           color: "#1D1D1D",
                                           fontWeight: 600,
@@ -838,7 +887,7 @@ export default function Trace() {
                                           {imp.label}
                                         </span>{" "}
                                         {imp.title}
-                                      </h4>
+                                      </h5>
                                       <p
                                         style={{
                                           color: "#626664",
@@ -881,7 +930,7 @@ export default function Trace() {
                                     data-aos-delay="300"
                                     data-aos-duration={1500}
                                   >
-                                    <h5>{imp.description}</h5>
+                                    <h6>{imp.description}</h6>
                                   </div>
                                 ))}
                               </div>
@@ -914,27 +963,24 @@ export default function Trace() {
                               <div className="tech_card_index">
                                 {impact.attributes.case_impact.map((imp) => (
                                   <div className="tech_card_index_details">
-                                    <h4
+                                    <h5
                                       style={{
                                         color: "#1D1D1D",
-                                        fontWeight: 600,
                                       }}
                                     >
                                       <span
                                         style={{
                                           color: "#185893",
-                                          fontWeight: 600,
                                         }}
                                       >
                                         {imp.label}
                                       </span>{" "}
                                       <br />
                                       {imp.title}
-                                    </h4>
+                                    </h5>
                                     <p
                                       style={{
                                         color: "#626664",
-                                        fontWeight: 500,
                                       }}
                                     >
                                       {imp.description}
@@ -969,7 +1015,7 @@ export default function Trace() {
                       <div className="col-lg-6 col-md-12 col-sm-12 mx-auto">
                         <form onSubmit={formik.handleSubmit}>
                           <div className="partner_form mx-5">
-                            <h1
+                            <h3
                               style={{
                                 color: "#07002F",
                                 fontWeight: "700",
@@ -977,7 +1023,7 @@ export default function Trace() {
                               className="mb-2"
                             >
                               Partner with us for the next generation products
-                            </h1>
+                            </h3>
                             <h6
                               style={{
                                 color: "#62666A",
@@ -997,23 +1043,35 @@ export default function Trace() {
                               placeholder="Contact Person Name *"
                               className="mt-3 input"
                               onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
                               value={formik.values.name}
                               style={{
                                 color: "#363636",
                               }}
                             />
+                            {formik.touched.name && formik.errors.name && (
+                              <div className="error-message">
+                                {formik.errors.name}
+                              </div>
+                            )}
                             <input
-                              type="number"
+                              type="text"
                               name="mobile"
                               id="number"
                               placeholder="Contact Person No.*"
                               className="mt-3 input"
                               onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
                               value={formik.values.mobile}
                               style={{
                                 color: "#363636",
                               }}
                             />
+                            {formik.touched.mobile && formik.errors.mobile && (
+                              <div className="error-message">
+                                {formik.errors.mobile}
+                              </div>
+                            )}
                             <input
                               type="email"
                               name="email"
@@ -1021,11 +1079,17 @@ export default function Trace() {
                               placeholder="Email Id *"
                               className="mt-3 input"
                               onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
                               value={formik.values.email}
                               style={{
                                 color: "#363636",
                               }}
                             />
+                            {formik.touched.email && formik.errors.email && (
+                              <div className="error-message">
+                                {formik.errors.email}
+                              </div>
+                            )}
                             <textarea
                               type="text"
                               name="message"
@@ -1048,6 +1112,7 @@ export default function Trace() {
                             </button>
                           </div>
                         </form>
+                        {successMessage && <div className="success-message">{successMessage}</div>}
                       </div>
                     </div>
                   </div>
@@ -1380,7 +1445,7 @@ export default function Trace() {
                                     data-aos-delay="300"
                                     data-aos-duration={1500}
                                   >
-                                    <h4
+                                    <h5
                                       style={{
                                         color: "#1D1D1D",
                                         fontWeight: 600,
@@ -1395,7 +1460,7 @@ export default function Trace() {
                                         {imp.label}
                                       </span>{" "}
                                       {imp.title}
-                                    </h4>
+                                    </h5>
                                     <p
                                       style={{
                                         color: "#626664",
@@ -1443,7 +1508,7 @@ export default function Trace() {
                                   data-aos-delay="300"
                                   data-aos-duration={1500}
                                 >
-                                  <h5>{imp.description}</h5>
+                                  <h6>{imp.description}</h6>
                                 </div>
                               ))}
                             </div>
@@ -1483,27 +1548,24 @@ export default function Trace() {
                                   data-aos-delay="300"
                                   data-aos-duration={1500}
                                 >
-                                  <h4
+                                  <h5
                                     style={{
                                       color: "#1D1D1D",
-                                      fontWeight: 600,
                                     }}
                                   >
                                     <span
                                       style={{
                                         color: "#185893",
-                                        fontWeight: 600,
                                       }}
                                     >
                                       {imp.label}
                                     </span>{" "}
                                     <br />
                                     {imp.title}
-                                  </h4>
+                                  </h5>
                                   <p
                                     style={{
                                       color: "#626664",
-                                      fontWeight: 500,
                                     }}
                                   >
                                     {imp.description}
@@ -1538,7 +1600,7 @@ export default function Trace() {
                     <div className="col-lg-6 col-md-12 col-sm-12 mx-auto">
                       <form onSubmit={formik.handleSubmit}>
                         <div className="partner_form mx-5">
-                          <h1
+                          <h3
                             style={{
                               color: "#07002F",
                               fontWeight: "700",
@@ -1546,7 +1608,7 @@ export default function Trace() {
                             className="mb-2"
                           >
                             Partner with us for the next generation products
-                          </h1>
+                          </h3>
                           <h6
                             style={{
                               color: "#62666A",
@@ -1566,23 +1628,35 @@ export default function Trace() {
                             placeholder="Contact Person Name *"
                             className="mt-3 input"
                             onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             value={formik.values.name}
                             style={{
                               color: "#363636",
                             }}
                           />
+                          {formik.touched.name && formik.errors.name && (
+                              <div className="error-message">
+                                {formik.errors.name}
+                              </div>
+                            )}
                           <input
-                            type="number"
+                            type="text"
                             name="mobile"
                             id="number"
                             placeholder="Contact Person No.*"
                             className="mt-3 input"
                             onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             value={formik.values.mobile}
                             style={{
                               color: "#363636",
                             }}
                           />
+                          {formik.touched.mobile && formik.errors.mobile && (
+                              <div className="error-message">
+                                {formik.errors.mobile}
+                              </div>
+                            )}
                           <input
                             type="email"
                             name="email"
@@ -1590,11 +1664,17 @@ export default function Trace() {
                             placeholder="Email Id *"
                             className="mt-3 input"
                             onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             value={formik.values.email}
                             style={{
                               color: "#363636",
                             }}
                           />
+                          {formik.touched.email && formik.errors.email && (
+                              <div className="error-message">
+                                {formik.errors.email}
+                              </div>
+                            )}
                           <textarea
                             type="text"
                             name="message"
@@ -1617,6 +1697,7 @@ export default function Trace() {
                           </button>
                         </div>
                       </form>
+                      {successMessage && <div className="success-message">{successMessage}</div>}
                     </div>
                   </div>
                 </div>
@@ -1705,9 +1786,10 @@ export default function Trace() {
                             >
                               {firstSolution.hids_section.description}
                             </h6>
-                            <button
-                              type="submit"
+                            <button 
+                              type="button"
                               className="know_more clipped-btns mt-4"
+                              onClick={openHidsPDF}
                             >
                               Know More
                             </button>
@@ -1781,18 +1863,18 @@ export default function Trace() {
                                 helps organizations identify and mitigate
                                 security risks effectively.
                               </p>
-                              <button
+                              {/* <button
                                 type="submit"
                                 className="know_more clipped-btns mt-4"
                               >
                                 Know More
-                              </button>
+                              </button> */}
                             </div>
                           </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 hids">
                           <div
-                            className="mt-2"
+                            className="mt-2 hids-img"
                             style={{
                               background: `url(${video})`,
                               height: "100vh",
@@ -1954,8 +2036,9 @@ export default function Trace() {
                               {firstSolution.hids_section.description}
                             </h6>
                             <button
-                              type="submit"
+                              type="button"
                               className="know_more clipped-btns mt-4"
+                              onClick={openNidsPDF}
                             >
                               Know More
                             </button>
@@ -2030,20 +2113,20 @@ export default function Trace() {
                                 sources and other have been used to train
                                 various ML and DL models.
                               </p>
-                              <button
+                              {/* <button
                                 type="submit"
                                 className="know_more clipped-btns mt-4"
                               >
                                 Know More
-                              </button>
+                              </button> */}
                             </div>
                           </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 hids">
                           <div
-                            className="mt-2"
+                            className="mt-2 hids-img"
                             style={{
-                              background: `url(${video})`,
+                              background: `url(${nidesabout})`,
                               height: "100vh",
                               backgroundSize: "cover",
                               backgroundPosition: "center",

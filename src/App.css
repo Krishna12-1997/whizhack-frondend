@@ -323,8 +323,8 @@
   margin-top: 50px;
 }
 .second-banner {
-  height: 105vh;
-  background-image: url(./components/images/home-bg.png);
+  height: 127vh;
+  /* background-image: url(./components/images/home-bg.png); */
   background-size: 78% 100%;
   background-repeat: no-repeat;
   display: flex;
@@ -389,9 +389,9 @@
   justify-content: right;
   align-items: center; */
   position: absolute;
-  bottom: 6%;
+  bottom: 0;
   width: 55%;
-  right: 2%;
+  left: 30%;
 }
 .art-products-inner-logo {
   text-align: center;
@@ -406,8 +406,8 @@
   align-items: center; */
   position: absolute;
   top: 3%;
-  width: 55%;
-  right: 2%;
+  width: 80%;
+  left: 20%;
   border-bottom: 2px solid red;
   padding: 0 0 3% 0;
 }
@@ -419,7 +419,7 @@
   padding: 3% 3% 1% 3%;
   width: 85%;
   /* height: fit-content; */
-  height: 40vh;
+  height: 50vh;
   margin: 15px 15px;
   background-color: #fff;
   border-radius: 5px;
@@ -463,23 +463,25 @@
 .art-product-box-training:hover .fas.fa-arrow-right{
   color: #fff;
 }
-.whizrange-product {
+/* .whizrange-product {
   padding: 0 15%;
-}
+} */
 .art-product-box-inner {
   position: relative;
-  text-align: right;
-  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* text-align: right; */
+  /* padding-right: 15px; */
   z-index: 1;
 }
 .art-product-box-inner-whizrange {
   position: relative;
   text-align: center;
-  padding-right: 15px;
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 100%;
 }
 .art-product-box-inner h3 {
@@ -495,30 +497,34 @@
   color: blueviolet;
 }
 .art-product-box-inner .product-images {
-  width: 53%;
+  width: 20%;
+  margin-bottom: 1rem;
   /* padding-right: 39%; */
 }
 .art-product-box-inner .training-images{
-  width: 53%;
+  width: 24%;
+}
+.art-product-box-inner .product-images22{
+   width: 50%;
 }
 .art-product-box-inner-whizrange img:first-child {
-  width: 80%;
-  margin-left: 72px;
+  width: 20%;
   /* padding-right: 39%; */
 }
+
+
 .art-product-box-inner img {
-  width: 50%;
-  padding-right: 25%;
-  margin-right: 17px;
-  margin-bottom: 5%;
+  width: 70%;
+  /* padding-right: 25%;
+  margin-right: 17px; */
+  margin-bottom: 1rem;
 }
 .art-product-box-inner-whizrange img {
-  width: 50%;
-  padding-right: 25%;
-  margin-bottom: 5%;
+  width: 70%;
+  margin-bottom: 1rem;
 }
-.art-product-box-inner img:nth-child(2) {
-  width: 65%;
+.whizrange-product-card .art-product-box-inner-whizrange img:first-child {
+  width: 35%;
   /* padding-right: 0; */
 }
 .art-product-box-inner p,
@@ -539,7 +545,6 @@
   color: gray;
   font-size: 23px;
   position: relative;
-  right: 40%;
   opacity: 0.6;
 }
 
@@ -842,13 +847,184 @@ a:hover {
 /* Second section css Home page banner3 */
 
 .second-banner {
-  height: 135vh;
-  background-color: #e3e2e2;
+  background-color: #f1f1f1;
   display: flex;
   position: relative;
   justify-content: space-between;
 }
+.second-banner .zerohack-logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 127vh;
+  align-items: center;
+}
+.second-banner .zerohack-logo p{
+  margin-top: 2rem;
+  padding-left: 3rem;
+}
+.second-banner .zerohack-logo-card {
+  height: 100vh;
+}
+.second-banner .zerohack-logo-card video{
+  height: 127vh;
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0 100%, 0 29%);
+  width: 100%;
+  object-fit: none;
+}
 
+.zerohack-product .art-product-box-outer:first-child::before{
+   content: "";
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   clip-path: polygon(100% 0, 100% 0, 0 100%, 0 0);
+   height: 23%;
+   width: 17%;
+   background-color: #6A06E8;
+}
+.whizrange-product .art-product-box-outer:first-child::before{
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  clip-path: polygon(100% 0, 100% 0, 0 100%, 0 0);
+  height: 23%;
+  width: 17%;
+  background-color: #C84727;
+}
+.whizrange-product .art-product-box-outer:last-child::before{
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  clip-path: polygon(100% 0, 100% 0, 0 100%, 0 0);
+  height: 23%;
+  width: 17%;
+  background-color: #F9C404;
+} 
+.zerohack-product .art-product-box-outer:last-child::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  clip-path: polygon(100% 0, 100% 0, 0 100%, 0 0);
+  height: 23%;
+  width: 17%;
+  background-color: #6666FF;
+}
+.zerohack-product .art-product-box-outer:nth-child(2)::before {
+  content: "";
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   clip-path: polygon(100% 0, 100% 0, 0 100%, 0 0);
+   height: 23%;
+   width: 17%;
+   background-color: #2CD882;
+}
+.whizrange-product-card .art-product-box-outer:nth-child(2)::before {
+  content: "";
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   clip-path: polygon(100% 0, 100% 0, 0 100%, 0 0);
+   height: 23%;
+   width: 17%;
+   background-color: #6A09E9;
+}
+.whizrange-product-card .art-product-box-outer:first-child::before {
+  content: "";
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   clip-path: polygon(100% 0, 100% 0, 0 100%, 0 0);
+   height: 23%;
+   width: 17%;
+   background-color: #6A09E9;
+}
+.right-content-zerohack{
+  padding-right: 0;
+}
+/* .whizrange{
+  height: 100vh;
+} */
+.whizrange{
+  display: flex;
+  background-color: #f1f1f1;
+  margin: 4rem 0;
+}
+.whizlabs-card{
+  background-color: #3A0794;
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 10% 100%, 0 76%, 0% 20%)
+}
+.zerohack-services-content{
+  padding: 0 3rem;
+}
+.zerohack-services-content img{
+  padding-bottom: 1rem;
+}
+.whizrange .whizrange-card{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.art-products-inner-whizrange-card{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.whizrange-product-card{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+  margin: 0 auto;
+}
+.art-product-box-whizrange:hover {
+  background-color: #002c55;
+  color: #fff;
+}
+.art-product-box-whizrange:hover .art-product-box-inner-whizrange p{
+  color: #fff;
+}
+
+.art-product-box-whizrange:hover .fas.fa-arrow-right{
+  color: #fff;
+}
+.art-product-box-whizrange{
+  padding: 3% 3% 1% 3%;
+    width: 90%;
+    /* height: fit-content; */
+    height: 40vh;
+    margin: 15px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    clip-path: polygon(17% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0% 25%);
+    margin-bottom: 22px;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+.whizrange .whizrange-logo{
+  display: flex;
+  padding: 4rem 0;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+.whizrange .whizrange-logo p{
+  margin-top: 2rem;
+  padding-left: 3rem;
+}
+.zerohack-services{
+  padding: 5rem 0;
+}
+.zerohack-services-contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .art-product-content2 {
   height: 105vh;
   width: 20%;
@@ -1494,9 +1670,9 @@ a:hover {
     height: 1874px;
     object-fit: cover;
   }
-  .zerohack-product {
+  /* .zerohack-product {
     display: block;
-  }
+  } */
   .art-products-inner-whizrange {
     width: 100%;
     right: 2%;
@@ -1734,9 +1910,7 @@ a:hover {
     grid-template-columns: repeat(1, 1fr);
     border-bottom: none;
   }
-  .zerohack-product {
-    display: block;
-  }
+  
   .banner-text {
     background-size: 400% 100%;
   }
@@ -1915,9 +2089,7 @@ a:hover {
     grid-template-columns: repeat(1, 1fr);
     border-bottom: none;
   }
-  .zerohack-product {
-    display: block;
-  }
+  
   .person {
     height: 73%;
   }
@@ -1937,6 +2109,18 @@ a:hover {
     width: 90%;
     margin: 0 auto;
   }
+  .second-banner .zerohack-logo-card video , .second-banner{
+    height: 130vh;
+  }
+  .second-banner .zerohack-logo-card {
+    height: 130vh;
+}
+.zerohack-services {
+  padding: 9rem 0 5rem 0;
+}
+  .art-product-box-whizrange {
+    height: 55vh;
+  }
   .nav_right_solution {
     height: 62vh;
   }
@@ -1954,12 +2138,24 @@ a:hover {
     height: 350px;
     width: 233px;
   }
-  
+  .art-product-box-inner-whizrange img:first-child {
+    width: 15%;
+    height: 20%;
+  }
+  .art-product-box-inner-whizrange img {
+    width: 50%;
+}
 }
 @media only screen and (min-width: 996px) and (max-width: 1280px) {
   .second-banner::before {
     clip-path: polygon(47% 0, 67% 0%, 35% 100%, 15% 100%);
     left: 32%;
+  }
+  .second-banner .zerohack-logo-card video , .second-banner{
+    height: 130vh;
+  }
+  .art-product-box-whizrange {
+    height: 55vh;
   }
   .nav_right {
     padding: 3px 2px;
@@ -1972,10 +2168,6 @@ a:hover {
   }
   .art-product-box {
     height: 48vh;
-  }
-  .art-products,
-  .second-banner {
-    height: 165vh;
   }
   .art-product-content-inner {
     width: 28%;
@@ -2019,7 +2211,7 @@ a:hover {
   font-size: 11px;
 }
 .art-product-box-inner img:first-child {
-  width: 47%;
+  width: 25%;
 }
 .art-product4-content-inner h3 {
   font-size: 2rem;
@@ -2049,6 +2241,12 @@ a:hover {
     clip-path: polygon(47% 0, 67% 0%, 29% 100%, 10% 100%);
     left: 33%;
   }
+  .second-banner .zerohack-logo-card video , .second-banner{
+    height: 130vh;
+  }
+  .art-product-box-whizrange {
+    height: 55vh;
+  }
   .nav_right_solution {
     height: 62vh;
   }
@@ -2072,10 +2270,6 @@ a:hover {
   }
   .art-product-box {
     height: 46vh;
-  }
-  .art-products,
-  .second-banner {
-    height: 163vh;
   }
   .art-product2-box {
     height: 71vh;
@@ -2102,13 +2296,11 @@ a:hover {
     height: 55vh;
   }
  
-  .art-product-box {
-    height: 50vh;
-}
-  .art-products,
+  
+  /* .art-products,
   .second-banner {
     height: 152vh;
-  }
+  } */
   .art-products-inner {
     bottom: 2%;
   }

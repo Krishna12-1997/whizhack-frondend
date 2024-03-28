@@ -40,7 +40,7 @@ export default function Whitepaper_Form({ pdfUrlForm }) {
 
       return errors;
     },
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       const formData = {
         data: {
           name: values.name,
@@ -65,8 +65,7 @@ export default function Whitepaper_Form({ pdfUrlForm }) {
 
           // Close the modal
           if (newWindow) {
-            const modal = document.getElementById("enquiryModal");
-            modal.style.display = "none";
+            resetForm();
           } else {
             console.error(
               "Unable to open the new window. Please check your browser settings."

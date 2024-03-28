@@ -1,5 +1,5 @@
 .footer-section {
-  margin-top: 30px;
+  margin-top: 42px;
 }
 .footer .list-unstyled p a {
   color: #62666a;
@@ -20,6 +20,7 @@
 .footer_link {
   clip-path: polygon(78% 0, 100% 72%, 91% 100%, 0 100%, 0 0);
   height: 100%;
+  margin-top: 12px;
 }
 .contact {
   display: flex;
@@ -35,8 +36,24 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.input-group-prepend {
-  margin-left: -10px;
+.success-message {
+  position: fixed;
+  top: 10%;
+  right: 10px;
+  background-color: #D4EDDA;
+  color: #155759;
+  padding: 15px;
+  z-index: 999; /* Ensure it's above other content */
+  animation: slideInRight 0.5s ease forwards; /* Animation */
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .footer-newsletter input {
   background-color: #dbdadb;
@@ -76,8 +93,8 @@
     color: #fff;
   }
   .footer-section {
-    margin-top: 0;
-  }
+    margin-top: 15px;
+}
   .contact .contact-details{
     padding: 0 10%;
   }
@@ -93,6 +110,9 @@
   .location svg path , .email svg path, .site svg path, .mobile svg path {
     fill: #183893;
   }
+  .footer-section {
+    margin-top: 15px;
+}
   .location .address, .email .address, .site .address, .mobile .address {
     color: #62666a;
   }

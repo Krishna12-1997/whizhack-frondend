@@ -21,23 +21,30 @@ import oticon from "../images/icons/OT icon (1).svg";
 import hidsicon from "../images/icons/computer-networks Edit.png";
 import nidesicon from "../images/icons/global-network Edit.png";
 import product_video from "../images/video/product BG.webm";
-import zerohack from "../images/2Zero.svg";
+import zerohack from "../images/2Zero hack.png";
 import whizrange from "../images/whizrange logo.png";
+import layer from "../images/Layer 17.png";
+import chain from "../images/chain.png";
+import security from "../images/security-room.png";
+import performance from "../images/performance.png";
+import zerohackN from "../images/ZeroHack-N 1.png";
+import zerohackS from "../images/ZeroHack S 1.png";
+import zerohackU from "../images/ZeroHack-U 1.png";
+import zerohackH from "../images/ZeroHack-H 1.png";
 import Lottie from "react-lottie-player";
 import { Helmet } from "react-helmet";
 import animationData from "../json/animation.json";
 
 export default function Home() {
-
   const uri =
-    'https://test.whizhack.com/api/home?populate=productleft.product_button, contact.product_type, link, images';
+    "https://test.whizhack.com/api/home?populate=productleft.product_button, contact.product_type, link, images";
   const { loading, error, data } = useFetch(uri);
 
   useEffect(() => {
     if (!loading && !error && data) {
       AOS.init();
     }
-  }, [loading, error, data]);  
+  }, [loading, error, data]);
 
   if (loading) {
     return (
@@ -69,46 +76,26 @@ export default function Home() {
         </div>
         <div className="banner2" id="productid">
           <div className="second-banner">
-            {/* {data.attributes.productleft.map((product) => ( */}
-            <div className="art-product-content">
-              <div className="art-product-content-inner">
-                <h3
-                  className="section-title"
-                  style={{
-                    animation: "fadeUp 1.5s ease-in-out",
-                    animationDelay: "0.2s",
-                  }}
-                >
-                  {data.attributes.productleft.title}
-                </h3>
-                <p
-                   style={{
-                    animation: "fadeUp 1.5s ease-in-out",
-                    animationDelay: "0.2s",
-                  }}
-                >
-                  {data.attributes.productleft.description}
+            <div className="col-lg-4">
+              <div className="zerohack-logo">
+                <img src={zerohack} alt="zerohack-logo" width={250} />
+                <p>
+                  An adaptable, triple-layer security system that uses
+                  industry-standard mature signature technology with highly
+                  optimized machine language and deep learning-based models on
+                  live traffic to detect threats in the hybrid cloud.
                 </p>
               </div>
             </div>
-            {/* ))} */}
-            <div className="art-products">
-              <video muted loop autoPlay="autoplay">
-                <source src={product_video} type="video/mp4" />
-              </video>
+
+            <div className="col-lg-8 right-content-zerohack">
+              <div className="zerohack-logo-card">
+                <video muted loop autoPlay="autoplay">
+                  <source src={product_video} type="video/mp4" />
+                </video>
+
+
               <div className="art-products-inner">
-                <div className="art-products-inner-logo">
-                  <img
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
-                    src={whizrange}
-                    alt=""
-                    width="100px"
-                    height="70px"
-                    style={whiteImageStyle}
-                  />
-                </div>
                 <div className=" whizrange-product">
                   <div
                     className="art-product-box-outer"
@@ -119,13 +106,19 @@ export default function Home() {
                     <a href={`/Products/whizrange`} className="">
                       <div className="art-product-box">
                         <div className="art-product-box-inner-whizrange">
-                          <img src={shooting} alt="shooting" />
+                        <img
+                            src={nidesicon}
+                            alt="traceicon"
+                            className="product-images"
+                          />
+                          <img
+                            src={zerohackU}
+                            alt="traceicon"
+                            className=""
+                          />
                           <p>
-                            Simulation-based platform that trains professionals
-                            to respond to real-world cyberattacks.
+                            It is an active response solution which is designed to atter the flow of network traffic based on threat detection.
                           </p>
-                          {/* <img src={whiz_box.logo_url} alt="" />
-                            <p>{whiz_box.description}</p> */}
 
                           <i class="fas fa-arrow-right"></i>
                         </div>
@@ -142,14 +135,11 @@ export default function Home() {
                     <a href={`/`} className="">
                       <div className="art-product-box">
                         <div className="art-product-box-inner-whizrange">
-                          <img src={virtuallab} alt="virtuallab" />
+                          <img src={nidesicon} alt="virtuallab" />
+                          <img src={zerohackS} alt="zerohacks" />
                           <p>
-                            An adaptable, triple-layer security system that uses
-                            industry-standard mature signature technology with
-                            highly optimized machine language.
+                          It is an active response solution which is designed to atter the flow of network traffic based on threat detection.
                           </p>
-                          {/* <img src={whiz_box.logo_url} alt="" />
-                            <p>{whiz_box.description}</p> */}
 
                           <i class="fas fa-arrow-right"></i>
                         </div>
@@ -160,17 +150,6 @@ export default function Home() {
               </div>
 
               <div className="art-products-inner-whizrange">
-                <div className="art-products-inner-logo-zerohack">
-                  <img
-                    data-aos="fade-down"
-                    data-aos-delay="300"
-                    data-aos-duration={1500}
-                    src={zerohack}
-                    alt=""
-                    width="150px"
-                    height="50px"
-                  />
-                </div>
                 <div className="zerohack-product">
                   <div
                     className="art-product-box-outer"
@@ -184,13 +163,9 @@ export default function Home() {
                           <img
                             src={traceicon}
                             alt="traceicon"
-                            style={{
-                              ...colorizeImageStyle,
-                              objectFit: "cover",
-                            }}
                             className="product-images"
                           />
-                          <img src={tracelogo} alt="tracelogo" className="product-images2" />
+                          <img src={tracelogo} alt="tracelogo" className="product-images22" />
                           <p>
                             A highly scalable and adaptable cyber deception
                             software that has been designed to capture and
@@ -223,7 +198,7 @@ export default function Home() {
                             }}
                             className="product-images"
                           />
-                          <h3>HIDS</h3>
+                          <img src={zerohackH} alt="tracelogo" className="product-images2" />
                           <p>
                             WhizHack HIDS solution uses advanced analytics,
                             machine learning, and rule-based algorithms to
@@ -255,7 +230,7 @@ export default function Home() {
                             }}
                             className="product-images"
                           />
-                          <h3>NIDS</h3>
+                          <img src={zerohackN} alt="tracelogo" className="product-images2" />
                           <p>
                             It is an active response solution which is designed
                             to alter the flow of network traffic based on threat
@@ -271,8 +246,103 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </div>
+         
           </div>
         </div>
+        <div className="zerohack-services">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="zerohack-services-contents">
+                  <div className="zerohack-services-content">
+                    <img src={layer} alt="img" width={65}  />
+                    <h5>Signature tech and deception for hybrid cloud security.</h5>
+                  </div>
+
+                  <div className="zerohack-services-content">
+                    <img src={chain} alt="img" width={65}  />
+                    <h5>Centralized platform for compliance and risk</h5>
+                  </div>
+
+                  <div className="zerohack-services-content">
+                    <img src={security} alt="img" width={65} />
+                    <h5>Assessments and SOC services for ongoing protection</h5>
+                  </div>
+
+                  <div className="zerohack-services-content">
+                    <img src={performance} alt="img" width={65} />
+                    <h5>Hands-on programs combat cyber threats</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="whizrange">
+            <div className="col-lg-4">
+            <div className="whizrange-logo">
+                <img src={whizrange} alt="whizrange-logo" width={150} />
+                <p>
+                  An adaptable, triple-layer security system that uses
+                  industry-standard mature signature technology with highly
+                  optimized machine language and deep learning-based models on
+                  live traffic to detect threats in the hybrid cloud.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-lg-8 whizlabs-card">
+            <div className="art-products-inner-whizrange-card">
+                <div className=" whizrange-product-card">
+                  <div
+                    className="art-product-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <a href={`/Products/whizrange`} className="">
+                      <div className="art-product-box-whizrange">
+                        <div className="art-product-box-inner-whizrange">
+                          <img src={shooting} alt="shooting" />
+                          <p>
+                            Simulation-based platform that trains professionals
+                            to respond to real-world cyberattacks.
+                          </p>
+
+                          <i class="fas fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div
+                    className="art-product-box-outer"
+                    data-aos="fade-down"
+                    data-aos-delay="300"
+                    data-aos-duration={1500}
+                  >
+                    <a href={`/`} className="">
+                      <div className="art-product-box-whizrange">
+                        <div className="art-product-box-inner-whizrange">
+                          <img src={virtuallab} alt="virtuallab" />
+                          <p>
+                            An adaptable, triple-layer security system that uses
+                            industry-standard mature signature technology with
+                            highly optimized machine language.
+                          </p>
+
+                          <i class="fas fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
         <div className="section3">
           <div className="form-container">
             <div className="form-row">
@@ -314,7 +384,7 @@ export default function Home() {
                   Services That Keep Securing Digital
                 </h3>
                 <p
-                   style={{
+                  style={{
                     animation: "fadeUp 1.5s ease-in-out",
                     animationDelay: "0.2s",
                   }}
@@ -448,7 +518,11 @@ export default function Home() {
                   <a href={`/Trainings/enterprise`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={enterprise} alt="enterprise" className="training-images" />
+                        <img
+                          src={enterprise}
+                          alt="enterprise"
+                          className="training-images"
+                        />
                         <h3>Enterprise </h3>
                         <p>
                           Enterprise training is versatile, offered through
@@ -476,7 +550,11 @@ export default function Home() {
                   <a href={`/Trainings/npti`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={industry} alt="industry" className="training-images" />
+                        <img
+                          src={industry}
+                          alt="industry"
+                          className="training-images"
+                        />
                         <h3>Industry Specific </h3>
                         <p>
                           India’s First Experiential Post Graduate Diploma in
@@ -504,7 +582,11 @@ export default function Home() {
                   <a href={`/Trainings/government`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={gov} alt="goverment" className="training-images" />
+                        <img
+                          src={gov}
+                          alt="goverment"
+                          className="training-images"
+                        />
                         <h3>Government </h3>
                         <p>
                           WhizHack is providing security against some of the
@@ -532,7 +614,11 @@ export default function Home() {
                   <a href={`/career`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={career} alt="career" className="training-images" />
+                        <img
+                          src={career}
+                          alt="career"
+                          className="training-images"
+                        />
                         <h3>Career Pathways </h3>
                         <p>
                           Teenagers across the country will have the opportunity
@@ -556,10 +642,14 @@ export default function Home() {
                   data-aos-delay="300"
                   data-aos-duration={1500}
                 >
-                  <a href={`/Trainings/bridge`} className="">
+                  <a href={`/Trainings/international-bridge-courses`} className="">
                     <div className=" art-product-box-training">
                       <div className="art-product-box-inner">
-                        <img src={bridges} alt="bridges" className="training-images" />
+                        <img
+                          src={bridges}
+                          alt="bridges"
+                          className="training-images"
+                        />
                         <h3>International Bridge Courses </h3>
                         <p>
                           Complete your Masters in Cyber Security from

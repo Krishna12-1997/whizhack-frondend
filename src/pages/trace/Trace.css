@@ -12,6 +12,12 @@
   height: 100%;
   object-fit: cover;
 }
+.hids{
+  padding-right: 0;
+}
+.hids-img{
+  clip-path: polygon(15% 0, 100% 0, 100% 30%, 100% 70%, 100% 100%, 14% 100%, 0 83%, 0 20%);
+}
 .ui1-banner1-parent-solution {
   position: relative;
   background: url(../../components//images/bg/whizrange_BG.png);
